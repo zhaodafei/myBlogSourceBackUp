@@ -207,3 +207,30 @@ rss: /atom.xml #rss地址  默认即可
   </section>
 <% } %>
 ```
+
+### hexo-git-backup
+
+``` bash
+安装备份插件
+参考网址：  https://github.com/coneycode/hexo-git-backup
+Update
+if you install with --save, you must remove firstly when you update it.
+$ npm remove hexo-git-backup
+$ npm install hexo-git-backup --save
+--------------------------------------
+安装主题
+参考网址：   https://github.com/chaooo/hexo-theme-BlueLake
+git clone https://github.com/chaooo/hexo-theme-BlueLake.git themes/BlueLake
+-------------------------------------
+生成、部署
+hexo g
+hexo d
+hexo b
+hexo server -p 5000   【本地查看】
+```
+
+### hexo
+
+``` bash
+
+```
