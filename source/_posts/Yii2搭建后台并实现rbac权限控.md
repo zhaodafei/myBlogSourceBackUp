@@ -29,6 +29,9 @@ title: YII2搭建后台并实现rbac权限控制
 
 ```
 composer require mdmsoft/yii2-admin "~2.0"
+
+!!!温馨提示：建议安装 1.0 版本不安装 2.0 版本!!!
+composer require mdmsoft/yii2-admin "~1.0"
 ```
 
 ### 配置yii2-admin运行环境
@@ -105,6 +108,11 @@ return [
 现在可以查看后台：
 <Your domain name>/index.php?r=admin/user
 <Your domain name>/index.php?r=admin
+<Your domain name>/index.php?r=admin/route
+<Your domain name>/index.php?r=admin/permission
+<Your domain name>/index.php?r=admin/menu
+<Your domain name>/index.php?r=admin/role
+<Your domain name>/index.php?r=admin/assignment
 ```
 
 <img src="/img/yii2_2017_12_10/yii2_admin_install_end.png" alt="yii2-admin 安装完成">
@@ -334,7 +342,6 @@ server {
         include fastcgi.conf;
     }
 }
-
 ```
 
 ### 启动更多分配路由
@@ -360,7 +367,7 @@ server {
         ]
     ],
     
-？？？？？？？？？？？？？？？父级一直添加不上？？？先手动修改数据库？？？？？？？？    
+？？？？？？？？？父级一直添加不上？？？先手动修改数据库？？？？最后解决这个问题？？？？    
 添加界面如下：
 ```
 
@@ -476,10 +483,136 @@ server {
 
 <img src="/img/yii2_2017_12_10/adminLTE_left.png" alt="yii2-adminlte 左侧菜单">
 
-### 整合完毕后存在问题
+### 整合完毕后存在问题（原因是 yii2-admin 2.0版本）
 
 一、菜单小图标并控制菜单显示： 
 我们在创建菜单的时候，没填写的"数据"一栏，我们填写 <a href="http://www.runoob.com/font-awesome/fontawesome-tutorial.html"><font color="red">Font Awesome</font></a> 从这里面选择图标，例如在品牌图标中 使用这个是	fa fa-android  ；我们在 菜单“数据”一栏应该写 android，如图：
 <img src="/img/yii2_2017_12_10/bug_menu_icon.png" alt="bug 图标填写错误">
 
-二、？？？？？？？？？？？？？？？父级一直添加不上？？？先手动修改数据库？？？？？？？？    
+二、菜单列表中父级一直添加不上 ，父级名意图提示样式会跑到最左侧，路由意图样式会跑到最左侧（yii2-admin 版本1.0没有此问题）
+<img src="/img/yii2_2017_12_10/bug_menu_add_menu.png" alt="bug 新增菜单样式错误">
+
+解决办法：
+
+```
+一、解决父级添加不上：
+修改<project>/vendor/mdmsoft/yii2-admin/models/Menu.php中
+原来：
+    public function rules()
+    {
+        return [
+            [['name'], 'required'],
+            [['parent_name'], 'in',
+                'range' => static::find()->select(['name'])->column(),
+                'message' => 'Menu "{value}" not found.'],
+            [['parent', 'route', 'data', 'order'], 'default'],
+            [['parent'], 'filterParent', 'when' => function() {
+                return !$this->isNewRecord;
+            }], 
+            [['order'], 'integer'],
+            [['route'], 'in',
+                'range' => static::getSavedRoutes(),
+                'message' => 'Route "{value}" not found.']
+        ];
+    }
+    修改后：
+    public function rules()
+    {
+        return [
+            [['name'], 'required'],
+            [['parent_name'], 'in',
+                'range' => static::find()->select(['name'])->column(),
+                'message' => 'Menu "{value}" not found.'],
+            [['parent', 'route', 'data', 'order'], 'default'],
+            /*[['parent'], 'filterParent', 'when' => function() {
+                return !$this->isNewRecord;
+            }],*/
+            [['parent_name'], 'filterParent'],//修改此方法
+            [['order'], 'integer'],
+            [['route'], 'in',
+                'range' => static::getSavedRoutes(),
+                'message' => 'Route "{value}" not found.']
+        ];
+    }
+    
+    原来：
+    public function filterParent()
+    {
+        $parent = $this->parent;
+        $db = static::getDb();
+        $query = (new Query)->select(['parent'])
+            ->from(static::tableName())
+            ->where('[[id]]=:id');
+        while ($parent) {
+            if ($this->id == $parent) {
+                $this->addError('parent_name', 'Loop detected.');
+                return;
+            }
+            $parent = $query->params([':id' => $parent])->scalar($db);
+        }
+    }
+    
+    修改后：
+    public function filterParent()
+    {
+        //修改此方法
+        $value = $this->parent_name;
+        $parent = self::findOne(['name' => $value]);
+        if ($parent) {
+            $id = $this->id;
+            $parent_id = $parent->id;
+            while ($parent) {
+                if ($parent->id == $id) {
+                    $this->addError('parent_name', 'Loop detected.');
+
+                    return;
+                }
+                $parent = $parent->menuParent;
+            }
+            $this->parent = $parent_id;
+        }
+    }
+    
+二、解决意图提示样式
+下载 yiisoft/yii2-jui
+php composer.phar require --prefer-dist yiisoft/yii2-jui
+
+现在已经可以上试试效果，完全没有问题，如果不想用form中原来的书写方式可以按下面的办法；
+修改 <project>/vendor/mdmsoft/yii2-admin/views/menu/_form.php中parent_name和route表单：
+修改之前：
+            <?= $form->field($model, 'parent_name')->textInput(['id' => 'parent_name']) ?>
+            <?= $form->field($model, 'route')->textInput(['id' => 'route']) ?>
+修改之后：
+            <?= $form->field($model, 'parent_name')->widget('yii\jui\AutoComplete',[
+                'options'=>['class'=>'form-control'],
+                'clientOptions'=>[
+                    'source'=>  Menu::find()->select(['name'])->column()
+                ]
+            ]) ?>
+
+            <?= $form->field($model, 'route')->widget('yii\jui\AutoComplete',[
+                'options'=>['class'=>'form-control'],
+                'clientOptions'=>[
+                    'source'=> Menu::getSavedRoutes()
+                ]
+            ]) ?>
+三、在 <project>/vendor/mdmsoft/yii2-admin/views/role/_form.php 同样会有样式问题，按照二的步骤修改即可
+   使用到的时候再改就可以。
+   修改后的：
+   <?=
+    $form->field($model, 'ruleName')->widget('yii\jui\AutoComplete', [
+        'options' => [
+            'class' => 'form-control',
+        ],
+        'clientOptions' => [
+            'source' => array_keys(Yii::$app->authManager->getRules()),
+        ]
+    ])
+    ?>
+```
+
+<img src="/img/yii2_2017_12_10/bug_menu_add_menu_ok_01.png" alt="bug 新增菜单父级改好1">
+
+<img src="/img/yii2_2017_12_10/bug_menu_add_menu_ok_02.png" alt="bug 新增菜单父级改好2">
+
+<img src="/img/yii2_2017_12_10/bug_menu_add_menu_ok_03.png" alt="bug 新增菜单父级改好3">
