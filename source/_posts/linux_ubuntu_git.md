@@ -42,7 +42,7 @@ git init --bare test.git
 
 开始本地(windows)操作
 
-### 本地生成公钥,位置  C:\Users\Administrator\.ssh  或者  ~/.ssh 
+### 本地生成公钥,位置  C:\Users\Administrator\\.ssh 或者  ~/.ssh 
 
 ```
 ssh-keygen -t rsa ls ~/.ssh/
