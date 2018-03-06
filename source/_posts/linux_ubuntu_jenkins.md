@@ -18,43 +18,21 @@ title: linux ubuntu jenkins
 
 #### 第二种安装方式，在 tomcat 中启动
 
+![Jenkins war包](/img/linux_ubuntu_jenkins/01.png "Jenkins war包")
 
+![Jenkins](/img/linux_ubuntu_jenkins/02.png "Jenkins")
 
-![Jenkins war包](/img/linux_ubuntu_jenkins/jenkins_war.png "Jenkins war包")
+![Jenkins](/img/linux_ubuntu_jenkins/03.png "Jenkins")
 
+![Jenkins](/img/linux_ubuntu_jenkins/04.png "Jenkins")
 
+![Jenkins](/img/linux_ubuntu_jenkins/05.png "Jenkins")
 
+![Jenkins](/img/linux_ubuntu_jenkins/windows.png "Jenkins")
 
+不管用那种方法，安装后登录时空白，现在没有时间弄了，有知道的请留言
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![Jenkins error](/img/linux_ubuntu_jenkins/06_error.png "Jenkins error")
 
 
 
