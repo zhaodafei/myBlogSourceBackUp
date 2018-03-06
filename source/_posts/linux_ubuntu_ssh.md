@@ -7,7 +7,7 @@ title: linux Ubuntu ssh
 sudo apt install openssh-client
 ```
 
-![ssh client](/img/linux_command01_2017_1224/linux_ubuntu_ssh/ssh_client.png "ssh client")
+![ssh client](/img/linux_ubuntu_ssh/ssh_client.png "ssh client")
 
 ### 安装服务端
 
@@ -28,7 +28,7 @@ sudo cp /etc/ssh/sshd_config /etc/ssh/sshd_config.original
 sudo chmod a-w /etc/ssh/sshd_config.original
 ```
 
-![ssh sshd_config](/img/linux_command01_2017_1224/linux_ubuntu_ssh/ssh_sshd_config.png "ssh sshd_config")
+![ssh sshd_config](/img/linux_ubuntu_ssh/ssh_sshd_config.png "ssh sshd_config")
 
 - 要设置您 OpenSSH 在 TCP 2222 端口而不是缺省的 TCP 20 端口监听，可以如下使用改变 Port 语句：
 
@@ -64,7 +64,7 @@ sudo systemctl restart sshd.service
 断开连接：exit;
 ```
 
-![ssh remote_login](/img/linux_command01_2017_1224/linux_ubuntu_ssh/ssh_remote_login.png "ssh remote_login")
+![ssh remote_login](/img/linux_ubuntu_ssh/ssh_remote_login.png "ssh remote_login")
 
 如果细心，可能发现远程登录不能用root登录，解决办法： 修改 /etc/ssh/sshd_config 配置文件
 
@@ -77,9 +77,9 @@ sudo systemctl restart sshd.service
 
 ```
 
-![ssh remote_login_root](/img/linux_command01_2017_1224/linux_ubuntu_ssh/ssh_remote_login_root.png "ssh remote_login_root")
+![ssh remote_login_root](/img/linux_ubuntu_ssh/ssh_remote_login_root.png "ssh remote_login_root")
 
-![ssh remote_login_root_ok](/img/linux_command01_2017_1224/linux_ubuntu_ssh/ssh_remote_login_ok.png "ssh remote_login_root_ok")
+![ssh remote_login_root_ok](/img/linux_ubuntu_ssh/ssh_remote_login_ok.png "ssh remote_login_root_ok")
 
 ### 其他
 

@@ -15,7 +15,7 @@ git --version  【检测当前环境是否安装git】
 sudo apt-get install git  【安装git】
 ```
 
-![git install](/img/linux_command01_2017_1224/linux_ubuntu_git/git_install.png "git install")
+![git install](/img/linux_ubuntu_git/git_install.png "git install")
 
 ### 新增用户
 
@@ -24,7 +24,7 @@ sudo apt-get install git  【安装git】
 adduser git_dafei
 ```
 
-![git adduser](/img/linux_command01_2017_1224/linux_ubuntu_git/git_adduser.png "git adduser")
+![git adduser](/img/linux_ubuntu_git/git_adduser.png "git adduser")
 
 ### 初始git仓库，
 
@@ -36,9 +36,9 @@ adduser git_dafei
 git init --bare test.git
 ```
 
-![git init](/img/linux_command01_2017_1224/linux_ubuntu_git/git_init.png "git init")
+![git init](/img/linux_ubuntu_git/git_init.png "git init")
 
-![git init02](/img/linux_command01_2017_1224/linux_ubuntu_git/git_init02.png "git init02")
+![git init02](/img/linux_ubuntu_git/git_init02.png "git init02")
 
 开始本地(windows)操作
 
@@ -48,7 +48,7 @@ git init --bare test.git
 ssh-keygen -t rsa ls ~/.ssh/
 ```
 
-![git win ssh](/img/linux_command01_2017_1224/linux_ubuntu_git/git_win_ssh.png "git win ssh")
+![git win ssh](/img/linux_ubuntu_git/git_win_ssh.png "git win ssh")
 
 ### 将win用户的公钥(即 id_rsa.pub )添加到服务器上
 
@@ -59,7 +59,7 @@ ssh-keygen -t rsa ls ~/.ssh/
 [扩展:使用ssh端口 ] scp -P 22 ~/.ssh/id_rsa.pub git_dafei@192.168.1.113:/home/git_dafei/
 ```
 
-![git win scp](/img/linux_command01_2017_1224/linux_ubuntu_git/git_win_scp.png "git win scp")
+![git win scp](/img/linux_ubuntu_git/git_win_scp.png "git win scp")
 
 ### 将本地用户的公钥添加到认证文件中
 
@@ -70,9 +70,9 @@ touch authorized_keys    【在 .ssh中创建 】
 cat id_rsa.pub >> .ssh/authorized_keys   [如果没有 authorized_keys 请创建 touch authorized_keys
 ```
 
-![git ssh](/img/linux_command01_2017_1224/linux_ubuntu_git/git_ssh.png "git ssh")
+![git ssh](/img/linux_ubuntu_git/git_ssh.png "git ssh")
 
-![git id_rs](/img/linux_command01_2017_1224/linux_ubuntu_git/git_id_rs.png "git id_rs")
+![git id_rs](/img/linux_ubuntu_git/git_id_rs.png "git id_rs")
 
 ### 修改文件所有者为 git_dafei 用户
 
@@ -98,7 +98,7 @@ chmod 600 /home/git_dafei/.ssh/authorized_keys
 
 ```
 
-![git chmod](/img/linux_command01_2017_1224/linux_ubuntu_git/git_chmod.png "git chmod")
+![git chmod](/img/linux_ubuntu_git/git_chmod.png "git chmod")
 
 ### 修改ssh配置文件
 
@@ -107,7 +107,7 @@ chmod 600 /home/git_dafei/.ssh/authorized_keys
 修改完重启ssh:  service ssh restart
 ```
 
-![git sshd_config](/img/linux_command01_2017_1224/linux_ubuntu_git/git_sshd_config.png "git sshd_config")
+![git sshd_config](/img/linux_ubuntu_git/git_sshd_config.png "git sshd_config")
 
 ### 安全
 
@@ -117,7 +117,7 @@ chmod 600 /home/git_dafei/.ssh/authorized_keys
 改为  git_dafei:x:1002:1002:,,,:/home/git_dafei:/usr/bin/git-shell
 ```
 
-![git passwd](/img/linux_command01_2017_1224/linux_ubuntu_git/git_passwd.png "git passwd")
+![git passwd](/img/linux_ubuntu_git/git_passwd.png "git passwd")
 
 ### 在win中clone刚才创建的test.git
 
@@ -129,11 +129,11 @@ git clone 上面设置的用户名@服务器ip:/home/git_dafei/code/test.git
 git clone ssh://git_dafei@192.168.1.113:22 /home/git_dafei/code/test.git  [指定ssh端口克隆]
 ```
 
-![git win clone](/img/linux_command01_2017_1224/linux_ubuntu_git/git_win_clone.png "git win clone")
+![git win clone](/img/linux_ubuntu_git/git_win_clone.png "git win clone")
 
-![git win use](/img/linux_command01_2017_1224/linux_ubuntu_git/git_win_user.png "git win use")
+![git win use](/img/linux_ubuntu_git/git_win_user.png "git win use")
 
-![git ubuntu clone](/img/linux_command01_2017_1224/linux_ubuntu_git/git_ubuntu_clone.png "git ubuntu clone")
+![git ubuntu clone](/img/linux_ubuntu_git/git_ubuntu_clone.png "git ubuntu clone")
 
 
 
