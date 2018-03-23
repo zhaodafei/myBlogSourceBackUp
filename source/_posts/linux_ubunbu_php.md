@@ -1,28 +1,292 @@
 ---
-title: linux ubuntu15 php
+title: linux ubuntu16 php7.0.28
 ---
-### 这里是标题
-
 源码编译安装php7.0
+
+### 依赖安装，安装依赖
+
+```
+apt-get install libxml2 libxml2-dev
+
+apt-get install openssl
+apt-get install libssl-dev
+
+apt-get install curl
+apt-get install libcurl4-gnutls-dev
+
+apt-get install libxslt-dev
+
+apt-get install libpng-dev
+
+apt-get install libfreetype6-dev
+
+
+// RetHat CentOS or Fedora 使用下面安装命令
+yum install curl curl-devel
+
+****************一般使用的依赖都是以下这些***************************
+安装相关依赖库
+
+sudo apt-get update
+sudo apt-get install libxml2-dev
+#安装gcc
+sudo apt-get install build-essential
+sudo apt-get install openssl 
+sudo apt-get install libssl-dev 
+sudo apt-get install make
+sudo apt-get install curl
+sudo apt-get install libcurl4-gnutls-dev
+sudo apt-get install libjpeg-dev
+sudo apt-get install libpng-dev
+sudo apt-get install libmcrypt-dev
+sudo apt-get install libreadline6 libreadline6-dev
+apt-get -y install libfreetype6-dev  
+sudo apt-get install libxslt1-dev
+```
+
+
 
 ### 下载 PHP 源码
 
 ```
 wget http://cn2.php.net/get/php-7.0.28.tar.gz/from/this/mirror
 mv mirror php-7.0.28.tar.gz
+
+解压到你指定的目录，我这里选择  /data/server/ 目录
+tar -zxvf php-7.0.28.tar.gz -C /data/server/
+mv php-7.0.28 php7
+cd php7/
 ```
 
-![root passwd](/img/linux_ubunbu_php/php7_download.png)
+![PHP7.0.28 下载](/img/linux_ubunbu_php/php7_download.png "PHP7.0.28 下载")
+
+### 查看安装帮助，执行配置脚本进行编译预处理
+
+```
+# ./configure   --help
+# ./configure --prefix=/data/server/php7 \
+ --with-curl \
+ --with-freetype-dir \
+ --with-gd \
+ --with-gettext \
+ --with-iconv-dir \
+ --with-kerberos \
+ --with-libdir=lib64 \
+ --with-libxml-dir \
+ --with-mysqli \
+ --with-openssl \
+ --with-pcre-regex \
+ --with-pdo-mysql \
+ --with-pdo-sqlite \
+ --with-pear \
+ --with-png-dir \
+ --with-xmlrpc \
+ --with-xsl \
+ --with-zlib \
+ --enable-fpm \
+ --enable-bcmath \
+ --enable-libxml \
+ --enable-inline-optimization \
+ --enable-gd-native-ttf \
+ --enable-mbregex \
+ --enable-mbstring \
+ --enable-opcache \
+ --enable-pcntl \
+ --enable-shmop \
+ --enable-soap \
+ --enable-sockets \
+ --enable-sysvsem \
+ --enable-xml \
+ --enable-zip
+
+
+********************新的编译*****************
+./configure --prefix=/data/server/php7 \
+--with-gd \
+--with-freetype-dir \
+--enable-gd-native-ttf \
+--enable-mysqlnd \
+--with-pdo-mysql=mysqlnd \
+--with-openssl \
+--with-mcrypt \
+--enable-mbstring \
+--enable-zip \
+--enable-fpm
+```
+
+我的错误
+| Configure Command                       | './configure' '--prefix=/data/server/php7' '--with-gd' '--with-freetype-dir' '--enable-gd-native-ttf' '--enable-mysqlnd' '--with-pdo-mysql=mysqlnd' '--with-openssl' '--with-mcrypt' '--enable-mbstring' '--enable-zip' '--enable-fpm' |
+| --------------------------------------- | ------------------------------------------------------------ |
+| Server API                              | FPM/FastCGI                                                  |
+| Virtual Directory Support               | disabled                                                     |
+| Configuration File (php.ini) Path       | /data/server/php7/lib                                        |
+| Loaded Configuration File               | (none)        【正常情况这里不应该没有值的，还是之前的编译有问题，请仔细查看<br />                     正常应该是这个值   /data/server/php7/lib/php.ini】 |
+| Scan this dir for additional .ini files | (none)                                                       |
+| Additional .ini files parsed            | (none)                                                       |
+|                                         |                                                              |
 
 
 
+之前安装过依赖这里就可以不用装，然后会提示部分依赖没有安装，安装依赖
+
+```
+apt-get install libxml2 libxml2-dev
+
+apt-get install openssl
+apt-get install libssl-dev
+
+apt-get install curl
+apt-get install libcurl4-gnutls-dev
+
+apt-get install libxslt-dev
+
+apt-get install libpng-dev
+
+apt-get install libfreetype6-dev
+
+
+// RetHat CentOS or Fedora 使用下面安装命令
+yum install curl curl-devel
+
+****************一般使用的依赖都是以下这些***************************
+安装相关依赖库
+
+sudo apt-get update
+sudo apt-get install libxml2-dev
+#安装gcc
+sudo apt-get install build-essential
+sudo apt-get install openssl 
+sudo apt-get install libssl-dev 
+sudo apt-get install make
+sudo apt-get install curl
+sudo apt-get install libcurl4-gnutls-dev
+sudo apt-get install libjpeg-dev
+sudo apt-get install libpng-dev
+sudo apt-get install libmcrypt-dev
+sudo apt-get install libreadline6 libreadline6-dev
+apt-get -y install libfreetype6-dev  
+sudo apt-get install libxslt1-dev
+```
+
+![php configure](/img/linux_ubunbu_php/php7_configure01.png "php configure")
 
 
 
+### 预处理ok后，make 编译
+
+```
+make &&  make install
+
+最后用 make test 测试一下【这个过程时间比较长】
+```
+
+![php make](/img/linux_ubunbu_php/php7_configure01.png "php make")
+
+![php make install](/img/linux_ubunbu_php/php7_make_install.png "php make install")
+
+### 安装完毕
+
+```
+查看 php 版本
+/data/server/php7/bin/php -v  
+```
+
+![php version](/img/linux_ubunbu_php/php7_version.png "php version")
+
+### 配置PHP 
+
+```
+
+cp /data/server/php7/php.ini-development   /data/server/php7/lib/php.ini
+cp /data/server/php7/etc/php-fpm.conf.default /data/server/php7/etc/php-fpm.conf
+cp /data/server/php7/etc/php-fpm.d/www.conf.default /data/server/php7/etc/php-fpm.d/www.conf
+
+```
+
+![php7 php.ini](/img/linux_ubunbu_php/php7_php_ini.png "php7 php.ini")
+
+### 添加 PHP 启动用户
+
+```
+设置 PHP 启动用户
+cd /data/server/php7/etc/php-fpm.d
+vi www.conf  修改23、24行，内容如下：
+ user = 启动fpm的用户名
+ group = 启动fpm的用户所在组
+ 
+ user = managers
+ group = managers
+
+修改完启动 PHP-fpm
+```
+
+### php 启动命令
+
+```
+ /data/server/php7/sbin/php-fpm
+```
+
+![php7 启动用户](/img/linux_ubunbu_php/php7_user.png "php7 启动用户")
+
+### 配置虚拟主机测试一下
+
+在 /data/www/ 目录下创建 index.php 内容如下：
+
+```
+<?php
+echo phpinfo();
+?>
+
+```
+
+在 nginx 中配置虚拟主机
+
+```
+server {
+    listen       80;
+    server_name  127.0.0.1 192.168.1.230;
+    client_max_body_size 10m;
+    charset utf-8;
+    #access_log /data/server/tengine/logs/127.0.0.1_access.log;
+    #error_log  /data/server/tengine/logs/127.0.0.1_error.log;
+    root  /data/www/;
+   # index index.html;
+    index index.php;
+    location ~ .+\.php($|/) {
+        fastcgi_pass 127.0.0.1:9000;
+        fastcgi_index index.php;
+        include fastcgi.conf;
+    }
+}
+```
+
+![php7 测试](/img/linux_ubunbu_php/php7_test.jpg "php7 测试")
 
 
 
+扩展： 使用 php -m  查看扩展,提示如下：
 
+```
+root@ubuntu:/data/server/php7/bin# php -m
+The program 'php' can be found in the following packages:
+ * php7.0-cli
+ * hhvm
+Try: apt install <selected package>
+root@ubuntu:/data/server/php7/bin# apt install php7.0-cli
+
+安装：  apt install php7.0-cli
+```
+
+PHP命令
+
+```
+php --ini
+
+查询 PHP 服务 ps aux | grep php-fpm
+pkill -9 php
+php启动命令
+/data/server/php7/sbin/php-fpm
+```
 
 
 

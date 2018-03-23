@@ -65,7 +65,7 @@ make && make install
 ### 下载
 
 ```
-###有空试试这个不添加应该也是可以的，安装完有2个报错，不用理会，手动创建log目录，修改权限；###
+###有空试试这个不添加应该也是可以的，安装完有2个报错，不用理会，手动创建 logs 目录，修改权限；###
 groupadd www
 useradd -s /sbin/nologin -g www www
 ///////////////////////////////////////////////////////////
@@ -120,7 +120,7 @@ pid出错时，可以使用这个：
 
 
 
-扩展：有时候，我们有好多域名，为了方便我们修改一下 nginx.conf  ,修改内容如下，主要是最后一句 include servers/*;然后在nginx.conf 当前位置创建 servers 目录；【修改之前记得把原来的备份】
+扩展：有时候，我们有好多域名，为了方便我们修改一下 nginx.conf  ,修改内容如下，主要是最后一句 include servers/*;然后在nginx.conf 当前位置创建 servers 目录；【修改之前记得把原来的备份  cp nginx.conf nginx.conf_backups  】
 
 ```
 #user  nobody;
@@ -195,11 +195,28 @@ server {
     index index.html;
 }
 
+或者：
+server {
+    listen       80;
+    server_name  127.0.0.1 192.168.1.232;
+    client_max_body_size 10m;
+    charset utf-8;
+    #access_log /data/server/tengine/logs/127.0.0.1_access.log;
+    #error_log  /data/server/tengine/logs/127.0.0.1_error.log;
+    root  /data/www/;
+    index index.html index.php;
+    
+    location ~ .+\.php($|/) {
+        fastcgi_pass 127.0.0.1:9000;
+        fastcgi_index index.php;
+        include fastcgi.conf;
+    }    
+}
 ```
 
-![demo_test01](/img/linux_ubunbu_tengine/ demo_test01.png "demo_test01")
+![demo_test01](/img/linux_ubunbu_tengine/demo_test01.png "demo_test01")
 
-![demo_test02](/img/linux_ubunbu_tengine/ demo_test01.png "demo_test02")
+![demo_test02](/img/linux_ubunbu_tengine/demo_test01.png "demo_test02")
 
 
 

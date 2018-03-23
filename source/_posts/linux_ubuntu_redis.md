@@ -119,6 +119,7 @@ vi redis.conf
 
 修改完重启redis：
 src/redis-server ./redis.conf   【指定配置文件启动】
+/data/server/redis-4.0.8/src/redis-server ./redis.conf   【指定配置文件启动】
 后台启动后关闭命令：
 ./redis-cli -h 127.0.0.1 -a redis_pwd_123456 -p 6379 shutdown
 ```
