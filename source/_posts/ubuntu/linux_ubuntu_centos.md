@@ -6,7 +6,7 @@ title: ubuntu系统
 设置root密码
 sudo password
 ```
-![root passwd](/img/linux_command/linux_00/root_passwd.png)
+![root passwd](/img/ubuntu/linux_command/linux_00/root_passwd.png)
 ### 虚拟机安装完centos后重新设置root密码
 ```
 设置root密码
