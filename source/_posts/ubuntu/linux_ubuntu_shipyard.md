@@ -13,7 +13,7 @@ Shipyard 是一个基于 Web 的 Docker 管理工具，支持多 host，可以�
 docker run --rm -v /var/run/docker.sock:/var/run/docker.sock shipyard/deploy start
 ```
 
-![root passwd](/img/linux_ubuntu_shipyard/shipyard_install.png)
+![root passwd](/img/ubuntu/shipyard/shipyard_install.png)
 
 
 

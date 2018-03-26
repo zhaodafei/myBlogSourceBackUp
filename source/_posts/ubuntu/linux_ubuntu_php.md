@@ -58,7 +58,7 @@ mv php-7.0.28 php7
 cd php7/
 ```
 
-![PHP7.0.28 下载](/img/linux_ubunbu_php/php7_download.png "PHP7.0.28 下载")
+![PHP7.0.28 下载](/img/ubuntu/php/php7_download.png "PHP7.0.28 下载")
 
 ### 查看安装帮助，执行配置脚本进行编译预处理
 
@@ -168,7 +168,7 @@ apt-get -y install libfreetype6-dev
 sudo apt-get install libxslt1-dev
 ```
 
-![php configure](/img/linux_ubunbu_php/php7_configure01.png "php configure")
+![php configure](/img/ubuntu/php/php7_configure01.png "php configure")
 
 
 
@@ -180,9 +180,9 @@ make &&  make install
 最后用 make test 测试一下【这个过程时间比较长】
 ```
 
-![php make](/img/linux_ubunbu_php/php7_configure01.png "php make")
+![php make](/img/ubuntu/php/php7_configure01.png "php make")
 
-![php make install](/img/linux_ubunbu_php/php7_make_install.png "php make install")
+![php make install](/img/ubuntu/php/php7_make_install.png "php make install")
 
 ### 安装完毕
 
@@ -191,7 +191,7 @@ make &&  make install
 /data/server/php7/bin/php -v  
 ```
 
-![php version](/img/linux_ubunbu_php/php7_version.png "php version")
+![php version](/img/ubuntu/php/php7_version.png "php version")
 
 ### 配置PHP 
 
@@ -203,7 +203,7 @@ cp /data/server/php7/etc/php-fpm.d/www.conf.default /data/server/php7/etc/php-fp
 
 ```
 
-![php7 php.ini](/img/linux_ubunbu_php/php7_php_ini.png "php7 php.ini")
+![php7 php.ini](/img/ubuntu/php/php7_php_ini.png "php7 php.ini")
 
 ### 添加 PHP 启动用户
 
@@ -226,7 +226,7 @@ vi www.conf  修改23、24行，内容如下：
  /data/server/php7/sbin/php-fpm
 ```
 
-![php7 启动用户](/img/linux_ubunbu_php/php7_user.png "php7 启动用户")
+![php7 启动用户](/img/ubuntu/php/php7_user.png "php7 启动用户")
 
 ### 配置虚拟主机测试一下
 
@@ -260,7 +260,7 @@ server {
 }
 ```
 
-![php7 测试](/img/linux_ubunbu_php/php7_test.jpg "php7 测试")
+![php7 测试](/img/ubuntu/php/php7_test.jpg "php7 测试")
 
 
 

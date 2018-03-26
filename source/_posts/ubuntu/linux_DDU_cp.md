@@ -13,7 +13,7 @@ cp file_3.txt /home/destination_file
 cp /home/soruce_file2/file_3.txt /home/destination_file
 ```
 
-<img src="/img/linux_command01_2017_1224/linux_cp/cp.png" alt="cp" title="cp">
+<img src="/img/linux_command/linux_cp/cp.png" alt="cp" title="cp">
 
 ### 拷贝多个文件
 
@@ -24,7 +24,7 @@ cp file_3.txt file_4.txt /home/destination_file
 cp *  /home/destination_file       【拷贝所有文件，注意观察截图，aaa目录没有拷贝成功，稍后解决】
 ```
 
-<img src="/img/linux_command01_2017_1224/linux_cp/cp_02.png" alt="cp 多个文件" title="cp 多个文件">
+<img src="/img/linux_command/linux_cp/cp_02.png" alt="cp 多个文件" title="cp 多个文件">
 
 ### 拷贝一个目录
 
@@ -34,7 +34,7 @@ cp *  /home/destination_file       【拷贝所有文件，注意观察截图，
 cp -r aaa/ /home/destination_file     【这就解决上次没有拷贝aaa目录】
 ```
 
-<img src="/img/linux_command01_2017_1224/linux_cp/cp_r.png" alt="cp 递归拷贝目录" title="cp 递归拷贝目录">
+<img src="/img/linux_command/linux_cp/cp_r.png" alt="cp 递归拷贝目录" title="cp 递归拷贝目录">
 
 ### 创建文件硬链接，而不是拷贝他们
 
@@ -44,7 +44,7 @@ cp -r aaa/ /home/destination_file     【这就解决上次没有拷贝aaa目录
 cp -l file_3.txt /home/destination_file
 ```
 
-<img src="/img/linux_command01_2017_1224/linux_cp/cp_l.png" alt="cp 拷贝硬链接" title="cp 拷贝硬链接">
+<img src="/img/linux_command/linux_cp/cp_l.png" alt="cp 拷贝硬链接" title="cp 拷贝硬链接">
 
 ### 创建文件的软连接【符号链接、快捷方式.....】
 
@@ -54,7 +54,7 @@ cp -l file_3.txt /home/destination_file
 cp -s file_3.txt file_44.txt
 ```
 
-<img src="/img/linux_command01_2017_1224/linux_cp/cp_s.png" alt="cp 拷贝软链接" title="cp 软链接">
+<img src="/img/linux_command/linux_cp/cp_s.png" alt="cp 拷贝软链接" title="cp 软链接">
 
 ### 文件归档
 
@@ -64,7 +64,7 @@ cp -s file_3.txt file_44.txt
 cp -a  * /home/destination_file/
 ```
 
-<img src="/img/linux_command01_2017_1224/linux_cp/cp_a.png" alt="cp a" title="cp a">
+<img src="/img/linux_command/linux_cp/cp_a.png" alt="cp a" title="cp a">
 
 #### 只拷贝文件属性
 
@@ -74,7 +74,7 @@ cp -a  * /home/destination_file/
 cp --attributes-only file_3.txt /home/destination_file/
 ```
 
-<img src="/img/linux_command01_2017_1224/linux_cp/cp_attributes_only.png" alt="cp --attributes-only" title="cp 拷贝文件属性，不拷贝内容">
+<img src="/img/linux_command/linux_cp/cp_attributes_only.png" alt="cp --attributes-only" title="cp 拷贝文件属性，不拷贝内容">
 
 
 
@@ -86,7 +86,7 @@ cp --attributes-only file_3.txt /home/destination_file/
 cp -v  * /home/destination_file/
 ```
 
-<img src="/img/linux_command01_2017_1224/linux_cp/cp_v.png" alt="cp v" title="cp v显示信息">
+<img src="/img/linux_command/linux_cp/cp_v.png" alt="cp v" title="cp v显示信息">
 
 ### 目标文件时间是最新更改，源文件时间老
 
@@ -96,7 +96,7 @@ cp -v  * /home/destination_file/
 cp -vu file_3.txt file_4.txt /home/destination_file/
 ```
 
-<img src="/img/linux_command01_2017_1224/linux_cp/cp_u.png" alt="cp u" title="cp 跳过目标最新文件">
+<img src="/img/linux_command/linux_cp/cp_u.png" alt="cp u" title="cp 跳过目标最新文件">
 
 ### 使用交互模式
 
@@ -106,7 +106,7 @@ cp -vu file_3.txt file_4.txt /home/destination_file/
 cp -i file_3.txt file_4.txt /home/destination_file/
 ```
 
-<img src="/img/linux_command01_2017_1224/linux_cp/cp_i.png" alt="cp i" title="cp 交互模式">
+<img src="/img/linux_command/linux_cp/cp_i.png" alt="cp i" title="cp 交互模式">
 
 ### 创建备份文件
 
@@ -116,7 +116,7 @@ cp -i file_3.txt file_4.txt /home/destination_file/
  cp -bv * /home/destination_file/
 ```
 
-<img src="/img/linux_command01_2017_1224/linux_cp/cp_b.png" alt="cp b" title="cp 拷贝备份">
+<img src="/img/linux_command/linux_cp/cp_b.png" alt="cp b" title="cp 拷贝备份">
 
 ### 强制拷贝
 
@@ -126,7 +126,7 @@ cp -i file_3.txt file_4.txt /home/destination_file/
 cp -f * /home/destination_file/
 ```
 
-<img src="/img/linux_command01_2017_1224/linux_cp/cp_f.png" alt="cp f" title="cp 强制拷贝">
+<img src="/img/linux_command/linux_cp/cp_f.png" alt="cp f" title="cp 强制拷贝">
 
 #### 在拷贝之前先删除目标
 
@@ -136,7 +136,7 @@ cp -f * /home/destination_file/
 cp --remove-destination -v * /home/destination_file/
 ```
 
-<img src="/img/linux_command01_2017_1224/linux_cp/cp_remove_destination.png" alt="cp cp_remove_destination.png" title="cp 拷贝前删除目标">
+<img src="/img/linux_command/linux_cp/cp_remove_destination.png" alt="cp cp_remove_destination.png" title="cp 拷贝前删除目标">
 
 
 

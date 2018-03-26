@@ -27,7 +27,7 @@ cd pcre/
 make && make install
 ```
 
-![pcre 组件](/img/linux_ubunbu_tengine/component_pcre.png "pcre 组件")
+![pcre 组件](/img/ubuntu/tengine/component_pcre.png "pcre 组件")
 
 ### OpenSSL
 
@@ -43,7 +43,7 @@ make && make install
 
 这个执行时间稍微长一点  
 
-![OpenSSL  组件](/img/linux_ubunbu_tengine/component_openssl.png "OpenSSL 组件")
+![OpenSSL  组件](/img/ubuntu/tengine/component_openssl.png "OpenSSL 组件")
 
 ### Zlib
 
@@ -58,7 +58,7 @@ make && make install
 
 ```
 
-![Zlib  组件](/img/linux_ubunbu_tengine/component_Zlib.png "Zlib 组件")
+![Zlib  组件](/img/ubuntu/tengine/component_Zlib.png "Zlib 组件")
 
 
 
@@ -91,7 +91,7 @@ make && make install
 
 注意配置的时候 –with-pcre 、–with-openssl、–with-zlib的路径为源文件的路径
 
-![tengine install](/img/linux_ubunbu_tengine/tengine_install.png "tengine install")
+![tengine install](/img/ubuntu/tengine/tengine_install.png "tengine install")
 
 ### 检测是否可用
 
@@ -102,9 +102,9 @@ make && make install
 
 ```
 
-![tengine check](/img/linux_ubunbu_tengine/tengine_check.png "tengine check")
+![tengine check](/img/ubuntu/tengine/tengine_check.png "tengine check")
 
-![tengine ok](/img/linux_ubunbu_tengine/tengine_ok.png "tengine ok")
+![tengine ok](/img/ubuntu/tengine/tengine_ok.png "tengine ok")
 
 ### 启动关闭命令
 
@@ -168,6 +168,7 @@ http {
    # fastcgi_cache_path   /dev/shm/fastcgi_cache  levels=1:2  keys_zone=PHPCACHE:1024m inactive=15m;
    # fastcgi_cache_key "$scheme$request_method$host$request_uri";
    # fastcgi_cache_use_stale error  timeout invalid_header http_500;
+   # fastcgi_intercept_errors on;    #开启后支持4XX 和 5XX 错误自定义
     gzip on;
     gzip_vary on;
     gzip_min_length  10k;
@@ -214,9 +215,9 @@ server {
 }
 ```
 
-![demo_test01](/img/linux_ubunbu_tengine/demo_test01.png "demo_test01")
+![demo_test01](/img/ubuntu/tengine/demo_test01.png "demo_test01")
 
-![demo_test02](/img/linux_ubunbu_tengine/demo_test01.png "demo_test02")
+![demo_test02](/img/ubuntu/tengine/demo_test01.png "demo_test02")
 
 
 

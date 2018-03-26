@@ -57,7 +57,7 @@ scp test2_01.test dafei@192.168.1.113:/data/www/test/
 第3个仅指定了远程的目录，文件名字不变，
 第4个指定了文件名
 
-![scp 本地拷贝到远程复制文件](/img/linux_command01_2017_1224/linux_scp/scp_local_remote01.png "本地拷贝到远程复制文件")
+![scp 本地拷贝到远程复制文件](/img/linux_command/linux_scp/scp_local_remote01.png "本地拷贝到远程复制文件")
 
 #### 复制目录
 
@@ -74,7 +74,7 @@ scp -r test2 dafei@192.168.1.113:/data/www/test/
 第1个指定了用户名，命令执行后需要输入用户密码； 
 第2个没有指定用户名，命令执行后需要输入用户名和密码(默认使用root)；
 
-![scp 本地拷贝到远程复制目录](/img/linux_command01_2017_1224/linux_scp/scp_local_remote02.png "scp 本地拷贝到远程复制目录")
+![scp 本地拷贝到远程复制目录](/img/linux_command/linux_scp/scp_local_remote02.png "scp 本地拷贝到远程复制目录")
 
 #### 从远程服务器复制到本地服务器
 
@@ -88,7 +88,7 @@ demo：
 scp dafei@192.168.1.87:/data/www/test2/test2_01.test  /data/www/test/
 ```
 
-![scp 远程拷贝文件到本地](/img/linux_command01_2017_1224/linux_scp/scp_remote_locat01.png "scp 远程拷贝文件到本地")
+![scp 远程拷贝文件到本地](/img/linux_command/linux_scp/scp_remote_locat01.png "scp 远程拷贝文件到本地")
 
 #### 从远处复制目录到本地
 
@@ -98,7 +98,7 @@ demo:
 scp -r dafei@192.168.1.87:/data/www/test2 /data/www/test/
 ```
 
-![scp 远程拷贝目录到本地](/img/linux_command01_2017_1224/linux_scp/scp_remote_locat02.png "scp 远程拷贝目录到本地")
+![scp 远程拷贝目录到本地](/img/linux_command/linux_scp/scp_remote_locat02.png "scp 远程拷贝目录到本地")
 
 
 

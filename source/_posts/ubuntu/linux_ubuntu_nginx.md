@@ -15,7 +15,7 @@ service nginx restart
 /etc/init.d/nginx start
 ```
 
-![ubuntu nginx start](/img/linux_ubuntu_nginx/nginx_start.png "ubuntu nginx start")
+![ubuntu nginx start](/img/ubuntu/nginx/nginx_start.png "ubuntu nginx start")
 
 ### 查看nginx配置文件目录
 
@@ -25,7 +25,7 @@ nginx -t               【返回结果包含配置文件目录】
 cat /etc/nginx/nginx.conf
 ```
 
- ![nginx 安装位置](/img/linux_ubuntu_nginx/nginx_server.png "nginx 安装位置")
+ ![nginx 安装位置](/img/ubuntu/nginx/nginx_server.png "nginx 安装位置")
 
 
 

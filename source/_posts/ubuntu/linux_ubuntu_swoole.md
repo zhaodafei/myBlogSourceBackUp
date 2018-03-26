@@ -88,7 +88,7 @@ cp /data/server/php7/lib/php/extensions/no-debug-non-zts-20151012/swoole.so  /us
 
 在phpinfo页面可以看到关于swoole的选项，说明安装成功
 
-![swoole 安装成功](/img/linux_ubuntu_swoole/swoole_success.png "swoole 安装成功")
+![swoole 安装成功](/img/ubuntu/swoole/swoole_success.png "swoole 安装成功")
 
 
 

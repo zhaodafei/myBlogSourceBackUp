@@ -12,7 +12,7 @@ sudo apt-get install redis-server
 redis-server
 ```
 
-![redis install](/img/linux_ubuntu_redis/redis_install.png "redis install")
+![redis install](/img/ubuntu/redis/redis_install.png "redis install")
 
 ### 检查redis 进程
 
@@ -20,11 +20,11 @@ redis-server
 ps -aux|grep redis  
 ```
 
-![redis server](/img/linux_ubuntu_redis/reids_server.png "redis server")
+![redis server](/img/ubuntu/redis/reids_server.png "redis server")
 
 ### 终端输入：redis-cli 测试redis是否成功
 
-![redis-cli](/img/linux_ubuntu_redis/redis_cli.png "redis-cli")
+![redis-cli](/img/ubuntu/redis/redis_cli.png "redis-cli")
 
 ### redis 设置密码
 
@@ -40,7 +40,7 @@ sudo vi /etc/redis/redis.conf
 # bind 127.0.0.1  
 ```
 
- ![redis pwd remote](/img/linux_ubuntu_redis/redis_pwd_remote.png "redis pwd remote")
+ ![redis pwd remote](/img/ubuntu/redis/redis_pwd_remote.png "redis pwd remote")
 
 ### 修改后重启redis
 
@@ -48,11 +48,11 @@ sudo vi /etc/redis/redis.conf
 sudo /etc/init.d/redis-server restart  
 ```
 
-![redis restart](/img/linux_ubuntu_redis/redis_restart.png  "redis restart")
+![redis restart](/img/ubuntu/redis/redis_restart.png  "redis restart")
 
 ### 记得使用密码登录奥！！！
 
-![redis login](/img/linux_ubuntu_redis/redis_login.png  "redis login")
+![redis login](/img/ubuntu/redis/redis_login.png  "redis login")
 
 ### 卸载redis
 
@@ -73,7 +73,7 @@ cd redis-4.0.8/
 make
 ```
 
-![redis02 install](/img/linux_ubuntu_redis/redis02_install.png  "redis02 install")
+![redis02 install](/img/ubuntu/redis/redis02_install.png  "redis02 install")
 
 ### 启动redis
 make完后 redis-4.0.8目录下会出现编译后的redis服务程序redis-server,还有用于测试的客户端程序redis-cli,两个程序位于安装目录 src 目录下，下面启动redis服务.
@@ -83,7 +83,7 @@ cd src/
 ./redis-server 
 ```
 
-![redis02 start](/img/linux_ubuntu_redis/redis02_start.png  "redis02 start")
+![redis02 start](/img/ubuntu/redis/redis02_start.png  "redis02 start")
 
 ### redis设置密码
 
@@ -99,7 +99,7 @@ vi redis.conf
 # bind 127.0.0.1  
 ```
 
- ![redis02 pwd remote](/img/linux_ubuntu_redis/redis_pwd_remote.png "redis02 pwd remote")
+ ![redis02 pwd remote](/img/ubuntu/redis/redis_pwd_remote.png "redis02 pwd remote")
 
 ### 修改后启动redis
 
@@ -107,7 +107,7 @@ vi redis.conf
 src/redis-server ./redis.conf   【指定配置文件启动】
 ```
 
-![redis02 pwd login](/img/linux_ubuntu_redis/redis02_login.png "redis02 pwd login")
+![redis02 pwd login](/img/ubuntu/redis/redis02_login.png "redis02 pwd login")
 
 ### 设置 reids 后台启动
 
@@ -124,7 +124,7 @@ src/redis-server ./redis.conf   【指定配置文件启动】
 ./redis-cli -h 127.0.0.1 -a redis_pwd_123456 -p 6379 shutdown
 ```
 
-![redis02 backend start](/img/linux_ubuntu_redis/redis02_backend_start.png "redis02 backend start")
+![redis02 backend start](/img/ubuntu/redis/redis02_backend_start.png "redis02 backend start")
 
 
 

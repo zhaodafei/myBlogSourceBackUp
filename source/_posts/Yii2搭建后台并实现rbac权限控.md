@@ -23,7 +23,7 @@ title: YII2搭建后台并实现rbac权限控制
             'charset' => 'utf8',
         ],
 ```
-<img src="/img/yii2_2017_12_10/mysql_config.png" alt="数据配置">
+<img src="/img/Yii2/mysql_config.png" alt="数据配置">
 
 ### 使用composer安装yii2-admin
 
@@ -115,7 +115,7 @@ return [
 <Your domain name>/index.php?r=admin/assignment
 ```
 
-<img src="/img/yii2_2017_12_10/yii2_admin_install_end.png" alt="yii2-admin 安装完成">
+<img src="/img/Yii2/yii2_admin_install_end.png" alt="yii2-admin 安装完成">
 
 ### 配置授权demo
 
@@ -143,35 +143,35 @@ return [
 
 在路由列表中，添加book各个节点路由由表添加至右侧可分配路由列表中，如下:
 
-<img src="/img/yii2_2017_12_10/book_route.png" alt="路由列表 图书">
+<img src="/img/Yii2/book_route.png" alt="路由列表 图书">
 
 在权限列表=》新增权限，填好后提交，然后填的路由规则即可，如下：
 
-<img src="/img/yii2_2017_12_10/authority_add_01.png" alt="权限列表 新增权限">
+<img src="/img/Yii2/authority_add_01.png" alt="权限列表 新增权限">
 
-<img src="/img/yii2_2017_12_10/authority_add_03.png" alt="权限列表 新增权限的对应路由">
+<img src="/img/Yii2/authority_add_03.png" alt="权限列表 新增权限的对应路由">
 
-<img src="/img/yii2_2017_12_10/authority_add_04.png" alt="权限列表">
+<img src="/img/Yii2/authority_add_04.png" alt="权限列表">
 
 ### 添加角色并分配权限
 
-<img src="/img/yii2_2017_12_10/role_add_01.png" alt="角色列表 新增角色">
+<img src="/img/Yii2/role_add_01.png" alt="角色列表 新增角色">
 
-<img src="/img/yii2_2017_12_10/role_add_02.png" alt="角色列表 新增角色对应的权限">
+<img src="/img/Yii2/role_add_02.png" alt="角色列表 新增角色对应的权限">
 
-<img src="/img/yii2_2017_12_10/role_add_03.png" alt="角色列表">
+<img src="/img/Yii2/role_add_03.png" alt="角色列表">
 
 ### 分配角色
 
 手动注册用户，我这里注册admin和test进行测试。其中admin为管理员，test为一般用户
 
-<img src="/img/yii2_2017_12_10/register_user.png" alt="分配列表 00">
+<img src="/img/Yii2/register_user.png" alt="分配列表 00">
 
-<img src="/img/yii2_2017_12_10/assignments_list_01.png" alt="分配列表 list 01">
+<img src="/img/Yii2/assignments_list_01.png" alt="分配列表 list 01">
 
-<img src="/img/yii2_2017_12_10/assignments_list_02.png" alt="分配列表 add 02">
+<img src="/img/Yii2/assignments_list_02.png" alt="分配列表 add 02">
 
-<img src="/img/yii2_2017_12_10/assignments_list_03.png" alt="分配列表 add 03">
+<img src="/img/Yii2/assignments_list_03.png" alt="分配列表 add 03">
 
 ## <font color="red">！！！测试权限之前</font>
 
@@ -255,7 +255,7 @@ composer require dmstr/yii2-adminlte-asset "^2.1"
         ]
 ```
 
-<img src="/img/yii2_2017_12_10/yii2_adminlte_install_end.png" alt="yii2-adminlte 安装完成">
+<img src="/img/Yii2/yii2_adminlte_install_end.png" alt="yii2-adminlte 安装完成">
 
 ### 配置数据库，登录
 
@@ -348,7 +348,7 @@ server {
 
 我们先访问路由页面 /admin/route ，尽可能的把左侧的全部选中，然后移动到右侧，并记得给当前用户分配相关的可访问权限。
 
-<img src="/img/yii2_2017_12_10/adminLTE_route_all.png" alt="yii2-adminlte 所有路由">
+<img src="/img/Yii2/adminLTE_route_all.png" alt="yii2-adminlte 所有路由">
 
 
 
@@ -371,7 +371,7 @@ server {
 添加界面如下：
 ```
 
-<img src="/img/yii2_2017_12_10/adminLTE_menu_add_01.png" alt="yii2-adminlte 添加菜单01">
+<img src="/img/Yii2/adminLTE_menu_add_01.png" alt="yii2-adminlte 添加菜单01">
 
 ```
 一、例如添加一级菜单"权限管理"，按照如下填写：
@@ -440,7 +440,7 @@ server {
 具体如下
 ```
 
-<img src="/img/yii2_2017_12_10/adminLTE_menu_add_02.png" alt="yii2-adminlte 添加菜单02">
+<img src="/img/Yii2/adminLTE_menu_add_02.png" alt="yii2-adminlte 添加菜单02">
 
 ### 左侧菜单展示
 
@@ -481,16 +481,16 @@ server {
         );
 ```
 
-<img src="/img/yii2_2017_12_10/adminLTE_left.png" alt="yii2-adminlte 左侧菜单">
+<img src="/img/Yii2/adminLTE_left.png" alt="yii2-adminlte 左侧菜单">
 
 ### 整合完毕后存在问题（原因是 yii2-admin 2.0版本）
 
 一、菜单小图标并控制菜单显示： 
 我们在创建菜单的时候，没填写的"数据"一栏，我们填写 <a href="http://www.runoob.com/font-awesome/fontawesome-tutorial.html"><font color="red">Font Awesome</font></a> 从这里面选择图标，例如在品牌图标中 使用这个是	fa fa-android  ；我们在 菜单“数据”一栏应该写 android，如图：
-<img src="/img/yii2_2017_12_10/bug_menu_icon.png" alt="bug 图标填写错误">
+<img src="/img/Yii2/bug_menu_icon.png" alt="bug 图标填写错误">
 
 二、菜单列表中父级一直添加不上 ，父级名意图提示样式会跑到最左侧，路由意图样式会跑到最左侧（yii2-admin 版本1.0没有此问题）
-<img src="/img/yii2_2017_12_10/bug_menu_add_menu.png" alt="bug 新增菜单样式错误">
+<img src="/img/Yii2/bug_menu_add_menu.png" alt="bug 新增菜单样式错误">
 
 解决办法：
 
@@ -611,8 +611,8 @@ php composer.phar require --prefer-dist yiisoft/yii2-jui
     ?>
 ```
 
-<img src="/img/yii2_2017_12_10/bug_menu_add_menu_ok_01.png" alt="bug 新增菜单父级改好1">
+<img src="/img/Yii2/bug_menu_add_menu_ok_01.png" alt="bug 新增菜单父级改好1">
 
-<img src="/img/yii2_2017_12_10/bug_menu_add_menu_ok_02.png" alt="bug 新增菜单父级改好2">
+<img src="/img/Yii2/bug_menu_add_menu_ok_02.png" alt="bug 新增菜单父级改好2">
 
-<img src="/img/yii2_2017_12_10/bug_menu_add_menu_ok_03.png" alt="bug 新增菜单父级改好3">
+<img src="/img/Yii2/bug_menu_add_menu_ok_03.png" alt="bug 新增菜单父级改好3">

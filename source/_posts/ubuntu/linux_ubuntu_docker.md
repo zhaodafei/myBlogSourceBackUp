@@ -9,7 +9,7 @@ title: Linux ubuntu docker
 uname -r
 ```
 
-![获取docker安装包报错](/img/linux_ubuntu_docker/docker_get_error.png)
+![获取docker安装包报错](/img/ubuntu/docker/docker_get_error.png)
 
 系统版本没有问题，docker安装一直包这错。试一下docker命令，检查镜像信息
 
@@ -19,7 +19,7 @@ docker images
 apt-get install docker.io
 ```
 
-![根据系统提示安装docker](/img/linux_ubuntu_docker/docker_instal.png)
+![根据系统提示安装docker](/img/ubuntu/docker/docker_instal.png)
 
 ### 查看docker版本
 
@@ -29,7 +29,7 @@ docker version
 sudo docker run hello-world    【确认docker是否安装成功】
 ```
 
-![却docker是否安装成功](/img/linux_ubuntu_docker/docker_v.png)
+![却docker是否安装成功](/img/ubuntu/docker/docker_v.png)
 
 -----------------------到这里docker已经安装完成------------------------
 
@@ -63,7 +63,7 @@ docker-compose stop App1  #停止App1
 docker-compose -f docker-compose.yml down    停止并删除容器、网络、镜像、数据卷
 ```
 
-![docker-compose](/img/linux_ubuntu_docker/docker_compose.png)
+![docker-compose](/img/ubuntu/docker/docker_compose.png)
 
 -----------------------到这里docker-compose已经安装完成------------------------
 
@@ -103,7 +103,7 @@ gem 'rails', '5.0.0.1'
 touch Gemfile.lock
 ```
 
-![docker-compose Rails02](/img/linux_ubuntu_docker/docker_compose_Rails02.png)
+![docker-compose Rails02](/img/ubuntu/docker/docker_compose_Rails02.png)
 
 #### 创建一个 docker-compose.yml ，包含以下内容
 
@@ -134,7 +134,7 @@ docker-compose run web rails new . --force --database=postgresql
 
 查看现在的目录：  ls -l   
 
-![docker-compose Rails](/img/linux_ubuntu_docker/docker_compose_Rails03.png)
+![docker-compose Rails](/img/ubuntu/docker/docker_compose_Rails03.png)
 
 #### 修改权限，重建 Docker 镜像
 
@@ -143,7 +143,7 @@ sudo chown -R $USER:$USER .
 docker-compose build
 ```
 
-![docker-compose Rails](/img/linux_ubuntu_docker/docker_compose_Rails04.png)
+![docker-compose Rails](/img/ubuntu/docker/docker_compose_Rails04.png)
 
 #### 修改 config/database.yml 文件
 
@@ -174,7 +174,7 @@ test:
 
 ```
 
-![docker-compose Rails](/img/linux_ubuntu_docker/docker_compose_Rails05.png)
+![docker-compose Rails](/img/ubuntu/docker/docker_compose_Rails05.png)
 
 #### 启动应用
 
@@ -182,7 +182,7 @@ test:
 docker-compose up
 ```
 
-![docker-compose Rails](/img/linux_ubuntu_docker/docker_compose_Rails06.png)
+![docker-compose Rails](/img/ubuntu/docker/docker_compose_Rails06.png)
 
 #### 创建数据库，在另一个终端中，执行
 
@@ -190,14 +190,14 @@ docker-compose up
 docker-compose run web rake db:create
 ```
 
-![docker-compose Rails](/img/linux_ubuntu_docker/docker_compose_Rails07.png)
+![docker-compose Rails](/img/ubuntu/docker/docker_compose_Rails07.png)
 
 用浏览器访问 [http://localhost:3000](http://localhost:3000/) ，你会看到 Rails 的欢迎信息：
 
-![docker-compose Rails](/img/linux_ubuntu_docker/docker_compose_Rails.png)
+![docker-compose Rails](/img/ubuntu/docker/docker_compose_Rails.png)
 
 #### If you are using [Docker Machine](https://docs.docker.com/machine/overview/), then `docker-machine ip MACHINE_VM` returns the Docker host IP address, to which you can append the port (`<Docker-Host-IP>:3000`).
 
-![docker-compose Rails](/img/linux_ubuntu_docker/docker_compose_Rails08.png)
+![docker-compose Rails](/img/ubuntu/docker/docker_compose_Rails08.png)
 
 [Compose and Rail 官方文档](https://docs.docker.com/compose/rails/#rebuild-the-application "docker-compose 安装Rails官方文档")

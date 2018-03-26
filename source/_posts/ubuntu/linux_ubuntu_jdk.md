@@ -25,9 +25,9 @@ sudo apt-get install oracle-java8-installer
 
 接下来会出现连个界面，选择ok、yes 即可
 
-![jdk1.8 install](/img/jdk/installer.png "jdk1.8 install")
+![jdk1.8 install](/img/ubuntu/jdk/installer.png "jdk1.8 install")
 
-![jdk1.8 install](/img/jdk/installer.png "jdk1.8 install02")
+![jdk1.8 install](/img/ubuntu/jdk/installer.png "jdk1.8 install02")
 
 #### 查看java版本
 
@@ -41,7 +41,7 @@ java -version
 sudo apt-get remove openjdk*
 ```
 
-![uninstall](/img/jdk/uninstall.png "uninstall")
+![uninstall](/img/ubuntu/jdk/uninstall.png "uninstall")
 
 ### 直接下载 jdk 压缩包方式安装
 
@@ -49,7 +49,7 @@ sudo apt-get remove openjdk*
 
 [jdk1.8 官网地址](http://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-2177648.html "jdk1.8 官网地址")    选择相应的系统 .tar.gz 包，然后用ssh上传到服务器【提醒：不要在服务器直接下载，否则解压会出错】
 
-![tar Download error](/img/jdk/tar_download_error.png "tar Download error")
+![tar Download error](/img/ubuntu/jdk/tar_download_error.png "tar Download error")
 
 #### 解压缩，放到指定目录
 
@@ -57,7 +57,7 @@ sudo apt-get remove openjdk*
 sudo tar -zxvf jdk-8u161-linux-x64.tar.gz -C /usr/lib/jvm
 ```
 
-![tar jdk](/img/jdk/tar_jdk.png "tar jdk")
+![tar jdk](/img/ubuntu/jdk/tar_jdk.png "tar jdk")
 
 #### 修改环境变量
 
@@ -75,7 +75,7 @@ export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
 export PATH=${JAVA_HOME}/bin:$PATH  
 ```
 
-![jdk environment](/img/jdk/jdk_environment.png "jdk environment")
+![jdk environment](/img/ubuntu/jdk/jdk_environment.png "jdk environment")
 
 #### 设置系统默认 jdk 版本
 
@@ -96,7 +96,7 @@ sudo update-alternatives --config java
 java -version
 ```
 
-![java version](/img/jdk/java_version.png "java version" )
+![java version](/img/ubuntu/jdk/java_version.png "java version" )
 
 
 

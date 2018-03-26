@@ -11,7 +11,7 @@ sudo apt install mysql-client
 sudo apt install libmysqlclient-dev
 ```
 
-![mysql install](/img/linux_ubunbu_mysql/fast_mysql_install.png "mysql install")
+![mysql install](/img/ubuntu/mysql/fast_mysql_install.png "mysql install")
 
 安装完用以下命测试,出现图中说明 OK
 
@@ -19,7 +19,7 @@ sudo apt install libmysqlclient-dev
 sudo netstat -tap | grep mysql
 ```
 
-![mysql check](/img/linux_ubunbu_mysql/fast_mysql_check.png "mysql check")
+![mysql check](/img/ubuntu/mysql/fast_mysql_check.png "mysql check")
 
 ### 进入 mysql
 
@@ -27,7 +27,7 @@ sudo netstat -tap | grep mysql
  mysql -uroot -p   然后回车输入密码
 ```
 
-![show databases](/img/linux_ubunbu_mysql/fast_show_databases.png "show databases")
+![show databases](/img/ubuntu/mysql/fast_show_databases.png "show databases")
 
 ### 设置 mysql 运行远程访问
 
@@ -41,7 +41,7 @@ sudo vi /etc/mysql/mysql.conf.d/mysqld.cnf
 4、exit; 退出 mysql服务
 5、重启服务： service mysql restart
 
-![remote connection](/img/linux_ubunbu_mysql/fast_remote_connection.png "remote connection")
+![remote connection](/img/ubuntu/mysql/fast_remote_connection.png "remote connection")
 
 ### 卸载mysql
 
@@ -85,7 +85,7 @@ sudo cp support-files/mysql.server  /etc/init.d/mysql.server
 
 ```
 
-![mysql download](/img/linux_ubunbu_mysql/mysql_download.png "mysql download")
+![mysql download](/img/ubuntu/mysql/mysql_download.png "mysql download")
 
 ### 初始化数据库
 
@@ -110,7 +110,7 @@ Alternatively you can run:
 
 ```
 
-![mysql install](/img/linux_ubunbu_mysql/mysql_install.png "mysql install")
+![mysql install](/img/ubuntu/mysql/mysql_install.png "mysql install")
 
 ### 启动 MySQL 服务
 
@@ -148,7 +148,7 @@ Logging to '/usr/local/mysql/data/ubuntu.err'.
 
 ```
 
-![mysql start](/img/linux_ubunbu_mysql/mysql_start.png "mysql start")
+![mysql start](/img/ubuntu/mysql/mysql_start.png "mysql start")
 
 ### 查看 MySQL 服务是否启动
 
@@ -162,7 +162,7 @@ mysqld  41934 managers   10u  IPv6 328086      0t0  TCP *:mysql (LISTEN)
 root@ubuntu:/usr/local/mysql# 
 ```
 
-![mysql check](/img/linux_ubunbu_mysql/mysql_check.png "mysql check")
+![mysql check](/img/ubuntu/mysql/mysql_check.png "mysql check")
 
 ### 配置环境变量
 
@@ -180,7 +180,7 @@ export PATH=$MYSQL_HOME/bin:$PATH
 再在shell下运行如下命令 :export $MYSQL_HOME
 显示如下：
 
-![mysql check](/img/linux_ubunbu_mysql/mysql_check.png "mysql check")
+![mysql check](/img/ubuntu/mysql/mysql_check.png "mysql check")
 
 
 ### 登录mysql
@@ -190,7 +190,7 @@ export PATH=$MYSQL_HOME/bin:$PATH
 默认密码为空
 ```
 
-![mysql login](/img/linux_ubunbu_mysql/mysql_login.png "mysql login")
+![mysql login](/img/ubuntu/mysql/mysql_login.png "mysql login")
 
 
 
@@ -211,7 +211,7 @@ update mysql.user set  host='%' where user='root' and host='localhost';
 flush privileges;  【刷新权限，必须】
 ```
 
-![mysql 远程连接](/img/linux_ubunbu_mysql/remote_connection.png "mysql 远程连接")
+![mysql 远程连接](/img/ubuntu/mysql/remote_connection.png "mysql 远程连接")
 
 ### mysql 命令
 

@@ -8,7 +8,7 @@ title: linux-DDU 移动或重命名文件/目录 -mv
 ```
 mv file_1.txt /home/destination_file/
 ```
-<img src="/img/linux_command01_2017_1224/linux_mv/mv.png" alt="linux mv">
+<img src="/img/linux_command/linux_mv/mv.png" alt="linux mv">
 ### 移动多个文件
 
 如果想一次移动多个文件，我们可以将他们放在一行并用空格分开。
@@ -19,7 +19,7 @@ mv file_2.txt file_3.txt file_4.txt /home/destination_file/
 mv file_{2,3,4}.txt /home/destination_file/
 ```
 
-<img src="/img/linux_command01_2017_1224/linux_mv/mv_much.png" alt="linux mv 移动多个文件夹">
+<img src="/img/linux_command/linux_mv/mv_much.png" alt="linux mv 移动多个文件夹">
 
 如果你的文件夹有规律可循那么你就可以使用通配符，比如，为了移除所有以.txt为扩展名的文件夹，我们可以使用下面的命令：
 
@@ -27,7 +27,7 @@ mv file_{2,3,4}.txt /home/destination_file/
 mv *.txt /home/destination_file/
 ```
 
-<img src="/img/linux_command01_2017_1224/linux_mv/mv_much02.png" alt="linux mv 移动多个文件夹">
+<img src="/img/linux_command/linux_mv/mv_much02.png" alt="linux mv 移动多个文件夹">
 
 ### 移动目录
 
@@ -37,7 +37,7 @@ mv *.txt /home/destination_file/
 mv /soruce_file/ /home/destination_file/
 ```
 
-<img src="/img/linux_command01_2017_1224/linux_mv/mv_directory.png" alt="linux mv 移动目录">
+<img src="/img/linux_command/linux_mv/mv_directory.png" alt="linux mv 移动目录">
 
 ### 重命名文件或目录
 
@@ -49,7 +49,7 @@ mv file_1.txt file_new1.txt
 mv /home/soruce_file/file_2.txt /home/soruce_file/file_new2.txt
 ```
 
-<img src="/img/linux_command01_2017_1224/linux_mv/mv_re_directory.png" alt="linux mv 重命名文件或目录">
+<img src="/img/linux_command/linux_mv/mv_re_directory.png" alt="linux mv 重命名文件或目录">
 
 ### 重命名目录
 
@@ -58,7 +58,7 @@ mv /home/soruce_file/file_2.txt /home/soruce_file/file_new2.txt
 mv /home/soruce_file/ /home/soruce_file2/
 ```
 
-<img src="/img/linux_command01_2017_1224/linux_mv/mv_re_directory02.png" alt="linux mv 重命名文目录">
+<img src="/img/linux_command/linux_mv/mv_re_directory02.png" alt="linux mv 重命名文目录">
 
 ### 打印移动信息
 
@@ -68,7 +68,7 @@ mv /home/soruce_file/ /home/soruce_file2/
 mv -v  /home/soruce_file2/*.txt /home/destination_file/
 ```
 
-<img src="/img/linux_command01_2017_1224/linux_mv/mv_v.png" alt="linux mv 打印移动信息">
+<img src="/img/linux_command/linux_mv/mv_v.png" alt="linux mv 打印移动信息">
 
 ### 使用交互模式
 
@@ -81,7 +81,7 @@ mv -i /home/soruce_file2/file_3.txt /home/destination_file/
 
 这个提示会让我们知道目标位置处file_3.txt的存在。如果我们按y键，那么那个文件将会被删除，否则不会
 
-<img src="/img/linux_command01_2017_1224/linux_mv/mv_i.png" alt="linux mv 移动文件是否覆盖">
+<img src="/img/linux_command/linux_mv/mv_i.png" alt="linux mv 移动文件是否覆盖">
 
 ### 使用更新选项
 
@@ -91,7 +91,7 @@ mv -i /home/soruce_file2/file_3.txt /home/destination_file/
 mv -uv /home/soruce_file2/*.txt /home/destination_file/
 ```
 
-<img src="/img/linux_command01_2017_1224/linux_mv/mv_u.png" alt="linux mv 移动文件最新是否覆盖">
+<img src="/img/linux_command/linux_mv/mv_u.png" alt="linux mv 移动文件最新是否覆盖">
 
 ### 不要覆盖任何已存在的文件
 
@@ -101,7 +101,7 @@ mv -uv /home/soruce_file2/*.txt /home/destination_file/
 mv -vn /home/soruce_file2/file_new_time2.txt  /home/destination_file/
 ```
 
-<img src="/img/linux_command01_2017_1224/linux_mv/rm_n.png" alt="linux mv 移动文件最新是否覆盖">
+<img src="/img/linux_command/linux_mv/rm_n.png" alt="linux mv 移动文件最新是否覆盖">
 
 ### 复制时创建备份
 
@@ -111,7 +111,7 @@ mv -vn /home/soruce_file2/file_new_time2.txt  /home/destination_file/
  mv -bv /home/soruce_file2/file_new_time2.txt  /home/destination_file/
 ```
 
-<img src="/img/linux_command01_2017_1224/linux_mv/mv_b.png" alt="linux mv 移动文件并备份">
+<img src="/img/linux_command/linux_mv/mv_b.png" alt="linux mv 移动文件并备份">
 
 ### 无条件覆盖已经存在的文件
 
