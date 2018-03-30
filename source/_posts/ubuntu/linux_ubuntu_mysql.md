@@ -58,181 +58,160 @@ dpkg -l |grep ^rc|awk '{print $2}' |sudo xargs dpkg -P
 
 ## mysql 手动安装
 
+### 编译环境
+
+```
+sudo apt install make cmake gcc g++ perl bison libaio-dev libncurses5 libncurses5-dev libnuma-dev
+
+```
+
 ### 下载【注意版本】
 
 ```
-wget http://ftp.ntu.edu.tw/MySQL/Downloads/MySQL-5.6/mysql-5.6.39-linux-glibc2.12-x86_64.tar.gz
-wget ftp://mirror.switch.ch/mirror/mysql/Downloads/MySQL-5.6/mysql-5.6.38.tar.gz
-wget ftp://mirror.switch.ch/mirror/mysql/Downloads/MySQL-5.6/mysql-5.6.39.tar.gz
+安装版本 5.7.21；如果是虚拟机建议内容 4G ;
 
-解压到你指定的目录，我这里选择  /usr/local/ 目录
-tar -zxvf mysql-5.6.39-linux-glibc2.12-x86_64.tar.gz -C /usr/local/
-mv mysql-5.6.39-linux-glibc2.12-x86_64 mysql
-
-
-修改权限【我的用户是managers】
-
-sudo groupadd mysql #添加组
-##sudo useradd -g mysql mysql -s /bin/false #创建用户mysql并加入到mysql组，不允许mysql用户直接
-sudo chown -R mysql:mysql /usr/local/mysql
+wget https://dev.mysql.com/get/Downloads/MySQL-5.7/mysql-boost-5.7.21.tar.gz
+【解压到你指定的目录，我这里选择 /data/server/ 】
+tar zxvf mysql-boost-5.7.21.tar.gz -C /data/server/
+mv mysql-5.7.21 mysql
 cd mysql
-
-
-这一步先不要做;
-复制文件到init.d下，使机子开机时自动启动mysql服务器。
-sudo cp support-files/mysql.server  /etc/init.d/mysql.server
-
-
 ```
 
 ![mysql download](/img/ubuntu/mysql/mysql_download.png "mysql download")
 
-### 初始化数据库
+### 编译安装
 
 ```
-sudo ./scripts/mysql_install_db --user=managers
+cmake . -DBUILD_CONFIG=mysql_release \
+-DCPACK_MONOLITHIC_INSTALL=ON \
+-DCMAKE_INSTALL_PREFIX=/data/server/mysql \
+-DDEFAULT_CHARSET=utf8 \
+-DDEFAULT_COLLATION=utf8_general_ci \
+-DMYSQL_UNIX_ADDR=/data/server/mysql/mysql.sock \
+-DMYSQL_TCP_PORT=3306 \
+-DMYSQLX_UNIX_ADDR=/data/server/mysql/mysqlx.sock \
+-DMYSQL_DATADIR=/data/server/mysql/data \
+-DSYSCONFDIR=/data/server/mysql/etc \
+-DWITH_BOOST=/data/server/mysql/boost/boost_1_59_0
 
-结束后，注意看英文提示
-
-To start mysqld at boot time you have to copy
-support-files/mysql.server to the right place for your system
-
-PLEASE REMEMBER TO SET A PASSWORD FOR THE MySQL root USER !
-To do so, start the server, then issue the following commands:
-
-  ./bin/mysqladmin -u root password 'new-password'
-  ./bin/mysqladmin -u root -h ubuntu password 'new-password'
-
-Alternatively you can run:
-
-  ./bin/mysql_secure_installation
+make && make install
 
 
+注意这一项：这个是你 boost 下载好的目录，我的这个版本的 MySQL 解压后对应的目录中有这个
+-DWITH_BOOST=/data/server/mysql/boost/boost_1_59_0
+
+make 的过程比较耗时；耐心等待，make install 就很快啦
+官方预编译配置参数：
+https://dev.mysql.com/doc/refman/5.7/en/source-configuration-options.html#cmake-general-options
+https://dev.mysql.com/doc/refman/5.7/en/source-configuration-options.html#cmake-general-options
 ```
 
-![mysql install](/img/ubuntu/mysql/mysql_install.png "mysql install")
+这个过程时间比较长…………
 
-### 启动 MySQL 服务
+![mysql make install](/img/ubuntu/mysql/mysql_make.png "mysql make install")
 
-```
-启动命令：【注意用户，在 managers 用户下】
-/usr/local/mysql/support-files/mysql.server start
+![mysql exception_01](/img/ubuntu/mysql/exception_01.png "mysql exception_01")
 
-修改mysql目录下的my.cnf配置文件：vi my.cnf
-找到[mysqld]模块,去掉注释#，添加如下内容：
+### 初始化设置 mysql 
 
-basedir=/usr/local/mysql
-datadir=/usr/local/mysql/data
-port=3306
-
-这里要是不修改会报错
-******************************************************
-
-错误一：
-without updating files
-或者报错：
-Enter password: 
-ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
-
-修改mysql目录下的my.cnf配置文件：vi my.cnf
-找到[mysqld]模块,去掉注释#，添加如下内容：
-
-basedir=/usr/local/mysql
-datadir=/usr/local/mysql/data
-port=3306
-
-错误二：
-Logging to '/usr/local/mysql/data/ubuntu.err'.
-. * The server quit without updating PID file (/usr/local/mysql/data/ubuntu.pid).
-解决方法:切换到刚才设置的用户 managers ，然后启动服务：
+#### 创建 MySQL 组跟用户
 
 ```
-
-![mysql start](/img/ubuntu/mysql/mysql_start.png "mysql start")
-
-### 查看 MySQL 服务是否启动
-
-```
-sudo lsof -i:3306
-
-如图说明启动成功
-root@ubuntu:/usr/local/mysql# sudo lsof -i:3306
-COMMAND   PID     USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
-mysqld  41934 managers   10u  IPv6 328086      0t0  TCP *:mysql (LISTEN)
-root@ubuntu:/usr/local/mysql# 
+sudo groupadd mysql
+sudo useradd -r -g mysql -s /bin/false mysql
 ```
 
-![mysql check](/img/ubuntu/mysql/mysql_check.png "mysql check")
-
-### 配置环境变量
-
-为了能在shell下使用mysql的bin工具（默认mysql 在shell中不能连接），需要将其配置到/etc/profile里。
-命令如下：   sudo vi /etc/profile
-在上方添加一行：export MYSQL_HOME=/usr/local/mysql
-然后在PATH末尾下添加bin目录,添加 \$MYSQL_HOME/bin:$PATH到PATH末尾
+#### 更改 mysql 目录权限
 
 ```
-export MYSQL_HOME=/usr/local/mysql
-export PATH=$MYSQL_HOME/bin:$PATH
+cd /data/server/mysql
+sudo chown -R mysql .
+sudo chgrp -R mysql .
 ```
 
-保存后退出，运行如下命令，使环境变量生效：source /etc/profile
-再在shell下运行如下命令 :export $MYSQL_HOME
-显示如下：
-
-![mysql check](/img/ubuntu/mysql/mysql_check.png "mysql check")
-
-
-### 登录mysql
+#### 初始化 mysql ， 生成 root 用户临时密码，
 
 ```
-使用root账户登录:    mysql -uroot -p
-默认密码为空
+sudo bin/mysqld --initialize --user=mysql
+
+通过mysqld初始化data目录时，如果使用--initialize选项，则会为'root'@'localhost'用户创建一个随机密码。该密码会打印在控制台，如下所示行中末尾就是临时密码：
+
+2018-03-29T01:10:08.161779Z 1 [Note] A temporary password is generated for root@localhost: xJB.L-TJ)2wB
+
+*****************初始化一个空密码，使用initialize-insecure ****************
+sudo bin/mysqld --initialize-insecure --user=mysql
 ```
 
-![mysql login](/img/ubuntu/mysql/mysql_login.png "mysql login")
+![mysql init](/img/ubuntu/mysql/mysql_init.png "mysql init")
 
-
-
-
-
-### 修改密码
+### 启动 mysql
 
 ```
-set password for  'root'@'localhost' = password('你的密码');
-flush privileges;  【刷新权限，必须】
+support-files/mysql.server start
+bin/mysql -u root -p
+alter user 'root'@'localhost' identified by 'new_password';
+修改完重启mysql 或者 刷新
+support-files/mysql.server stop   或者
+flush privileges;
+
+*************************************************************
+我这里设置密码： 123456 做测试，实际中设置你认为安全的密码
+方法1：alter user 'root'@'localhost' identified by '123456';
+方法2：update user set authentication_string=password('123456') where user='root';
+方法3：set password=password('123456');
+
+这里如果不重新设置密码，系统会一直提示：
+mysql> show databases;
+ERROR 1820 (HY000): You must reset your password using ALTER USER statement before executing this statement.
 
 ```
 
-### 更改 root 账号为所有主机都可以登录
+![mysql 启动](/img/ubuntu/mysql/mysql_pwd.png "mysql 启动")
+
+### 设为系统服务
 
 ```
-update mysql.user set  host='%' where user='root' and host='localhost';
-flush privileges;  【刷新权限，必须】
+cp /data/server/mysql/support-files/mysql.server /etc/init.d/mysqld
+
+systemctl daemon-reload  [重新加载 service 文件]
+systemctl start mysqld
+systemctl stop  mysqld
+systemctl restart mysqld
+
 ```
 
-![mysql 远程连接](/img/ubuntu/mysql/remote_connection.png "mysql 远程连接")
-
-### mysql 命令
+### 创建新用户，并允许远程连接
 
 ```
-/usr/local/mysql/support-files/mysql.server start
-/usr/local/mysql/support-files/mysql.server stop
+命令: 
+GRANT ALL PRIVILEGES ON *.* TO 'username'@'host' IDENTIFIED BY 'new_password' WITH GRANT OPTION; 
 
-MySQL登录命令：
-mysql -uroot -p
+. 点代表所有表
+username 代表你创建的用户名
+host 代表你指定在那台机器可以登录，本地登录就是 localhost ，允许所有远程登录就是 % ；
+new_password 代表该用户的登录密码，密码可以为空，如果是空则改用户可以不需要密码登录
 
-屏蔽权限
-/usr/local/mysql/bin/mysqld_safe --skip-grant-table
+demo:
+新增超级权限并允许远程访问：
+GRANT ALL PRIVILEGES ON *.* TO 'afei2'@'%' IDENTIFIED BY '123456' WITH GRANT OPTION;   
+FLUSH   PRIVILEGES; 
+```
+
+![mysql 远程连接](/img/ubuntu/mysql/mysql_remote_connect.png "mysql 远程连接")
+
+### MySQL 命令
+
+```
+support-files/mysql.server start
+support-files/mysql.server stop
+/data/server/mysql/bin/mysql -u root -p
+
+mysql -h 你登录的ip -u username -P 3306 -p 【远程登录】
+demo： mysql -h 192.168.1.230 -u afei2 -p
 ```
 
 
 
-set password for  'root'@'localhost' = password('qhdroot!@#');
-
-这个命令什么时候执行？？？？？？？
-
-./bin/mysqladmin -u root -h 127.0.0.1 password 'qhdroot!@#'
 
 
 
@@ -241,20 +220,13 @@ set password for  'root'@'localhost' = password('qhdroot!@#');
 
 
 
+ [mysql官方下载地址](https://dev.mysql.com/downloads/mysql/  "mysql官方下载地址")
 
-----------------------------
+ [mysql官方下载地址](http://ftp.ntu.edu.tw/MySQL/Downloads/ "mysql官方下载地址")
 
+ [mysql官方预编译配置参数](https://dev.mysql.com/doc/refman/5.7/en/source-configuration-options.html#cmake-general-options "mysql官方预编译配置参数")
 
-
-
-
-### 
-
-
-
- [mysql官方下载地址](http://ftp.ntu.edu.tw/MySQL/Downloads/"mysql官方下载地址")
-
-
+ [mysql官方手册](https://dev.mysql.com/doc/refman/5.7/en/faqs.html "mysql官方手册")
 
 
 

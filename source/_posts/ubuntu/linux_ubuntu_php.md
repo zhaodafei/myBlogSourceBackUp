@@ -115,6 +115,9 @@ cd php7/
 ```
 
 我的错误
+
+
+
 | Configure Command                       | './configure' '--prefix=/data/server/php7' '--with-gd' '--with-freetype-dir' '--enable-gd-native-ttf' '--enable-mysqlnd' '--with-pdo-mysql=mysqlnd' '--with-openssl' '--with-mcrypt' '--enable-mbstring' '--enable-zip' '--enable-fpm' |
 | --------------------------------------- | ------------------------------------------------------------ |
 | Server API                              | FPM/FastCGI                                                  |
@@ -123,7 +126,6 @@ cd php7/
 | Loaded Configuration File               | (none)        【正常情况这里不应该没有值的，还是之前的编译有问题，请仔细查看<br />                     正常应该是这个值   /data/server/php7/lib/php.ini】 |
 | Scan this dir for additional .ini files | (none)                                                       |
 | Additional .ini files parsed            | (none)                                                       |
-|                                         |                                                              |
 
 
 
@@ -201,6 +203,7 @@ cp /data/server/php7/php.ini-development   /data/server/php7/lib/php.ini
 cp /data/server/php7/etc/php-fpm.conf.default /data/server/php7/etc/php-fpm.conf
 cp /data/server/php7/etc/php-fpm.d/www.conf.default /data/server/php7/etc/php-fpm.d/www.conf
 
+官方这里拷贝文件有点不一样，注意一下
 ```
 
 ![php7 php.ini](/img/ubuntu/php/php7_php_ini.png "php7 php.ini")
@@ -290,7 +293,10 @@ php启动命令
 
 
 
- [PHP官网下载地址](http://www.php.net/downloads.php"PHP官网下载地址")
+ [PHP官网下载地址](http://www.php.net/downloads.php)
+
+[PHP官方安装文档](http://php.net/manual/zh/install.unix.nginx.php "PHP 官方安装文档")
+
 
 
 

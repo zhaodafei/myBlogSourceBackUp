@@ -132,7 +132,7 @@ src/redis-server ./redis.conf   【指定配置文件启动】
 
 
 
- [redis官网下载地址](http://download.redis.io/releases/"redis官网下载地址")
+ [redis官网下载地址](http://download.redis.io/releases/)
 
 
 
