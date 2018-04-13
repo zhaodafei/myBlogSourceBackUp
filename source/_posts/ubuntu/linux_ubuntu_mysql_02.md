@@ -54,6 +54,22 @@ make && make install
 
 编译参数： https://dev.mysql.com/doc/refman/5.6/en/source-configuration-options.html
 编译参数： https://dev.mysql.com/doc/refman/5.6/en/source-configuration-options.html
+
+cmake \
+-DCMAKE_INSTALL_PREFIX=/data/server/mysql \   安装路径
+-DMYSQL_DATADIR=/data/server/mysql/data \         文件存放路径
+-DSYSCONFDIR=/etc \
+-DWITH_MYISAM_STORAGE_ENGINE=1 \
+-DWITH_INNOBASE_STORAGE_ENGINE=1 \
+-DWITH_MEMORY_STORAGE_ENGINE=1 \
+-DWITH_READLINE=1 \
+-DMYSQL_UNIX_ADDR=/tmp/mysql/mysql.sock \
+-DMYSQL_TCP_PORT=3306 \
+-DENABLED_LOCAL_INFILE=1 \
+-DWITH_PARTITION_STORAGE_ENGINE=1 \
+-DEXTRA_CHARSETS=all \
+-DDEFAULT_CHARSET=utf8 \
+-DDEFAULT_COLLATION=utf8_general_ci
 ```
 
 ![mysql make](/img/ubuntu/mysql/5.6/mysql_make.png "mysql make")
