@@ -58,6 +58,7 @@ root@ubuntu:/data/server#
  gem install bundler
 安装Rails
  gem install rails  5.2.0             # 可以到rails官网查看最新版本号
+ 或者使用： gem install rails          #自己默认选择最新版
 查看版本
  rails -v 
  
@@ -156,6 +157,8 @@ ruby bin/rails server webrick -e production -b 0.0.0.0 -p3000  #允许远程访�
 默认账户 admin/admin 初次登录需要修改密码，
 
 ![Redmine ok](/img/ubuntu/Redmine_ok.png "Redmine ok")
+
+关机重启后，需要再次运行 source /etc/profile.d/rvm.sh  载入环境
 
 
 

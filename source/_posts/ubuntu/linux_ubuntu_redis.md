@@ -122,6 +122,12 @@ src/redis-server ./redis.conf   【指定配置文件启动】
 /data/server/redis-4.0.8/src/redis-server ./redis.conf   【指定配置文件启动】
 后台启动后关闭命令：
 ./redis-cli -h 127.0.0.1 -a redis_pwd_123456 -p 6379 shutdown
+
+指定密码登录：
+./redis-cli -a redis_pwd_123456
+测试数据：
+set key1 "hello world"
+get key1
 ```
 
 ![redis02 backend start](/img/ubuntu/redis/redis02_backend_start.png "redis02 backend start")

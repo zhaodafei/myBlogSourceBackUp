@@ -211,6 +211,10 @@ cp /data/server/php7/etc/php-fpm.d/www.conf.default /data/server/php7/etc/php-fp
 ### 添加 PHP 启动用户
 
 ```
+PHP 安装默认使用 www 用户，这里根据自己情况添加用户
+groupadd managers
+useradd -r -g managers -s /bin/false managers
+
 设置 PHP 启动用户
 cd /data/server/php7/etc/php-fpm.d
 vi www.conf  修改23、24行，内容如下：

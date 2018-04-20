@@ -98,7 +98,7 @@ sudo chgrp -R mysql .
 ### 初始化数据库
 
 ```
-chmod +x mysql_install_db
+chmod +x mysql_install_db 或者  chmod +x scripts/mysql_install_db
 
 ./scripts/mysql_install_db --basedir=/data/server/mysql --datadir=/data/server/mysql/data --user=mysql
 
@@ -142,10 +142,14 @@ You may edit this file to change server settings
 ### 启动数据库
 
 ```
+chmod +x mysql.server 或者 chmod +x support-files/mysql.server
  ./support-files/mysql.server start
  
- 初始化密码，我这里设置密码： 123456 做测试，实际中设置你认为安全的密码
+初始化密码，我这里设置密码： 123456 做测试，实际中设置你认为安全的密码
   /data/server/mysql/bin/mysqladmin -u root password '123456'
+  
+登录MySQL
+  bin/mysql -u root -p
 ```
 
 ![mysql 启动](/img/ubuntu/mysql/5.6/mysql_pwd.png "mysql 启动")

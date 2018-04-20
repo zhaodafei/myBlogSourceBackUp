@@ -13,7 +13,7 @@ apt-get install libpcre3 libpcre3-dev
 
 cd  /data/server/
 wget https://github.com/swoole/swoole-src/archive/v1.9.1-stable.tar.gz
-tar zxvf v1.9.1-stable.tar.gz
+tar zxvf v1.9.1-stable.tar.gz -C /data/server/
 cd swoole-src-1.9.1-stable
 
 /data/server/php7/bin/phpize
@@ -64,7 +64,7 @@ extension=swoole.so
 ### 重启php-fpm
 
 ```
-插找PHP服务 ps aux | grep php-fpm
+查找PHP服务 ps aux | grep php-fpm
 pkill -9 php
 php启动命令
 /data/server/php7/sbin/php-fpm

@@ -1,7 +1,7 @@
 ---
-title: linux ubuntu15 mysql
+title: linux ubuntu15 mysql5.7
 ---
-### mysql 安装
+### mysql 5.7安装
 
 ### 在终端执行 以下命令
 

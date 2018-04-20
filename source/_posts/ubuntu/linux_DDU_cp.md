@@ -138,7 +138,13 @@ cp --remove-destination -v * /home/destination_file/
 
 <img src="/img/ubuntu/linux_command/linux_cp/cp_remove_destination.png" alt="cp cp_remove_destination.png" title="cp 拷贝前删除目标">
 
+其他：
 
+```
+一般情况下用这个命令 【参数avr】
+cd /home/www/Downloads
+cp -avr * /data/www/
+```
 
 
 
