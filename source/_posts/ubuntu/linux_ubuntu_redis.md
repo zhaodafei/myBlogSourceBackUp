@@ -120,10 +120,13 @@ vi redis.conf
 修改完重启redis：
 src/redis-server ./redis.conf   【指定配置文件启动】
 /data/server/redis-4.0.8/src/redis-server ./redis.conf   【指定配置文件启动】
+/data/server/redis-4.0.8/src/redis-server /data/server/redis-4.0.8/redis.conf   【指定配置文件启动】
 后台启动后关闭命令：
 ./redis-cli -h 127.0.0.1 -a redis_pwd_123456 -p 6379 shutdown
+/data/server/redis-4.0.8/src/redis-cli -h 127.0.0.1 -a redis_pwd_123456 -p 6379 shutdown
 
 指定密码登录：
+/data/server/redis-4.0.8/src/redis-cli -a redis_pwd_123456
 ./redis-cli -a redis_pwd_123456
 测试数据：
 set key1 "hello world"
@@ -139,6 +142,8 @@ get key1
 
 
  [redis官网下载地址](http://download.redis.io/releases/)
+
+ [redis官网安装](http://www.redis.net.cn/tutorial/3503.html)
 
 
 
