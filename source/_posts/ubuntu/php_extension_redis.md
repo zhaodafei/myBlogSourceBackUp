@@ -3,6 +3,8 @@ title: ubuntu16 php7 extension redis
 ---
 ### Extension 之 redis
 
+### 安装redis
+
 ```
 wget https://github.com/nicolasff/phpredis/archive/4.0.0.tar.gz
 wget http://pecl.php.net/get/redis-4.0.0.tgz
@@ -20,7 +22,11 @@ make install
 root@www:/data/server/other_component/phpredis-4.0.0# make install
 Installing shared extensions:     /data/server/php7/lib/php/extensions/no-debug-non-zts-20151012/
 root@www:/data/server/other_component/phpredis-4.0.0# 
+```
 
+### 配置 redis
+
+```
 安装完成后配置【找到 php.ini 的位置添加扩展】：
 vi /etc/php/7.0/cli/php.ini
 vi  /data/server/php7/lib/php.ini  
@@ -32,8 +38,11 @@ extension=redis.so
 cp /data/server/php7/lib/php/extensions/no-debug-non-zts-20151012/opcache.a  /usr/lib/php/20151012/
 cp /data/server/php7/lib/php/extensions/no-debug-non-zts-20151012/opcache.so  /usr/lib/php/20151012/
 cp /data/server/php7/lib/php/extensions/no-debug-non-zts-20151012/redis.so  /usr/lib/php/20151012/
+```
 
+### 重启php-fpm  并查看扩展
 
+```
 重启php-fpm
 查找PHP服务 ps aux | grep php-fpm
 pkill -9 php
@@ -49,6 +58,10 @@ root@www:/data/server/other_component/phpredis-4.0.0#
 ```
 
 ![redis 扩展](/img/ubuntu/php/extension/e_redis.png "redis 扩展")
+
+
+
+
 
  [历史版本](https://github.com/phpredis/phpredis/releases "历史版本")
 
