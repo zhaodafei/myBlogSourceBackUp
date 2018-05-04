@@ -3,12 +3,16 @@ title: ubuntu16 php7 extension redis
 ---
 ### Extension 之 redis
 
-### 安装redis
+### 下载 redis 包
 
 ```
 wget https://github.com/nicolasff/phpredis/archive/4.0.0.tar.gz
 wget http://pecl.php.net/get/redis-4.0.0.tgz
+```
 
+### 安装redis
+
+```
 解压到指定目录【我这里是 /data/server/other_component/】
 tar -zxvf 4.0.0.tar.gz -C /data/server/other_component/
 cd phpredis-4.0.0/
