@@ -7,7 +7,24 @@ title: centos PHP7
 
 ```
 yum -y install libxml2 libxml2-devel curl-devel libjpeg-devel libpng-devel freetype-devel  libmcrypt-devel
+
+yum install openssl openssl-devel
 ```
+
+### 安装
+
+```
+安装php
+wget http://cn2.php.net/get/php-7.0.28.tar.gz/from/this/mirror
+mv mirror php-7.0.28.tar.gz
+
+解压到你指定的目录，我这里选择  /data/server/ 目录
+tar -zxvf php-7.0.28.tar.gz -C /data/server/
+mv php-7.0.28 php7
+cd php7/
+```
+
+
 
 ### 编译
 

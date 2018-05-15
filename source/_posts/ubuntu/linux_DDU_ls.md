@@ -56,7 +56,7 @@ ls -l  [常用这个]
 ls -L
 ```
 
-![linux ls aACl](/img/ubuntu/linux_command/linux_ls/ls_aACl.png "linux ls aACl")
+![linux ls acl](/img/ubuntu/linux_command/linux_ls/ls_acl.png "linux ls acl")
 
 ### 选项  full-time 
 
@@ -80,12 +80,6 @@ ls *.txt | egrep -v aaa.txt
 ![linux rm 排除指定文件显示](/img/ubuntu/linux_command/linux_ls/ls_other_01.png "linux ls 排除指定文件显示")
 
 ![linux rm 排除指定文件显示](/img/ubuntu/linux_command/linux_ls/ls_other_02.png "linux ls 排除指定文件显示")
-
-
-
-
-
- [我是a里面的内容](http://example.com/ "这里是title")
 
 
 
