@@ -81,6 +81,16 @@ ls *.txt | egrep -v aaa.txt
 
 ![linux rm 排除指定文件显示](/img/ubuntu/linux_command/linux_ls/ls_other_02.png "linux ls 排除指定文件显示")
 
+### 显示某一目录下文件，显示  www 目录下文件
+
+```
+ls -l /www
+```
+
+![显示 www目录下文件](/img/ubuntu/linux_command/linux_ls/ls_other_03.png "显示 www目录下文件")
+
+
+
 
 
 
