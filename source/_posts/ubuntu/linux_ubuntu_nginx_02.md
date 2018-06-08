@@ -53,7 +53,8 @@ Context:	server, location
 ```
 ![nginx location](/img/ubuntu/nginx/other/nginx_location.png "nginx location")
 
-[location 模块]: http://nginx.org/en/docs/http/ngx_http_core_module.html#location	"location 模块"
+
+ [location 模块](http://nginx.org/en/docs/http/ngx_http_core_module.html#location"location 模块")
 
 
 
