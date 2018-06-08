@@ -3,6 +3,8 @@ title: linux Ubuntu nginx
 ---
 ### 日志切割  testlog.sh
 
+使用脚本切割 nginx 日志，脚本内容如下
+
 ```
 --------------------------nginx.conf---------------------
   #打开注释
