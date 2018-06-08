@@ -1,6 +1,8 @@
 ---
 title: linux Ubuntu nginx
 ---
+## 安装nginx 01
+
 ### 安装nginx
 
 ```
@@ -27,7 +29,7 @@ cat /etc/nginx/nginx.conf
 
  ![nginx 安装位置](/img/ubuntu/nginx/nginx_server.png "nginx 安装位置")
 
-## 编译安装
+## 编译安装02
 
 ### 安装必要的编译环境
 
@@ -43,9 +45,9 @@ yum -y install gcc automake autoconf libtool make
 yum install gcc gcc-c++
 ```
 
-### 安装所需要的组件【pcre、openssl、zlib】，组件安装的时候注意路径
+安装所需要的组件【pcre、openssl、zlib】，组件安装的时候注意路径
 
-#### PCRE
+### PCRE
 
 ```
 wget ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.38.tar.gz
@@ -163,6 +165,87 @@ root@ubuntu:/data/server/nginx# /data/server/nginx/nginx -s reload
 pid出错时，可以使用这个：
 /data/server/nginx/nginx  -c /data/server/nginx/conf/nginx.conf
 ```
+
+## 编译安装03
+
+### 下载
+
+```
+当前操作目录位置：  /home/fei/server
+wget http://nginx.org/download/nginx-1.4.2.tar.gz
+tar -zxvf nginx-1.4.2.tar.gz  -C /home/fei/server
+cd nginx-1.4.2
+```
+
+![nginx 安装](/img/ubuntu/nginx/nginx03_instal.png "安装")
+
+### 配置
+
+```
+./configure --prefix=/data/server/nginx-1.4.2
+发现少包，安装缺少的包
+sudo apt-get install libpcre3 libpcre3-dev 
+再次配置【 一直到不在缺少包 】
+./configure --prefix=/data/server/nginx-1.4.2
+
+【 常见缺少少包： pcre、openssl、zlib，安装这三个包命令如下】
+sudo apt-get install libpcre3 libpcre3-dev 
+sudo apt-get install openssl libssl-dev  
+sudo apt-get install zlib1g-dev  
+
+
+配置 OK 后，继续操作
+```
+
+![nginx 安装缺少包](/img/ubuntu/nginx/nginx03_packet1.png "安装缺少包")
+
+![nginx 安装缺少包](/img/ubuntu/nginx/nginx03_packet2.png "安装缺少包")
+
+### 编译安装
+
+```
+make && make install
+```
+
+![nginx 安装](/img/ubuntu/nginx/nginx03_make.png "安装")
+
+### 检测是否可用
+
+```
+/data/server/nginx-1.4.2/sbin/nginx -t
+```
+
+![nginx 检测是否可用](/img/ubuntu/nginx/nginx03_test.png "检测是否可用")
+
+### 安装完成后，原文件就没有用了  
+
+![nginx 删除没有用文件](/img/ubuntu/nginx/remove_useless.png "删除没有用文件")
+
+
+
+### 命令
+
+```
+/data/server/nginx/nginx -t          【检查配置】
+/data/server/nginx/nginx             【启动命令】
+/data/server/nginx/nginx -s stop     【停止命令】
+/data/server/nginx/nginx -s reload   【重启命令：】
+
+pid出错时，可以使用这个：
+/data/server/nginx/nginx  -c /data/server/nginx/conf/nginx.conf
+```
+## 其他
+
+### 让普通用户可以启动nginx
+
+```
+用root用户进入....nginx/sbin
+然后chown root nginx
+chmod u+s nginx
+然后通过普通用户就可以启动了。
+```
+
+![nginx 普通用户启动nginx](/img/ubuntu/nginx/common_star.png "普通用户启动nginx")
 
 
 

@@ -3,6 +3,8 @@ title: linux-DDU  显示目录列表  -less -more
 ---
 less 与 more 类似，但使用 less 可以随意浏览文件，而且 less 在查看之前不会加载整个文件 
 
+## 命令 less
+
 ### 命令格式
 
 ```
@@ -101,7 +103,7 @@ more +1 d01.txt    #显示文件中从第1行器内容
 more +2 d01.txt    #显示文件中从第2行器内容
 ```
 
-![more](/img/ubuntu/linux_command/linux_more/mored_01.png "more")
+![more](/img/ubuntu/linux_command/linux_more/more_01.png "more")
 
 从文件中查找第一个出现 "d01" 字符串的行，并从该处前2行显示输出
 从文件中查找第一个出现 "3" 字符串的行，并从该处前2行显示输出
@@ -113,7 +115,7 @@ more +/3  d01.txt
 more +/hello  d01.txt
 ```
 
-![more](/img/ubuntu/linux_command/linux_more/mored_02.png "more")
+![more](/img/ubuntu/linux_command/linux_more/more_02.png "more")
 
 ```
 设定每屏显示行数
@@ -127,7 +129,7 @@ ls -l | more -2
 q 键退出，enter向下
 ```
 
-![more](/img/ubuntu/linux_command/linux_more/mored_03.png "more")
+![more](/img/ubuntu/linux_command/linux_more/more_03.png "more")
 
 
 
