@@ -36,7 +36,7 @@ nl -b a test01.txt    【空行显示行号】
 nl -b t test01.txt    【空行不显示行号】
 ```
 
-![root passwd](/img/linux_command/linux_nl/nl_b.png "-b 指定行号")
+![root passwd](/img/ubuntu/linux_command/linux_nl/nl_b.png "-b 指定行号")
 
 ### 参数
 
@@ -52,7 +52,7 @@ demo
  nl -n rz test01.txt  【行号在左，且加零】
 ```
 
-![root passwd](/img/linux_command/linux_nl/nl_n.png "-n 显示行号")
+![root passwd](/img/ubuntu/linux_command/linux_nl/nl_n.png "-n 显示行号")
 
 ### 参数
 
@@ -65,7 +65,7 @@ nl -n rz -w 3 test01.txt
 nl -n rz -w 5 test01.txt
 ```
 
-![root passwd](/img/linux_command/linux_nl/nl_w.png "-w 列出行号占用位数")
+![root passwd](/img/ubuntu/linux_command/linux_nl/nl_w.png "-w 列出行号占用位数")
 
 
 
