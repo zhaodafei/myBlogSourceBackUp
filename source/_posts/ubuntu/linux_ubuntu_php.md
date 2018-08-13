@@ -60,7 +60,7 @@ cd php7/
 
 ![PHP7.0.28 下载](/img/ubuntu/php/php7_download.png "PHP7.0.28 下载")
 
-### 查看安装帮助，执行配置脚本进行编译预处理
+### 查看安装帮助，执行配置脚本进行配置
 
 ```
 # ./configure   --help
@@ -97,21 +97,10 @@ cd php7/
  --enable-sockets \
  --enable-sysvsem \
  --enable-xml \
- --enable-zip
-
-
-********************新的编译*****************
-./configure --prefix=/data/server/php7 \
---with-gd \
---with-freetype-dir \
---enable-gd-native-ttf \
---enable-mysqlnd \
---with-pdo-mysql=mysqlnd \
---with-openssl \
---with-mcrypt \
---enable-mbstring \
---enable-zip \
---enable-fpm
+ --enable-zip \
+ --enable-mysqlnd \
+ --with-pdo-mysql=mysqlnd \
+ --with-mcrypt
 ```
 
 我的错误
