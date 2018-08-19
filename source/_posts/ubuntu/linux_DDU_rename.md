@@ -21,7 +21,7 @@ perlexpr 语言格式的正则表达式
  rename 's/test02.txt/test03.txt/' test02.txt
 ```
 
-![rename](/img/linux_command/linux_rename/rename_01.png "重命名")
+![rename](/img/ubuntu/linux_command/linux_rename/rename_01.png "重命名")
 
 ### 参数 -v 打印被重命名的文件
 
@@ -29,7 +29,7 @@ perlexpr 语言格式的正则表达式
 rename -v 's/test03.txt/test02.txt/' test03.txt
 ```
 
-![rename v](/img/linux_command/linux_rename/rename_v.png "重命名参数v")
+![rename v](/img/ubuntu/linux_command/linux_rename/rename_v.png "重命名参数v")
 
 ### 参数 -n 只显示被重命名的文件，而不实际重命名
 
@@ -37,7 +37,7 @@ rename -v 's/test03.txt/test02.txt/' test03.txt
  rename -n 's/test02.txt/test03.txt/' test02.txt   [实际没有重命名]
 ```
 
-![rename n](/img/linux_command/linux_rename/rename_n.png "重命名参数n")
+![rename n](/img/ubuntu/linux_command/linux_rename/rename_n.png "重命名参数n")
 
 ### 参数 -f 覆盖已经存在的文件
 
@@ -46,9 +46,9 @@ rename -f 's/test02.txt/test08.txt/' test02.txt
 rename -f 's/test02.txt/test08.txt/' *.txt    [也可以] 
 ```
 
-![rename f](/img/linux_command/linux_rename/rename_f.png "重命名参数f")
+![rename f](/img/ubuntu/linux_command/linux_rename/rename_f.png "重命名参数f")
 
-![rename f](/img/linux_command/linux_rename/rename_f_2.png "重命名参数f")
+![rename f](/img/ubuntu/linux_command/linux_rename/rename_f_2.png "重命名参数f")
 
 ## 表达式中 替换用 s ,转化用 y 或者tr
 
