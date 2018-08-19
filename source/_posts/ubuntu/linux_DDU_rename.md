@@ -59,7 +59,7 @@ rename 'y/a-z/A-Z/' *.txt
 rename 'tr/a-z/A-Z/' *.txt
 ```
 
-![rename 转化](/img/linux_command/linux_rename/rename_zhuanhua.png "重命名 转化")
+![rename 转化](/img/ubuntu/linux_command/linux_rename/rename_zhuanhua.png "重命名 转化")
 
 
 
