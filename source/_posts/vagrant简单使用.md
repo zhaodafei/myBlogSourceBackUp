@@ -3,6 +3,10 @@ title: linux-DDU  -vagrant 简单使用
 ---
 ### 常用命令
 
+vagrant 常用命令介绍
+
+
+
 ```
 vagrant init  [初始化]
 vagrant up    [启动虚拟机]
