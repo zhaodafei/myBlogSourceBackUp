@@ -1,5 +1,5 @@
 ---
-title: linux ubuntu16 php7.0.28
+title: linux ubuntu16 -php7.0.28
 ---
 源码编译安装php7.0
 

@@ -1,5 +1,5 @@
 ---
-title: linux Ubuntu nginx
+title: linux Ubuntu -nginx
 ---
 ### 日志切割  testlog.sh
 
