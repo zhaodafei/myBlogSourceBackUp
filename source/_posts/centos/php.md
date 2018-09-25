@@ -1,5 +1,5 @@
 ---
-title: centos PHP7
+title: centos -PHP7
 ---
 ### centos  PHP7 安装
 

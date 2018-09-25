@@ -65,8 +65,6 @@ demo:
 
 ```
 
-![vagrant ](/img/vagrant/vagrant_01.png "vagrant 01")
-
 
 
 
