@@ -1,5 +1,5 @@
 ---
-title: linux-DDU  为文件创建连接  -ln
+title: linux-DDU -ln  为文件创建连接  
 ---
 ### 命令格式
 
@@ -7,25 +7,21 @@ title: linux-DDU  为文件创建连接  -ln
 ln [参数] [源文件或目录][目标文件或目录]
 ```
 
-### 选项
+### demo
 
 ```
--m     安安分分分ddd
+ln index.html /home/fei/web/index.copy     #index.copy 就是index.html 的一个快捷方式 [硬链接]
 ```
 
-### 参数
+![ln](/img/linux_command01_2017_1224/linux_00/ln.png "ln")
 
-发的发的发的放的地方湖广会馆
+### 软连接符号 -s
 
-demo
-
-
-
-![root passwd](/img/linux_command01_2017_1224/linux_00/root_passwd.png "fdfdsfd")
+```
+ln -s index.html /home/fei/web/index.copy  
+```
 
 
-
- [我是a里面的内容](http://example.com/ "这里是title")
 
 
 

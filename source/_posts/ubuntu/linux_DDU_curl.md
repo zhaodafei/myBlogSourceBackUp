@@ -1,21 +1,9 @@
 ---
-title: linux-DDU  显示目录列表  -curl
+title: linux-DDU -curl  一个利用URL规则在命令行下工作的文件传输工具  
 ---
 在 linux 中 curl 是一款利用 URL 规则在命令下工作的开源文件传输工具.
 
 
-
-### 命令格式
-
-```
-mkdir [option] [url]
-```
-
-### 选项
-
-```
--m     安安分分分
-```
 
 以下 demo 中,使用文件  index.php 作为实例演示, index.php 中内容为
 
