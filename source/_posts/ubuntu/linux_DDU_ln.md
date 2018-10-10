@@ -32,7 +32,7 @@ ln /home/fei/www/index.html /home/fei/web/index.txt # [硬链接]源文件变化
 ![删除源文件后,链接文件不收影响](/img/ubuntu/linux_command/linux_ln/ln_002.png "删除源文件后,链接文件不收影响")
 
 
-### 软连接符号 -s   [ 想当与windows中的快捷方式]
+### 软连接符号 -s   [ 相当于windows中的快捷方式]
 ```
 ln -s /home/fei/www/test01.txt /home/fei/web/
 ln -s /home/fei/www/test05.txt /home/fei/web/test_05.txt  #test01.txt 源文件变化后.链接的文件也随着变化
