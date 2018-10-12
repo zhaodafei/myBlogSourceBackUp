@@ -1,5 +1,5 @@
 ---
-title: linux-DDU  用作替换工具，读取输入数据重新格式化后输出  -xargs
+title:  -xargs  用作替换工具，读取输入数据重新格式化后输出 
 ---
 ### demo
 

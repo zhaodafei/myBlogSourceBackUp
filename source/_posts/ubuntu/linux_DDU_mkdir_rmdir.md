@@ -1,5 +1,5 @@
 ---
-title: linux-DDU  显示目录列表  -mkdir  -rmdir
+title: -mkdir  -rmdir 显示目录列表
 ---
 mkdir 不指定参数，创建文件默认权限 为 755  rwxr-xr-x
 

@@ -1,5 +1,5 @@
 ---
-title: linux-DDU  显示目录列表  -cat
+title:  -cat  连接文件并打印到标准输出设备上
 ---
 ### 命令格式
 

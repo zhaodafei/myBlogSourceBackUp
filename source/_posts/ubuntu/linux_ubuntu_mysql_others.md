@@ -1,5 +1,5 @@
 ---
-title: ubuntu mysql others
+title: ubuntu -mysql others
 ---
 ### mysql 5.6 其他
 

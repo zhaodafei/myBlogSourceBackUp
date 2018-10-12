@@ -1,6 +1,5 @@
 ---
-title: linux Ubuntu git
-
+title: Ubuntu -git
 ---
 ### 前言：  
 

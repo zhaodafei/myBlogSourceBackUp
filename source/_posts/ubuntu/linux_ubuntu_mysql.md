@@ -1,5 +1,5 @@
 ---
-title: linux ubuntu15 mysql5.7
+title: ubuntu15 -mysql5.7
 ---
 ### mysql 5.7安装
 

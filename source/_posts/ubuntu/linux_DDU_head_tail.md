@@ -1,5 +1,5 @@
 ---
-title: linux-DDU 输出文件中的内容 -head -tail 
+title:  -head -tail  输出文件中的内容
 ---
 ## 命令 head
 

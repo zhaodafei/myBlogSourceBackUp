@@ -1,5 +1,5 @@
 ---
-title: linux-DDU  文件重命名  -rename
+title: -rename  文件重命名
 ---
 ### 命令格式，文件重命名
 

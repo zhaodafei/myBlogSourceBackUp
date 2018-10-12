@@ -1,5 +1,5 @@
 ---
-title: llinux-DDU 创建文件和目录的副本  -grep
+title:    -grep  查找文件里符合条件的字符串
 ---
 ### 命令格式
 

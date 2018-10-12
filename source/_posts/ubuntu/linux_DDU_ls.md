@@ -1,5 +1,5 @@
 ---
-title: linux-DDU  显示目录列表  -ls
+title:  -ls 显示目录列表  
 ---
 ### 命令格式
 

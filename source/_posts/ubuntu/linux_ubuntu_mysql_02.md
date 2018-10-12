@@ -1,5 +1,5 @@
 ---
-title:  linux ubuntu mysql5.6.39
+title: ubuntu -mysql5.6.39
 ---
 ### mysql5.6.39
 

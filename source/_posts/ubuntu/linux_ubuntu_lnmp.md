@@ -1,5 +1,5 @@
 ---
-title: linux ubuntu lnmp环境
+title: ubuntu -lnmp环境
 ---
 ### LNMP环境搭建
 

@@ -1,5 +1,5 @@
 ---
-title: ubuntu16 php7 extension redis
+title: ubuntu16 -php7 extension redis
 ---
 ### Extension 之 redis
 

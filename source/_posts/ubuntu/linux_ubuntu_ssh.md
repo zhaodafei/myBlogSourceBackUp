@@ -1,5 +1,5 @@
 ---
-title: linux Ubuntu ssh
+title: Ubuntu -ssh
 ---
 ### 安装客户端
 

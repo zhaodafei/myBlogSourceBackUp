@@ -1,5 +1,5 @@
 ---
-title: linux ubuntu jenkins 
+title: ubuntu -jenkins 
 ---
 ### 下载war 包
 

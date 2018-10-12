@@ -1,5 +1,5 @@
 ---
-title: linux-DDU 删除文件或目录  -rm
+title: -rm  删除文件或目录
 ---
 ### 命令格式
 

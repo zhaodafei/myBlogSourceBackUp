@@ -1,5 +1,5 @@
 ---
-title: linux Ubuntu -nginx
+title: Ubuntu -nginx
 ---
 ## 安装nginx 01
 

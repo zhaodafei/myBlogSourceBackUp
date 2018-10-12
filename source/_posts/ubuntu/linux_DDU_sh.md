@@ -1,5 +1,5 @@
 ---
-title: llinux-DDU shell 脚本  -sh
+title: -sh  shell 脚本
 ---
 ### 简单shell，打印昨天时间，并输出到屏幕上，注意 反引号
 

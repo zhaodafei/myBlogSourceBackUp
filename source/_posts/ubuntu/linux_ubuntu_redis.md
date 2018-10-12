@@ -1,5 +1,5 @@
 ---
-title: linux ubuntu15 redis安装
+title: ubuntu15 -redis安装
 ---
 redis2种安装方式
 

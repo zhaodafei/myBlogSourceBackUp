@@ -1,5 +1,5 @@
 ---
-title: linux ubuntu15 tengine
+title: ubuntu15 -tengine
 ---
 Tengine 官网安装相当简略，这里详细安装一次（ubuntu15 安装 tengine）
 

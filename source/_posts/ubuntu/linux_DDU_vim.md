@@ -1,5 +1,5 @@
 ---
-title: linux-DDU 编辑文件  -vim
+title: -vim  编辑文件
 ---
 ### 跳转到指定行
 

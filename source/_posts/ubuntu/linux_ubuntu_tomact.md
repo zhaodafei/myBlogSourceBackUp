@@ -1,5 +1,5 @@
 ---
-title: linux ubuntu -tomact
+title: ubuntu -tomact
 ---
 #### 官网下载 Tomact 包上传到服务器
 

@@ -46,7 +46,13 @@ ln -s /home/fei/www/test05.txt /home/fei/web/test_05.txt  #test01.txt 源文件�
 ![链接文件删除后,源文件不影响](/img/ubuntu/linux_command/linux_ln/ln_01.png "链接文件删除后,源文件不影响")
 ![删除源文件后,链接文件失效](/img/ubuntu/linux_command/linux_ln/ln_02.png "删除源文件后,链接文件失效")
 
+### 软连接目录
 
+```
+ln -s /home/fei/www/aaa/ /home/fei/web/
+```
+
+![ln s](/img/ubuntu/linux_command/linux_ln/ln_s_dir.png "ln s 软连接符号")
 
 
 

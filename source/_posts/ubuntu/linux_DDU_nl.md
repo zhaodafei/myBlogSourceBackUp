@@ -1,5 +1,5 @@
 ---
-title: linux-DDU  显示目录列表  -nl
+title: -nl  计算文件中行号
 ---
 介绍： 计算文件中行号；
 

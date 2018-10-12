@@ -1,5 +1,5 @@
 ---
-title: linux-DDU  搜索 locate
+title:  -locate 搜索 
 ---
 使用 locate 搜索前一般先执行 updatedb 来更新
 

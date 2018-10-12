@@ -1,5 +1,5 @@
 ---
-title: linux Ubuntu jdk
+title: Ubuntu -jdk
 ---
 ## Ubuntu 安装 jdk 2 种方式
 

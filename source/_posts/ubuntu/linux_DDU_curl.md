@@ -1,5 +1,5 @@
 ---
-title: linux-DDU -curl  一个利用URL规则在命令行下工作的文件传输工具  
+title: -curl  一个利用URL规则在命令行下工作的文件传输工具  
 ---
 在 linux 中 curl 是一款利用 URL 规则在命令下工作的开源文件传输工具.
 
