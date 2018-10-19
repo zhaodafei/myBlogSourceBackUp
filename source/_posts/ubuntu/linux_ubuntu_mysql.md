@@ -210,6 +210,21 @@ mysql -h 你登录的ip -u username -P 3306 -p 【远程登录】
 demo： mysql -h 192.168.1.230 -u afei2 -p
 ```
 
+### mysql  命令行工具中 \c  取消之前的输入,重新开始输入
+
+```
+mysql> fdfds \c
+mysql> show tables ddjfkldjfdklsf \c
+mysql> show tables;
+```
+
+mysql  命令行工具中 \G 竖向显示内容
+
+```
+mysql> show tables \G;
+mysql> show table status \G;
+```
+
 
 
 

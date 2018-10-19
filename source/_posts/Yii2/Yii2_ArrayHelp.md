@@ -309,10 +309,89 @@ $result2 = ArrayHelper::map($array, 'id', 'name', 'class');
     ],
 ]    
 ```
+### ArrayHelper::keyExists  只能是一维数组
 
+```php
+$data1 = [
+    'userName' => 'Alex',
+];
 
+$data2 = [
+    'username' => 'Carsten',
+];
 
+var_dump(ArrayHelper::keyExists('username',$data1,true));//输出 false
+var_dump(ArrayHelper::keyExists('username',$data2,false));//输出 true
+```
 
+### ArrayHelper::multisort  多维数组排序
+
+```php
+$data = [
+    ['age' => 30, 'name' => 'Alexander'],
+    ['age' => 30, 'name' => 'Brian'],
+    ['age' => 19, 'name' => 'Barney'],
+];
+
+ArrayHelper::multisort($data,['age','name'],[SORT_ASC,SORT_DESC]);
+//输出, age 排序, name 排序
+[
+    ['age' => 19, 'name' => 'Barney'],
+    ['age' => 30, 'name' => 'Brian'],
+    ['age' => 30, 'name' => 'Alexander'],
+];
+```
+
+### ArrayHelper::isIndexed  ArrayHelper::isAssociative 检测数组是索引数组还是联合数组
+
+```php
+// 不指定键名的数组
+$indexed = ['Qiang', 'Paul'];
+echo ArrayHelper::isIndexed($indexed);  //true
+
+// 所有键名都是字符串
+$associative = ['framework' => 'Yii', 'version' => '2.0'];
+echo ArrayHelper::isAssociative($associative); //true
+```
+
+### ArrayHelper::isIn   ArrayHelper::isSubset  测试阵列
+
+```php
+// true
+ArrayHelper::isIn('a', ['a']);
+// true
+ArrayHelper::isIn('a', new \ArrayObject(['a']));
+// true
+ArrayHelper::isSubset(new \ArrayObject(['a','c']),new \ArrayObject(['a','b','c']));
+```
+
+### ArrayHelper::filter  过滤
+
+```php
+$array = [
+    'A' => [1, 2],
+    'B' => [
+        'C' => 1,
+        'D' => 2,
+    ],
+    'E' => 1,
+];
+
+$result1 = ArrayHelper::filter($array,['A']);
+$result2 = ArrayHelper::filter($array,['A','B.C']);
+$result3 = ArrayHelper::filter($array,['B','!B.C']);
+//输出
+['A' => [1, 2]];
+//输出
+[
+    'A' => [1, 2], 
+    'B' => ['C' => 1]
+]
+//输出
+[
+    'B' => ['D' => 2],
+]
+```
 
 
 

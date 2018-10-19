@@ -115,6 +115,17 @@ drop user 'afei'@'%';     #删除用户
 
 ![mysql 版本](/img/mysql/mysql_others/03.png "mysql 版本")
 
+### Mysql 常用性能分析方法??
+
+```
+select version();  #查版本号
+show processlist;  #查看那些线程正在运行
+show profiles; 
+show profiles for query 3;  #更具query_id 查看某个查询的详细时间耗费
+explian + sql # 分析执行计划和最左前缀原理
+reset query cache;   #清除缓存
+```
+
 
 
 
