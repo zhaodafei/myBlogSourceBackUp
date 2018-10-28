@@ -56,7 +56,7 @@ redis 扩展添加成功,[ !!!这种方法会自动升级扩展!!! ]
 
 ### !!!  install  , update  , require
 
-```
+
 添加一个新的扩展包建议使用 composer require
 
 另外2个会更新所有扩展到最新版本
@@ -64,7 +64,19 @@ redis 扩展添加成功,[ !!!这种方法会自动升级扩展!!! ]
 composer install 命令从当前目录读取 composer.json 文件，处理了依赖关系，并把其安装到 vendor 目录下。如果当前目录下存在 composer.lock 文件，它会从此文件读取依赖版本，而不是根据 composer.json 文件去获取依赖。这确保了该库的每个使用者都能得到相同的依赖版本。如果没有 composer.lock 文件，composer 将在处理完依赖关系后创建它.
 
 composer update  为了获取依赖的最新版本，并且升级 composer.lock 文件，你应该使用 update 命令。
-```
+
+
+### 扩展 
+
+扩展: 这里配置 reids 后,使用 phpstorm 写代码的时候,redis是没有提示的,比如 Yii::$app->redis->set("hello","world");,这里的reids在phpstorm中是跟踪不到的,解决这个问题,在 \vendor\yiisoft\yii2\base\Application.php 中的上面注释中添加如下:
+
+* @property \yii\redis\Connection $redis  
+
+这样 phpstorm 就可以跟踪代码,并且 Yii::$app->redis->set("hello","world");  这个set 也会有提示;
+
+
+
+![redis 2](/img/win/redis_phpstorm.png)
 
 官方解释
 
