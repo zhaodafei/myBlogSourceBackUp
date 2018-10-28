@@ -1,10 +1,10 @@
 ---
-title:  - JavaScript - 3种事件绑定
+title:   --JavaScript -3种事件绑定
 ---
 
 ```javascript
 /**
- * 第一种绑定:行为结构不分离,效率也低
+ * 第一种绑定:行为结构不分离,效率也低    
  * <a onclick="xxx()">
  *
  *  第二种绑定:只能绑定1个事件
