@@ -88,7 +88,8 @@ deploy:
 backup:
   type: git
   repository:
-    origin: git@github.com:zhaodafei/myBlogSourceBackUp.git,master
+    #origin: https://github.com/zhaodafei/myBlogSourceBackUp.git,master
+    origin: git@github.com:zhaodafei/myBlogSourceBackUp.git
 
 jsonContent:
   meta: false
