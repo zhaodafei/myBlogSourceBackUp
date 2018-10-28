@@ -82,12 +82,14 @@ theme: BlueLake
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: https://github.com/zhaodafei/zhaodafei.github.io.git
+  #repository: https://github.com/zhaodafei/zhaodafei.github.io.git
+  repository: git@github.com:zhaodafei/zhaodafei.github.io.git
   branch: master
 backup:
   type: git
   repository:
-    origin: https://github.com/zhaodafei/myBlogSourceBackUp.git,master  
+    #origin: https://github.com/zhaodafei/myBlogSourceBackUp.git,master
+    origin: git@github.com:zhaodafei/myBlogSourceBackUp.git
 
 jsonContent:
   meta: false
