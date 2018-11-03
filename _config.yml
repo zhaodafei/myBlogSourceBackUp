@@ -87,9 +87,9 @@ deploy:
   branch: master
 backup:
   type: git
-  repository:
+  repo:
     #origin: https://github.com/zhaodafei/myBlogSourceBackUp.git,master
-    repo: git@github.com:zhaodafei/myBlogSourceBackUp.git
+    github: git@github.com:zhaodafei/myBlogSourceBackUp.git
     #origin: https://github.com/zhaodafei/myBlogSourceBackUp.git
     branch: master
 jsonContent:
