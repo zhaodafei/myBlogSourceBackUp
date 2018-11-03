@@ -89,7 +89,7 @@ backup:
   type: git
   repo:
     #origin: https://github.com/zhaodafei/myBlogSourceBackUp.git,master
-    github: git@github.com:zhaodafei/myBlogSourceBackUp.git
+    origin: git@github.com:zhaodafei/myBlogSourceBackUp.git
     #origin: https://github.com/zhaodafei/myBlogSourceBackUp.git
     branch: master
 jsonContent:
