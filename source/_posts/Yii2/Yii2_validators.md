@@ -122,6 +122,6 @@ title: -Yii2 验证器
 ['name2', 'required', 'when' => function ($model) {    return empty($model->name1);}],#说明: 
 ```
 
- [核心验证器 en](https://www.yiiframework.com/doc/guide/2.0/en/input-validation"核心验证旗 en")
+ [核心验证器 en](https://www.yiiframework.com/doc/guide/2.0/en/input-validation "核心验证旗 en")
 
- [核心验证器 zh-cn](https://www.yiiframework.com/doc/guide/2.0/zh-cn/tutorial-core-validators"核心验证旗 zh-cn")
+ [核心验证器 zh-cn](https://www.yiiframework.com/doc/guide/2.0/zh-cn/tutorial-core-validators "核心验证旗 zh-cn")

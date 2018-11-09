@@ -33,11 +33,11 @@ vagrant ssh-config [输出用于ssh连接的一些信息]
 3.显示当前已经添加的box列表
 	vagrant box list 
 4.  添加 box 
-	vagrant box add yours-box-name.box(你的box文件)
+	vagrant box add new-box-name yours-box-name.box(你的box文件)
 5.  删除 box	
-	vagrant box remove yours-box-name.box(你的box文件)	
+	vagrant box remove yours-box-name
 6. 	指定 box 初始化
-	vagrant init yours-box-name.box(你的box文件)
+	vagrant init yours-box-name
 7.启动
 	vagrant up
 	vagrant up --provider virtualbox
