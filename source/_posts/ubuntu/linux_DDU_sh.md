@@ -15,7 +15,7 @@ echo `ls /www`                    #使用反引号，显示 www 目录下文件
 touch /www/test.txt               #在 www 目录下创建 test.txt 文件
 ```
 
-![demo shell](/img/linux_command/linux_sh/sh_01.png "demo shell")
+![demo shell](/img/ubuntu/linux_command/linux_sh/sh_01.png "demo shell")
 
 demo 2,创建文件，运行命令  sh testlog.sh
 
@@ -27,7 +27,7 @@ mkdir -p $BASEPATH
 echo $BASEPATH
 ```
 
-![demo shell](/img/linux_command/linux_sh/sh_02.png "demo shell")
+![demo shell](/img/ubuntu/linux_command/linux_sh/sh_02.png "demo shell")
 
 
 
