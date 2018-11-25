@@ -151,4 +151,4 @@ public function validatePassword()
 
  [核心验证器 zh-cn](https://www.yiiframework.com/doc/guide/2.0/zh-cn/tutorial-core-validators "核心验证旗 zh-cn")
 
- [输入验证](https://www.yiiframework.com/doc/guide/2.0/zh-cn/input-validation"输入验证")
+ [输入验证](https://www.yiiframework.com/doc/guide/2.0/zh-cn/input-validation "输入验证")
