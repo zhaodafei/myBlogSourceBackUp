@@ -122,6 +122,33 @@ title: -Yii2 验证器
 ['name2', 'required', 'when' => function ($model) {    return empty($model->name1);}],#说明: 
 ```
 
+### 行内验证器--
+
+```php
+ // password is validated by foo()
+ ['password', 'foo']
+ 
+ public function foo(){
+ 	$this->addError('password', '调用这个方法了.');
+ }
+
+----------------
+['password', 'validatePassword'],
+
+public function validatePassword()
+{
+    $user = User::findByUsername($this->username);
+
+    if (!$user || !$user->validatePassword($this->password)) {
+        $this->addError('password', 'Incorrect username or password.');
+    }
+}
+```
+
+
+
  [核心验证器 en](https://www.yiiframework.com/doc/guide/2.0/en/input-validation "核心验证旗 en")
 
  [核心验证器 zh-cn](https://www.yiiframework.com/doc/guide/2.0/zh-cn/tutorial-core-validators "核心验证旗 zh-cn")
+
+ [输入验证](https://www.yiiframework.com/doc/guide/2.0/zh-cn/input-validation"输入验证")
