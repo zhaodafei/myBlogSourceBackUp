@@ -73,3 +73,6 @@ title: -多态
 
 [设计模式]: https://www.w3cschool.cn/shejimoshi/design-pattern-tutorial.html	"设计模式"
 
+[设计模式01](http://www.runoob.com/design-pattern/design-pattern-tutorial.html)
+
+[设计模式02](https://www.w3cschool.cn/shejimoshi/design-pattern-tutorial.html)

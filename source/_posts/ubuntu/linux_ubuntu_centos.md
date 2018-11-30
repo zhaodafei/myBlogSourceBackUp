@@ -4,7 +4,7 @@ title: ubuntu系统
 ### 虚拟机安装完ubuntu后root没有密码
 ```
 设置root密码
-sudo password
+sudo passwd
 ```
 ![root passwd](/img/ubuntu/linux_command/linux_00/root_passwd.png)
 ### 虚拟机安装完centos后重新设置root密码

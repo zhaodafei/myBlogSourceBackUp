@@ -39,11 +39,16 @@ PubkeyAuthentication yes  #注释取消掉
 
 windows端:  ssh vagrant@127.0.0.1 -p2222
 使用密码登录
+windows端:  ssh vagrant@192.168.56.3  #使用指定ip登录
 ```
 
 ![ssh remote](/img/centos/vagrant/ssh_remote.png)
 
 ![ssh remote2](/img/centos/vagrant/ssh_remote2.png)
+
+![ssh remote2](/img/centos/vagrant/ssh_remote3.png)
+
+
 
 ### windows 添加私钥  ssh 免密码登录,[在windows中执行]
 
@@ -77,6 +82,12 @@ cat id_rsa.pub > authorized_keys
   config.vm.network "public_network",:bridge=>'en0: Wi-Fi (AirPort)'
   config.vm.synced_folder "E:/data_web/webroot/", "/data",
   mount_options: ["dmode=775,fmode=775"]
+  
+  ------------------  这三种写法都可以 ---------------
+
+  #config.vm.network "public_network",:bridge=>'en0: Wi-Fi (AirPort)'
+  #config.vm.network "public_network", ip: "192.168.1.201"
+  #config.vm.network "public_network", ip: "192.168.1.200", :bridge => 'en0: Wi-Fi (AirPort)'
 ```
 
 #### 重启

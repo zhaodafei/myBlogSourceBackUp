@@ -67,7 +67,9 @@ demo:
 
 
 
+[ubuntu box -releases版本](http://cloud-images.ubuntu.com/releases/releases/ "记得要下载release版本")
 
+[centos box](http://cloud.centos.org/centos/7/vagrant/x86_64/images/)
 
 
 
