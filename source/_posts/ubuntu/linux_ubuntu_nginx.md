@@ -177,7 +177,7 @@ tar -zxvf nginx-1.4.2.tar.gz  -C /home/fei/server
 cd nginx-1.4.2
 ```
 
-![nginx 安装](/img/ubuntu/nginx/nginx03_instal.png "安装")
+![nginx 安装](/img/ubuntu/nginx/nginx03_install.png "安装")
 
 ### 配置
 

@@ -49,6 +49,11 @@ vagrant ssh-config [输出用于ssh连接的一些信息]
 	vagrant suspend
 11. ssh登录
 	vagrant ssh
+12. 打包box
+打包前删除一个文件
+sudo rm -rf /etc/udev/rules.d/70-persistent-net.rules
+vagrant package
+vagrant package --base ubuntu18_default_1543569229538_92064 --output php72_mysql8_nginx.box
 	
 demo:
     vagrant --help

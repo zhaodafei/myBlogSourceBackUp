@@ -178,8 +178,11 @@ make &&  make install
 ### 安装完毕
 
 ```
-查看 php 版本
+#查看 php 版本
 /data/server/php7/bin/php -v  
+
+#查看配置文件,没有加载,需要自己复制一份 php.ini
+/data/server/php7/bin/php --ini
 ```
 
 ![php version](/img/ubuntu/php/php7_version.png "php version")
