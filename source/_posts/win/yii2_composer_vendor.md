@@ -74,9 +74,18 @@ composer update  为了获取依赖的最新版本，并且升级 composer.lock 
 
 这样 phpstorm 就可以跟踪代码,并且 Yii::$app->redis->set("hello","world");  这个set 也会有提示;
 
-
-
 ![redis 2](/img/win/redis_phpstorm.png)
+
+### 扩展02 view 层 render 提示
+
+```
+# 一般情况下 view 层这个是没有提示的, 在页面的上面添加 /* @var $this \yii\web\View */
+<?= $this->render('footer/_about'); ?> 
+```
+
+![render 2](/img/win/render_phpstorm.png)
+
+
 
 官方解释
 
