@@ -128,6 +128,7 @@ src/redis-server ./redis.conf   【指定配置文件启动】
 指定密码登录：
 /data/server/redis-4.0.8/src/redis-cli -a redis_pwd_123456
 ./redis-cli -a redis_pwd_123456
+./redis-cli   回车后,输入 auth  密码
 测试数据：
 set key1 "hello world"
 get key1

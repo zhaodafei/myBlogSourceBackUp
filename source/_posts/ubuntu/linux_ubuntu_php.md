@@ -178,7 +178,7 @@ make &&  make install
 ### 安装完毕
 
 ```
-#查看 php 版本
+#查看 php 版本 ,这个时候没有环境变量,全局还不能使用 php -v,下问有介绍
 /data/server/php7/bin/php -v  
 
 #查看配置文件,没有加载,需要自己复制一份 php.ini
@@ -285,6 +285,27 @@ php --ini
 pkill -9 php
 php启动命令
 /data/server/php7/sbin/php-fpm
+
+#查看PHP的编译参数
+/data/server/php7/bin/php -i | grep configure
+此命令使用场景:
+编译web服务器由nginx换为Apache的时候需要在Apache中添加PHP模块,  PHP需要添加 --with-apxs2 后重新编译
+```
+
+### 配置 php 全局变量
+
+```
+PHP编译安装后的目录:  /data/server/php7/bin
+vim  /etc/profile
+
+#centos中配置PHP环境变量:
+修改 /etc/profile 配置环境变量
+PATH=$PATH:/data/server/php7/bin
+export PATH
+然后执行source /etc/profile 或者 ./profile 使其生效; 执行完后可以通过 echo $PATH  命令查看环境变量
+
+###PATH=$PATH:/data/server/php/bin  意思加入环境变量
+###export PATH          意思使环境变量生效
 ```
 
 

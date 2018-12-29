@@ -30,16 +30,42 @@ cd php7/
 
 ```
 ./configure --prefix=/data/server/php7 \
---with-gd \
---with-freetype-dir \
---enable-gd-native-ttf \
---enable-mysqlnd \
---with-pdo-mysql=mysqlnd \
---with-openssl \
---with-mcrypt \
---enable-mbstring \
---enable-zip \
---enable-fpm
+ --with-curl \
+ --with-freetype-dir \
+ --with-gd \
+ --with-gettext \
+ --with-iconv-dir \
+ --with-kerberos \
+ --with-libdir=lib64 \
+ --with-libxml-dir \
+ --with-mysqli \
+ --with-openssl \
+ --with-pcre-regex \
+ --with-pdo-mysql \
+ --with-pdo-sqlite \
+ --with-pear \
+ --with-png-dir \
+ --with-xmlrpc \
+ --with-xsl \
+ --with-zlib \
+ --enable-fpm \
+ --enable-bcmath \
+ --enable-libxml \
+ --enable-inline-optimization \
+ --enable-gd-native-ttf \
+ --enable-mbregex \
+ --enable-mbstring \
+ --enable-opcache \
+ --enable-pcntl \
+ --enable-shmop \
+ --enable-soap \
+ --enable-sockets \
+ --enable-sysvsem \
+ --enable-xml \
+ --enable-zip \
+ --enable-mysqlnd \
+ --with-pdo-mysql=mysqlnd \
+ --with-mcrypt
 ```
 
 ![PHP 编译](/img/centos/php/configure.png "PHP 编译")
@@ -57,6 +83,7 @@ make &&  make install
 ```
 查看 php 版本
 /data/server/php7/bin/php -v
+这时候在命令窗口执行 php -v ,会提示命令找不到,需要配置环境变量,详情看下文
 ```
 
 ### 配置PHP
@@ -127,9 +154,18 @@ server {
 
 ![PHP7 测试](/img/centos/php/php7_test.png "PHP7 测试")
 
+### 配置环境变量
 
+```
+这时候在命令窗口执行 php -v ,会提示命令找不到,需要配置环境变量,详情看下文
+修改 /etc/profile 配置环境变量
+PATH=$PATH:/data/server/php/bin
+export PATH
+然后执行source /etc/profile 或者 ./profile 使其生效; 执行完后可以通过 echo $PATH  命令查看环境变量,
+在次执行 PHP -v 就看到PHP信息
+```
 
-
+![PHP7 环境变量](/img/centos/php/php_env.png "PHP7 环境变量")
 
 
 
