@@ -17,7 +17,7 @@ uname -r
 uname -s
 ```
 
-![uname](/img/linux_command/linux_df_du/uname.png "uname")
+![uname](/img/ubuntu/linux_command/linux_login/uname.png "uname")
 
 ### free  查看内存
 
@@ -25,7 +25,7 @@ uname -s
 free -h   #以K，M，G为单位，提高信息的可读性
 ```
 
-![free 参数h](/img/linux_command/linux_df_du/free_h.png "free 参数h")
+![free 参数h](/img/ubuntu/linux_command/linux_login/free_h.png "free 参数h")
 
 
 ### df  显示磁盘分区上的可使用的磁盘空间
@@ -34,7 +34,7 @@ free -h   #以K，M，G为单位，提高信息的可读性
 df -h   #以K，M，G为单位，提高信息的可读性
 ```
 
-![df 参数h](/img/linux_command/linux_df_du/df_h.png "df 参数h")
+![df 参数h](/img/ubuntu/linux_command/linux_login/df_h.png "df 参数h")
 
 du :  与地方不同的是,du命令是对文件和目录磁盘使用的空间查看
 
@@ -46,7 +46,7 @@ du -h   #以K，M，G为单位，提高信息的可读性
 du -s   #显示目录中文件总和
 ```
 
-![df 参数h](/img/linux_command/linux_df_du/du_h.png "du 参数h")
+![df 参数h](/img/ubuntu/linux_command/linux_login/du_h.png "du 参数h")
 
 ### uptime 查看系统运行时间、用户数、负载  
 
@@ -77,12 +77,6 @@ ps -aux | grep php
 ps -aux | nginx
 ```
 
-### w 查看活动用户
-
-```
-w
-```
-
 ###  crontab 计划任务
 
 ```
@@ -97,5 +91,46 @@ top
 然后按 Shift + m, 按照进程内存占用率排序
 ```
 
+### w  显示已经登陆系统的用户列表，并显示用户正在执行的指令
 
+```
+w
 
+root@ubuntu:/# w      #当前登录用户 fei, fei_02
+ 19:46:31 up  1:19,  2 users,  load average: 0.18, 0.10, 0.03
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+fei      tty7     :0               18:27    1:19m  7.79s  0.58s /sbin/upstart -
+fei_02   pts/18   192.168.47.1     19:46   12.00s  0.00s  0.00s -sh
+
+```
+
+### who 显示目前登录系统的用户信息
+
+```
+root@ubuntu:/home/fei# who
+fei      tty7         2019-01-05 18:27 (:0)
+fei_02   pts/17       2019-01-05 22:05 (192.168.47.1)
+root@ubuntu:/home/fei# 
+```
+
+### write 终端给登录用户发消息
+
+```
+ write fei_02 pts/17
+ ctrl+c 或者 ctrl + d 结束
+ 
+ 或者:
+ echo “你被管理员踢出了” > /dev/pts/17
+ fuser -k /dev/pts/17
+```
+
+![w who write](/img/ubuntu/linux_command/linux_login/w_who_write.png "w who write")
+
+### fuser 踢用户下线
+
+```
+fuser -k /dev/pts/17  #使用 w 或者 who 可查看在线用户
+echo “你被管理员踢出了” > /dev/pts/17 && fuser -k /dev/pts/17  #发送消息并踢下线
+```
+
+![fuser](/img/ubuntu/linux_command/linux_login/fuser.png "fuser")

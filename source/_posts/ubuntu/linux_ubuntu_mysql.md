@@ -225,6 +225,12 @@ mysql> show tables \G;
 mysql> show table status \G;
 ```
 
+mysql  命令行工具中 \q 退出终端
+
+```
+mysql> \q;
+```
+
 
 
 

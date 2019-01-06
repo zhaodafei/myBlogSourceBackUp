@@ -32,17 +32,15 @@ delete from user_t; #清空表内容
 truncate user_t;    #清空表内容 id 从最初开始
 ```
 
-### 索引
+### 索引????
 
 ```mysql
-key 普通索引
-unique key  唯一索引
-primary key  主键索引
-fulltext 全文索引
-unique key email(email(10))  #使用索引长度
+#普通索引(index  另一个名字normal)、
+#唯一索引(unique)、
+#全文索引(fulltext)、
+#空间索引(SPATIAL)
 
-alter table 表名 add  unique key(字段名);  # 添加唯一索引
-alter table 表名 add  primary key(字段名);  # 添加主键索引
+unique key email(email(10))  #使用索引长度
 alter table 表名 add  index 索引名(字段名) #添加普通索引
 alter table 表名 drop index 索引名    #删除索引
 show index from 表名    #查看索引

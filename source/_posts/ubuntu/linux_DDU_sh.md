@@ -29,6 +29,33 @@ echo $BASEPATH
 
 ![demo shell](/img/ubuntu/linux_command/linux_sh/sh_02.png "demo shell")
 
+### demo3  运行 test.sh 文件使用 source 命令
+
+```
+source test.sh 
+# 四个的区别区别, 执行权限; 脚本报错后是否继续执行
+1) ./test.sh
+2) sh test.sh
+3) . test.sh
+4) source test.sh
+
+```
+
+### 其他
+
+```
+cat /etc/shells 
+使用 #sh test.sh  #dash test.sh #bash test.sh #rbash test.sh 都是可以执行的 
+
+root@ubuntu:/home/fei/web# cat /etc/shells 
+# /etc/shells: valid login shells
+/bin/sh
+/bin/dash
+/bin/bash
+/bin/rbash
+root@ubuntu:/home/fei/web# 
+```
+
 
 
 
