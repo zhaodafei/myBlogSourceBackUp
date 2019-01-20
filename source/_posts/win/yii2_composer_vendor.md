@@ -85,6 +85,14 @@ composer update  为了获取依赖的最新版本，并且升级 composer.lock 
 
 ![render 2](/img/win/render_phpstorm.png)
 
+### 移除扩展包
+
+```
+composer remove yiisoft/yii2-redis
+```
+
+
+
 
 
 官方解释
