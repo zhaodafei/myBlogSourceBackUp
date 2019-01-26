@@ -46,7 +46,25 @@ local_search: true      #安装好 BlueLake主题后，会有这个配置
 
 
 
- [我是a里面的内容](http://example.com/ "这里是title")
+BlueLake : 主题底部的访问量统计,不显示问题; 
+
+```
+按照作者配置:
+主题_config.yml               themes/BlueLake/_config.yml
+
+busuanzi: true
+
+这个配置完后,需要修改 themes\BlueLake\layout\_partial\after_footer.jade 这个文件
+把卜算子地址改为如下:
+script(src='http://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js', async)
+
+不蒜子作者提示:域名已经更换
+http://busuanzi.ibruce.info/
+```
+
+
+
+
 
 
 
