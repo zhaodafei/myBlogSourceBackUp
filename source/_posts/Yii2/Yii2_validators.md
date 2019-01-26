@@ -1,5 +1,5 @@
 ---
-title: -Yii2 验证器
+title: -Yii2 验证器  -不为人知的秘密
 ---
 ### required : 必须值验证属性
 

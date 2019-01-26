@@ -78,3 +78,14 @@ create database yourdb3 default character set utf8mb4 collate utf8mb4_unicode_ci
 !!! 数据库的的名字不要直接修改,容易丢数据!!!
 ```
 
+### 不常用,有实际用处sql
+
+```mysql
+SELECT 
+    name,
+    NULL AS hello, ---空值作为一列
+    "foo" AS bar   ---字符串作为一列
+FROM  student2
+```
+
+![添加列](/img/mysql/mysql_other_01.png "添加列")
