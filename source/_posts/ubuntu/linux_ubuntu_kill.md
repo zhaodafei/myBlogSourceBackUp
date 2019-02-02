@@ -2,6 +2,8 @@
 title: -kill -pkill -killall 终结进程
 ---
 
+-kill -pkill -killall 终结进程
+
 ### kill 发送指定信号到相应进程
 
 ```

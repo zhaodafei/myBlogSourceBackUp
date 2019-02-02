@@ -230,6 +230,8 @@ make && make install
 /data/server/nginx/nginx             【启动命令】
 /data/server/nginx/nginx -s stop     【停止命令】
 /data/server/nginx/nginx -s reload   【重启命令：】
+/data/server/nginx/nginx -v          【查看nginx版本】
+/data/server/nginx/nginx -V          【大写V 检查编译参数】
 
 pid出错时，可以使用这个：
 /data/server/nginx/nginx  -c /data/server/nginx/conf/nginx.conf

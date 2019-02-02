@@ -80,7 +80,7 @@ ps -aux | grep svnserve      #查看svnserve是否启动
 killall svnserve       #停止服务
 ```
 
-### 访问svn版本库
+### windows 中访问svn版本库
 
 ```
 #vim conf/svnserve.conf   这个配置文件修改的时候有空格这时候这里会一直练不上

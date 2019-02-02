@@ -56,7 +56,7 @@ busuanzi: true
 
 这个配置完后,需要修改 themes\BlueLake\layout\_partial\after_footer.jade 这个文件
 把卜算子地址改为如下:
-script(src='http://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js', async)
+script(src='https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js', async)
 
 不蒜子作者提示:域名已经更换
 http://busuanzi.ibruce.info/

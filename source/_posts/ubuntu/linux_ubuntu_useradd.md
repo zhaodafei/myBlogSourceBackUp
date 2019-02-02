@@ -22,13 +22,15 @@ tail -3 /etc/passwd
 ### 创建用户
 
 ```
+useradd -m -s /bin/bash fei_04  ###可以远程登录,也可以执行shell命令  常用
+
 useradd fei_02    #创建用户
 passwd fei_02     #设定密码
 tail -4 /etc/group  #查看用户
 这样创建的用户登录后不能使用 ll,touch 等其他命令
 
 useradd -m fei_03  #创建一个有家目录,远程登录后不能执行命令
-useradd -m -s /bin/bash fei_04  #可以远程登录,也可以执行shell命令
+useradd -m -s /bin/bash fei_04  ##可以远程登录,也可以执行shell命令
 useradd -s /sbin/nologin fei_05  #创建一个没有家目录,且不能登录的用户
 
 ```

@@ -80,9 +80,9 @@ x\{m,n\} 重复字符x，至少m次，不多于n次，如：/0\{5,10\}/匹配5~1
  mv d01.txt.tmp d01.txt   #确认临时文件修改内容争取后替换原文件
 ```
 
-![sed 参数s](/img/linux_command/linux_sed/sed_s.png "sed 参数s")
+![sed 参数s](/img/ubuntu/linux_command/linux_sed/sed_s.png "sed 参数s")
 
-![sed 参数n](/img/linux_command/linux_sed/sed_s.png "sed 参数n")
+![sed 参数n](/img/ubuntu/linux_command/linux_sed/sed_s.png "sed 参数n")
 
 ### 定界符
 
@@ -100,7 +100,7 @@ x\{m,n\} 重复字符x，至少m次，不多于n次，如：/0\{5,10\}/匹配5~1
  
 ```
 
-![sed 定界符](/img/linux_command/linux_sed/sed_01.png "sed 定界符")
+![sed 定界符](/img/ubuntu/linux_command/linux_sed/sed_01.png "sed 定界符")
 
 ### 命令 d  删除操作
 
@@ -123,7 +123,7 @@ sed '/^hello/d' d01.txt
 
 ```
 
-![sed 删除](/img/linux_command/linux_sed/sed_d.png "sed 删除")
+![sed 删除](/img/ubuntu/linux_command/linux_sed/sed_d.png "sed 删除")
 
 ### 已匹配字符串标记  & ，注意这个符号
 
@@ -138,9 +138,9 @@ sed -i 's/\w\+/[&]/g' d01.txt    [真是替换，并保存]
 sed 's/^hello/&hi/' d01.txt
 ```
 
-![sed 替换](/img/linux_command/linux_sed/sed_&.png "sed 替换")
+![sed 替换](/img/ubuntu/linux_command/linux_sed/sed_&.png "sed 替换")
 
-![sed 替换](/img/linux_command/linux_sed/sed_&02.png "sed 替换")
+![sed 替换](/img/ubuntu/linux_command/linux_sed/sed_&02.png "sed 替换")
 
 ### 字符串匹配标记   \1
 
@@ -159,14 +159,14 @@ echo aaa BBB | sed 's/\([a-z]\+\) \([A-Z]\+\)/\2 \1/'
 echo aaa BBB | sed 's/\([a-z]\+\) \([A-Z]\+\)/\1 \2/'
 ```
 
-![sed 字符串标记](/img/linux_command/linux_sed/sed_str_mark.png "sed 字符串标记")
+![sed 字符串标记](/img/ubuntu/linux_command/linux_sed/sed_str_mark.png "sed 字符串标记")
 
 ```
 hi 被标记为 1 ,所有 hiLinux 会被替换成 hiUbuntu, 并打印出来
 sed -n 's/\(hi\)Linux/\1Ubuntu/p' d01.txt
 ```
 
-![sed 字符串标记](/img/linux_command/linux_sed/sed_str_mark02.png "sed 字符串标记")
+![sed 字符串标记](/img/ubuntu/linux_command/linux_sed/sed_str_mark02.png "sed 字符串标记")
 
 ### 选项 e 允许在同一行里执行多条命令
 
@@ -176,7 +176,7 @@ sed -e '1,2d' -e 's/d01.txt/dd0011.txt/'  d01.txt
 第一条命令，删除1到2行，第二条命令用 dd0011.txt 替换 d01.txt。 这两条命令的前后顺序有影响，如果两个命令都是替换命令，那么第一个替换命令将影响第二个替换命令的结果
 ```
 
-![sed 多条命令执行](/img/linux_command/linux_sed/sed_e.png "sed 多条命令执行")
+![sed 多条命令执行](/img/ubuntu/linux_command/linux_sed/sed_e.png "sed 多条命令执行")
 
 ### 退出  命令： q
 
@@ -185,7 +185,7 @@ sed -e '1,2d' -e 's/d01.txt/dd0011.txt/'  d01.txt
 sed '3q' d01.txt
 ```
 
-![sed 退出](/img/linux_command/linux_sed/sed_q.png "sed 退出")
+![sed 退出](/img/ubuntu/linux_command/linux_sed/sed_q.png "sed 退出")
 
 ### 打印奇数行或偶数行
 
@@ -198,7 +198,7 @@ sed -n '1~2p' d01.txt  #奇数行
 sed -n '2~2p' d01.txt  #偶数行
 ```
 
-![sed 奇数偶数行](/img/linux_command/linux_sed/sed_pn.png "sed 奇数偶数行")
+![sed 奇数偶数行](/img/ubuntu/linux_command/linux_sed/sed_pn.png "sed 奇数偶数行")
 
 ### 插入新一行内容
 
@@ -212,7 +212,7 @@ sed -n '2~2p' d01.txt  #偶数行
  sed '/hello/i\我是新添加行内容' d01.txt  #在所有包含 hello 行前面面插入下一行
 ```
 
-![sed 插入下一行](/img/linux_command/linux_sed/sed_insert.png "sed 插入下一行")
+![sed 插入下一行](/img/ubuntu/linux_command/linux_sed/sed_insert.png "sed 插入下一行")
 
 ### 替换某一行内容
 
@@ -221,7 +221,7 @@ sed  "1s/.*/第一行全部替换新内容/" d01.txt    #把第一行内容全�
 sed  "2s/.*/第二行全部替换新内容/" d01.txt    #把第二行内容全部替换
 ```
 
-![sed 替换具体的某一行](/img/linux_command/linux_sed/sed_line_replace.png "sed 替换具体的某一行")
+![sed 替换具体的某一行](/img/ubuntu/linux_command/linux_sed/sed_line_replace.png "sed 替换具体的某一行")
 
 ## 其他
 
