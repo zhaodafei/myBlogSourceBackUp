@@ -25,7 +25,8 @@ ls[选项][文件][目录]
 -r：以文件名反序排列并输出目录内容列表；
 -R：递归处理，将指定目录下的所有文件及子目录一并处理；
 
---full-time：列出完整的日期与时间；
+--full-time：列出完整的日期与时间；  等价于full-iso
+--time-style=long-iso   显示时间风格
 
 ////////////  以下不经常用到  //////////////
 
@@ -62,9 +63,13 @@ ls -L
 
 ```
 ls --full-time
+ls -l --time-style=long-iso
+ls -l --time-style=local
 ```
 
 ![linux ls 显示详细时间](/img/ubuntu/linux_command/linux_ls/ls_full-time.png "linux ls full-time")
+
+![ls time-style](/img/ubuntu/linux_command/linux_ls/time_style.png "ls time-style")
 
 ### 排除某些文件显示
 

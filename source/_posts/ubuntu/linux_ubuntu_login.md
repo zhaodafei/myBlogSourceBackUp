@@ -44,9 +44,18 @@ du :  与地方不同的是,du命令是对文件和目录磁盘使用的空间�
 ```
 du -h   #以K，M，G为单位，提高信息的可读性
 du -s   #显示目录中文件总和
+du -sh  
 ```
 
-![df 参数h](/img/ubuntu/linux_command/linux_login/du_h.png "du 参数h")
+![du 参数h](/img/ubuntu/linux_command/linux_login/du_h.png "du 参数h")
+
+```
+du -h --max-depth=0
+du -h --max-depth=1
+du -h --max-depth=2
+```
+
+![参数max-depth](/img/ubuntu/linux_command/linux_login/max_depth.png "参数max-depth")
 
 ### uptime 查看系统运行时间、用户数、负载  
 
