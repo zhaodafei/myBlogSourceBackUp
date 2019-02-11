@@ -236,6 +236,9 @@ sed -i 's/d01.txt/dd0011.txt/' d01.txt    # 真实修改文件内容 用参数 i
 \b  表示后退符
 \a  表示"alert"(蜂鸣或者闪烁)
 \0xx 转换为八进制的ASCII码
+
+#显示文件中的指定行内容,显示index.php 中的第2行到第5行内容
+sed -n '2,5p' index.php 
 ```
 
 
