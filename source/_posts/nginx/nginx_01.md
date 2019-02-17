@@ -16,6 +16,7 @@ nginx 相关使用文章介绍
         valid_referers none blocked *.test22.com;
         if ($invalid_referer) {
             #return 403;
+            #return 500;
             rewrite ^/  https://www.baidu.com/img/bd_logo1.png;
         }
         expires 30d;
@@ -24,7 +25,7 @@ nginx 相关使用文章介绍
 
 ### 强制 Apache 返回一个404状态码
 
-```
+```apacheconf
 Redirect 404 /          #访问根目录显示404
 Redirect 500 /          #访问根目录显示500
 ```

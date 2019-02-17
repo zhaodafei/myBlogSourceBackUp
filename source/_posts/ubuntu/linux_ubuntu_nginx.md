@@ -235,6 +235,11 @@ make && make install
 
 pid出错时，可以使用这个：
 /data/server/nginx/nginx  -c /data/server/nginx/conf/nginx.conf
+
+让nginx 返回http状态码
+return 403;
+return 500;
+
 ```
 ## 其他
 

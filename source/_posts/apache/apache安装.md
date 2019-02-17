@@ -71,21 +71,44 @@ ServerName www.test.com:80
 /data/server/apache/bin/apachectl -k stop
 /data/server/apache/bin/apachectl restart
 /data/server/apache/bin/apachectl configtest #检查配置文件是否正确
+/data/server/apache/bin/apachectl -S   #大写S  显示已解析的vhost设置
+/data/server/apache/bin/apachectl -help  
 ps -aux | grep httpd   # 查看 apache 状态
 
+
+
+ <Directory /data/www>
+     Deny from all   #403 拒绝访问
+     #ErrorDocument 404 /test/404.html  #404 重定向
+     #ErrorDocument 404 "This is 404 page"
+  </Directory>
 ```
 
 ### 5)自定义配置文件
 
-```
+```apacheconf
 Include conf/self_vhosts/*.conf
 ```
 
 ![apache 配置文件](/img/apache/apache.png "apache 配置文件")
 
-### Apache 解析php
+### 强制 Apache 返回一个404状态码
 
 ```
+Redirect 404 /          #访问根目录显示404
+Redirect 500 /          #访问根目录显示500
+<Directory /data/www>
+    Deny from all   #403 拒绝访问
+    #ErrorDocument 404 /test/404.html  #404 重定向
+    #ErrorDocument 404 "This is 404 page"  #400 显示错误字符串
+</Directory>
+```
+
+
+
+### Apache 解析php
+
+```apacheconf
 #方法一: PHP编译的时候使用--with-apxs2
 '--with-apxs2=/usr/local/apache/bin/apxs' #让Apache支持PHP
 #查看原来PHP的编译参数
@@ -125,7 +148,7 @@ Include conf/self_vhosts/*.conf
 
 ### 使用ip访问,骚气操作01
 
-```
+```apacheconf
 #http://192.168.1.202/api/hello/world       #后端PHP访问方式
 #http://192.168.1.202/test/dist/index.html  #前端访问方式
 #/data/www/web/test/public    前端
@@ -147,7 +170,7 @@ Include conf/self_vhosts/*.conf
 
 ### 使用ip访问,骚气操作01
 
-```
+```apacheconf
 在 conf/httpd.conf 文件中添加
 #解析PHP
 <FilesMatch \.php$>

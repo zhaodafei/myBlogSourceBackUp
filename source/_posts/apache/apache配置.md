@@ -109,7 +109,7 @@ vim /data/server/apache/conf/self_vhosts/vhost.conf
 
 ### 配置ssl,支持https 02-2
 
-```
+```apacheconf
 编辑Apache根目录下 conf/httpd.conf 找到 
 LoadModule ssl_module modules/mod_ssl.so
 和 
@@ -161,7 +161,46 @@ Include conf/extra/httpd-ssl.conf
 </VirtualHost>
 ```
 
+### apache 80 跳转到 443
 
+```apacheconf
+<VirtualHost *:80>
+    ServerName your.domain.com
+    RewriteEngine on
+    RewriteCond %{SERVER_PORT} !^443$
+    
+    #所有 http:// 变为 https://  url的内容不会匹配
+    RewriteRule ^/?(.*)$ https://%{SERVER_NAME}/$1 [L,R]
+    
+    #所有 http:// 变为 https://  保持url地址内容不变
+    RewriteRule ^.*$ https://%{SERVER_NAME}%{REQUEST_URI} [L,R] 
+</VirtualHost>
+```
+
+###  Apache 正向代理
+
+```apacheconf
+<virtualHost *:80>
+         ServerName 127.0.0.1:80
+         DocumentRoot /usr/local/apache2/htdocs/www
+         <Directory /usr/local/apache2/htdocs/www>
+                Options FollowSymLinks
+                AllowOverride All
+                Order allow,deny
+                Allow from all
+         </Directory>
+         ProxyRequests Off
+         <Proxy *>
+                Order deny,allow
+                Allow from all
+         </Proxy>
+         # 访问127.0.0.1/fei1/ 的时候 代理到 http://192.168.1.151/
+         ProxyPass /fei1/ http://192.168.1.151/   
+         ProxyPassReverse /fei1/ http://192.168.1.151/
+</VirtualHost>
+```
+
+![正向代理](/img/apache/ProxyPass.png "正向代理")
 
 
 
