@@ -62,7 +62,7 @@ sudo tar -zxvf jdk-8u161-linux-x64.tar.gz -C /usr/lib/jvm
 #### 修改环境变量
 
 ```
-sudo vim ~/.bashrc
+sudo vim ~/.bashrc    #或者修改 vim /etc/profile
 ```
 
 文件的末尾追加下面内容

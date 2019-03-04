@@ -46,5 +46,43 @@ export PATH
 
 ![php 环境变量2](/img/ubuntu/path/path_02.png "php 环境变量2")
 
+### composer 命令
+
+```
+composer config -gl    #查看composer全局设置
+composer config --list -g  #查看composer全局设置
+composer require monolog/monolog   #安装monolog
+composer require monolog/monolog:"1.24.0"   #安装monolog指定版本
+composer require "monolog/monolog:1.24.0"   #安装monolog指定版本
+composer install 
+composer update
+composer dump-autoload   #添加自定义后文件执行
+
+设置镜像地址:
+1) 全局配置
+composer config -g repo.packagist composer https://repo.packagist.org
+2) 当前项目使用  [ 去掉参数-g ]
+ composer config repo.packagist composer https://repo.packagist.org
+
+repo.packagist.org  ip地址: 139.99.121.122   新加坡
+packagist.org       ip地址: 139.99.121.122   新加坡
+
+其他镜像地址
+composer-proxy.jp  
+packagist.jp
+https://packagist.laravel-china.org  [laravel 中国镜像]
+```
+
+### 其他--环境变量顺序
+
+```
+正常情况下修改
+/etc/profile
+在图形界面中需要再修改
+~/.bashrc      #针对当前用户
+```
+
+
+
 [composer官方安装文档](https://docs.phpcomposer.com/00-intro.html#Installation-*nix)
 

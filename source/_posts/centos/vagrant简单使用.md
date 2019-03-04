@@ -23,6 +23,13 @@ vagrant box remove [删除相应的box]
 vagrant package  [打包命令,可以吧当前运行的虚拟机环境进行打包]
 vagrant plugin  [用于安装卸载插件]
 vagrant ssh-config [输出用于ssh连接的一些信息]
+
+vagrant 创建的虚拟机账号
+用户名：vagrant 
+密   码：vagrant 
+root帐号密码：vagrant
+用vagrant创建的ubuntu系统，root账号密码默认是没有设置的，需要手动设置 
+sudo passwd
 ```
 
 一般使用
