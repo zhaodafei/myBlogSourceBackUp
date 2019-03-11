@@ -31,7 +31,7 @@ tar -tvf aaa_ccc.tar   #查看包里面文件
 tar -xvf aaa_ccc.tar -C /home/fei/web/  #解压到 /home/fei/web/ 目录下
 ```
 
-![tar cvf](/img/linux_command/linux_tar/tar_cvf.png "tar cvf")
+![tar cvf](/img/ubuntu/linux_command/linux_tar/tar_cvf.png "tar cvf")
 
 #### 以 gzip 压缩
 
@@ -45,7 +45,7 @@ tar -xvf aaa_bbb.tar.gz -C /home/fei/web/  #没有参数z
 tip: 在这里其实没有 z 这个参数有可以查看
 ```
 
-![tar zcvf](/img/linux_command/linux_tar/tar_cvf.png "tar zcvf")
+![tar zcvf](/img/ubuntu/linux_command/linux_tar/tar_cvf.png "tar zcvf")
 
 #### 以 bzip2  压缩
 
@@ -58,7 +58,7 @@ tar -xvf aaa_bbb.tar.bz2 -C /home/fei/web/  #没有参数j
 tip: 在这里其实没有 j 这个参数有可以查看
 ```
 
-![tar jcvf](/img/linux_command/linux_tar/tar_cvf.png "tar jcvf")
+![tar jcvf](/img/ubuntu/linux_command/linux_tar/tar_cvf.png "tar jcvf")
 
 
 

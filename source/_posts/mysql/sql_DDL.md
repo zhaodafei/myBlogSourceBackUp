@@ -68,7 +68,7 @@ show index from a1 \G    #查看索引
 
 ### !!!库操作  [此操作比较危险,请谨慎操作]
 
-```
+```mysql
 create database 数据库; #创建库
 create database 数据库 default character set 字符集 collate 排序规则; #创建库指定字符集
 
