@@ -109,6 +109,8 @@ src/redis-server ./redis.conf   【指定配置文件启动】
 
 ![redis02 pwd login](/img/ubuntu/redis/redis02_login.png "redis02 pwd login")
 
+![redis02 pwd2 login](/img/ubuntu/redis/redis_pwd.png "redis02 pwd2 login")
+
 ### 设置 reids 后台启动
 
 ```

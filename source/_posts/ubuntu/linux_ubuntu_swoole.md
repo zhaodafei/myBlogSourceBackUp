@@ -90,9 +90,22 @@ cp /data/server/php7/lib/php/extensions/no-debug-non-zts-20151012/swoole.so  /us
 
 ![swoole 安装成功](/img/ubuntu/swoole/swoole_success.png "swoole 安装成功")
 
+### 其他
 
+```
+01) 让phpstorm 对 swoole的函数提示
+下载地址 https://github.com/swoole/ide-helper
+
+phpstorm-->settings-->languages&Frameworks-->(Include path)添加下载的文件
+```
+
+![swoole ide](/img/ubuntu/swoole/swoole_ide.png "swoole ide")
+
+![swoole ide ok](/img/ubuntu/swoole/swoole_ide_success.png "swoole ide ok")
 
  [swoole官方文档](https://wiki.swoole.com/wiki/page/6.html "swoole官方文档")
+
+
 
 
 

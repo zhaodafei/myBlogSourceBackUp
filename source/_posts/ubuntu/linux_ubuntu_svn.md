@@ -2,7 +2,7 @@
 title: ubuntu16 --svn
 ---
 
-ubuntu16 系统通过 apt-get 安装svn
+ubuntu16 系统通过 apt-get 安装svn ; svn的源码编译安装比较复杂这里不做介绍
 
 ### 检查是否安装 svn,并安装
 

@@ -30,9 +30,15 @@ show table status where name ='表名';  # 查看某一张表信息
 rename table 旧表名 to 新表名 #修改表名字
 delete from user_t; #清空表内容
 truncate user_t;    #清空表内容 id 从最初开始
+
+#视图
+show create view 视图名 #查看建视图过程
+drop view 视图名 #删除视图
+create view v1 as select * from student2    #创建视图 as后面跟普通sql
+create view v2 as select id,name,score from student2  #创建视图 as后面跟普通sql
 ```
 
-### 索引????
+### 索引
 
 ```mysql
 #普通索引(index  另一个名字normal)、
