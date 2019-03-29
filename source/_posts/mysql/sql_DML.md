@@ -150,4 +150,9 @@ select id,num from b) as tmp
 group by id;
 ```
 
+### 数据从B库导入到A库
+
+```mysql
+INSERT INTO a(id,num) SELECT id,num FROM b
+```
 

@@ -2,7 +2,7 @@
 title: ubuntu -path 环境变量篇 -composer 测试
 ---
 
-源码编译完的包,很多时候在任何目录时访问不到的,这时候需要添加环境变量,或者通过链接的形式,链接到系统默认的PATH目录下的一个,这篇文章就是介绍一下这2中添加环境变量的方式; !!!修改系统环境变量后,要退出当前用户重新登录后才可以看到效果;
+源码编译完的包,很多时候在任何目录时访问不到的,这时候需要添加环境变量,或者通过链接的形式,链接到系统默认的PATH目录下的一个,这篇文章就是介绍一下这2中添加环境变量的方式; !!!修改系统环境变量后,要退出当前用户重新登录后才可以看到效果;  <font style="color:red"> 本章介绍修改文件配置环境变量, 软链接配置环境变量参考node篇 <font>
 
 demo背景,采用composer测试,前提编译安装完php
 
@@ -25,6 +25,10 @@ mv /test/composer.phar /usr/local/bin/composer
 root@ubuntu:/test# echo $PATH
 /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
 root@ubuntu:/test# 
+
+##查看环境变量 
+01)  echo $PATH
+02)  evn
 ```
 
 ![composer 环境变量](/img/ubuntu/path/path_01.png "composer 环境变量")
@@ -45,6 +49,33 @@ export PATH
 ```
 
 ![php 环境变量2](/img/ubuntu/path/path_02.png "php 环境变量2")
+
+### 添加多个环境变量
+
+```
+以node 和 PHP 为例
+修改 /etc/profile 配置环境变量
+PATH=$PATH:/data/server/node-v10.15.3-linux-x64/bin:/data/server/php7/bin
+export PATH
+然后执行source /etc/profile 或者 ./profile 使其生效; 执行完后可以通过 echo $PATH  命令查看环境变量
+
+执行 
+node -v
+npm -v
+php -v
+node 和 PHP 都生效
+```
+
+![多个环境变量](/img/ubuntu/path/path_more.png "多个环境变量")
+
+### 其他--环境变量顺序
+
+```
+正常情况下修改
+/etc/profile
+在图形界面中需要再修改
+~/.bashrc      #针对当前用户
+```
 
 ### composer 命令
 
@@ -73,14 +104,7 @@ packagist.jp
 https://packagist.laravel-china.org  [laravel 中国镜像]
 ```
 
-### 其他--环境变量顺序
 
-```
-正常情况下修改
-/etc/profile
-在图形界面中需要再修改
-~/.bashrc      #针对当前用户
-```
 
 
 

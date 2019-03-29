@@ -54,7 +54,17 @@ ln -s /home/fei/www/aaa/ /home/fei/web/
 
 ![ln s](/img/ubuntu/linux_command/linux_ln/ln_s_dir.png "ln s 软连接符号")
 
+### 删除软连接
 
+```
+正确的是：rm -rf link_result
+
+错误的是：rm -rf link_result/    #这个会把整个目录都删了
+
+测试: ln -s /home/fei/web/link_source /home/fei/www/link_result
+```
+
+![删除链接](/img/ubuntu/linux_command/linux_ln/ln_del.gif "删除链接")
 
 
 
