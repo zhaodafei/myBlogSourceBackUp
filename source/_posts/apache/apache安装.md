@@ -73,8 +73,11 @@ ServerName www.test.com:80
 /data/server/apache/bin/apachectl configtest #检查配置文件是否正确
 /data/server/apache/bin/apachectl -S   #大写S  显示已解析的vhost设置
 /data/server/apache/bin/apachectl -help  
+cat /data/server/apache/build/config.nice  #查看apache编译参数
 ps -aux | grep httpd   # 查看 apache 状态
 
+windows 中命令
+./httpd.exe -t    #查看配置文件是否正确
 
 
  <Directory /data/www>
