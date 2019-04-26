@@ -13,7 +13,7 @@ yarn serve  #也可以运行 or
 npx vue-cli-service serve #也可以运行
 ```
 
-![运行vue](/img/ubuntu/run.png "运行vue")
+![运行vue](/img/ubuntu/vue/run.png "运行vue")
 
 
 

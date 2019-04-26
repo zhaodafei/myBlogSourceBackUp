@@ -149,7 +149,7 @@ sudo bin/mysqld --initialize-insecure --user=mysql
 ```
 support-files/mysql.server start
 bin/mysql -u root -p
-alter user 'root'@'localhost' identified by 'new_password';
+alter user 'root'@'localhost' identified by 'new_password';  #修改密码
 修改完重启mysql 或者 刷新
 support-files/mysql.server stop   或者
 flush privileges;
@@ -157,13 +157,16 @@ flush privileges;
 *************************************************************
 我这里设置密码： 123456 做测试，实际中设置你认为安全的密码
 方法1：alter user 'root'@'localhost' identified by '123456';
-方法2：update user set authentication_string=password('123456') where user='root';
-方法3：set password=password('123456');
+方法2：set password=password('123456');
+方法3：update user set authentication_string=password('123456') where user='root';
+( 不建议使用方法3,SQL会记录到日志中 )
 
 这里如果不重新设置密码，系统会一直提示：
 mysql> show databases;
 ERROR 1820 (HY000): You must reset your password using ALTER USER statement before executing this statement.
 
+****其他****
+ALTER USER 'root'@'localhost' PASSWORD EXPIRE;  #使密码过期
 ```
 
 ![mysql 启动](/img/ubuntu/mysql/mysql_pwd.png "mysql 启动")

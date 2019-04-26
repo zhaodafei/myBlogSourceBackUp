@@ -25,6 +25,8 @@ wget http://jaist.dl.sourceforge.net/project/pcre/pcre/8.36/pcre-8.36.tar.gz
 ### 4).安装
 
 ```
+centos中安装pcre:   yum install -y pcre pcre-devel
+ubuntu中安装pcre:   apt-get install libpcre3 libpcre3-dev
 #安装过程中缺少依赖自行安装,我的pcre已经用apt安装好了
 #groupadd deployer useradd -g apache apache 
 #tar -zxvf apr-1.6.5.tar.gz -C /data/server/apache_component
