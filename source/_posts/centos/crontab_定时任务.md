@@ -5,6 +5,7 @@ title: -crontab 定时任务
 ### crontab 
 
 crontab 文件说明,每个用户都会生成一个自己的 crontab 文件,位于 /var/spool/cron 目录下
+查看 crontab 详情 cat  /etc/crontab
 
 ```shell
 [root@localhost cron]# cat /etc/crontab
@@ -24,7 +25,8 @@ MAILTO=root
 # *  *  *  *  * user-name  command to be executed
 
 [root@localhost cron]# ls /var/spool/cron
-root
+root           #root 用户
+fei            #飞用户
 ```
 
 ###  crontab 命令

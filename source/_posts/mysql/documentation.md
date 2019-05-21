@@ -39,3 +39,32 @@ FLUSH   PRIVILEGES;
 ```
 
  [6.2.7添加帐户，分配权限和删除帐户](https://dev.mysql.com/doc/refman/5.7/en/creating-accounts.html "6.2.7添加帐户，分配权限和删除帐户")
+
+### 数据库备份和恢复
+
+```
+创建数据库指定数据库字符集utf8mb4  排序规则 utf8mb4_general_ci ; mysql8有些字符集在低版本mysql没有
+
+#使用mysqldump以SQL格式转储数据
+/data/server/mysql/bin/mysqldump -h127.0.0.1 -uvagrant -p  --databases fei fei02 >/data/web/mysql_dump/dump.sql
+
+./mysqldump -h127.0.0.1 -uvagrant -p  --databases fei fei02 >/data/web/mysql_dump/dump.sql
+
+#重新加载SQL格式备份
+./mysql -h127.0.0.1 -uvagrant -p  < /data/web/mysql_dump/dump.sql
+
+/data/server/mysql/bin/mysql -h127.0.0.1 -uvagrant -p  < /data/web/mysql_dump/dump.sql
+
+source /data/dump.sql       ###这里没有<符号
+source /data/web/mysql_dump/dump.sql
+```
+
+ [使用mysqldump以SQL格式转储数据](https://dev.mysql.com/doc/refman/5.7/en/mysqldump-sql-format.html"使用mysqldump以SQL格式转储数据")
+
+### mysql查看二进制日志文件
+
+```
+#查看mysql二进制日志
+/data/server/mysql/bin/mysqlbinlog -d demodb binlog.000004
+```
+

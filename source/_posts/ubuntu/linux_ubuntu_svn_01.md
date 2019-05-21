@@ -158,6 +158,7 @@ ldconfig -v  查看
 ```
 svn checkout svn://192.168.1.11/repo/nh_rbac/aaa_test
 接下来数据账号密码
+svn checkout svn://192.168.1.11/repo/test/aaa_test  /data/fei    #检出到指定目录
 ```
 
 ![checkout 测试](/img/ubuntu/svn/svn_configure/checkout.png "checkout 测试")

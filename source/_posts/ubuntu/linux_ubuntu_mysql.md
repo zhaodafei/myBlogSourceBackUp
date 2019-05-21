@@ -211,7 +211,28 @@ support-files/mysql.server stop
 
 mysql -h 你登录的ip -u username -P 3306 -p 【远程登录】
 demo： mysql -h 192.168.1.230 -u afei2 -p
+
 ```
+
+### mysql 配置文件 my.cnf
+
+```
+mysql5.7 以后版本中编译安装完后没有my.cnf 文件,需要自己创建
+
+./bin/mysql --help|grep 'my.cnf'   #查看mysql默认读取的my.cnf
+
+/data/server/mysql  下新建 
+mkdir etc    
+cd etc
+touch my.cnf       #权限 chmod 644 /data/server/mysql/etc/my.cnf  权限过大会出问题
+chown mysql:mysql -R etc/my.cnf    #用户
+
+在my.cnf 中修改日志配置测试文件是否生效
+[mysqld]
+log-error = /data/server/mysql/mysql_log/error.log
+```
+
+
 
 ### mysql  命令行工具中 \c  取消之前的输入,重新开始输入
 

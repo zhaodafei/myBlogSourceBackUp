@@ -279,7 +279,8 @@ root@ubuntu:/data/server/php7/bin# apt install php7.0-cli
 PHP命令
 
 ```
-php --ini
+php --ini   #查看PHP的配置文件
+php -ini    #查看php.ini里面的配置
 
 查询 PHP 服务 ps aux | grep php-fpm
 pkill -9 php

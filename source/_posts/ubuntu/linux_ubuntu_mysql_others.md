@@ -20,7 +20,13 @@ linux 中 locate my.cnf 就出来了（没有的话先updatedb）
 MySQL> UPDATE mysql.user SET Password=PASSWORD('你的密码') where USER='root';
 MySQL> flush privileges; 
 MySQL> exit;
+
+yum 安装的mysql 跳过密码,修改配置文件无效,可以使用命令跳过密码
+/usr/bin/mysqld_safe --skip-grant-tables 
+执行后,从新开一个窗口,连接数据库
 ```
+
+![mysql 跳过密码](/img/mysql/mysql_others/04.png "mysql 跳过密码")
 
 ### 确定 MySQL 中文件位置
 

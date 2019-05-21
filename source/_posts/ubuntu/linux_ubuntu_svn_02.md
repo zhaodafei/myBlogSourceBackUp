@@ -137,6 +137,7 @@ C:\Documents and Settings\Administrator\Application Data\Subversion\auth
 /data/server/svn/bin/svnserve --version       //--svn版本信息
 
 /data/server/svn/bin/svn checkout  svn://192.168.42.128/test
+./svn checkout svn://192.168.1.11/repo/test  /data/www/test   #指定检出目录位置
 ```
 
 

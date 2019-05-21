@@ -36,7 +36,7 @@ df -h   #以K，M，G为单位，提高信息的可读性
 
 ![df 参数h](/img/ubuntu/linux_command/linux_login/df_h.png "df 参数h")
 
-du :  与地方不同的是,du命令是对文件和目录磁盘使用的空间查看
+du :  与df不同的是,du命令是对文件和目录磁盘使用的空间查看
 
 
 ### du  对文件和目录磁盘使用的空间查看

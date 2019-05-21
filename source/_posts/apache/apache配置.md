@@ -29,6 +29,8 @@ Apache  配置.. httpd.conf
 		#是否禁用.htaccess 文件配置        
 		AllowOverride All
 
+        #默认index.php index.html
+        DirectoryIndex index.html index.php 
 
 		Order allow,deny
 		Allow from all

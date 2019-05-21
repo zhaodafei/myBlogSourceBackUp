@@ -73,6 +73,9 @@ ServerName www.test.com:80
 /data/server/apache/bin/apachectl -k stop
 /data/server/apache/bin/apachectl restart
 /data/server/apache/bin/apachectl configtest #检查配置文件是否正确
+/data/server/apache/bin/apachectl -t         #检查配置文件是否正确
+/data/server/apache/bin/httpd -t             #检查配置文件是否正确
+
 /data/server/apache/bin/apachectl -S   #大写S  显示已解析的vhost设置
 /data/server/apache/bin/apachectl -help  
 cat /data/server/apache/build/config.nice  #查看apache编译参数
