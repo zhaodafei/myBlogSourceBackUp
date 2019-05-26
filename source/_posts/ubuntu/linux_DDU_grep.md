@@ -1,6 +1,5 @@
----
 title:    -grep  查找文件里符合条件的字符串
----
+
 ### 命令格式
 
 ```
@@ -129,7 +128,7 @@ grep -i php  aaa.txt
 grep -e php -e The aaa.txt  [ 搜索 PHP、搜索 The ]
 ```
 
-![grep 忽略大小写搜索](/img/ubuntu/linux_command/linux_grep/grep_e.png "grep 忽略大小写搜索")
+
 
 ### 选项 -q  静默输出，一般配合 if  逻辑判断
 
@@ -166,6 +165,7 @@ grep -A1 -n  php aaa.php   [ 匹配结果之后的1行 ]
 grep -B1 -n  php aaa.php   [ 匹配结果之前的1行 ]
 grep -C1 -n  php aaa.php   [ 匹配结果之前的1行和之后一行]
 
+grep -C1 -n  php aaa.php 
 ```
 
 ![grep 前后](/img/ubuntu/linux_command/linux_grep/grep_ABC.png "grep 前后")

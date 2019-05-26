@@ -82,6 +82,12 @@ cd mysql
 ### 编译安装
 
 ```
+ 可以试试这个参数选项
+ -DDEFAULT_CHARSET=utf8mb4 
+ -DDEFAULT_COLLATION=utf8mb4_general_ci
+
+--------------------------------------
+
 cmake . -DBUILD_CONFIG=mysql_release \
 -DCPACK_MONOLITHIC_INSTALL=ON \
 -DCMAKE_INSTALL_PREFIX=/data/server/mysql \

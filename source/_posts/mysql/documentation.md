@@ -6,6 +6,27 @@ title: mysql -Documentation  手册
 
 ```mysql
 SELECT PASSWORD('mypass');   #生成的密码值
+
+SHOW STATUS;  
+SHOW STATUS LIKE 'Table%';
+
+SHOW VARIABLES;  
+SHOW VARIABLES LIKE 'datadir';
+SHOW VARIABLES LIKE 'have_symlink';
+SHOW VARIABLES LIKE 'host_cache_size';
+
+SET GLOBAL host_cache_size=300;
+
+SELECT 'hello', '"hello"', '""hello""', 'hel''lo', '\'hello';
+SELECT "hello", "'hello'", "''hello''", "hel""lo", "\"hello";
+
+SET @t1=1, @t2=2, @t3:=4; #赋值
+SELECT @t1, @t2, @t3, @t4 := @t1+@t2+@t3;
+
+SET NAMES 'utf8';
+SHOW CHARACTER SET;
+USE test;
+SELECT @@character_set_database, @@collation_database;
 ```
 
 ### 访问控制阶段1,2
@@ -42,7 +63,7 @@ FLUSH   PRIVILEGES;
 
 ### 数据库备份和恢复
 
-```
+```mysql
 创建数据库指定数据库字符集utf8mb4  排序规则 utf8mb4_general_ci ; mysql8有些字符集在低版本mysql没有
 
 #使用mysqldump以SQL格式转储数据
@@ -63,8 +84,35 @@ source /data/web/mysql_dump/dump.sql
 
 ### mysql查看二进制日志文件
 
-```
+```mysql
 #查看mysql二进制日志
 /data/server/mysql/bin/mysqlbinlog -d demodb binlog.000004
+```
+
+### EXPLAIN 
+
+```
+
+```
+
+ [EXPLAIN  输出格式](https://dev.mysql.com/doc/refman/5.7/en/explain-output.html"EXPLAIN  输出格式")
+
+### 优化锁定操作
+
+```mysql
+SHOW STATUS LIKE 'Table%';   #查看表上锁争用
+
+MyISAM 表锁
+LOCK TABLES t1 WRITE, temp_t1 WRITE;
+UNLOCK TABLES;
+```
+
+ [表锁定问题](https://dev.mysql.com/doc/refman/5.7/en/table-locking.html "表锁问题")
+
+### 字符集
+
+```mysql
+USE test;
+SELECT @@character_set_database, @@collation_database;
 ```
 
