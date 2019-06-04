@@ -100,6 +100,17 @@ Include conf/self_vhosts/*.conf
 
 ![apache 配置文件](/img/apache/apache.png "apache 配置文件")
 
+### 让普通用户可以启apache
+
+```apacheconf
+##用普通用户安装的时候
+cd /data/server/apache/bin
+chown root httpd   #chown root:www httpd
+chmod u+s httpd
+```
+
+
+
 ### 强制 Apache 返回一个404状态码
 
 ```
@@ -144,9 +155,10 @@ Redirect 500 /          #访问根目录显示500
 
 ##需要在 conf/httpd.conf 文件中打开4个扩展,把下面这几个的注释都打开
 #LoadModule proxy_module modules/mod_proxy.so
+#LoadModule proxy_http_module modules/mod_proxy_http.so  
 #LoadModule proxy_fcgi_module modules/mod_proxy_fcgi.so
 #LoadModule rewrite_module modules/mod_rewrite.so
-#LoadModule proxy_http_module modules/mod_proxy_http.so  
+
 
 #方法三,解析PHP,需要Apache 2.4.9  以后
 <FilesMatch \.php$>

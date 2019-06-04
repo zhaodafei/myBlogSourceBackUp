@@ -48,9 +48,10 @@ Apache  配置.. httpd.conf
 ```
 编辑Apache根目录下 conf/httpd.conf 找到 
 LoadModule ssl_module modules/mod_ssl.so
+LoadModule socache_shmcb_module modules/mod_socache_shmcb.so
 和 
 Include conf/extra/httpd-ssl.conf
-去掉这2行前面的注释
+去掉这3行前面的注释
 ```
 
 ![ssl 模块](/img/apache/ssl_01.png "ssl 模块")
@@ -197,6 +198,7 @@ Include conf/extra/httpd-ssl.conf
                 Allow from all
          </Proxy>
          # 访问127.0.0.1/fei1/ 的时候 代理到 http://192.168.1.151/
+         # 注意这里的 / 不能多也不能少,要对应上
          ProxyPass /fei1/ http://192.168.1.151/   
          ProxyPassReverse /fei1/ http://192.168.1.151/
 </VirtualHost>

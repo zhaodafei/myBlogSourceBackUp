@@ -27,6 +27,8 @@ SET NAMES 'utf8';
 SHOW CHARACTER SET;
 USE test;
 SELECT @@character_set_database, @@collation_database;
+
+SELECT USER();
 ```
 
 ### 访问控制阶段1,2
@@ -114,5 +116,57 @@ UNLOCK TABLES;
 ```mysql
 USE test;
 SELECT @@character_set_database, @@collation_database;
+
+utf8mb4：Unicode字符集的UTF-8编码，每个字符使用一到四个字节。
+utf8mb3：Unicode字符集的UTF-8编码，每个字符使用一到三个字节。
+utf8：别名 utf8mb3。
 ```
+
+### 数据类型  mysql5.7.8 新类型 json
+
+```mysql
+CREATE TABLE t1 (jdoc JSON);
+INSERT INTO t1 VALUES('{"key1": "value1", "key2": "value2"}');
+SELECT JSON_OBJECT('key1', 1, 'key2', 'abc');
+```
+
+###  控制运算符 `case` `if`
+
+```mysql
+mysql> SELECT CASE 1 WHEN 1 THEN 'one'
+    -> WHEN 2 THEN 'two' ELSE 'more' END;
+    -> 'one'
+
+mysql> SELECT CASE 2 WHEN 1 THEN 'one'
+    -> WHEN 2 THEN 'two' ELSE 'more' END;
+    -> 'two'
+    
+mysql> SELECT CASE 3 WHEN 1 THEN 'one'
+    -> WHEN 2 THEN 'two' ELSE 'more' END;
+    -> 'more'    
+-----------------
+
+mysql> SELECT CASE WHEN 1>0 THEN 'true' ELSE 'false' END;
+    -> 'true'
+    
+--------------
+mysql> SELECT IF(1>2,2,3);
+    -> 3
+```
+
+### 全文搜索功能
+
+```mysql
+#自然语言全文搜索
+mysql> SELECT * FROM articles
+        WHERE MATCH (title,body)
+        AGAINST ('database' IN NATURAL LANGUAGE MODE);
+
+#布尔全文搜索
+mysql> SELECT * FROM articles WHERE MATCH (title,body)
+    AGAINST ('+MySQL -YourSQL' IN BOOLEAN MODE);        
+    
+```
+
+ [全文搜索功能](<https://dev.mysql.com/doc/refman/5.7/en/fulltext-search.html> "全文搜索功能")
 

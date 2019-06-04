@@ -130,9 +130,19 @@ sudo useradd -r -g mysql -s /bin/false mysql
 #### 更改 mysql 目录权限
 
 ```
-cd /data/server/mysql
-sudo chown -R mysql .
-sudo chgrp -R mysql .
+##cd /data/server/mysql
+##sudo chown -R mysql .
+##sudo chgrp -R mysql .
+
+这里不用 . 来操作
+cd /data/server
+chown -R mysql mysql57   #把目录下的所有文件变为mysql用户,在回到上级目录修改为root
+chgrp -R mysql mysql57
+
+cd ../
+chown root mysql57
+chgrp root  mysql57
+
 ```
 
 #### 初始化 mysql ， 生成 root 用户临时密码，
