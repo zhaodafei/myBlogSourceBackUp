@@ -168,5 +168,50 @@ mysql> SELECT * FROM articles WHERE MATCH (title,body)
     
 ```
 
- [全文搜索功能](<https://dev.mysql.com/doc/refman/5.7/en/fulltext-search.html> "全文搜索功能")
+ [全文搜索功能](https://dev.mysql.com/doc/refman/5.7/en/fulltext-search.html "全文搜索功能")
 
+### show 语法
+
+```mysql
+SHOW COLUMNS FROM city; #显示列
+SHOW CREATE DATABASE test; #显示创建库语法
+SHOW CREATE TABLE  student2; #显示创建表语法
+```
+
+### innoDB 表移动或者复制
+
+```mysql
+方法一、 复制数据文件(冷备份)
+	01) 在新的库中新建和原来一样的表 , 在data目录下找到创建的表,删除 .ibd 文件
+	02) 执行: ALTER TABLE tbl_name DISCARD TABLESPACE;
+	03) 复制 .ibd 文件,到新刚才删除的位置
+	04) 执行 ALTER TABLE tbl_name IMPORT TABLESPACE;  告诉InnoDb使用新的.bd文件
+方法二、 导出和导入（热备份 mysqldump）
+```
+
+ [innoDB 表移动或者复制](https://dev.mysql.com/doc/refman/5.7/en/innodb-migration.html "innoDB 表移动或者复制")
+
+### innodb 锁
+
+```mysql
+共享锁(S锁) ShareLock
+排他锁(X锁) ExclusiveLock
+
+区别:
+如果事务T对数据A加上共享锁，则其他事务只能对A再加共享锁，不能加排它锁。只有事务T可以对A进行读取和修改，其他事务只能读取数据而不能修改数据。
+如果事务T对数据A加上排它锁，只有事务T可以对A进行读取和修改，其他任何事务都不能对A进行读取和修改
+
+ SHOW ENGINE INNODB STATUS
+```
+
+ [innodb处理死锁](https://dev.mysql.com/doc/refman/5.7/en/innodb-deadlocks-handling.html "innodb处理死锁")
+
+### 主从复制
+
+```
+# 在主服务器上，您必须启用二进制日志记录并配置唯一的服务器ID
+# 在要连接到主服务器的每个从服务器上，必须配置唯一的服务器ID
+# 在读取二进制日志以进行复制时，为主服务器创建一个单独的用户
+```
+
+ [基于二进制文件复制](https://dev.mysql.com/doc/refman/5.7/en/replication-howto.html "基于二进制日志复制")

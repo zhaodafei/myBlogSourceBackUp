@@ -11,6 +11,29 @@ title: -vim  编辑文件
 
 ![vim](/img/ubuntu/linux_command/linux_vim/vim_01.gif "vim")
 
+### 替换
+
+```
+利用 :s 命令可以实现字符串的替换。具体的用法包括：
+:s/str1/str2/       用字符串 str2 替换[行]中[首次]出现的字符串 str1
+:s/str1/str2/g      用字符串 str2 替换[行]中[所有]出现的字符串 str1
+:.,$ s/str1/str2/g  用字符串 str2 替换[正文]当前[行到末尾]所有出现的字符串 str1
+:1,$ s/str1/str2/g  用字符串 str2 替换[正文]中[所有]出现的字符串 str1
+:g/str1/s//str2/g   功能同上
+```
+
+
+
+### 其他
+
+```
+u         #撤销
+ctrl + r  #反撤销
+shift + G #最后一行
+```
+
+
+
 
 
 

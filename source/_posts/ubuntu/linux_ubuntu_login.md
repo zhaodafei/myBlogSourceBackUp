@@ -74,7 +74,7 @@ netstat -lntp # 查看所有监听端口
 netstat -antp # 查看所有已经建立的连接, 查看端口是否被应用
 
 #查看占用端口22的进程
-netstat -tnlp | grep 22
+netstat -lntp | grep 22
 lsof -i:22   
 ```
 

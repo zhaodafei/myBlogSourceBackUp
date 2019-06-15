@@ -19,7 +19,7 @@ touch /www/test.txt               #在 www 目录下创建 test.txt 文件
 
 demo 2,创建文件，运行命令  sh testlog.sh
 
-```
+```shell
 #!/bin/bash
 BASEPATH=/data/$(date -d yesterday +%Y%m)
 bak=$BASEPATH/$(date -d yesterday +%Y%m%d%H%M).test.txt
@@ -31,7 +31,7 @@ echo $BASEPATH
 
 ### demo3  运行 test.sh 文件使用 source 命令
 
-```
+```shell
 source test.sh 
 # 四个的区别区别, 执行权限; 脚本报错后是否继续执行
 1) ./test.sh
@@ -41,9 +41,18 @@ source test.sh
 
 ```
 
+### 利用当前时间作为目录
+
+```shell
+#!/bin/bash
+cp -arv /home/fei/www/aaa/  "/home/fei/www/ffffffffffff_"$(date  +%Y%m%d%H%M)
+```
+
+
+
 ### 其他
 
-```
+```shell
 cat /etc/shells 
 使用 #sh test.sh  #dash test.sh #bash test.sh #rbash test.sh 都是可以执行的 
 

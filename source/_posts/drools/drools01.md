@@ -1,5 +1,5 @@
 ---
-title: drools 笔记
+title: -drools 笔记
 ---
 
 ### 逗号 comma
@@ -33,11 +33,31 @@ Person( name == "mark", address.( city == "london", country == "uk") )
 
 [Grouped accessors for nested objects](https://docs.jboss.org/drools/release/7.20.0.Final/drools-docs/html_single/index.html#_grouped_accessors_for_nested_objects)
 
+### 操作符优先级
+
+```bash
+(nested) property access    .	
+List/Map access            [ ]	
+constraint binding   :	
+multiplicative       * / %	 
+additive             + -	 
+shift                << >> >>>	 
+relational           < > <= >= instanceof	 
+equality             == !=	
+bit-wise non-short circuiting AND               &	 
+bit-wise non-short circuiting exclusive OR	^	 
+bit-wise non-short circuiting inclusive OR	|	 
+logical AND	&&	 
+logical OR	||	 
+ternary	? :	 
+Comma separated AND	,
+```
+
+[Operators priority 操作符优先级 。⌘](https://docs.jboss.org/drools/release/7.20.0.Final/drools-docs/html_single/index.html#_grouped_accessors_for_nested_objects "Operators priority 操作符优先级 。⌘")
 
 
 
-
- [基本Drools规则语言语法](<http://support.streamx.co/intro/basic-drools-rule-language-syntax-cont>"基本Drools规则语言语法")
+ [基本Drools规则语言语法](http://support.streamx.co/intro/basic-drools-rule-language-syntax-cont "基本Drools规则语言语法")
 
 
 

@@ -176,6 +176,7 @@ docker restart  container04  #重启 container04 这个容器
 
 docker exec -it container01 /bin/bash  #进入container01这个容器
 docker exec -it e765b2939521 /bin/bash  #进入e765b2939521这个容器
+docker attach e765b2939521    #进入e765b2939521这个容器
 
 #docker inspect container_name | grep -A10 -n Mounts  #查看容器已经挂载的目录
 docker inspect container04 | grep  -A10 -n   Mounts
