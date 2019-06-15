@@ -21,8 +21,6 @@ MySQL Shell是MySQL Server的高级客户端和代码编辑器。除了提供的
 \exit #退出
 ```
 
-![mysql-shell连接数据库](/img/mysql/mysql_shell/mysql_shell_01.png "mysql-shell 连接数据库")
-
 ### 连接数据库01 `mysqlsh`
 
 ```
