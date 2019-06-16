@@ -208,10 +208,63 @@ SHOW CREATE TABLE  student2; #显示创建表语法
 
 ### 主从复制
 
-```
+```mysql
 # 在主服务器上，您必须启用二进制日志记录并配置唯一的服务器ID
 # 在要连接到主服务器的每个从服务器上，必须配置唯一的服务器ID
 # 在读取二进制日志以进行复制时，为主服务器创建一个单独的用户
 ```
 
  [基于二进制文件复制](https://dev.mysql.com/doc/refman/5.7/en/replication-howto.html "基于二进制日志复制")
+
+### 存储过程
+
+```mysql
+https://dev.mysql.com/doc/refman/5.7/en/stored-routines-syntax.html
+CREATE PROCEDURE 
+CREATE FUNCTION
+
+CALL
+
+DROP PROCEDURE
+DROP FUNCTION
+
+ALTER PROCEDURE
+ALTER FUNCTION
+
+#一个库中不能出现2个相同的触发器
+#创建的触发器在数据库 INFORMATION_SCHEMA 的 TRIGGERS 表中可以看到
+#SELECT * FROM INFORMATION_SCHEMA.TRIGGERS
+
+mysql> CREATE TABLE account (acct_num INT, amount DECIMAL(10,2));
+
+mysql> CREATE TRIGGER ins_sum BEFORE INSERT ON account
+       FOR EACH ROW SET @sum = @sum + NEW.amount;
+
+mysql> SET @sum = 0;
+mysql> INSERT INTO account VALUES(137,14.98),(141,1937.50),(97,-100.00);
+mysql> SELECT @sum AS 'Total amount inserted';
+
+#查看创建的触发器
+mysql> SELECT * FROM INFORMATION_SCHEMA.TRIGGERS
+       WHERE TRIGGER_SCHEMA='test' AND TRIGGER_NAME='ins_sum'
+       
+#查看创建触发器语法       
+mysql> SHOW CREATE TRIGGER test.ins_sum     
+
+#删除触发器
+mysql> DROP TRIGGER test.ins_sum;
+```
+
+ [触发语法和示例](https://dev.mysql.com/doc/refman/5.7/en/trigger-syntax.html "触发语法和示例")
+
+### 视图
+
+```mysql
+mysql> CREATE TABLE t (qty INT, price INT);
+mysql> INSERT INTO t VALUES(3, 50), (5, 60);
+mysql> CREATE VIEW v AS SELECT qty, price, qty*price AS value FROM t;
+mysql> SELECT * FROM v;
+mysql> SELECT * FROM v WHERE qty = 5;
+```
+
+ [视图](https://dev.mysql.com/doc/refman/5.7/en/view-syntax.html "视图")
