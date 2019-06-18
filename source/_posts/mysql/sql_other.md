@@ -161,7 +161,7 @@ ADD FULLTEXT INDEX `id_score_score2`(`id`, `score`, `score2`);
 ALTER TABLE `test`.`test` 
 ADD SPATIAL INDEX `id_score_score2`(`id`, `score`, `score2`);
 
-
+SHOW INDEX FROM test #查看表索引
 ```
 
 ### mysql 连接查询

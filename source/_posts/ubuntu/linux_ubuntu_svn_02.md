@@ -47,6 +47,24 @@ admin_groups=fei_svn   #用户fei_svn属于admin_groups权限组
 
 ![添加访问用户](/img/ubuntu/svn/authz.png "添加访问用户")
 
+### 添加子目录访问权限
+
+```
+vim conf/authz  #修改完不需要重启svn,
+
+内容如下:
+admin_groups=fei_svn   #用户fei_svn属于admin_groups权限组
+dev_groups=dafei       #用户dafei属于dev_groups权限组
+
+[/]
+@admin_groups = rw
+
+[/da]
+@dev_groups=rw       #da 这个子目录需要用最高权限账号在根目录新建,保存后才可以用非管理账号checkout
+```
+
+![子目录权限](/img/ubuntu/svn/sub_dir.png "子目录权限")
+
 ### 启动svn
 
 ```
@@ -138,6 +156,10 @@ C:\Documents and Settings\Administrator\Application Data\Subversion\auth
 
 /data/server/svn/bin/svn checkout  svn://192.168.42.128/test
 ./svn checkout svn://192.168.1.11/repo/test  /data/www/test   #指定检出目录位置
+
+svn add index.php               #添加
+svn commit -m "这里是信息" index.php   #提交
+svn update    #更新
 ```
 
 

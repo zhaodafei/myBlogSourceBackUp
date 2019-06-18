@@ -176,6 +176,7 @@ mysql> SELECT * FROM articles WHERE MATCH (title,body)
 SHOW COLUMNS FROM city; #显示列
 SHOW CREATE DATABASE test; #显示创建库语法
 SHOW CREATE TABLE  student2; #显示创建表语法
+SHOW INDEX FROM  test; #显示索引
 ```
 
 ### innoDB 表移动或者复制
