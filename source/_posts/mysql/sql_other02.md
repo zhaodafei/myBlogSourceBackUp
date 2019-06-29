@@ -1,5 +1,5 @@
 ---
-title: mysql -sql other02
+title: -mysql -sql other02
 ---
 
 ### MySQL 的复制原理及负载均衡

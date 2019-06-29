@@ -1,5 +1,5 @@
 ---
-title: sql DML (insert update delete select)基本使用
+title: -sql DML (insert update delete select)基本使用
 ---
 
 ### 事务

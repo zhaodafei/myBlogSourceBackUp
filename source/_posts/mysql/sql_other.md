@@ -1,5 +1,5 @@
 ---
-title: mysql -sql other
+title: -mysql -sql other
 ---
 
 ### mysql 简单整理

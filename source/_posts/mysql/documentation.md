@@ -203,6 +203,13 @@ SHOW INDEX FROM  test; #显示索引
 如果事务T对数据A加上排它锁，只有事务T可以对A进行读取和修改，其他任何事务都不能对A进行读取和修改
 
  SHOW ENGINE INNODB STATUS
+ 
+ 
+ #解除锁
+ SELECT * FROM INFORMATION_SCHEMA.INNODB_LOCKS; #查看当前锁定的事务
+ SELECT * FROM INFORMATION_SCHEMA.INNODB_LOCK_WAITS; #查看当前等锁的事务
+ SELECT * FROM INFORMATION_SCHEMA.INNODB_TRX; #查看下在锁的事务 
+ kill 线程ID   #杀死进程id（就是上面命令的trx_mysql_thread_id列）
 ```
 
  [innodb处理死锁](https://dev.mysql.com/doc/refman/5.7/en/innodb-deadlocks-handling.html "innodb处理死锁")
