@@ -107,8 +107,6 @@ cd nginx
 
 ##注意路径
  ./configure --prefix=/data/server/nginx \
---conf-path=/data/server/nginx/nginx.conf \
---pid-path=/data/server/nginx/nginx.pid \
 --with-http_ssl_module \
 --with-pcre=/data/server/nginx_component/pcre \
 --with-zlib=/data/server/nginx_component/zlib \
