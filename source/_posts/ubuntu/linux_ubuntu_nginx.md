@@ -1,5 +1,5 @@
 ---
-title: Ubuntu -nginx
+title: Ubuntu16 -nginx
 ---
 ## 安装nginx 01
 
@@ -31,7 +31,7 @@ cat /etc/nginx/nginx.conf
 
 ## 编译安装02
 
-### 安装必要的编译环境
+### 安装必要的编译环境,[ 在ubuntu18中编译安装参考另一篇文章]
 
 Tengine 安装需要使用源代码自行编译，所以安装前需要安装必要的编译工具
 
@@ -50,6 +50,7 @@ yum install gcc gcc-c++
 ### PCRE
 
 ```
+!!!只需要解压即可,nginx安装的时候,指定到解压目录就ok
 wget ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.38.tar.gz
 解压到你指定的目录
 tar -zxvf pcre-8.38.tar.gz -C /data/server/nginx_component
@@ -64,6 +65,7 @@ make && make install
 ### OpenSSL
 
 ```
+!!!只需要解压即可,nginx安装的时候,指定到解压目录就ok
 wget http://www.openssl.org/source/openssl-1.0.2.tar.gz
 解压到你指定的目录
 tar -zxvf openssl-1.0.2.tar.gz -C /data/server/nginx_component
@@ -78,6 +80,7 @@ make && make install
 ### Zlib
 
 ```
+!!!只需要解压即可,nginx安装的时候,指定到解压目录就ok
 wget http://zlib.net/zlib-1.2.11.tar.gz
 解压到你指定的目录
 tar -zxvf zlib-1.2.11.tar.gz -C /data/server/nginx_component
@@ -92,6 +95,9 @@ make && make install
 ### 下载nginx安装包，我选择的是 1.4.2
 
 ```
+./configure --help  可以查看nginx的编译参数说明,这里可以看到nginx需要的【pcre、openssl、zlib】的源码位置
+,所有者三个东西可以不用需要编译安装,只需要有源码即可
+
 wget http://nginx.org/download/nginx-1.4.2.tar.gz
 
 解压到 /data/server/nginx 目录（可以根据实际情况选择目录）：
@@ -121,6 +127,27 @@ test -d '/usr/local/nginx/logs' || 		mkdir -p '/usr/local/nginx/logs'
 make[1]: Leaving directory '/data/server/nginx'
 [1]+  Exit 2  
 
+
+****************************
+-------------如果执行make报错-----------
+cc1: all warnings being treated as errors
+objs/Makefile:447: recipe for target 'objs/src/core/ngx_murmurhash.o' failed
+make[1]: *** [objs/src/core/ngx_murmurhash.o] Error 1
+make[1]: Leaving directory '/data/download/nginx-1.4.2'
+Makefile:8: recipe for target 'build' failed
+make: *** [build] Error 2
+--------  修改 /nginx-1.4.2/objs/Makefile----
+现在修改  /nginx-1.4.2/objs/Makefile
+   2 CC =    cc
+   3 CFLAGS =  -pipe  -O -W -Wall -Wpointer-arith -Wno-unused -Werror -g
+   4 CPP =   cc -E
+   5 LINK =  $(CC)
+去掉这里面的 -Werror  
+重新make,不要重新编译
+---------------------------------------
+make
+make install
+****************************
 ```
 
 注意配置的时候 –with-pcre 、–with-openssl、–with-zlib的路径为源文件的路径
