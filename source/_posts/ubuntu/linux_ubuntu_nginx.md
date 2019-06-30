@@ -106,7 +106,7 @@ mv nginx-1.4.2 nginx
 cd nginx
 
 ##注意路径
- ./configure --sbin-path=/data/server/nginx \
+ ./configure --prefix=/data/server/nginx \
 --conf-path=/data/server/nginx/nginx.conf \
 --pid-path=/data/server/nginx/nginx.pid \
 --with-http_ssl_module \
