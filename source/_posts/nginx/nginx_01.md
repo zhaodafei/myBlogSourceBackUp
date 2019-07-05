@@ -30,3 +30,12 @@ Redirect 404 /          #访问根目录显示404
 Redirect 500 /          #访问根目录显示500
 ```
 
+### 访问不存在的页面重定向到首页
+
+```nginx
+if (!-e $request_filename) {
+    rewrite ^/(.*) /index.html redirect;
+    break;
+}
+```
+

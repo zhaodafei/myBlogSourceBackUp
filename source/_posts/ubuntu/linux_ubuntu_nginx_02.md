@@ -56,12 +56,22 @@ Context:	server, location
 
  [location 模块](http://nginx.org/en/docs/http/ngx_http_core_module.html#location"location 模块")
 
+### location 二级目录,忽略index.html
+
+```
+
+```
+
 
 
 ### rewrite 重写
 
-```
-
+```nginx
+location /h5cfsh {
+	index index.html;
+	root /usr/local/apache2/htdocs/cfsh/h5cfsh/dist/;
+	rewrite ^(.*)$ /index.html break;
+}
 
 
 ```

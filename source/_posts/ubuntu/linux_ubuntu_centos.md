@@ -31,7 +31,7 @@ passwd
      	sudo chmod -R 777 文件名
 ```
 
-### 安装好系统后，vi不能正常使用方向键和退格键
+### `ubuntu`安装好系统后，vi不能正常使用方向键和退格键
 ubuntu中vi在编辑状态下方向键不能用，还有回格键不能删除等我们平时习惯的一些键都不能使用。解决办法：可以安装vim full版本，在full版本下键盘正常，安装好后同样使用vi命令。
 
 ```
@@ -64,6 +64,30 @@ apt-get update   先更新一下
 现在可以安装vim
  	sudo apt-get install vim
  	
+```
+
+### `centos7`换源
+
+```shell
+进入 /etc/yum.repos.d/ 
+	cd /etc/yum.repos.d/
+对 CentOS-Base.repo 文件备份 CentOS-Base.repo.backups
+   cp -avr CentOS-Base.repo  CentOS-Base.repo.backups
+
+cenos7的源;
+wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
+或者
+curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
+
+ yum clean all   #清理缓存
+ yum makecache   #生成新缓存
+ yum update -y  #更新源设置
+```
+
+### 关闭防火墙
+
+```shell
+systemctl stop firewalld.service
 ```
 
 

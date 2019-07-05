@@ -47,8 +47,6 @@ mvn -v
 
 
 
- [我是a里面的内容](http://example.com/ "这里是title")
-
 
 
 
