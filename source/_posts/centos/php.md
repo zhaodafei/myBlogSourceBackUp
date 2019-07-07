@@ -6,8 +6,10 @@ title: centos -PHP7
 ### 安装依赖
 
 ```
-yum -y install libxml2 libxml2-devel curl-devel libjpeg-devel libpng-devel freetype-devel  libmcrypt-devel
-
+yum install -y epel-release
+yum -y install libxslt libxslt-devel
+yum -y install libxml2 libxml2-devel  libjpeg-devel libpng-devel  libmcrypt-devel
+yum -y install  curl-devel freetype-devel
 yum install openssl openssl-devel
 ```
 

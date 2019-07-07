@@ -63,7 +63,7 @@ cmake \
 -DWITH_INNOBASE_STORAGE_ENGINE=1 \
 -DWITH_MEMORY_STORAGE_ENGINE=1 \
 -DWITH_READLINE=1 \
--DMYSQL_UNIX_ADDR=/tmp/mysql/mysql.sock \         sock文件路径/data/server/mysql/mysqlx.sock
+-DMYSQL_UNIX_ADDR=/tmp/mysql/mysql.sock \         sock文件路径/data/server/mysql/mysql.sock
 -DMYSQL_TCP_PORT=3306 \
 -DENABLED_LOCAL_INFILE=1 \
 -DWITH_PARTITION_STORAGE_ENGINE=1 \
