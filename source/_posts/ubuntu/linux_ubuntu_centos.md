@@ -92,7 +92,7 @@ systemctl stop firewalld.service
 
 
 
-
+[OPSX阿里巴巴开源镜像站](https://opsx.alibaba.com/guide?lang=zh-CN&document=69a1db68-801e-11e8-b6bd-00163e04cdbb)
 
 
 

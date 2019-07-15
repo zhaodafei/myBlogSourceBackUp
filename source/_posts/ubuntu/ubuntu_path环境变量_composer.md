@@ -102,6 +102,9 @@ packagist.org       ip地址: 139.99.121.122   新加坡
 composer-proxy.jp  
 packagist.jp
 https://packagist.laravel-china.org  [laravel 中国镜像]
+https://mirrors.aliyun.com/composer  [阿里云 composer 镜像]
+
+https://opsx.alibaba.com/mirror   [这里可以看到阿里云的所有镜像]
 ```
 
 

@@ -281,6 +281,7 @@ PHP命令
 ```
 php --ini   #查看PHP的配置文件
 php -ini    #查看php.ini里面的配置
+php  -a     #进入交互模式,可以写PHP代码,demo: 输入 echo "hello world"; 然后回车显示hello world
 
 查询 PHP 服务 ps aux | grep php-fpm
 pkill -9 php
