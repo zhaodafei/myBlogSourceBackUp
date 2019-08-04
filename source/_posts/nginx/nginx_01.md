@@ -39,3 +39,17 @@ if (!-e $request_filename) {
 }
 ```
 
+### 伪静态
+
+```nginx
+    location / {
+        try_files $uri $uri/ /index.php$is_args$args;
+    }
+    location /backend {
+        try_files $uri $uri/ /backend/index.php$is_args$args;
+    }
+    location /api {
+        try_files $uri $uri/ /api/index.php$is_args$args;
+    }
+```
+

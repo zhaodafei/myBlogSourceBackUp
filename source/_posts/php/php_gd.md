@@ -3,6 +3,10 @@ title: php -GD 库制作图片
 ---
 ### php GD 库制作图片
 
+使用 `PHP GD` 库制作一张图片,并在图片中输出文字
+
+使用 `PHP GD` 库制作一张图片,并在图片中输出文字
+
 ```php
 // GD 和图像处理函数
 // https://www.php.net/manual/zh/ref.image.php
