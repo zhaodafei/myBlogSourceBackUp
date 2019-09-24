@@ -292,8 +292,13 @@ select * from test a1 inner join  test a2 on a1.score=a2.score2
 
 5. ```
    优化limit分页
-       limit 便宜量大的时候,查询效率较低,可以记录上次查询的最大id
-       下次查询的时候直接根据该id来查询 
+       01) limit 便宜量大的时候,查询效率较低,可以记录上次查询的最大id
+           下次查询的时候直接根据该id来查询 
+       02)  limit 数据量问题
+       select `id`, `name` from `user` where `status` = 1 order by `id` desc limit 10
+       上面这条SQL如果表中的数据量大的时候,status 为 1的数据不够10表,这条SQL会全表扫描
+       修改后SQL为:(添加范围)
+       select `id`, `name` from `user` where id>788008 AND `status` = 1 order by `id` desc limit 10
    ```
 6. ```
    优化union查询
