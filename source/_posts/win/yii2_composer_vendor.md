@@ -85,6 +85,8 @@ composer update  为了获取依赖的最新版本，并且升级 composer.lock 
 
 ![render 2](/img/win/render_phpstorm.png)
 
+![render 2](/img/win/render_phpstorm_02.png)
+
 ### 移除扩展包
 
 ```
