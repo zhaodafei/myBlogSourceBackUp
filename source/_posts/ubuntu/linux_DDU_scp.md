@@ -104,6 +104,12 @@ scp -r dafei@192.168.1.87:/data/www/test2 /data/www/test/
 
 
 
+### 其他
+
+ [expect-nt](https://github.com/an7oine/expect-nt/tree/master/original-5.21r1b1 "expect-nt")
+
+
+
 
 
 
