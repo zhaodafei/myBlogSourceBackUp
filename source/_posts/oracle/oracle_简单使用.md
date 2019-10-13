@@ -42,8 +42,10 @@ SELECT *  FROM 表名 WHERE 时间字段 BETWEEN TO_DATE('2000-01-01 02:00:00', 
 
 
 
-![root passwd](/img/oracle/Navicat_oracle_01.png "navicat oracle")
-![root passwd](/img/oracle/Navicat_oracle_02.png "navicat oracle")
+![navicat oracle](/img/oracle/Navicat_oracle_01.png "navicat oracle")
+![navicat oracle](/img/oracle/Navicat_oracle_02.png "navicat oracle")
+
+![navicat oracle system](/img/oracle/Navicat_oracle_system.png "navicat oracle system")
 
 
 
