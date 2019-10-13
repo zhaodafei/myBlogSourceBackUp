@@ -82,5 +82,5 @@ orcl =
 
 [instantclient-basic-windows.x64-11.2.0.4.0.zip 下载地址](https://www.oracle.com/technetwork/cn/topics/winx64soft-101515-zhs.html)   &&  [instantclient-basic-linux.zseries64-11.2.0.4.0.zip 下载](https://www.oracle.com/technetwork/cn/topics/zlinuxsoft-087641-zhs.html) 
 
-
+[oracle教程](https://www.oraclejsq.com/oracle.html)
 
