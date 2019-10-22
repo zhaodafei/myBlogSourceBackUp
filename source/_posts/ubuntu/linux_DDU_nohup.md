@@ -22,6 +22,9 @@ nohup command>/dev/null 2>&1 &
 ---- demo ---
 nohup php fei.php > fei.log 2>&1 &
 ##关闭当前窗口改命令也可以继续在后台运行
+
+nohup php fei.php >> fei.log 2>&1 &  
+### 把日志追加到 fei.log 文件中
 ```
 
 ![nohup 2>&1 &](/img/ubuntu/linux_command/linux_nohup/nohup.png "nohup 2>&1 &")
@@ -42,7 +45,7 @@ nohup command > myout.file 2>&1 &
 ./test.sh > fei.log 2>&1
 ```
 
-![2>&1](/img/ubuntu/linux_command/linux_nohup/root_passwd.png "2>&1")
+![2>&1](/img/ubuntu/linux_command/linux_nohup/2_1.png "2>&1")
 
 
 
