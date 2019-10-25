@@ -1,5 +1,5 @@
 ---
-title:  -oracle 简单使用
+title:  -oracle 其他问题
 ---
 oracle 其他问题
 
