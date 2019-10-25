@@ -5,7 +5,7 @@ oracle 简单SQL的使用................
 
 ### sql
 
-```
+```sql
 #sql
 SELECT * FROM USER_TAB_COMMENTS
 SELECT * FROM USER_TAB_COMMENTS T WHERE T.TABLE_NAME='表名' #查看表注释
@@ -38,6 +38,9 @@ SELECT  p.* FROM (SELECT * FROM 表名 t order by t.id desc) p WHERE ROWNUM = 1
 
 #between and
 SELECT *  FROM 表名 WHERE 时间字段 BETWEEN TO_DATE('2000-01-01 02:00:00', 'yyyy-MM-dd HH24:MI:SS') AND TO_DATE('2000-02-01 08:00:59', 'yyyy-MM-dd HH24:MI:SS')
+
+#时间字段 TO_CHAR
+SELECT UNID,NAME,NAME_XML FROM TABLE_NAME WHERE UNID=10
 ```
 
 
@@ -47,7 +50,24 @@ SELECT *  FROM 表名 WHERE 时间字段 BETWEEN TO_DATE('2000-01-01 02:00:00', 
 
 ![navicat oracle system](/img/oracle/Navicat_oracle_system.png "navicat oracle system")
 
+### `PHP` 操作 `oracle`
 
+```sql
+### PHP 使用 pdo  操作oracle数据库 报错
+## SELECT UNID,NAME,NAME_XML  WHERE UNID>=10 AND UNID<=15  ## 在10到15这5条数据中不为空数据
+php: symbol lookup error: ...php/lib/php/extensions/no-debug-non-zts-20170718/pdo_oci.so: undefined symbol: GC_ADDREF
+
+原因: oracle数据库中字段类型有 CLOB 和 SYS.XMLTYPE 这2中类型
+解决办法:
+我的字段 NAME 是 CLOB 类型; NAME_XML 是 SYS.XMLTYPE 类型
+SELECT UNID,NAME,NAME_XML FROM TABLE_NAME WHERE UNID>=10 AND UNID<=15
+
+SELECT UNID,TO_CHAR(a.NAME_XML.getclobval()) as NAME_XML  FROM TABLE_NAME WHERE UNID>=10 AND UNID<=15
+
+SELECT UNID,TO_CHAR(a.NAME),TO_CHAR(a.NAME_XML.getclobval()) as NAME_XML FROM TABLE_NAME WHERE UNID>=10 AND UNID<=15
+```
+
+![PHP pdo clob](/img/oracle/clob_sql.png "PHP pdo clob")
 
 
 
