@@ -12,6 +12,10 @@ SELECT * FROM USER_TAB_COMMENTS T WHERE T.TABLE_NAME='表名' #查看表注释
 SELECT table_name FROM user_tables; //当前用户的表
 SELECT table_name FROM all_tables; //所有用户的表
 
+查看oracle 数据库版本
+select * from v$version;
+select * from product_component_version;
+
 #获取表字段：
 SELECT * FROM user_tab_columns WHERE Table_Name='用户表'; 
 
