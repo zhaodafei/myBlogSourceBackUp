@@ -40,7 +40,7 @@ awk 'BEGIN{ print "start" } pattern{ commands } END{ print "end" }' file
 awk '{print}' fei.txt  
 ```
 
-![基础命令](/img/linux_command/linux_awk/awk_001.png "基础命令")
+![基础命令](/img/ubuntu/linux_command/linux_awk/awk_001.png "基础命令")
 
 ### awk  print
 
@@ -60,7 +60,7 @@ awk 'END{ print NR }' fei.txt  #统计文件中行数
 awk '{ print NR }' fei.txt   #显示每一行的行号
 ```
 
-![awk print ](/img/linux_command/linux_awk/awk_print.png "awk print")
+![awk print ](/img/ubuntu/linux_command/linux_awk/awk_print.png "awk print")
 
 ###  `-v` 指定定界符
 
@@ -75,7 +75,7 @@ head -3 /etc/passwd | awk 'BEGIN{ FS=":" } { print $NF }'
 tail -3 fei.txt | awk -F- '{ print $NF }' 
 ```
 
-![awk 使用定界符 ](/img/linux_command/linux_awk/awk_f.png "awk 使用定界符")
+![awk 使用定界符 ](/img/ubuntu/linux_command/linux_awk/awk_f.png "awk 使用定界符")
 
 ###   `-V`  使用变量 
 
@@ -95,7 +95,7 @@ var2="bbb"
 echo | awk '{ print v1,v2 }' v1=$var1 v2=$var2
 ```
 
-![awk 使用变量 ](/img/linux_command/linux_awk/awk_var.png "awk 使用变量")
+![awk 使用变量 ](/img/ubuntu/linux_command/linux_awk/awk_var.png "awk 使用变量")
 
 ### 运算
 
@@ -118,7 +118,7 @@ ok
 [root@localhost fei_test]# 		
 ```
 
-![awk next ](/img/linux_command/linux_awk/awk_next.png "awk next")
+![awk next ](/img/ubuntu/linux_command/linux_awk/awk_next.png "awk next")
 
 ### 输出到一个文件
 
@@ -140,7 +140,7 @@ mysql:x:987:1001::/home/mysql:/bin/false
 [root@localhost fei_test]# 
 ```
 
-![awk grep区别 ](/img/linux_command/linux_awk/awk_grep.png "awk grep区别")
+![awk grep区别 ](/img/ubuntu/linux_command/linux_awk/awk_grep.png "awk grep区别")
 
 
 
