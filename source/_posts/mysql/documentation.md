@@ -84,6 +84,35 @@ source /data/web/mysql_dump/dump.sql
 
  [使用mysqldump以SQL格式转储数据](https://dev.mysql.com/doc/refman/5.7/en/mysqldump-sql-format.html"使用mysqldump以SQL格式转储数据")
 
+数据库备份脚本
+
+```shell
+#!/bin/bash
+MYSQLDBUSERNAME=用户名
+MYSQLDBPASSWORD='用户密码'
+MYSQBASEDIR=/var/lib/mysql
+MYSQL=/usr/bin/mysql
+MYSQLDUMP=/usr/bin/mysqldump
+BACKDIR=/var/lib/mysql/DB/backup/mysqldump
+#DATEFORMATTYPE1=$(date +%Y-%m-%d)
+DateFormatType1=$(date +%Y-%m-%d)
+#DATEFORMATTYPE2=$(date +%Y%m%d%H%M%S)
+DateFormatType2=$(date +%Y%m%d%H:%M:%S)
+[ -d $MYSQBASEDIR ] && MYSQDATADIR=$MYSQBASEDIR || MYSQDATADIR=/var/lib/mysql
+[ -x $MYSQL ] || MYSQL=mysql
+[ -x $MYSQLDUMP ] || MYSQLDUMP=mysqldump
+[ -d ${BACKDIR} ] || mkdir -p ${BACKDIR}
+[ -d ${BACKDIR}/${DateFormatType1} ] || mkdir ${BACKDIR}/${DateFormatType1}
+DBLIST=`ls -p $MYSQDATADIR | grep / |tr -d /`
+for DBNAME in $DBLIST
+    do ${MYSQLDUMP} --user=${MYSQLDBUSERNAME} --password=${MYSQLDBPASSWORD} --routines --events --triggers --single-transaction --flush-logs --databases ${DBNAME} | gzip > ${BACKDIR}/${DateFormatType1}/${DBNAME}-backup-${DateFormatType2}.sql.gz
+    [ $? -eq 0 ] && echo "${DBNAME} has been backuped successful" || echo "${DBNAME} has been backuped failed"
+    /bin/sleep 5
+done
+```
+
+
+
 ### mysql查看二进制日志文件
 
 ```mysql
