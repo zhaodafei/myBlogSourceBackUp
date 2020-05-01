@@ -1,6 +1,8 @@
 ---
-title: vue 父子传值
+title: vue 父子传值vue
 ---
+vue 父子之间传值 props emit
+
 ### `vue` 父组件传值子组件 `props`
 
 ```html

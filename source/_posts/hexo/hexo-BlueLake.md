@@ -46,7 +46,7 @@ local_search: true      #安装好 BlueLake主题后，会有这个配置
 
 
 
-BlueLake : 主题底部的访问量统计,不显示问题; 
+### BlueLake : 主题底部的访问量统计,不显示问题; 
 
 ```
 按照作者配置:
@@ -61,6 +61,51 @@ script(src='https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js', as
 不蒜子作者提示:域名已经更换
 http://busuanzi.ibruce.info/
 ```
+
+### 标签显示
+
+01)   hexo new page categories
+
+```
+01-1) hexo new page categories
+成功后提示: source\categories\index.md
+打开 index.md 添加  type: "categories" ,添加完后为:
+---
+title: categories
+type: "categories"
+---
+保存关闭文件
+01-2) 给文章添加 categories 属性,随便打开一个md文章,添加
+---
+title: 这里是title  
+categories: 
+- 这是分类categories
+---
+
+```
+
+02) hexo new page tags
+
+```
+02-1) hexo new page tags
+成功后提示: source\tags\index.md
+打开 index.md 添加  type: "tags" ,添加完后为:
+---
+title: tags
+type: "tags"
+---
+保存关闭文件
+02-2) 给文章添加 tags 属性,随便打开一个md文章,添加
+---
+title: 这里是title  
+categories: 
+- 这是分类categories 
+tags:
+- 这是分类tags
+---
+```
+
+
 
 
 

@@ -14,8 +14,10 @@ webstorm 设置 vue 模板快捷方式
 <script>
     const app = new Vue({
         el: '#app',
-        data: {
-            message: 'Hello Vue!',
+        data() {
+            return {
+                message: 'Hello Vue!'
+            }
         }
     });
 </script>
