@@ -1,5 +1,10 @@
 ---
 title: vue_other 
+categories: 
+- web前端
+- vue
+tags:
+- vue
 ---
 ### `webstrom` 和 `vue`
 
