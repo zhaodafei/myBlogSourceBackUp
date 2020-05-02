@@ -19,11 +19,17 @@ menu:
   - page: rss
     directory: atom.xml
     icon: fa-rss
+  - page: categories
+    directory: categories/
+    icon: fa fa-gui
+  - page: tags
+    directory: tags/
+    icon: fa fa-biao
 
 # Sidebar
 widgets:
   - recent_posts
-#  - category
+  - category
   - tag
   - archive
   #- weibo
@@ -104,6 +110,7 @@ about:
   items:
   - label: email
     url: ## Your email with mailto: e.g.  mailto:zhenggchaoo@gmail.com
+    title: 1097625354@qq.com
 #    title: ## Your email e.g.  zhenggchaoo@gmail.com
 #  - label: github
 #    url: ## Your github'url e.g.  https://github.com/chaooo

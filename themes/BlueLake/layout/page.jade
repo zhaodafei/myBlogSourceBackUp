@@ -6,19 +6,31 @@ block title
 block content
   .post
     h1.post-title= page.title
-    .post-content
-      .author-page
-        a.photo(href="javascript:;")
-          img(src='#{theme.about.photo_url}')
-        .author
-          p
-            i.fa.fa-user name：
-            | #{config.author}
-          each item in theme.about.items
+    if page.title === 'categories_dafei'
+      .post
+        .post-title
+          i(class='fa fa-gui')= ' ' + __('categories')
+        != list_categories({show_count: theme.show_category_count})
+    if page.title === 'tags_dafei'
+      .post
+        .post-title
+          i(class='fa fa-biao')= ' ' + __('tags')
+        .tagcloud
+          != tagcloud({min_font: 25, max_font: 25, amount: 100, orderby: 'count'})
+    else if page.title !== 'categories_dafei' && page.title !== 'tags_dafei'
+      .post-content
+        .author-page
+          a.photo(href="javascript:;")
+            img(src='#{theme.about.photo_url}')
+          .author
             p
-              i(class="fa fa-" + item.label) #{item.label}：
-              a(href=item.url,target="_blank")= item.title
-      != page.content
+              i.fa.fa-user name：
+              | #{config.author}
+            each item in theme.about.items
+              p
+                i(class="fa fa-" + item.label) #{item.label}：
+                a(href=item.url,target="_blank")= item.title
+        != page.content
     if theme.comment && page.comments
       #comments
         include _partial/comments

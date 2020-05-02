@@ -11,10 +11,10 @@ block content
     else if config.language === 'ko'
       h1.label-title
         i.fa.fa-gui= page.category
-        = __('reading_label') 
+        = __('reading_label')
     else
       h1.label-title= __('reading_label')
-        i.fa.fa-gui= page.category 
+        i.fa.fa-gui= page.category
     .post-archive
       .archive-wrap.tag-cat
         each posts in _.groupBy(page.posts.toArray(), function(p){return -p.date.format('YYYY')})
@@ -23,5 +23,5 @@ block content
                 li
                   a(href=url_for(post.path), title=post.title)
                     span.tite= post.date.format(theme.date_formats.category) + '  '
-                      +title(post)             
+                      +title(post)
   include _partial/paginator.jade
