@@ -6,7 +6,9 @@ categories:
 tags:
 - vue
 ---
-vue 父子组件之间访问 `this.$refs` 和 `this.$parent`
+vue 父子组件之间访问 `this.$refs` 和 `this.$parent` 
+
+访问跟组件 `this.$root.xxxxxxxx`
 
 ### `vue` 父组件访问子组件 `this.$refs`
 
@@ -55,7 +57,7 @@ vue 父子组件之间访问 `this.$refs` 和 `this.$parent`
 
 ![vue refs](/img/vue/vue_refs.png "vue refs")
 
- [refs]([https://cn.vuejs.org/v2/guide/components-edge-cases.html#%E8%AE%BF%E9%97%AE%E5%AD%90%E7%BB%84%E4%BB%B6%E5%AE%9E%E4%BE%8B%E6%88%96%E5%AD%90%E5%85%83%E7%B4%A0](https://cn.vuejs.org/v2/guide/components-edge-cases.html#访问子组件实例或子元素) "refs")
+ [refs](https://cn.vuejs.org/v2/guide/components-edge-cases.html#%E8%AE%BF%E9%97%AE%E5%AD%90%E7%BB%84%E4%BB%B6%E5%AE%9E%E4%BE%8B%E6%88%96%E5%AD%90%E5%85%83%E7%B4%A0 "refs")
 
 ### `vue` 子组件访问父组件  `this.$parent`
 
