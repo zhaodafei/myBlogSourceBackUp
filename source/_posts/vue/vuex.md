@@ -34,7 +34,7 @@ import getters from './getters'
 
 Vue.use(Vuex);
 
-const state = { //demo
+const state = { //demo ,定义需要的属性
     count: 10
 };
 
@@ -52,6 +52,7 @@ export default store
 #### 03)`src/vuex/mutations.js` 内容
 
 ```javascript
+// mutations 同步函数
 const mutations = {
     increment_vuex(state) {  //demo
         state.count++
@@ -64,6 +65,7 @@ export default mutations
 #### 04)`src/vuex/actions.js` 内容
 
 ```javascript
+// actions 异步函数;提交使用dispatch
 const actions = {};
 
 export default actions
@@ -73,6 +75,7 @@ export default actions
 #### `05)src/vuex/getters.js` 内容
 
 ```javascript
+// 相当于计算属性 computed
 const getters = {};
 
 export default getters	
