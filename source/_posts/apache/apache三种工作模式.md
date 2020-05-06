@@ -1,5 +1,9 @@
 ---
 title: -apache 三种工作模式
+categories: 
+- Apache
+tags:
+- Apache
 ---
 Apache2.0 支持插入式并行处理模块,成为多路处理模块( MPM)
 

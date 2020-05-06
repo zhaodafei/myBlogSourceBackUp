@@ -1,5 +1,9 @@
 ---
 title: -Apache 安装
+categories: 
+- Apache
+tags:
+- Apache
 ---
 
 ### apache 安装
