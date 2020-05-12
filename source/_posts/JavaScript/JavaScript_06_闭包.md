@@ -1,5 +1,9 @@
 ---
 title:  -JavaScript  -闭包
+categories: 
+- JavaScript
+tags:
+- JavaScript
 ---
 
 ### 闭包 

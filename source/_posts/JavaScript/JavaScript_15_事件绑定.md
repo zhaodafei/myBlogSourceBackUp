@@ -1,5 +1,9 @@
 ---
 title:   --JavaScript -3种事件绑定
+categories: 
+- JavaScript
+tags:
+- JavaScript
 ---
 
 ```javascript

@@ -1,5 +1,9 @@
 ---
 title:  -JavaScript arguments
+categories: 
+- JavaScript
+tags:
+- JavaScript
 ---
 
 argumets 是什么? 

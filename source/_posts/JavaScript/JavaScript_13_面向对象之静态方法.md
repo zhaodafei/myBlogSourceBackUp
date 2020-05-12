@@ -1,5 +1,9 @@
 ---
 title: -- JavaScript -面向对象之静态方法
+categories: 
+- JavaScript
+tags:
+- JavaScript
 ---
 JS 面向对象中的静态方法
 1: 构造函数通过 new 来制造对象

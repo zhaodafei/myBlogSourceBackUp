@@ -1,6 +1,7 @@
 ---
 title: vue 插槽
 categories: 
+- web前端
 - vue
 tags:
 - vue

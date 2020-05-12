@@ -1,5 +1,9 @@
 ---
 title: -JavaScript -this
+categories: 
+- JavaScript
+tags:
+- JavaScript
 ---
 
 js 的 this 到底是谁???  js 中函数的4中条用方式

@@ -1,5 +1,9 @@
 ---
 title:  -JavaScript 作用域   词法分析
+categories: 
+- JavaScript
+tags:
+- JavaScript
 ---
 
 ### 注意

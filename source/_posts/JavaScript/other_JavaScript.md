@@ -1,5 +1,9 @@
 ---
 title: other JavaScript
+categories: 
+- JavaScript
+tags:
+- JavaScript
 ---
 ###  event.target.value 获取当前点击事件的值
 

@@ -1,5 +1,5 @@
 ---
-title: vue-router 路由
+title: -vue-router 路由
 categories: 
 - web前端
 - vue

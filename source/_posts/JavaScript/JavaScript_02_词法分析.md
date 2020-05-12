@@ -1,5 +1,9 @@
 ---
 title: -JavaScript  词法分析期  执行期
+categories: 
+- JavaScript
+tags:
+- JavaScript
 ---
 
 ###   词法分析期  执行期
