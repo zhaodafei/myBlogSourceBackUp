@@ -100,6 +100,15 @@ java -version
 
 
 
+###  其他
+
+```
+java -version  // 查看jdk版本
+java -verbose  // 查看jdk安装路径
+```
+
+
+
 
 
 
