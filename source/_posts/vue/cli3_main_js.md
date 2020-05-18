@@ -89,7 +89,7 @@ new Vue({
 runtime-compiler:
 
 ```
-template(解析)-->ast(abstract syntax tree 抽象语法叔)-->render-->virtual dom-->UI
+template(解析)-->ast(abstract syntax tree 抽象语法树)-->render-->virtual dom-->UI
 
 ```
 
