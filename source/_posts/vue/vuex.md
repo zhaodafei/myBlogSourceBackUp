@@ -1,5 +1,5 @@
 ---
-title: vuex 状态管理
+title: -vuex 状态管理
 categories: 
 - web前端
 - vue
