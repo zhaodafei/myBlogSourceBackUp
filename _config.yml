@@ -91,7 +91,7 @@ backup:
     #origin: https://github.com/zhaodafei/myBlogSourceBackUp.git,master
     origin: git@github.com:zhaodafei/myBlogSourceBackUp.git
     #origin: https://github.com/zhaodafei/myBlogSourceBackUp.git
-  branch: origin
+  branch: master
 jsonContent:
   meta: false
   pages: false
