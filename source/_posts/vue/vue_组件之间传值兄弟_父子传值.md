@@ -1,10 +1,13 @@
 ---
-title: vue 父子传值vue
+title: vue 组件之间传值
 categories: 
 - web前端
 - vue
 tags:
-- vue
+- vuex
+- Bus
+- props
+- emit
 ---
 vue 父子之间传值 `props` 和  `emit`
 
@@ -93,9 +96,40 @@ vue 父子之间传值 `props` 和  `emit`
 
 ![vue emit](/img/vue/vue_emit.png "vue emit")
 
+###  `vue` 兄弟组件传值  `事件总线 EventBus` 
+
+```javascript
+// src/utils/eventBus.js 文件内容  ***新建全局vue实例***
+// 事件总线
+// 非父子组件传参  
+import Vue from "vue";
+export default new Vue();
 
 
+// src/App.vue  文件内容  ***接受事件***
+import eventBus from './utils/eventBus';
+export default {
+    mounted() {
+        eventBus.$on("daFei", function (val) {
+            console.log("我是接受数据__", val);
+        })
+    }
+}
 
+// src/views/index.vue  文件内容  ***发送事件***
+import eventBus from '../../utils/eventBus';
+export default {
+    created() {
+        eventBus.$emit("daFei","hello foo_bar")
+    }
+}
+```
+
+![eventBus](/img/vue/vue_eventBus.png "eventBus")
+
+### 使用 `vuex` 状态管理
+
+参考另一篇文章,有详细介绍
 
 
 
