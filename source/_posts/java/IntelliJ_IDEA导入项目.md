@@ -9,6 +9,12 @@ tags:
 
 使用`idea`做开发,需要从`MyEclipse`导入老项目.
 
+```
+如果没有import 导入,在File-->New-->Project from Existing Source
+```
+
+![导入](/img/java/ide_eclipse_1.png "导入")
+
 ### 开始导入项目
 
 ![开始导入项目](/img/java/IDEA_MyEclipse_01.gif "开始导入项目")

@@ -131,6 +131,80 @@ export default {
 
 参考另一篇文章,有详细介绍
 
+### vue-cli 中使用父子之间传值_父组件传值子组件_封装button按钮
+
+study01.vue 中代码
+
+```html
+<template>
+    <div>
+        <header-btn @handleSave="handleSave" @handleSubmit="handleSubmit" :headerBtns="headerBtns"/>
+    </div>
+</template>
+
+<script>
+    import HeaderBtn from "../../components/headerBtn.vue";
+
+    export default {
+        components: {
+            HeaderBtn,
+        },
+        data() {
+            return {
+                headerBtns: [
+                    {type: 'primary', icon: 'save', name: '保存', handleClick: 'handleSave'},
+                    {type: 'primary', icon: 'check-submit', name: '提交', handleClick: 'handleSubmit'},
+                ],
+            }
+        },
+        methods: {
+            handleSave() {
+                console.log("handleSave");
+            },
+            handleSubmit() {
+                console.log("handleSubmit");
+            }
+        },
+    }
+</script>
+```
+
+ 02) 组件headerBtn.vue 中代码
+
+```html
+<template>
+    <div>
+        <button v-for="(item,index) in headerBtns" :key="index" @click="$emit(item.handleClick)">
+            {{ item.name}}
+        </button>
+    </div>
+</template>
+
+<script>
+    export default {
+        name: "headerBtn",
+        props: {
+            headerBtns: {  //父组件没有传参时,使用这个
+                type: Array,
+                default() {
+                    return [
+                        {type: 'primary', icon: 'goBack', name: '返回', handleClick: 'handleBack'},
+                        {type: 'primary', icon: 'save', name: '保存', handleClick: 'handleSave'},
+                        {type: 'primary', icon: 'check-submit', name: '提交', handleClick: 'handleSubmit'},
+                    ]
+                }
+            }
+        }
+    }
+</script>
+
+<style scoped>
+
+</style>
+```
+
+
+
 
 
 

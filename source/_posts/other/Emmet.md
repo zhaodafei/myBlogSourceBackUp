@@ -81,6 +81,27 @@ div#header>nav#container>ul.self-tabs>li.self-tabs-item*3>a[href="javascript:voi
 </div>
 ```
 
+### CSS 布局
+
+```css
+w20  按下tab后
+width: 20px;
+
+w20+h30    按下tab后
+width: 20px;
+height: 30px;   
+```
+
+### 隐式标签
+
+```html
+.foo   按下tab后
+<div class="foo"></div>
+
+#bar   按下tab后
+<div id="bar"></div>
+```
+
 
 
  [Emmet 官网](https://docs.emmet.io/ceat-sheet "Emmet 官网")
