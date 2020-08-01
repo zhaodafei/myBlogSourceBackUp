@@ -9,8 +9,6 @@ css特性
 css特性
 css特性
 
-
-
 ### 继承
 
 ```html
@@ -105,7 +103,15 @@ id选择器
 
 ```
 
+### 行内替换元素无效属性
 
+以下属性对行内非替换元素不起作用
+
+`width` `height` `margin-top` `margin-bottom`
+
+一下属性对行内非替换元素的效果比较特殊
+
+`padding-top`  `padding-bottom` 上下方向的`border`
 
 
 
