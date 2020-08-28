@@ -20,6 +20,9 @@ title: -vim  编辑文件
 :.,$ s/str1/str2/g  用字符串 str2 替换[正文]当前[行到末尾]所有出现的字符串 str1
 :1,$ s/str1/str2/g  用字符串 str2 替换[正文]中[所有]出现的字符串 str1
 :g/str1/s//str2/g   功能同上
+
+:%s/^/dada          在每行开始添加dada
+:%s/$/feifei        在每行末尾添加feifei
 ```
 
 
@@ -30,6 +33,7 @@ title: -vim  编辑文件
 u         #撤销
 ctrl + r  #反撤销
 shift + G #最后一行
+:set nu   #显示行号
 ```
 
 

@@ -139,13 +139,35 @@ demo:
 
 ![background-image](/img/css/css_01/background_image.png "background-image")
 
+background-image 和 img 的选择使用
+
+|                        | img            | background-image         |
+| ---------------------- | -------------- | ------------------------ |
+| 性质                   | HTML元素       | CSS样式                  |
+| 图片是否占用空间       | V              | X                        |
+| 浏览器右键直接查看地址 | V              | X                        |
+| 支持CSS Sprite         | X              | V                        |
+| 更有可能被搜索引擎收录 | V(结合alt属性) | X                        |
+| 加载顺序               | 优先加载       | 等加载完HTML元素后在加载 |
+
+### CSS常见颜色
+
+01) HTML中常用颜色 #c0c0c0    silver（银）
+02) HTML中常用颜色 #808080    gray[*]（灰） 
+03) HTML中常用颜色 #eee8aa    palegoldenrod（灰菊黄） 
+04) HTML中常用颜色 #dda0dd    plum（李子色）
+05) HTML中常用颜色 #90ee90    lightgreen（浅绿） 
+06) HTML中常用颜色 #afeeee     paleturquoise（苍宝石绿）
+07) HTML中常用颜色 #ffd700      gold（金）
+08) HTML中常用颜色 #add8e6    lightblue（淡蓝） 
+09) HTML中常用颜色 #ff6b81      Wild Watermelon(野生西瓜)
+10) HTML中常用颜色 #00ffff        aqua（水绿）
+
+![color](/img/css/css_01/color.png "color")
 
 
 
-
-
-
-
+[W3-CSS属性查询](https://www.w3.org/TR/CSS2/indexlist.html)
 
 
 

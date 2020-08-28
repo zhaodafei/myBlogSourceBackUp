@@ -1,9 +1,9 @@
 ---
-title: css 之 text-align
+title: CSS 之 text-align
 categories: 
-- css
+- CSS
 tags:
-- css
+- CSS
 - text-align
 ---
  css 之 text-align

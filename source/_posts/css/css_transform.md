@@ -1,9 +1,9 @@
 ---
-title:  -css -transform特效
+title:  -CSS -transform特效
 categories: 
-- css
+- CSS
 tags:
-- css
+- CSS
 - transform
 ---
 `css` `transform` 抽奖特效 实现2D和3D

@@ -46,6 +46,18 @@ let newNum_3 = newNum_2.reduce(function (total, item3) {
 console.log(newNum_3); // 86
 ```
 
+### map,获取对象中某个属性的所有值ES6
+
+```javascript
+let obj = [
+    {name: "daFei", age: "18", hobby: "JavaScript"},
+    {name: "daFei", age: "18", hobby: "HTML"},
+    {name: "daFei", age: "18", hobby: "CSS"},
+];
+let arr = obj.map(item => item.hobby);
+console.log(arr); // 输出 ["JavaScript", "HTML", "CSS"]
+```
+
 
 
 

@@ -1,10 +1,10 @@
 ---
-title: 选择器 -css
+title: 选择器 -CSS
 categories: 
-- css
+- CSS
 tags:
-- css
-- css选择器
+- CSS
+- CSS选择器
 ---
 选择器 -css  
 选择器 -css  
