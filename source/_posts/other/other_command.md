@@ -8,7 +8,8 @@ title: -other -command 其他命令
 
 #windows中
 start explorer .  #注意这里有个点
-
+或者
+explorer .    #注意这里有个点
 #linux 中
 nautilus  .      #注意这里有个点
 ```

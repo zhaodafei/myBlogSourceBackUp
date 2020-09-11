@@ -6,7 +6,7 @@ windows中常用命令
 
 ### 帮助命令 help
 
-```
+```shell
 help  #查看所有命令
 help xcopy #查看xcopy所有参数
 
@@ -14,7 +14,7 @@ help xcopy #查看xcopy所有参数
 
 ### xcpoy 复制文件夹
 
-```
+```bash
 参数:
 /s 复制目录和子目录，除了空的。
 /e 复制目录和子目录，包括空的。
@@ -27,7 +27,7 @@ xcopy E:\web\win_web\aaa  E:\web\win_web\bbb\bbb_01 /e/c/y   #注意目录文件
 
 ### tree 显示目录树
 
-```
+```bash
 语法:
  tree [drive:][path] [/F] [/A]
  参数:
@@ -68,8 +68,18 @@ vmware-hostd.exe              5056 Services                   0     52,416 K
 
 ### telnet 查看服务器某个端口是否开启
 
-```
+```shell
 telnet 127.0.0.1 80
 ```
 
 ![tree](/img/win/cmd/telent.png)
+
+### 打开当前目录
+
+```shell
+#windows中
+start explorer .  #注意这里有个点 
+或者
+explorer .    #注意这里有个点
+```
+
