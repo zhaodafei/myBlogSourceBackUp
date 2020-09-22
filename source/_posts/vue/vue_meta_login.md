@@ -1,9 +1,10 @@
 ---
 title: vue -meta 元数据
 categories: 
-- vue
+- web前端
+- Vue
 tags:
-- vue
+- Vue
 - meta
 ---
  `vue` 中 `meta` 元数据使用和页面中`title`处理,登录判断处理

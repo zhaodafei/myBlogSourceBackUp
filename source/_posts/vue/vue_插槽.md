@@ -2,9 +2,9 @@
 title: vue 插槽 -slot
 categories: 
 - web前端
-- vue
+- Vue
 tags:
-- vue
+- Vue
 - slot
 ---
 具名插槽、作用域插槽、理解编译作用域

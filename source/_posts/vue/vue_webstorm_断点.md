@@ -1,9 +1,10 @@
 ---
 title: vue_webstorm_debug
 categories: 
-- vue
+- web前端
+- Vue
 tags:
-- vue
+- Vue
 - webstorm
 - debug
 ---

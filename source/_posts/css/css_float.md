@@ -2,7 +2,6 @@
 title: CSS 属性 -float
 categories: 
 - CSS
-- float
 tags:
 - none
 - left

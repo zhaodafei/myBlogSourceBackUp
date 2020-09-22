@@ -2,8 +2,6 @@
 title: -IDEA -JSP 操作MySQL
 categories: 
 - IDEA
-- JSP
-- MySQL
 tags:
 - IDEA
 - JSP

@@ -2,9 +2,9 @@
 title: vue 父子组件之间访问
 categories: 
 - web前端
-- vue
+- Vue
 tags:
-- vue
+- Vue
 ---
 vue 父子组件之间访问 `this.$refs` 和 `this.$parent` 
 

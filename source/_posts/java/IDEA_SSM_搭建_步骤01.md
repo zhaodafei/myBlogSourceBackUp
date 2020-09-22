@@ -2,12 +2,9 @@
 title: -IDEA搭建-SSM 步骤01
 categories: 
 - SSM
-- ssm
 tags:
 - IDEA
-- idea
 - SSM
-- ssm
 ---
 使用 `IDEA`搭建`SSM`项目[ SSM 全名: Spring+SpringMVC+MyBatis ]
 环境:  IDEA,  JDK1.8, Maven3.6,Tomcat7.0

@@ -1,15 +1,15 @@
 ---
-title: -eclipse创建项目
+title: -Eclipse创建项目
 categories: 
-- eclipse
+- Eclipse
 tags:
-- eclipse
+- Eclipse
 ---
-eclipse创建项目
+Eclipse创建项目
 
-eclipse创建项目
+Eclipse创建项目
 
-### 01) MyEclipse 配置Tomcat
+### 01) Eclipse 配置Tomcat
 
 ![Eclipse 配置Tomcat](/img/java/Eclipse/Eclipse_add_Tomcat_001.gif "Eclipse配置Tomcat")
 

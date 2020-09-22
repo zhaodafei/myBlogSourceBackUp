@@ -2,9 +2,9 @@
 title: vue_webstorm _模板
 categories: 
 - web前端
-- vue
+- Vue
 tags:
-- vue
+- Vue
 - webstorm
 ---
 ### `webstrom` 和 `vue`

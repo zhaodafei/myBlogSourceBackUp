@@ -2,9 +2,9 @@
 title: -vue-router 路由
 categories: 
 - web前端
-- vue
+- Vue
 tags:
-- vue
+- Vue
 - vue.config.js
 ---
 `vue-cli3` 中 `vue.config.js` 配置

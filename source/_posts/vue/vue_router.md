@@ -2,9 +2,9 @@
 title: -vue-router 路由01
 categories: 
 - web前端
-- vue
+- Vue
 tags:
-- vue
+- Vue
 - vue-router
 ---
 路由 `vue-router`

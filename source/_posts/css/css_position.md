@@ -2,7 +2,6 @@
 title: CSS 属性 -position
 categories: 
 - CSS
-- position
 tags:
 - static
 - relative

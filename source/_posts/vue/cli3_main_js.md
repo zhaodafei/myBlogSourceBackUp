@@ -2,9 +2,9 @@
 title: vue中main.js文件解析 
 categories: 
 - web前端
-- vue
+- Vue
 tags:
-- vue
+- Vue
 - main.js
 ---
 入口文件`mian.js` 中 `render`函数

@@ -1,13 +1,13 @@
 ---
-title: -mysql8
+title: -MySQL8
 categories: 
-- mysql
+- MySQL8
 tags:
-- mysql8
+- MySQL8
 ---
-mysql8 使用
-mysql8 使用
-mysql8 使用
+MySQL8 使用
+MySQL8 使用
+MySQL8 使用
 
 ### mysql8忘记密码
 

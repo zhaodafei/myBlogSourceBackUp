@@ -2,9 +2,9 @@
 title: -vue_axios 
 categories: 
 - web前端
-- vue
+- Vue
 tags:
-- vue
+- Vue
 - axios
 ---
 ### `vue` 和 `axios`

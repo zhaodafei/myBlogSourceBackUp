@@ -33,5 +33,32 @@ for (let key in obj) {
 }
 ```
 
+### forEach 遍历数组
+
+```javascript
+let arr = [
+    {age: 18, name: "daFei"},
+    {age: 28, name: "foo"},
+    {age: 38, name: "bar"}
+];
+
+arr.forEach(item => {
+    console.log(item);
+    console.log(item.age, item.name);
+});
+```
+
+### 序列化和反序列化
+
+```javascript
+let obj = {age: 18, name: "daFei"};
+
+let bbb = JSON.stringify(obj); // 序列化: 对象-->字符串
+console.log(bbb,obj);
+
+let xxx = JSON.parse(bbb); // 反序列化: 字符串-->对象
+console.log(xxx,obj);
+```
+
 
 
