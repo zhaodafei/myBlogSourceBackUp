@@ -60,5 +60,29 @@ let xxx = JSON.parse(bbb); // 反序列化: 字符串-->对象
 console.log(xxx,obj);
 ```
 
+### 立即执行
 
+```html
+<script>
+    (function(){
+        console.log("daFei");
+    }())
+
+    let demo=function(){
+        console.log("daFei_002");
+    }();
+
+    // 最low 的写法
+    function fei(){
+        console.log("daFei_003");
+    }
+    fei();  // 这里的() , 相当于执行
+</script>
+```
+
+### HTML事件属性
+
+[HTML 事件属性_菜鸟教程](https://www.runoob.com/tags/ref-eventattributes.html)
+
+ [HTML 事件属性_MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/GlobalEventHandlers)
 
