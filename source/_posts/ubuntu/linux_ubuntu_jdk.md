@@ -1,5 +1,9 @@
 ---
 title: Ubuntu -jdk
+categories: 
+- Java
+tags:
+- Java
 ---
 ## Ubuntu 安装 jdk 2 种方式
 
@@ -103,8 +107,9 @@ java -version
 ###  其他
 
 ```
-java -version  // 查看jdk版本
-java -verbose  // 查看jdk安装路径
+java -version   // 查看jdk版本
+javac -version  // 查看jdk版本
+java -verbose   // 查看jdk安装路径
 ```
 
 
