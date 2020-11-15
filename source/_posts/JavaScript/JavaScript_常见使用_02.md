@@ -33,7 +33,9 @@ for (let key in obj) {
 }
 ```
 
-### forEach 遍历数组
+### `forEach` 遍历数组
+
+循环所有值,直到所有元素都遍历
 
 ```javascript
 let arr = [
@@ -46,6 +48,26 @@ arr.forEach(item => {
     console.log(item);
     console.log(item.age, item.name);
 });
+```
+
+### `some `遍历对象
+
+可以跳出当前循环
+
+```javascript
+const arr = [
+        {name: "foo", age: "18"},
+        {name: "bar", age: "28"},
+        {name: "daFei", age: "20"}
+    ];
+
+    arr.some(item => {
+        if (item.name === "bar") { 
+            console.log("ok");
+            return true;
+        }
+        console.log("执行"); // 条件生效后,这里的代码不在执行
+    });
 ```
 
 ### 序列化和反序列化

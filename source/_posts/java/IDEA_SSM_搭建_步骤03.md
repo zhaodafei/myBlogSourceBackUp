@@ -97,6 +97,16 @@ public interface UserDao {
     User selectUser(long id);
 }
 
+
+//****************** 强烈建议使用 下面 **********
+package com.dafei.dao;
+
+import com.dafei.model.User;
+import org.apache.ibatis.annotations.Param;
+
+public interface UserDao {
+    User selectUser(@Param("id") long id);
+}
 ```
 
 ![ssm demo](/img/java/ssm/03_demo_test/ssm_3_02.png "ssm demo")
