@@ -45,9 +45,9 @@ demo
 
 ![root passwd](/img/linux_command01_2017_1224/linux_00/root_passwd.png "fdfdsfd")
 
+![这是一张图片](https://github.githubassets.com/images/icons/emoji/octocat.png "这是一张图片")
 
-
- [我是a里面的内容](http://example.com/ "这里是title")
+ [这是github](https://github.com "这是github")
 
 
 
