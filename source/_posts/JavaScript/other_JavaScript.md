@@ -58,6 +58,36 @@ let arr = obj.map(item => item.hobby);
 console.log(arr); // 输出 ["JavaScript", "HTML", "CSS"]
 ```
 
+###  map,保留原数组修改数据
+
+```javascript
+let arr = [
+    {name: "daFei", age: "18", hobby: "JavaScript"},
+    {name: "daFei", age: "18", hobby: "HTML"},
+    {name: "daFei", age: "18", hobby: "CSS"},
+];
+
+let arrNew = arr.map(item => {
+    item.hobby = item.hobby + "__修改";
+    return item;
+});
+console.log(arr, arrNew);
+
+
+let brr = [
+    {name: "daFei", age: "18", hobby: "JavaScript"},
+    {name: "daFei", age: "18", hobby: "HTML"},
+    {name: "daFei", age: "18", hobby: "CSS"},
+];
+let brrNew = brr.map(item => {
+    item = {...item, hobby: item.hobby + "__不改原数组"};
+    return item;
+});
+console.log(brr, brrNew); 
+```
+
+![map](/img/JavaScript/flex/map.png "map")
+
 
 
 

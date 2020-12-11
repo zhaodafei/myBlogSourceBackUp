@@ -142,11 +142,11 @@ mysql:x:987:1001::/home/mysql:/bin/false
 
 ![awk grep区别 ](/img/ubuntu/linux_command/linux_awk/awk_grep.png "awk grep区别")
 
+### `linux` 三剑客
 
-
-
-
-
+ [grep命令](./linux_DDU_grep/ "grep命令")
+ [sed命令](./linux_DDU_sed/ "sed命令")
+ [sed命令](./linux_DDU_sed/ "sed命令")
 
 
 

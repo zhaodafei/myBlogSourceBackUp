@@ -1,5 +1,9 @@
 ---
 title: linux-DDU  -git基本使用
+categories: 
+- git
+tags:
+- git
 ---
 ### git基本使用
 
@@ -17,6 +21,7 @@ git reset --hard commit_id    在版本的历史之间穿梭
 ###  git reset --hard 远程覆盖本地
 ###  git pull origin dev  从dev分支获取最新提交
 git log                     （git log --pretty=oneline）可以查看提交历史
+git log --oneline  #查看简洁历史
 git reflog                    查看命令历史
 git checkout -- file          把文件在工作区的修改全部撤销    命令中的--很重要
 git rm                       用于删除一个文件
@@ -57,7 +62,63 @@ git push origin :refs/tags/<tagname>       可以删除一个远程标签
 git ls-files                            如何知道目录里的文件是否在git仓库里
 ```
 
-### 
+###  回滚代码
+
+4 个时期回滚代码
+
+#### 在工作区的代码
+
+```shell
+git checkout  文件名　　#丢弃某个文件
+git checkout  .　　　　 #丢弃全部[ 注意有个点 ]
+```
+
+#### 添加到缓存区的代码回滚
+
+```bash
+git add 到了缓存区，没有git commit -m
+git reset HEAD   #从缓存区回滚[ 仅仅改变缓存区,工作区不变也不会丢 ]
+```
+
+#### 提交到本地分支没有推送远端
+
+[ git reset 三种模式 ]
+git reset --mixed : 代码回到工作区  [  默认这种模式 ]
+git reset --soft: 代码回到缓存区
+git reset --hard: 代码丢掉
+
+```shell
+git commit -m 到本地分支，没有git push 远端
+git log  --oneline        #查看版本信息,版本号
+git reset --hard 版本号　　#回到想要的版本 [ 这个版本之后的提交信息和数据都会丢掉 ]
+git reset --hard HEAD^　　 #回到上一个版本提交  [ 这个版本之后的提交信息和数据都会丢掉 ]
+git reset --soft HEAD^    #回到上一个版本提交[ 回都上一个版本的缓存区,  这个版本之后的提交信息和数据都会丢掉 ]
+git reset HEAD^　　　　　  #此时代码保留，回到git add操作之前[表示需要重新add] [ 使用了默认参数--mixed]
+git reset --mixed HEAD^   #效果同上一条命令[ git reset HEAD^ ]
+```
+
+#### 远端仓库代码回滚
+
+这种回滚有点麻烦, 有2中方式
+
+```shell
+01)先把本地代码还原到指定版本,然后强制推送
+git reset --hard 版本号　　
+git push --force  #[ 本地版本比远程版本低,加上--force这个参数就可以强制推送到远程 ]
+
+02) 备份当前分支到新分支,先把本地代码还原到指定版本,然后删除远程仓库,用回退的代码推送到远程
+git branch backup_备份         #备份当前分支到新分支
+git push origin backup_备份    #把新分支推送到远程
+git reset --hard 版本号        #把本地代码还原到指定版本
+git push origin  --delete 远程分支  #删除远程分支
+git push origin 本地回退分支上代码    #把本地回退分支上代码推送到远程
+```
+
+
+
+
+
+
 
 
 

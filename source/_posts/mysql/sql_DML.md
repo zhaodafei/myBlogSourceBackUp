@@ -156,3 +156,26 @@ group by id;
 INSERT INTO a(id,num) SELECT id,num FROM b
 ```
 
+### case when end
+
+```mysql
+SELECT *,
+CASE
+		WHEN score >= 90 THEN'优秀' 
+		WHEN score >= 80 AND score < 90 THEN '良好' 
+		WHEN score >= 60 AND score < 80 THEN '及格'
+ELSE '不及格' END AS score_name 
+FROM student2
+
+#---------------------
+id	name	subject	score	score_name
+1	张三		数学	90		优秀
+2	张三		语文	50		不及格
+3	张三		地理	40		不及格
+4	李四		语文	55		不及格
+5	李四		政治	45		不及格
+6	王五		政治	30		不及格
+7	马六		地理	80		良好
+8	马六		英语	90		优秀
+```
+

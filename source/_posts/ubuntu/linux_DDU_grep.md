@@ -172,13 +172,15 @@ grep -C1 -n  php aaa.php
 
 
 
-其他：
+### 其他：
 
 grep家族总共有三个：grep，egrep，fgrep。
 
+### `linux` 三剑客
 
-
-
+ [grep命令](./linux_DDU_grep/ "grep命令")
+ [sed命令](./linux_DDU_sed/ "sed命令")
+ [sed命令](./linux_DDU_sed/ "sed命令")
 
 
 

@@ -1,5 +1,9 @@
 ---
 title: linux-DDU  -git git-bash
+categories: 
+- git
+tags:
+- git
 ---
 ### git-bash  中添加 wget命令
 

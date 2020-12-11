@@ -106,5 +106,62 @@ console.log(xxx,obj);
 
 [HTML 事件属性_菜鸟教程](https://www.runoob.com/tags/ref-eventattributes.html)
 
- [HTML 事件属性_MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/GlobalEventHandlers)
+[HTML 事件属性_MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/GlobalEventHandlers)
+
+### 去除前后空格 `jQuery`
+
+```javascript
+// jQuery 去除前后端空格
+console.log($.trim("111   去除前后空格  222") );
+console.log($.trim("   去除前后空格  ") ); 
+```
+
+
+
+### 2个感叹号使用
+
+`2`个感叹号一般用来将后面的表达式强制转为布尔类型 `true` 或者 `false`
+
+```javascript
+let foo;
+console.log("foo = " + foo); // foo = undefined
+let bar = !!foo;
+console.log("bar = " + bar); // bar = false
+```
+
+`JavaScript` 中 `null`、`undefined`、`NaN`、`+0`、`-0`、`""`，这六种转换成布尔类型是 `false`，其余都是`true`
+
+[理解相等比较的模型](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness)
+
+```javascript
+let foo = []; // true
+let foo = {}; // true
+
+let fei =  !!''    // false
+let fei =  !!'0'   // true
+let fei =  !!'1'   // true
+let fei =  !!'-1'  // true
+let fei =  !!'foo' // true
+let fei =  !!0     // false
+let fei =  !!undefined   //false
+let fei =  !!null  // false
+let fei =  !!NaN   // false
+let fei =  !!{}    // true
+let fei =  !![]    // true
+let fei =  !!{foo: "bar"}           // true
+let fei =  !!['foo', 'bar', 'fei']  // true
+```
+
+`PHP` 中
+
+```php
+$foo = []; // false
+$foo = (object)[]; // true
+```
+
+
+
+
+
+
 

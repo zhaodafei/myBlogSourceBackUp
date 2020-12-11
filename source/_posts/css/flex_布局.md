@@ -106,7 +106,7 @@ flex-flow       (是flex-direction 和 flex-wrap 的简写)
 
 
 
-![flex](/img/JavaScript/flex/flex.png "flex")
+![flex](/img/css/flex/flex.png "flex")
 
  [flex](https://philipwalton.github.io/solved-by-flexbox/ "flex")
 
