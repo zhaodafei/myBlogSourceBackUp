@@ -47,7 +47,7 @@ URG:
 
 ```
 
-![TCP三次握手](/img/z_interview/web/tcp_3hand.png "TCP三次握手")
+![TCP三次握手](/img/z_interview/web/tcp_3hand.jpg "TCP三次握手")
 
 #### TCP 四次挥手
 
@@ -64,7 +64,7 @@ URG:
 
 ```
 
-![TCP四挥手](/img/z_interview/web/tcp_4hand.png "TCP四挥手")
+![TCP四挥手](/img/z_interview/web/tcp_4hand.jpg "TCP四挥手")
 
 ### 其他资料:
 
