@@ -52,7 +52,8 @@ arr.forEach(item => {
 
 ### `some `遍历对象
 
-可以跳出当前循环
+01) 可以跳出当前循环
+02) 可以用来做判断   [Array.prototype.some()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/some)
 
 ```javascript
 const arr = [
@@ -68,6 +69,16 @@ const arr = [
         }
         console.log("执行"); // 条件生效后,这里的代码不在执行
     });
+/////////////////////////
+// 注意：如果用一个空数组进行测试，在任何情况下它返回的都是false
+if ([12, 5, 8, 1, 4].some(x => x > 10)) { //结果 true
+    console.log("找到大于10的数据");
+}
+if ([2, 5, 8, 1, 4].some(x => x > 22)) {
+    console.log("找到大于22的数据");
+}else {  //结果 false
+    console.log("没有找到数据")
+}
 ```
 
 ### 序列化和反序列化
