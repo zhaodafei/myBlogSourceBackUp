@@ -53,3 +53,8 @@ if (!-e $request_filename) {
     }
 ```
 
+### nginx全局变量
+
+ [Alphabetical index of variables](http://nginx.org/en/docs/varindex.html)
+
+[Module ngx_http_core_module](http://nginx.org/en/docs/http/ngx_http_core_module.html)   搜索 Embedded Variables
