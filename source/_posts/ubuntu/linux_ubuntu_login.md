@@ -208,3 +208,8 @@ echo “你被管理员踢出了” > /dev/pts/17 && fuser -k /dev/pts/17  #发�
 ubuntu 命令窗口背景颜色  #300a24
 ```
 
+[Linux命令大全](https://man.linuxde.net/)
+
+[Linux学习频道](http://linux.it.net.cn/)
+
+[Linux公社](https://www.linuxidc.com/)

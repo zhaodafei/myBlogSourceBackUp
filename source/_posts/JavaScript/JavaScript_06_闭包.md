@@ -177,6 +177,42 @@ console.log(Y18.cnt());
 </script>
 ```
 
+### demo 2
+
+```javascript
+function t1() {
+    let age = 20;
+
+    function t2() {
+        console.log(age);
+    }
+
+    return t2;
+}
+
+let fn = t1();
+let age = 100;
+fn(); // 20
+```
+
+### demo 3
+
+```javascript
+// 所有函数自由变量的查找是在定义时候,向上级作用域查询,不是在执行的地方
+function t1(fn) {
+    let a = 20;
+    fn();
+}
+
+let a = 100;
+function t2() {
+    console.log(a);
+}
+
+// 函数作为参数传递
+t1(t2); // 100
+```
+
 
 
 

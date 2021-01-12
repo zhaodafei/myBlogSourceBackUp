@@ -19,8 +19,7 @@ Math.floor(Math.random()*10000)
 
 ```javascript
 let ids = "1,2,3,4,5,6,";
-ids.substr(0, ids.length - 1); //去掉末尾逗号
-
+ids.substring(0, ids.length - 1); //去掉末尾逗号,  *** 禁止使用substr ***
 
 let feiArr = [
     {id: 1, name: "daFei"},
@@ -30,6 +29,8 @@ let feiArr = [
 feiArr.map(m => m.id).join(",");// 输出 1,2,3
 
 ```
+
+警告： 尽管 `String.prototype.substr(…)` 没有严格被废弃 (as in "removed from the Web standards"), 但它被认作是遗留的函数并且可以的话应该避免使用。它并非JavaScript核心语言的一部分，未来将可能会被移除掉。如果可以的话，使用 `substring()` 替代它.       [警告: String.prototype.substr()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/substr)
 
 ### hasOwnProperty 判断自身属性是否存在 
 

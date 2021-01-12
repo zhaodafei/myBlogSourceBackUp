@@ -36,7 +36,18 @@ tags:
 "123@qq.com---456@gmail.com".match(/\d*@[\w]+[.]{1}\w+/g);// ["123@qq.com", "456@gmail.com"]
 ```
 
+```javascript
+"123_fei_456_foo_789".replace(/[0-9]{3}/g,",");   
+",_fei_,_foo_,"
 
+"123_fei_456_foo_789".replace(/(?=[0-9]{3})/g,",");  // (?=pattern)
+",123_fei_,456_foo_,789"
+
+"123_fei_456_foo_789".replace(/(?=\B[0-9]{3})/g,","); //  \B
+"123_fei_,456_foo_,789"
+```
+
+![正则](/img/ubuntu/linux_command/linux_regexp/RegExp_02.png "正则")
 
 [正则_菜鸟教程](https://www.runoob.com/regexp/regexp-metachar.html)
 
