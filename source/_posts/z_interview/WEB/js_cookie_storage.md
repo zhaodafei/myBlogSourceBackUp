@@ -11,4 +11,4 @@ tags:
 -cookie -localStorage -sessionStorage 区别
 -cookie -localStorage -sessionStorage 区别
 
-![cookie storage](/img/z_interview/cookie_storage.png "cookie storage")
+![cookie storage](/img/z_interview/web/cookie_storage.png "cookie storage")
