@@ -61,6 +61,8 @@ vue 父子组件之间访问 `this.$refs` 和 `this.$parent`
 
 ### `vue` 子组件访问父组件  `this.$parent`
 
+这种方式不太好,尽量不使用,  尽量让父组件传值进来
+
 ```html
 <div id="app">
     {{ message }}
