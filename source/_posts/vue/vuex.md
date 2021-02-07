@@ -11,6 +11,8 @@ tags:
 
 vuex 状态管理demo
 
+`vuex` 5个属性 `state`, `getters`, `mutations`, `actions`, `modules`
+
 ####  01) 基本目录结构(自己创建)
 
 ```html
@@ -127,7 +129,9 @@ new Vue({
 
 ![vuex](/img/vue/vue_vuex.png " vuex")
 
+#### Module 模块化
 
+这里暂时不做介绍
 
  [vuex状态管理](https://vuex.vuejs.org/zh/installation.html "vuexzh状态管理")
 
