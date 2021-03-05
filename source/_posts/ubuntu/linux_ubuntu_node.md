@@ -1,5 +1,10 @@
 ---
-title: linux -node 编译安装, 需要配置环境变量
+title: Linux -node 编译安装, 需要配置环境变量
+categories: 
+- Linux
+tags:
+- Linux
+- node
 ---
 
 node

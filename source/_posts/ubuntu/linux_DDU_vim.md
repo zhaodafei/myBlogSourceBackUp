@@ -1,5 +1,10 @@
 ---
 title: -vim  编辑文件
+categories: 
+- Linux
+tags:
+- Linux
+- vim
 ---
 ### 跳转到指定行
 

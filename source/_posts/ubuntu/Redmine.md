@@ -30,7 +30,7 @@ RVM装好后，可以执行以下命令将刚才安装的Ruby版本，设置系�
  
 ```
 
-![root passwd](/img/ubuntu/rvm01.png "rvm01")
+![root passwd](/img/ubuntu/Redmine/rvm01.png "rvm01")
 
 由于某些原因，调整gem安装目录至国内镜像，有且仅有一个就好！
 
@@ -73,7 +73,7 @@ gem update --system
 
 ```
 
-![root passwd](/img/ubuntu/rvm02.png "rvm02")
+![root passwd](/img/ubuntu/Redmine/rvm02.png "rvm02")
 
 ### Redmine
 
@@ -93,7 +93,7 @@ cp config/database.yml.example  config/database.yml
 vim config/database.yml
 ```
 
-![Redmine database](/img/ubuntu/Redmine_database.png "Redmine database")
+![Redmine database](/img/ubuntu/Redmine/Redmine_database.png "Redmine database")
 
 ### 安装依赖包
 
@@ -110,7 +110,7 @@ Gems in the groups development and test were not installed.
 Use `bundle info [gemname]` to see where a bundled gem is installed.
 ```
 
-![Redmine depend](/img/ubuntu/Redmine_depend.png "Redmine depend")
+![Redmine depend](/img/ubuntu/Redmine/Redmine_depend.png "Redmine depend")
 
 ### Session 存储秘钥
 
@@ -126,7 +126,7 @@ RAILS_ENV=production rake redmine:load_default_data //初始化数据
 
 ```
 
-![Redmine database](/img/ubuntu/Redmine_database2.png "Redmine database")
+![Redmine database](/img/ubuntu/Redmine/Redmine_database2.png "Redmine database")
 
 ### 创建上传文件的目录，设置文件夹的权限
 
@@ -150,13 +150,13 @@ ruby bin/rails server webrick -e production
 ruby bin/rails server webrick -e production -b 0.0.0.0 -p3000  #允许远程访问
 ```
 
-![Redmine test](/img/ubuntu/Redmine_test.png "Redmine test")
+![Redmine test](/img/ubuntu/Redmine/Redmine_test.png "Redmine test")
 
 ### 其他
 
 默认账户 admin/admin 初次登录需要修改密码，
 
-![Redmine ok](/img/ubuntu/Redmine_ok.png "Redmine ok")
+![Redmine ok](/img/ubuntu/Redmine/Redmine_ok.png "Redmine ok")
 
 关机重启后，需要再次运行 source /etc/profile.d/rvm.sh  载入环境
 
