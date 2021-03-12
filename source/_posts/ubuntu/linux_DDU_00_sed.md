@@ -1,9 +1,13 @@
 ---
 title: -sed 自动编辑一个或多个文件；简化对文件的反复操作；编写转换程序
+categories: 
+- Linux
+tags:
+- Linux
 ---
-介绍：
-
-sed 是实现对流的编辑。要修改原文件记得用参数 i 。
+介绍：sed 是实现对流的编辑。要修改原文件记得用参数 i 。
+介绍：sed 是实现对流的编辑。要修改原文件记得用参数 i 。
+介绍：sed 是实现对流的编辑。要修改原文件记得用参数 i 。
 
 ###  sed命令格式
 
@@ -245,13 +249,9 @@ sed -n '2,5p' index.php
 
 ### `linux` 三剑客
 
- [grep命令](./linux_DDU_grep/ "grep命令")
- [sed命令](./linux_DDU_sed/ "sed命令")
- [awk命令](./linux_DDU_awk/ "awk命令")
-
-
-
-
+ [grep命令](../linux_DDU_00_grep/ "grep命令")
+ [sed命令](../linux_DDU_00_sed/ "sed命令")
+ [awk命令](../linux_DDU_00_awk/ "awk命令")
 
 
 

@@ -1,5 +1,9 @@
 ---
 title: linux -DDU  文本处理  -awk
+categories: 
+- Linux
+tags:
+- Linux
 ---
 ### 命令格式
 
@@ -144,9 +148,9 @@ mysql:x:987:1001::/home/mysql:/bin/false
 
 ### `linux` 三剑客
 
- [grep命令](./linux_DDU_grep/ "grep命令")
- [sed命令](./linux_DDU_sed/ "sed命令")
- [awk命令](./linux_DDU_awk/ "awk命令")
+ [grep命令](../linux_DDU_00_grep/ "grep命令")
+ [sed命令](../linux_DDU_00_sed/ "sed命令")
+ [awk命令](../linux_DDU_00_awk/ "awk命令")
 
 
 

@@ -1,6 +1,11 @@
 ---
 title: linux -grep  查找文件里符合条件的字符串
+categories: 
+- Linux
+tags:
+- Linux
 ---
+
 ### 命令格式
 
 ```
@@ -179,11 +184,9 @@ grep家族总共有三个：grep，egrep，fgrep。
 
 ### `linux` 三剑客
 
- [grep命令](./linux_DDU_grep/ "grep命令")
- [sed命令](./linux_DDU_sed/ "sed命令")
- [awk命令](./linux_DDU_awk/ "awk命令")
-
-
+ [grep命令](../linux_DDU_00_grep/ "grep命令")
+ [sed命令](../linux_DDU_00_sed/ "sed命令")
+ [awk命令](../linux_DDU_00_awk/ "awk命令")
 
 
 
