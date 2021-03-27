@@ -96,6 +96,63 @@ vue 父子之间传值 `props` 和  `emit`
 
 ![vue emit](/img/vue/vue_emit.png "vue emit")
 
+### `vue` 跨级组件传值 `provider/inject`
+
+```html
+<div id="app">
+    <children_fei></children_fei>
+</div>
+
+<!-- 子组件 -->
+<template id="children_foo">
+    <div>
+        我是第一
+        <children_fei222></children_fei222>
+    </div>
+</template>
+
+<!-- 子组件22222 -->
+<template id="children_foo222">
+    <div>
+        我是第222222222  隔代组件 <br />
+        {{foo}}   <br />
+        <ul>
+            <li v-for="item in books">{{item}}</li>
+        </ul>
+    </div>
+</template>
+
+<script src="vue.js"></script>
+<script>
+    const children_fei222 = {
+        template: '#children_foo222',
+        inject: ["foo", "books"], // 接受 ************
+        created() {
+            console.log(this.foo);
+            console.log(this.books);
+        }
+    };
+    const children_fei = {
+        template: '#children_foo',
+        components: {
+            children_fei222
+        },
+    };
+    const app = new Vue({
+        el: '#app',
+        provide: { // 传值 ************
+            foo: "bar",
+            books: ['论语', '史记', '左传', '汉书', '战国策']
+        },
+        components: {
+            children_fei
+        }
+    });
+</script>
+```
+
+![provider/inject](/img/vue/vue_provide_inject.png "provider/inject")
+
 ###  `vue` 兄弟组件传值  `事件总线 EventBus` 
 
 ```javascript

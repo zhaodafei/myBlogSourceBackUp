@@ -19,7 +19,7 @@ tags:
 process.nextTick
 Promise的then方法 [ 注意是then 方法 ] ***************
 
-// 宏任务:
+// 宏任务: ( script 脚本的执行 )
 setTimeout
 setInterval
 ```

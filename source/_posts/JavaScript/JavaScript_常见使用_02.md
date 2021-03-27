@@ -170,6 +170,19 @@ $foo = []; // false
 $foo = (object)[]; // true
 ```
 
+### 判断一个对象是否是空对象
+
+```javascript
+function checkObj(obj) {
+    return Object.keys(obj).length === 0;
+}
+
+checkObj([]); // true
+checkObj({}); // true
+```
+
+
+
 
 
 

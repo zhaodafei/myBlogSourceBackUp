@@ -213,6 +213,30 @@ function t2() {
 t1(t2); // 100
 ```
 
+### demo4
+
+实现每隔一秒答打印0,1,2,3,4
+
+```javascript
+// 01) 使用闭包
+for (var i = 0; i < 5; i++) {
+    (function (i) {
+        setTimeout(function () {
+            console.log(i);
+        }, i * 1000);
+    })(i);
+}
+
+// 02) 使用let
+for (let i = 0; i < 5; i++) {
+    setTimeout(function () {
+        console.log(i);
+    }, i * 1000);
+}
+
+// 扩展,如果使用var 又没有用闭包,会输出5个5
+```
+
 
 
 
