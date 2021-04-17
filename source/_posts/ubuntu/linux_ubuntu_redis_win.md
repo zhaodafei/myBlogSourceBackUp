@@ -1,5 +1,5 @@
 ---
-title: ubuntu15 -redis安装
+title:  -redis 在windows中使用
 categories: 
 - redis
 tags:

@@ -45,7 +45,7 @@ tar -xvf aaa_bbb.tar.gz -C /home/fei/web/  #没有参数z
 tip: 在这里其实没有 z 这个参数有可以查看
 ```
 
-![tar zcvf](/img/ubuntu/linux_command/linux_tar/tar_cvf.png "tar zcvf")
+![tar zcvf](/img/ubuntu/linux_command/linux_tar/tar_zcvf.png "tar zcvf")
 
 #### 以 bzip2  压缩
 
@@ -58,9 +58,16 @@ tar -xvf aaa_bbb.tar.bz2 -C /home/fei/web/  #没有参数j
 tip: 在这里其实没有 j 这个参数有可以查看
 ```
 
-![tar jcvf](/img/ubuntu/linux_command/linux_tar/tar_cvf.png "tar jcvf")
+![tar jcvf](/img/ubuntu/linux_command/linux_tar/tar_jcvf.png "tar jcvf")
 
+#### 打包后用当前时间命名
 
+```
+tar -cvf fei_$(date '+%Y-%m-%d').tar codeFileName
+tar -cvf fei_$(date '+%m%d')_01.tar  codeFileName
+```
+
+![tar cvf date](/img/ubuntu/linux_command/linux_tar/tar_cvf_date.png "tar cvf date")
 
 
 
