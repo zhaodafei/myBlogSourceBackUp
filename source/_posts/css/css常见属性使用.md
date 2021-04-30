@@ -168,45 +168,20 @@ background-image 和 img 的选择使用
 ### 常见公用CSS
 
 ```css
-/*常见公用css 01*/
-*{ margin:0; padding:0}
-ul, ol, li, dl, dt, dd {list-style:none;}
+/****** reset.css 常见公用样式 ******/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,hr,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td { margin:0; padding:0; }
+
+body { color:#555;background:#FFF; font-size:12px; font-family:  "microsoft yahei", sans-serif, arial; }
+a {text-decoration: none;}
+a:hover{text-decoration:underline;}
 img {border: 0;vertical-align: middle;}
-a {color: #000000;text-decoration: none;}
-a:hover{color:#BA2636;text-decoration:underline;}
-body,div,ul,ol,dl,dt,dd,li,dl,h1,h2,h3,h4 {margin:0;padding:0;font-style:normal;font:12px/22px"\5B8B\4F53",Arial,Helvetica,sans-serif}
-body{color:#000000;background:#FFF;text-align:center;}
-/*.clear{clear:both;height:1px;width:100%;overflow:hidden;margin-top:-1px;}*/
-```
-
-```css
-/*常见公用css 02*/
-body, ol, ul, h1, h2, h3, h4, h5, h6, p, th, td, dl, dd, form, fieldset, legend, input, textarea, select{margin:0;padding:0;}
-body{font:12px "宋体","Arial Narrow",HELVETICA;background:#FFF;-webkit-text-size-adjust:100%;color:#333;}
-a{text-decoration:none;color:#333;}
-a:hover{text-decoration:underline; color:#f88324}
-li{list-style:none;}
-img{border:0;vertical-align:middle;}
-
-em{font-style:normal;}
+ul,ol{list-style:none;}
 table{border-collapse:collapse;border-spacing:0;}
 p{word-wrap:break-word;}
-.undis{display:none;}
-.dis{display:block;}
-.cf:after,.layout:after,.hd:after,.bd:after,.ft:after{content:"";display:table;clear:both;}
-.cf,.layout,.hd,.bd,.ft{*zoom:1;}
-.layout{ width:1000px; margin:0 auto}
-.fl{ float:left; _display:inline}
-.fr{ float:right; _display:inline}
-.yh{ font-family:"微软雅黑"; font-weight:normal;}
-.bgf{ background:#fff;}
-.posr{ position:relative;zoom:1}
-.mt{ margin-top:20px;}
-.borf{border:1px solid #c7d8e0; border-top:0px; background:#fff;}
-.bor{border:1px solid #c7d8e0; background:#fff;}
+
+.clearfix:after {content: "."; display: block; height:0; clear:both; visibility: hidden;}
+.clearfix { *zoom:1; }
 ```
-
-
 
 [W3-CSS属性查询](https://www.w3.org/TR/CSS2/indexlist.html)
 

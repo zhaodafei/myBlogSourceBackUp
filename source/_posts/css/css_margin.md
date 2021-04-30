@@ -198,7 +198,46 @@ padding一般是用来设置父子元素之间的间距
 
 
 
+### 水平居中
 
+```html
+<style>
+    div {
+        width: 200px;
+        height: 200px;  
+        background-color: #ff6b81;
+        margin: 0 auto;
+    }
+</style>
+<div class="div1"></div>
+```
+
+### 折叠详细介绍
+
+折叠,传递,重叠 三个词一个意思
+
+产生折叠的必备条件: `margin` 必须是邻接的,  两个 `margin` 是邻接的必须满足以下条件:
+
+1. 必须是处于常规文档流(非 `float` 和绝对定位)的块级盒子,并且处于同一个 `BFC` 当中
+
+2. 没有线盒,没有空隙,没有 `padding` 和` border` 将他们分隔开
+3. 都属于垂直方向上相邻的外边距,可以是下面任意一种情况
+4. 元素的` margin-top` 与其第一个常规文档流的子元素的 `margin-top`
+5. 元素的 `margin-bottom` 与其下一个常规文档流的兄弟元素的 `margin-top`
+6. `height` 为 `auto` 的元素的 `margin-bottom` 与其最后一个常规文档流的子元素的 `margin-bottom`
+7. 高度为 0 并且最小高度也为 0,不包含常规文档流的子元素,并且自身没有建立新的 BFC 的元素的 `margin-top` 和 `margin-bottom`
+
+有三种情况会形成外边距重叠
+
+1. 同一层相邻元素之间
+2. 没有内容将父元素和后代元素分开
+3. 空的块级元素
+
+
+
+### 其他
+
+[MDN外边距重叠](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
 
 
 

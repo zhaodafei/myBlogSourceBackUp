@@ -78,7 +78,28 @@ markdown 转为 pdf  空格不生效， 使用**全角空格**。即：在**全�
 console.log("hello JavaScript")
 ```
 
+### 块注释
 
+> 一级
+>
+> 一级
+
+> > 二级
+> >
+> > 二级
+
+> > > 三级
+> > >
+> > > 三级
+
+
+
+>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 这个可以换行,文字会自动适应宽度
+
+### 加粗和斜体
+
+*斜体字体*
+**加粗字体**
 
 
 

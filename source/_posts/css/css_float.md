@@ -3,7 +3,8 @@ title: CSS 属性 -float
 categories: 
 - CSS
 tags:
-- none
+- CSS
+- float
 - left
 - right
 
@@ -335,7 +336,11 @@ width of containing block= 'margin-left' + 'border-left-width' + 'padding-left' 
 
 ### 清除浮动
 
-给父元素增加`::after`伪元素
+浮动元素会脱离文档流(绝对定位元素也会脱离文档流)，导致无法计算准确的高度，这种问题称为**高度塌陷**
+
+01) 使用`BFC`清除浮动, 具体见`BFC`文章内容
+
+02) 给父元素增加`::after`伪元素
 
 ```css
     .clear-item::after {
@@ -350,6 +355,12 @@ width of containing block= 'margin-left' + 'border-left-width' + 'padding-left' 
     }
 ```
 
+> 浮动元素可以左右移动，直到遇到另一个浮动元素或者遇到它外边缘的包含框。浮动框不属 于文档流中的普通流，当元素浮动之后， 不会影响块级元素的布局，只会影响内联元素布局。此时文档流中的普通流就会表现得该浮 动框不存在一样的布局模式。当包含框 的高度小于浮动框的时候，此时就会出现“高度塌陷”。
+
+> 清除浮动是为了清除使用浮动元素产生的影响。浮动的元素，高度会塌陷，而高度的塌陷使 我们页面后面的布局不能正常显示
+
+> 因为 `BFC` 元素不会影响外部元素的特点，所以 `BFC` 元素也可以用来清除浮动的影响，因为 如果不清除，子元素浮动则父元 素高度塌陷，必然会影响后面元素布局和定位，这显然有违 `BFC` 元素的子元素不会影响外部 元素的设定。
+
 ### 其他
 
 `浮动`常用在水平布局
@@ -357,8 +368,6 @@ width of containing block= 'margin-left' + 'border-left-width' + 'padding-left' 
 
 
  [公式Block-level, non-replaced elements in normal flow](https://www.w3.org/TR/CSS2/visudet.html#blockwidth "Block-level, non-replaced elements in normal flow")
-
-
 
 
 
