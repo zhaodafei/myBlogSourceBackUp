@@ -36,3 +36,12 @@ $ hexo deploy
 ```
 
 More info: [Deployment](https://hexo.io/docs/deployment.html)
+
+### `Github` 上访问说明
+
+`GitHub`上访问分类的时候,如果出现404,那么请把大写改为小写`MySQL 改为 mysql`
+比如:
+https://zhaodafei.github.io/categories/MySQL/
+
+改为
+https://zhaodafei.github.io/categories/mysql/

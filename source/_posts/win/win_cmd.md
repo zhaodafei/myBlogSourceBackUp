@@ -1,5 +1,11 @@
 ---
 title: windows cmd 命令
+categories: 
+- command
+- Win
+tags:
+- command
+- Win
 ---
 
 windows中常用命令

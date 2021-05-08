@@ -84,7 +84,41 @@ width:auto 会使元素撑满整个父元素，margin、border、padding、conte
 绝对定位元素的宽高百分比是相对于临近的 position 不为 static 的祖先元素的 padding box 来计算的。
 非绝对定位元素的宽高百分比则是相对于父元素的 content box 来计算的。
 
+### 元素竖向百分比
+如果是 `height` 的话，是相对于包含块的`高度`
+如果是 `padding` 或者 `margin` 竖直方向的属性则是相对于包含块的`宽度`
+[W3-CSS属性查询___padding-properties](https://www.w3.org/TR/CSS2/box.html#padding-properties)
 
+><percentage>
+>The percentage is calculated with respect to the width of the generated box's containing block, even for 'padding-top' and 'padding-bottom'. If the containing block's width depends on this element, then the resulting layout is undefined in CSS 2.1
+
+>译文:
+><百分比>
+>即使对于 'padding-top'和'padding-bottom'而言，百分比也是相对于所生成的盒子的包含块的**宽度**来计算的。如果包含块的宽度取决于此元素，则CSS 2.1中未定义结果布局。与边距属性不同，填充值的值不能为负。与边距属性一样，填充属性的百分比值是指生成的框的包含块的宽度
+
+demo:
+
+```html
+<style>
+    .fei {
+        width: 200px;
+        height: 50px;/* warning: 这个高度没有作用 */
+    }
+
+    .fei div {
+        background: #ff6b81;
+        padding-left: 50%;
+        padding-right: 50%;
+        padding-top: 50%; /* 基于 [ 父元素的宽度 ]的百分比的内边距 */
+        padding-bottom: 50%; /* 基于 [ 父元素的宽度 ]的百分比的内边距 */
+    }
+</style>
+<div class="fei">
+    <div>xxx</div>
+</div>
+```
+
+<div class="fei" style="width: 200px;"><div style="background: #ff6b81;padding-left: 50%;padding-right: 50%;padding-top: 50%;padding-bottom: 50%;">x</div></div><br>
 
 
 

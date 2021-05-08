@@ -1,7 +1,8 @@
 ---
 title: 异步微任务与宏任务
 categories: 
-- WEB_JavaScript
+- WEB
+- JavaScript
 - setTimeout
 - Promise
 tags:

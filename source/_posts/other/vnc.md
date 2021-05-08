@@ -1,5 +1,9 @@
 ---
 title: -vnc server
+categories: 
+- Other
+tags:
+- Other
 ---
 ### `centos7`  `gnome`桌面,安装vnc
 

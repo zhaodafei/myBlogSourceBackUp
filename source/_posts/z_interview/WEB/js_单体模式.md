@@ -1,7 +1,8 @@
 ---
 title: 单体模式
 categories: 
-- WEB_JavaScript
+- WEB
+- JavaScript
 - 单体模式
 tags:
 - 单体模式

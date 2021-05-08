@@ -1,10 +1,10 @@
 ---
 title: 浏览器访问网页时发生了什么
 categories: 
-- HTTP
 - WEB
-tags:
 - HTTP
+tags:
+- WEB
 ---
 浏览器访问网页时发生了什么
 

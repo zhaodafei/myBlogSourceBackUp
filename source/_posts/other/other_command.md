@@ -1,5 +1,13 @@
 ---
 title: -other -command 其他命令
+categories: 
+- command
+- Win
+- Linux
+tags:
+- command
+- Win
+- Linux
 ---
 ###  `explorer ` 直接打开可视化目录
 

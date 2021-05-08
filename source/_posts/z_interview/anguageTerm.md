@@ -37,6 +37,7 @@ tags:
 ### 系统
 
 1. Linux
+2. Win
 
 ### 其他
 
@@ -44,6 +45,8 @@ tags:
 2. Android
 3. iOS
 4. Git
+5. Browser
+6. Developer
 
 ### 中文标点
 
