@@ -110,8 +110,7 @@ flex-flow       (是flex-direction 和 flex-wrap 的简写)
 ![flexbox](/img/css/flex/flexbox.png "flexbox")
 
 ### 弹性盒布局相关词汇
-尺寸(Dimension) : flex-grow 伸缩性
-
+[`flex`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex) 属性是 [`flex-grow`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-grow)、[`flex-shrink`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-shrink) 和 [`flex-basis`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-basis) 属性的简写，描述弹性项目的整体的伸缩性
 
 [使用 CSS 弹性盒子](https://developer.mozilla.org/zh-CN/docs/conflicting/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox/ "使用 CSS 弹性盒子")
 [对齐弹性容器中的弹性项目](https://developer.mozilla.org/ca/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container "对齐弹性容器中的弹性项目")

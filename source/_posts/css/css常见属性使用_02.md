@@ -1,13 +1,13 @@
 ---
-title: -CSS 常见属性使用
+title: -CSS 常见属性使用_02
 categories: 
 - CSS
 tags:
 - CSS
 ---
-CSS 常见属性使用
-CSS 常见属性使用
-CSS 常见属性使用
+CSS 常见属性使用2
+CSS 常见属性使用2
+CSS 常见属性使用2
 
 ### `vertical-align` 垂直居中
 
@@ -118,7 +118,105 @@ demo:
 </div>
 ```
 
-<div class="fei" style="width: 200px;"><div style="background: #ff6b81;padding-left: 50%;padding-right: 50%;padding-top: 50%;padding-bottom: 50%;">x</div></div><br>
+### overflow 文本溢出省略号
+
+1. 单行文本溢出后省略
+
+   ```html
+   <style>
+        div {
+            width: 400px;
+            height: 60px;
+            border: 2px solid #ff6b81;
+        }
+        p { /* 核心代码 */
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+   </style>
+   <div>
+        <p>
+            fei:WEB前端开发三剑客就是HTML、CSS、JavaScript
+            fei:WEB前端开发三剑客就是HTML、CSS、JavaScript
+            fei:WEB前端开发三剑客就是HTML、CSS、JavaScript
+        </p>
+   </div>
+   ```
+
+2. 多行文本溢出后省略
+
+   ```html
+   <style>
+       div {
+         width: 400px;
+         height: 60px;
+         border: 2px solid #ff6b81;
+       }
+       p { /* 核心代码 */
+         max-height: 40px;
+         overflow: hidden;
+         line-height: 20px;
+       }
+   </style>
+   <div>
+       <p>
+         fei:WEB前端开发三剑客就是HTML、CSS、JavaScript
+         fei:WEB前端开发三剑客就是HTML、CSS、JavaScript
+         fei:WEB前端开发三剑客就是HTML、CSS、JavaScript
+       </p>
+   </div>
+   ```
+
+3. 多行文本溢出后省略(出现省略号)
+
+   ```html
+   <style>
+       div {
+         width: 400px;
+         height: 60px;
+         border: 2px solid #ff6b81;
+       }
+       p { /* 核心代码 */
+         max-height: 40px;
+         overflow: hidden;
+         line-height: 20px;
+         position: relative;
+       }
+       p::after {  /* 核心代码 */
+         position: absolute;
+         content: '...';
+         right: 0;
+         bottom: 0;
+         background-color: #fff;/* 白色背景 */
+         padding: 0 20px 0 10px;
+       }
+   </style>
+   <div>
+       <p>
+         fei:WEB前端开发三剑客就是HTML、CSS、JavaScript
+         fei:WEB前端开发三剑客就是HTML、CSS、JavaScript
+         fei:WEB前端开发三剑客就是HTML、CSS、JavaScript
+       </p>
+   </div>
+   ```
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -226,7 +226,7 @@ git clone https://github.com/chaooo/hexo-theme-BlueLake.git themes/BlueLake
 hexo g
 hexo d
 hexo b
-hexo server -p 5000   【本地查看】
+hexo server -p 5000   【本地查看】或者 hexo s -p 5000
 ```
 
 ### hexo

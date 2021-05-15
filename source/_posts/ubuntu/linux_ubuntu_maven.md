@@ -1,5 +1,11 @@
 ---
 title: -maven  centos7
+categories: 
+- Java
+- maven
+tags:
+- Java
+- maven
 ---
 ## maven   Binary方式安装使用
 
@@ -38,6 +44,16 @@ mvn -v
 
 
 ## maven   source 方式安装使用
+
+## maven 仓库位置
+
+`maven`默认仓库位置`C:/Users/Administrator/.m2/repository`,如果改为自己指定本地位置位置，可通过修改`maven安装包下面配置文件`...\apache-maven-3.6.0\conf\settings.xml`中55行左右
+
+```xml
+<localRepository>D:\soft_position\java\maven_repo</localRepository>
+```
+
+修改完成后可以执行命令`mvn help:system`后，到新的仓库位置看一下是否有下载的包
 
 
 
