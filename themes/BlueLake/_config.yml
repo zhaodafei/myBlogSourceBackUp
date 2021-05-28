@@ -127,9 +127,11 @@ about:
 
 # Links widget. Empty links will hide widget.
 links:
-  - title: 联系方式qq:1097625354 
+  - title: 联系方式QQ:1097625354 
     url: https://github.com/
   - title: github
     url: https://github.com/
+  - title: Jetbrains
+    url: https://www.jetbrains.com/ 
   - title: 飛鳥的学习日记
     url: http://blog.jamci.cn/   
