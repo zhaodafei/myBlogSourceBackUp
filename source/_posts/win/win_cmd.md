@@ -4,8 +4,8 @@ categories:
 - command
 - Win
 tags:
-- command
 - Win
+- command
 ---
 
 windows中常用命令

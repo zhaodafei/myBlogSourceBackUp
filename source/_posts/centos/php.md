@@ -1,5 +1,13 @@
 ---
 title: centos -PHP7
+categories: 
+- Linux
+- CentOS
+- PHP
+tags:
+- Linux
+- CentOS
+- PHP7
 ---
 ### centos  PHP7 安装
 

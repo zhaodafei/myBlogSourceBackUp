@@ -86,7 +86,7 @@ let brrNew = brr.map(item => {
 console.log(brr, brrNew); 
 ```
 
-![map](/img/JavaScript/flex/map.png "map")
+![map](/img/JavaScript/map.png "map")
 
 
 

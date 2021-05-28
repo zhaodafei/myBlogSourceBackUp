@@ -1,5 +1,9 @@
 ---
 title: -drools 笔记
+categories: 
+- drools
+tags:
+- drools
 ---
 
 ### 逗号 comma

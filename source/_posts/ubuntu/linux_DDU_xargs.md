@@ -1,5 +1,10 @@
 ---
 title:  -xargs  用作替换工具，读取输入数据重新格式化后输出 
+categories: 
+- Linux
+tags:
+- Linux
+- xargs
 ---
 ### demo
 

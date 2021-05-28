@@ -1,5 +1,12 @@
 ---
 title: win server 2008 部署php
+categories: 
+- Win
+- PHP
+tags:
+- Win
+- PHP
+- IIS
 ---
 ### 配置IIS （安装好 PHPstudy 后测试php）
 

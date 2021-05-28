@@ -1,5 +1,9 @@
 ---
 title: Ubuntu -nginx
+categories: 
+- Nginx
+tags:
+- Nginx
 ---
 ### 日志切割  testlog.sh
 

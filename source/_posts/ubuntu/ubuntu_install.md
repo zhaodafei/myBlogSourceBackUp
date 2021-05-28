@@ -1,5 +1,10 @@
 ---
 title: computer install ubuntu16
+categories: 
+- Ubuntu
+tags:
+- Ubuntu
+- Ubuntu16
 ---
 ### 电脑安装ubuntu系统
 

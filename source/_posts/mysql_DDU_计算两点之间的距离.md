@@ -1,5 +1,9 @@
 ---
 title: 计算两点之间的距离
+categories: 
+- MySQL
+tags:
+- MySQL
 ---
 
 ### MySql查询执行流程图

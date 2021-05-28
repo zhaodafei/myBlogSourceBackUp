@@ -1,5 +1,10 @@
 ---
 title: ubuntu16 -swoole 
+categories: 
+- PHP
+- Swoole
+tags:
+- Swoole
 ---
 ### swoole 
 

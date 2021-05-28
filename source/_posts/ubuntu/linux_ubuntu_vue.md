@@ -1,5 +1,10 @@
 ---
 title: linux-vue vue-cli 使用
+categories: 
+- WEB
+- Vue
+tags:
+- Vue
 ---
 !!! node vue 在linux中使用注意环境变量,用户权限
 

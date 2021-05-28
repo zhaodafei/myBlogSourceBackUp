@@ -1,7 +1,7 @@
 ---
 title: vue中main.js文件解析 
 categories: 
-- web前端
+- WEB
 - Vue
 tags:
 - Vue

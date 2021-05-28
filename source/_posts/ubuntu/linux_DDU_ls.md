@@ -1,5 +1,10 @@
 ---
 title:  -ls 显示目录列表  
+categories: 
+- Linux
+tags:
+- Linux
+- ls
 ---
 ### 命令格式
 

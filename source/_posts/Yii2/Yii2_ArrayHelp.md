@@ -1,5 +1,10 @@
 ---
 title: Yii2 ArrayHelp类
+categories: 
+- PHP
+- Yii
+tags:
+- Yii
 ---
 
 ### ArrayHelper::toArray

@@ -1,5 +1,10 @@
 ---
-title: linux-DDU -ln  为文件创建连接  
+title: linux-DDU -ln  为文件创建连接
+categories: 
+- Linux
+tags:
+- Linux
+- ln
 ---
 ### ln 使用的时候要写全路径,否则编辑链接后的文件可能会出现错误:
 

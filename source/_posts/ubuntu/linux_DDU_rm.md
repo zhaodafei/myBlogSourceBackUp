@@ -1,5 +1,10 @@
 ---
 title: -rm  删除文件或目录
+categories: 
+- Linux
+tags:
+- Linux
+- rm
 ---
 ### 命令格式
 

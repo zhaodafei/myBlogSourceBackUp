@@ -1,5 +1,12 @@
 ---
 title: -crontab 定时任务
+categories: 
+- Linux
+- CentOS
+tags:
+- Linux
+- CentOS
+- crontab
 ---
 
 ### crontab 

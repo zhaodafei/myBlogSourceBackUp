@@ -1,5 +1,10 @@
 ---
 title: ubuntu -path 环境变量篇 -composer 测试
+categories: 
+- Ubuntu
+tags:
+- Ubuntu
+- composer
 ---
 
 源码编译完的包,很多时候在任何目录时访问不到的,这时候需要添加环境变量,或者通过链接的形式,链接到系统默认的PATH目录下的一个,这篇文章就是介绍一下这2中添加环境变量的方式; !!!修改系统环境变量后,要退出当前用户重新登录后才可以看到效果;  <font style="color:red"> 本章介绍修改文件配置环境变量, 软链接配置环境变量参考node篇 <font>

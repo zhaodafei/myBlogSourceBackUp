@@ -1,5 +1,10 @@
 ---
 title: 阿里云CDN上实现https
+categories: 
+- HTTP
+tags:
+- HTTP
+- HTTPS
 ---
 ### SSL证书管理
 

@@ -4,6 +4,7 @@ categories:
 - Java
 tags:
 - Java
+- jdk
 ---
 ## Ubuntu 安装 jdk 2 种方式
 

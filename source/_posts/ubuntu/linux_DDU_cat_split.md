@@ -1,5 +1,11 @@
 ---
 title:  -cat  连接文件并打印到标准输出设备上 -split 切割文件
+categories: 
+- Linux
+tags:
+- Linux
+- cat
+- split
 ---
 ### 命令格式
 

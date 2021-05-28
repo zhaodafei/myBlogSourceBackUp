@@ -1,7 +1,7 @@
 ---
 title: vue 插槽 -slot
 categories: 
-- web前端
+- WEB
 - Vue
 tags:
 - Vue

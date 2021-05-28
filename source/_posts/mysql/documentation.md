@@ -1,5 +1,9 @@
 ---
 title: mysql -Documentation  手册
+categories: 
+- MySQL
+tags:
+- MySQL
 ---
 
 ###  sql

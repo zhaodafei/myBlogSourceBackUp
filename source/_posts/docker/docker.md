@@ -1,5 +1,9 @@
 ---
 title: ubuntu -docker
+categories: 
+- Docker
+tags:
+- Docker
 ---
 
 `docker`使用建议,一个`docker` 容器中运行一种服务

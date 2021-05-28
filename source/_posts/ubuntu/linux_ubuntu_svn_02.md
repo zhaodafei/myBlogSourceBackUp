@@ -1,5 +1,9 @@
 ---
 title: ubuntu16 --svn02 编译安装后使用
+categories: 
+- SVN
+tags:
+- SVN
 ---
 编译安装后使用
 

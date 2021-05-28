@@ -1,5 +1,11 @@
 ---
 title: -mkdir  -rmdir 显示目录列表
+categories: 
+- Linux
+tags:
+- Linux
+- mkdir
+- rmdir
 ---
 mkdir 不指定参数，创建文件默认权限 为 755  rwxr-xr-x
 

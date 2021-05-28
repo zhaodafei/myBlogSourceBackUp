@@ -1,5 +1,9 @@
 ---
 title: -nginx 
+categories: 
+- Nginx
+tags:
+- Nginx
 ---
 
 nginx 相关使用文章介绍

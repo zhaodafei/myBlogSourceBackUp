@@ -1,5 +1,10 @@
 ---
 title: -nl  计算文件中行号
+categories: 
+- Linux
+tags:
+- Linux
+- nl
 ---
 介绍： 计算文件中行号；
 

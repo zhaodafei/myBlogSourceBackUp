@@ -1,5 +1,10 @@
 ---
 title: ubuntu15 -mysql5.7
+categories: 
+- MySQL
+tags:
+- MySQL
+- MySQL5.7
 ---
 ### mysql 5.7安装
 

@@ -1,5 +1,10 @@
 ---
 title: -cp  创建文件和目录的副本
+categories: 
+- Linux
+tags:
+- Linux
+- cp
 ---
 ### 不带任何参数,运行cp
 

@@ -1,5 +1,9 @@
 ---
 title: windows  phpstudy curl超时
+categories: 
+- PHP
+tags:
+- PHP
 ---
 场景:  `windows7` `phpstudy2016` `php7.3` `nginx`, 使用`curl` `file_get_content`本地项目之间互相访问一直超时或者失败
 

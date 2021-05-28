@@ -1,5 +1,10 @@
 ---
 title:  -mv   移动或重命名文件/目录
+categories: 
+- Linux
+tags:
+- Linux
+- mv
 ---
 ### 移动文件
 

@@ -1,5 +1,10 @@
 ---
 title: ubuntu -mysql5.6.39
+categories: 
+- MySQL
+tags:
+- MySQL
+- MySQL5.6
 ---
 ### mysql5.6.39
 

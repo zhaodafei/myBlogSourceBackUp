@@ -1,5 +1,9 @@
 ---
 title: ubuntu16 Redmine
+categories: 
+- Redmine
+tags:
+- Redmine
 ---
 ### Rvm+Ruby+Rails  【具体细节效果以后版本修改……】
 

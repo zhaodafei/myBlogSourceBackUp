@@ -1,5 +1,10 @@
 ---
 title: laravel 添加一个V1 接口模块 -api
+categories: 
+- PHP
+- Laravel
+tags:
+- Laravel
 ---
 ###  app/Providers/RouteServiceProvider.php  中添加
 

@@ -1,9 +1,9 @@
 ---
 title:  -redis 在windows中使用
 categories: 
-- redis
+- Redis
 tags:
-- redis
+- Redis
 ---
 `redis` 在windows中使用
 `redis` 在windows中使用
@@ -40,7 +40,6 @@ auth ***(输入密码)
 ```
 requirepass 123456
 ```
-
 
 
 

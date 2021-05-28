@@ -1,5 +1,10 @@
 ---
 title: -工厂方法
+categories: 
+- PHP
+tags:
+- PHP
+- 工厂方法
 ---
 
 ### 工厂方法

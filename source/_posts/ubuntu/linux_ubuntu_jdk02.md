@@ -4,6 +4,7 @@ categories:
 - Java
 tags:
 - Java
+- jdk
 ---
 `Windwos7` 中测试 `jdk`是否安装成功,并编写第一个`HelloWorld`程序,用命令行运行
 `Windwos7` 中测试 `jdk`是否安装成功,并编写第一个`HelloWorld`程序,用命令行运行

@@ -1,11 +1,11 @@
 ---
 title: vue_webstorm _模板
 categories: 
-- web前端
+- WEB
 - Vue
 tags:
 - Vue
-- webstorm
+- WebStorm
 ---
 ### `webstrom` 和 `vue`
 

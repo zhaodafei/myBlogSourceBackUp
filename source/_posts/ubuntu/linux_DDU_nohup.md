@@ -1,5 +1,10 @@
 ---
 title: linux-DDU  将进程挂起  -nohup
+categories: 
+- Linux
+tags:
+- Linux
+- nohup
 ---
 `nohup` 命令可以将程序以忽略挂起信号的方式运行起来，被运行的程序的输出信息将不会显示到终端
 

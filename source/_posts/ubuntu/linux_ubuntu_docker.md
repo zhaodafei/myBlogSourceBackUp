@@ -1,5 +1,9 @@
 ---
 title: ubuntu -docker
+categories: 
+- Docker
+tags:
+- Docker
 ---
 ### Linux ubuntu docker
 

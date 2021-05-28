@@ -1,5 +1,9 @@
 ---
 title: ubuntu15 -tengine
+categories: 
+- Tengine
+tags:
+- Tengine
 ---
 Tengine 官网安装相当简略，这里详细安装一次（ubuntu15 安装 tengine）
 

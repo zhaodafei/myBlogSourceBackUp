@@ -1,5 +1,10 @@
 ---
 title: -Yii2 验证器  -不为人知的秘密
+categories: 
+- PHP
+- Yii
+tags:
+- Yii
 ---
 ### required : 必须值验证属性
 

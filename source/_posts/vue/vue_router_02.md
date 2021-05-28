@@ -1,7 +1,7 @@
 ---
 title: -vue-router 路由02
 categories: 
-- web前端
+- WEB
 - Vue
 tags:
 - Vue

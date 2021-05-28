@@ -17,7 +17,9 @@ account计算，算账(ac+count总数→计算)
 acknowledge承认,告知已收到(ac+count知识,学识→认知,承认)
 ```
 
-### 
+### 其他
+
+`Regular Expression` 简写 `RegExp`  正则表达式
 
 
 

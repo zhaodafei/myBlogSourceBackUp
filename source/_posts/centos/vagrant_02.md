@@ -1,5 +1,11 @@
 ---
 title: linux-DDU  -vagrant 简单使用02
+categories: 
+- Linux
+- Vagrant
+tags:
+- Linux
+- Vagrant
 ---
 
 ### 添加一个 box 

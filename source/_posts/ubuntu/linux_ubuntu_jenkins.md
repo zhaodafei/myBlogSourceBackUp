@@ -1,5 +1,9 @@
 ---
 title: ubuntu -jenkins 
+categories: 
+- Jenkins
+tags:
+- Jenkins
 ---
 ### 下载war 包
 

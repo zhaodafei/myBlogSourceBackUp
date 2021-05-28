@@ -2,10 +2,10 @@
 title: -maven  centos7
 categories: 
 - Java
-- maven
+- Maven
 tags:
 - Java
-- maven
+- Maven
 ---
 ## maven   Binary方式安装使用
 

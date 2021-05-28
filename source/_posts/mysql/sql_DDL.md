@@ -1,5 +1,9 @@
 ---
 title: -sql -DDL
+categories: 
+- MySQL
+tags:
+- MySQL
 ---
 
 ### 列操作

@@ -1,5 +1,11 @@
 ---
 title: ubuntu系统
+categories: 
+- CentOS
+- Ubuntu
+tags:
+- CentOS
+- Ubuntu
 ---
 ### 虚拟机安装完ubuntu后root没有密码
 ```

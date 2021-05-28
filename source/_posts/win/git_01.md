@@ -1,9 +1,9 @@
 ---
 title: linux-DDU  -git基本使用
 categories: 
-- git
+- Git
 tags:
-- git
+- Git
 ---
 ### git基本使用
 

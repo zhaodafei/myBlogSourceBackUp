@@ -1,5 +1,10 @@
 ---
 title: ubuntu16 -php7 extension redis
+categories: 
+- PHP
+tags:
+- PHP
+- Redis
 ---
 ### Extension 之 redis
 

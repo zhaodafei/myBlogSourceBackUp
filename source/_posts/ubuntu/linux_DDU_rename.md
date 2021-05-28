@@ -1,5 +1,10 @@
 ---
 title: -rename  文件重命名
+categories: 
+- Linux
+tags:
+- Linux
+- rename
 ---
 ### 命令格式，文件重命名
 

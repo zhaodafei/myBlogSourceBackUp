@@ -1,5 +1,10 @@
 ---
 title: ubuntu16 -php7 extension imagick
+categories: 
+- PHP
+tags:
+- PHP
+- Imagick
 ---
 ### Extension 之 imagick 
 

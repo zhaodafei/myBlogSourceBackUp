@@ -1,5 +1,12 @@
 ---
 title:  -head -tail -sed 输出文件中的内容
+categories: 
+- Linux
+tags:
+- Linux
+- head
+- tail
+- sed
 ---
 ## 命令 head
 

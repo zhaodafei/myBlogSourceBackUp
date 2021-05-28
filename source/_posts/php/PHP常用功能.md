@@ -1,5 +1,9 @@
 ---
 title: PHP -常用功能
+categories: 
+- PHP
+tags:
+- PHP
 ---
 
 hello world ..............

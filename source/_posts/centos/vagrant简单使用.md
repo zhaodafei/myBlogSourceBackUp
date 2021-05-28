@@ -1,5 +1,11 @@
 ---
 title: linux-DDU  -vagrant 简单使用
+categories: 
+- Linux
+- Vagrant
+tags:
+- Linux
+- Vagrant
 ---
 ### 常用命令
 

@@ -1,7 +1,7 @@
 ---
 title: vue -meta 元数据
 categories: 
-- web前端
+- WEB
 - Vue
 tags:
 - Vue

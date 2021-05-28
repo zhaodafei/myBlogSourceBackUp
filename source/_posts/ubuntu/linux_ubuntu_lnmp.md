@@ -1,5 +1,10 @@
 ---
 title: ubuntu -lnmp环境
+categories: 
+- Linux
+tags:
+- Linux
+- Nginx
 ---
 ### LNMP环境搭建
 

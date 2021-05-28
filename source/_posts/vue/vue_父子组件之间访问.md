@@ -1,7 +1,7 @@
 ---
 title: vue 父子组件之间访问
 categories: 
-- web前端
+- WEB
 - Vue
 tags:
 - Vue

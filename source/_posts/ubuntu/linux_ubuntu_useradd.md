@@ -1,5 +1,10 @@
 ---
 title:  linux -useradd 
+categories: 
+- Linux
+tags:
+- Linux
+- useradd
 ---
 
 查看所有用户和用户组,添加删除用户

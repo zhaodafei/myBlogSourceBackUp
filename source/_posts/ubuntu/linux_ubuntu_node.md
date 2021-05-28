@@ -4,7 +4,7 @@ categories:
 - Linux
 tags:
 - Linux
-- node
+- Node
 ---
 
 node

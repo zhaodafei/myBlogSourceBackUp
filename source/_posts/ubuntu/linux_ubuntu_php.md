@@ -1,5 +1,9 @@
 ---
 title: ubuntu16 -php7.0.28
+categories: 
+- PHP
+tags:
+- PHP
 ---
 源码编译安装php7.0
 
@@ -315,7 +319,6 @@ export PATH
  [PHP官网下载地址](http://www.php.net/downloads.php)
 
 [PHP官方安装文档](http://php.net/manual/zh/install.unix.nginx.php "PHP 官方安装文档")
-
 
 
 

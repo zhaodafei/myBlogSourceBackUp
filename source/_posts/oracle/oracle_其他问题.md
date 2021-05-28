@@ -1,5 +1,9 @@
 ---
 title:  -oracle 其他问题
+categories: 
+- Oracle
+tags:
+- Oracle
 ---
 oracle 其他问题
 

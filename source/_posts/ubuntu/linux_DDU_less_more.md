@@ -1,5 +1,11 @@
 ---
 title: -less -more  显示目录列表
+categories: 
+- Linux
+tags:
+- Linux
+- less
+- more
 ---
 less 与 more 类似，但使用 less 可以随意浏览文件，而且 less 在查看之前不会加载整个文件 
 

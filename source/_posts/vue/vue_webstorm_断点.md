@@ -1,11 +1,11 @@
 ---
 title: vue_webstorm_debug
 categories: 
-- web前端
+- WEB
 - Vue
 tags:
 - Vue
-- webstorm
+- WebStorm
 - debug
 ---
 vue 和 debug 断点调试

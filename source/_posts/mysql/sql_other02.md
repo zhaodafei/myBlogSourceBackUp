@@ -1,5 +1,9 @@
 ---
 title: -mysql -sql other02
+categories: 
+- MySQL
+tags:
+- MySQL
 ---
 
 ### MySQL 的复制原理及负载均衡

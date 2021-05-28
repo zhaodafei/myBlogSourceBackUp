@@ -1,7 +1,7 @@
 ---
 title: vue 组件之间传值
 categories: 
-- web前端
+- WEB
 - Vue
 tags:
 - vuex

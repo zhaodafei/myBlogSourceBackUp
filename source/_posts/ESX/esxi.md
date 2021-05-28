@@ -1,5 +1,9 @@
 ---
 title: -ESX 基本使用
+categories: 
+- ESX
+tags:
+- ESX
 ---
 简单说明:
 
@@ -50,7 +54,6 @@ esxcli vm process kill --type=hard --world-id=你的world-id
  vim-cmd vmsvc/power.reset 2     #重启虚拟机 (这里的2是下面的 Vimd)
  vim-cmd vmsvc/power.getstate 2  #查看虚拟机状态
 ```
-
 
 
 

@@ -1,5 +1,14 @@
 ---
 title: -php -vagrant[centos] -xdebug
+categories: 
+- Linux
+- CentOS
+- PHP
+tags:
+- Linux
+- CentOS
+- PHP
+- xdebug
 ---
 
 !!!! 温馨提醒 PHP版本一点要和xdebug版本对应

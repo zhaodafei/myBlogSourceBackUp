@@ -1,6 +1,14 @@
 ---
 title: hexo常用命令笔记
+categories: 
+- Hexo
+tags:
+- Hexo
 ---
+
+hexo常用命令笔记
+hexo常用命令笔记
+hexo常用命令笔记
 
 ### hexo
 

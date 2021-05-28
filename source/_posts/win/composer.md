@@ -1,5 +1,11 @@
 ---
-title: win -Yii2 镜像源
+title: win -Yii2 镜像源 Composer
+categories: 
+- Win
+- Composer
+tags:
+- Win
+- Composer
 ---
 
 ### 查看composer 全局设置

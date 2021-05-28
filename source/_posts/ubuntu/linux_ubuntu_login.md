@@ -1,5 +1,9 @@
 ---
 title:  --login 登录系统后常用命令
+categories: 
+- Linux
+tags:
+- Linux
 ---
 
 介绍：

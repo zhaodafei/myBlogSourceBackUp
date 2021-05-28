@@ -1,7 +1,7 @@
 ---
 title: -vue_axios 
 categories: 
-- web前端
+- WEB
 - Vue
 tags:
 - Vue

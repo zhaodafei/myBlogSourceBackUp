@@ -1,6 +1,11 @@
-title: yii2 杂项整理
-
-----
+---
+title: Yii2 杂项整理
+categories: 
+- PHP
+- Yii
+tags:
+- Yii
+---
 
 ### JavaScript 引入
 

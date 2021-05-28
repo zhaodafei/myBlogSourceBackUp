@@ -1,5 +1,9 @@
 ---
 title: -sql DML (insert update delete select)基本使用
+categories: 
+- MySQL
+tags:
+- MySQL
 ---
 
 ### 事务

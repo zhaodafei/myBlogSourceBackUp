@@ -4,6 +4,7 @@ categories:
 - Linux
 tags:
 - Linux
+- uniq
 ---
 介绍：uniq 用于统计或忽略文件中的重复行。一般与 sort 命令结合使用。
 介绍：uniq 用于统计或忽略文件中的重复行。一般与 sort 命令结合使用。
@@ -56,7 +57,6 @@ JavaScript
 ```
 
 ![01](/img/ubuntu/linux_command/linux_uniq/uniq_01.png "01")
-
 
 
 

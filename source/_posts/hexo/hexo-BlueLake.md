@@ -1,5 +1,10 @@
 ---
 title: BlueLake 主题配置
+categories: 
+- Hexo
+tags:
+- Hexo
+- BlueLake
 ---
 ### 添加本地搜索
 

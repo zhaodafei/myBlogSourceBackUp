@@ -1,5 +1,10 @@
 ---
 title: php -GD 库制作图片
+categories: 
+- PHP
+tags:
+- PHP
+- GD
 ---
 ### php GD 库制作图片
 

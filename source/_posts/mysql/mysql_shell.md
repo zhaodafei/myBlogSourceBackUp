@@ -1,5 +1,10 @@
 ---
 title: -mysql-shell 工具使用(windows篇)
+categories: 
+- MySQL
+tags:
+- MySQL
+- MySQL-shell
 ---
 ### mysql-shell 
 

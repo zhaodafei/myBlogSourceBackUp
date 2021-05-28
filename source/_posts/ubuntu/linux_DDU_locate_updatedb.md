@@ -1,5 +1,10 @@
 ---
 title:  -locate 搜索 
+categories: 
+- Linux
+tags:
+- Linux
+- locate
 ---
 使用 locate 搜索前一般先执行 updatedb 来更新
 

@@ -1,5 +1,9 @@
 ---
 title: Ubuntu16 -nginx
+categories: 
+- Nginx
+tags:
+- Nginx
 ---
 ## 安装nginx 01
 

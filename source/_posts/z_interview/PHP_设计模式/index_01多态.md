@@ -1,5 +1,10 @@
 ---
 title: -多态
+categories: 
+- PHP
+tags:
+- PHP
+- 多态
 ---
 
 ### 多态满足三个条件:

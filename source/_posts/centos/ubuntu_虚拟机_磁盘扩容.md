@@ -1,5 +1,11 @@
 ---
 title: linux ubuntu 磁盘扩容
+categories: 
+- Linux
+- Ubuntu
+tags:
+- Linux
+- Ubuntu
 ---
 ### 在虚拟机`VMware`上增加磁盘空间
 

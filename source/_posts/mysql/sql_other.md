@@ -1,5 +1,9 @@
 ---
 title: -mysql -sql other
+categories: 
+- MySQL
+tags:
+- MySQL
 ---
 
 ### mysql 简单整理

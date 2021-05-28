@@ -1,5 +1,11 @@
 ---
 title: vagrant_03 --VirtualBox --硬盘扩容
+categories: 
+- Linux
+- Vagrant
+tags:
+- Linux
+- Vagrant
 ---
 vagrant  初始的 box 硬盘空间只有 10G,安装 mysql8 就不够用 :(  ,下面介绍给主硬盘空间扩容, 操作平台 windows7, box[ubuntu18]
 

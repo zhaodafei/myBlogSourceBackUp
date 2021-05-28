@@ -1,5 +1,9 @@
 ---
 title: ubuntu -shipyard
+categories: 
+- Shipyard
+tags:
+- Shipyard
 ---
 ### Shipyard简介
 

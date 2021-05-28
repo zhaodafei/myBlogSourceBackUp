@@ -1,5 +1,12 @@
 ---
 title: -kill -pkill -killall 终结进程
+categories: 
+- Linux
+tags:
+- Linux
+- kill
+- pkill
+- killall
 ---
 
 -kill -pkill -killall 终结进程

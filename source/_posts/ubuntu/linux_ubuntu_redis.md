@@ -1,9 +1,9 @@
 ---
 title: ubuntu15 -redis安装
 categories: 
-- redis
+- Redis
 tags:
-- redis
+- Redis
 ---
 redis2种安装方式
 

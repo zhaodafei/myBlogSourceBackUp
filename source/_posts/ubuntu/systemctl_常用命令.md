@@ -1,5 +1,10 @@
 ---
 title: -systemctl 常用命令
+categories: 
+- Linux
+tags:
+- Linux
+- Imagick
 ---
 systemctl 常用命令
 

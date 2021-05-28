@@ -1,5 +1,10 @@
 ---
 title: laravel -Command
+categories: 
+- PHP
+- Laravel
+tags:
+- Laravel
 ---
 ### `command`  简单使用
 

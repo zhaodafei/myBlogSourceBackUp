@@ -1,5 +1,10 @@
 ---
 title: Ubuntu -ssh
+categories: 
+- Linux
+tags:
+- Linux
+- ssh
 ---
 ### 安装客户端
 

@@ -1,5 +1,10 @@
 ---
 title: -单例模式
+categories: 
+- PHP
+tags:
+- PHP
+- 单例模式
 ---
 
 ### 单例模式( 三私一公 )

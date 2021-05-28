@@ -1,5 +1,9 @@
 ---
 title:  -oracle 简单使用
+categories: 
+- Oracle
+tags:
+- Oracle
 ---
 oracle 简单SQL的使用................
 

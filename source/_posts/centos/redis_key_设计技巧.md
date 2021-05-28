@@ -1,5 +1,13 @@
 ---
 title: --redis key 设计技巧
+categories: 
+- Linux
+- CentOS
+- Redis
+tags:
+- Linux
+- CentOS
+- Redis
 ---
 
 ### redis  key 设计技巧

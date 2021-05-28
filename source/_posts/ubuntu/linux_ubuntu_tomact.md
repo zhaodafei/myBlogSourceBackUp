@@ -1,5 +1,9 @@
 ---
 title: ubuntu -tomact
+categories: 
+- Tomact
+tags:
+- Tomact
 ---
 #### 官网下载 Tomact 包上传到服务器
 

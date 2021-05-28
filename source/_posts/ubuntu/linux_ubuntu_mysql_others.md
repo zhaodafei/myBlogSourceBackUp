@@ -1,5 +1,10 @@
 ---
 title: ubuntu -mysql others
+categories: 
+- MySQL
+tags:
+- MySQL
+- MySQL5.6
 ---
 ### mysql 5.6 其他
 

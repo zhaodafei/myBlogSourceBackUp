@@ -1,5 +1,9 @@
 ---
 title: Ubuntu -git
+categories: 
+- Git
+tags:
+- Git
 ---
 ### 前言：  
 

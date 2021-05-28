@@ -5,6 +5,10 @@ categories:
 tags:
 - RegExp
 ---
+`Regular Expression` 简写 `RegExp`  正则表达式
+`Regular Expression` 简写 `RegExp`  正则表达式
+`Regular Expression` 简写 `RegExp`  正则表达式
+
 ### 基本常见
 
 ```

@@ -1,5 +1,10 @@
 ---
 title: linux -wc
+categories: 
+- Linux
+tags:
+- Linux
+- wc
 ---
 
 Linux wc命令用于计算字数
