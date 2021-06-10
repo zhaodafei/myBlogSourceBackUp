@@ -35,7 +35,7 @@ ul.da#fei>li*4>{tab$}  按下tab后
 </ul>
 ```
 
-![e_02](/img/other/Emmet/e_01.gif "e_02")
+![e_02](/img/other/Emmet/e_02.gif "e_02")
 
 ### `HTML` 布局_03  `兄弟元素`
 
@@ -56,7 +56,7 @@ div.item*3>div.title{标题$}+div.val{内容$}  按下tab后
 </div>		
 ```
 
-![e_03](/img/other/Emmet/e_01.gif "e_03")
+![e_03](/img/other/Emmet/e_03.gif "e_03")
 
 ### `HTML` 布局_04 `自定义属性`
 
