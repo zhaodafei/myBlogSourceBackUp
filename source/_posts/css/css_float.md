@@ -338,7 +338,36 @@ width of containing block= 'margin-left' + 'border-left-width' + 'padding-left' 
 
 浮动元素会脱离文档流(绝对定位元素也会脱离文档流)，导致无法计算准确的高度，这种问题称为**高度塌陷**
 
-01) 使用`BFC`清除浮动, 具体见`BFC`文章内容
+01) 使用`BFC`清除浮动, 具体见`BFC`文章内容(常见清除浮动`overflow:hidden`)
+
+```html
+#BFC 中 overflow:hidden; 的demo
+<style>
+    .fei {border:1px solid #ff6b81; margin:0 0 10px 0;}
+    p {margin: 0;}
+    .footer {border:1px solid #ff6b81;}
+
+    img {float:left;}
+    .fei { overflow:hidden;}
+</style>
+
+
+<div class="fei">
+    <img src="https://github.githubassets.com/images/icons/emoji/octocat.png" />
+    <p>对父元素使用 overflow:hidden;图片不会再跑到父元素外面 </p>
+</div>
+<div class="footer"> 我还是保持原来的位置</div>
+
+
+#其他
+overflow:hidden声明的真
+正用途是防止包含元素被超大内容撑大
+。应用overflow:hidden之后，包含元素
+依然保持其设定的宽度，而超大的子内容
+则会被容器剪切掉。除此之外，
+overflow:hidden还有另一个作用，即它
+能可靠地迫使父元素包含其浮动的子元素
+```
 
 02) 给父元素增加`::after`伪元素
 
@@ -360,6 +389,8 @@ width of containing block= 'margin-left' + 'border-left-width' + 'padding-left' 
 > 清除浮动是为了清除使用浮动元素产生的影响。浮动的元素，高度会塌陷，而高度的塌陷使 我们页面后面的布局不能正常显示
 
 > 因为 `BFC` 元素不会影响外部元素的特点，所以 `BFC` 元素也可以用来清除浮动的影响，因为 如果不清除，子元素浮动则父元 素高度塌陷，必然会影响后面元素布局和定位，这显然有违 `BFC` 元素的子元素不会影响外部 元素的设定。
+
+03) 让父元素也同事浮动
 
 ### 其他
 

@@ -1,9 +1,9 @@
 ---
 title: -other -command 其他命令
 categories: 
+- Linux
 - command
 - Win
-- Linux
 tags:
 - command
 - Win

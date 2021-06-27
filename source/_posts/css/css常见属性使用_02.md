@@ -201,6 +201,13 @@ demo:
    </div>
    ```
 
+   ### 特效属性
+   
+   ```css
+   linear-gradient #线性渐变
+   
+   ```
+   
    
 
 
