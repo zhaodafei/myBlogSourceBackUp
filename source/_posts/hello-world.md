@@ -67,3 +67,14 @@ https://zhaodafei.github.io/categories/MySQL/
 
 改为
 https://zhaodafei.github.io/categories/mysql/
+
+## 模板`demo`
+
+1. simplessm
+2. temp_laravel2
+3. temp_react
+4. temp_ssm
+5. temp_vue
+6. temp_vue2
+7. temp_webpack
+

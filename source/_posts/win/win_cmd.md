@@ -18,6 +18,17 @@ help xcopy #查看xcopy所有参数
 
 ```
 
+### 不是内部命令
+
+> '.' 不是内部或外部命令，也不是可运行的程序
+
+```
+.\node_modules\.bin\webpack -v  #不是全局安装的webpack 用这个命令 查看版本(windows中执行)
+./node_modules/.bin/webpack -v  #不是全局安装的webpack 用这个命令 查看版本(linux 中执行)
+```
+
+
+
 ### xcpoy 复制文件夹
 
 ```bash

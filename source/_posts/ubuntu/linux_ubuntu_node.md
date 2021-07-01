@@ -71,5 +71,16 @@ registry=https://registry.npm.taobao.org
 npm install -g cnpm --registry=https://registry.npm.taobao.org   #安装配置cnpm
 ```
 
+### 多个node环境共存
+
+```
+windows中多个node环境共存,使用二进制包(以node14为例子)
+下载地址: https://nodejs.org/dist/v14.17.1/node-v14.17.1-win-x64.zip
+解压后即可使用
+D:/soft_position_not/node14/node.exe -v
+D:/soft_position_not/node14/npm -v
+D:/soft_position_not/node14/npm init vite-app feiVuexxx
+```
+
 
 

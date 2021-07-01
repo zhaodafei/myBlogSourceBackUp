@@ -33,7 +33,7 @@ tags:
 
 ### 使用composer安装yii2-admin
 
-```
+```bash
 composer require mdmsoft/yii2-admin "~2.0"
 
 !!!温馨提示：建议安装 1.0 版本不安装 2.0 版本!!!
@@ -42,7 +42,7 @@ composer require mdmsoft/yii2-admin "~1.0"
 
 ### 配置yii2-admin运行环境
 
-```
+```php
 权限控制在后台，所以在 backend/config/main.php 中配置以下内容：
 return [
     'modules' => [
@@ -94,7 +94,7 @@ yii migrate --migrationPath=@yii/rbac/migrations
 
 ### 中文显示
 
-```
+```php
 在 common\config\main.php 中配置
 
 return [
@@ -125,7 +125,7 @@ return [
 
 ### 配置授权demo
 
-```
+```bash
 以一个自定义的节点books为例，节点books下共有index 图书列表，view 查看图书，create创建图书，update 更新图书，delete 删除图书这个5个节点，，可以通过gii生成这些代码。
 
 配置目标：
@@ -181,7 +181,7 @@ return [
 
 ## <font color="red">！！！测试权限之前</font>
 
-```
+```php
 ！！！ 测试权限之前，把这里注释掉
 在 backend/config/main.php 中修改配置以下内容：
     'as access' => [
@@ -196,7 +196,7 @@ return [
 
 ### 开始测试
 
-```
+```php
 1、以管理员身份登录时，可以进行所有操作。ok
 2、如果不登录，在访问book首页的时候会跳转到登录页面。预期结果是未登录时能访问book首页，就是说当前系统默认不认可我们配置给未登录用户的权限。
 有2中办法
@@ -229,7 +229,7 @@ return [
 
 ### 安装yii2 AdminLTE后台主题
 
-```
+```bash
 composer require dmstr/yii2-adminlte-asset "^2.1"
 
 安装过程中可能需要输入github的token
@@ -237,7 +237,7 @@ composer require dmstr/yii2-adminlte-asset "^2.1"
 
 ### 引入主题
 
-```
+```php
 方式一：(建议使用这种方式)
 复制整个vendor/dmstr/yii2-adminlte-asset/example-views/yiisoft/yii2-app目录下的layouts目录和site目录到backend/views，覆盖原始文件。
 
@@ -265,7 +265,7 @@ composer require dmstr/yii2-adminlte-asset "^2.1"
 
 ### 配置数据库，登录
 
-```
+```php
 1、修改common/config/main-local.php数据库配置
 
         'db' => [
@@ -296,7 +296,7 @@ return [
 
 ### 配置简短路由
 
-```
+```php
 在 backend/config/main.php文件的compontents加上下面的配置
 "urlManager" => [    
     //用于表明urlManager是否启用URL美化功能，在Yii1.1中称为path格式URL，    
@@ -360,7 +360,7 @@ server {
 
 ### 添加菜单
 
-```
+```php
 访问菜单列表 admin/menu 点击添加菜单admin/menu/create按钮。
 > 如果这个时候你没有权限访问了，需要在配置文件（backend/config/main.php）的 as access数组暂时允许当前用户访问任意权限，并在我们添加完权限的时候去掉as access的设置，切记。
     'as access' => [
@@ -379,7 +379,7 @@ server {
 
 <img src="/img/Yii2/adminLTE_menu_add_01.png" alt="yii2-adminlte 添加菜单01">
 
-```
+```wiki
 一、例如添加一级菜单"权限管理"，按照如下填写：
 名称：权限管理
 父级名称：不填
@@ -500,7 +500,7 @@ server {
 
 解决办法：
 
-```
+```php
 一、解决父级添加不上：
 修改<project>/vendor/mdmsoft/yii2-admin/models/Menu.php中
 原来：

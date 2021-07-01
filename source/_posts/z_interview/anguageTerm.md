@@ -27,6 +27,7 @@ tags:
 19. Vue CLI
 20. Node
 21. npm
+22. TypeScript
 
 ### 数据库
 

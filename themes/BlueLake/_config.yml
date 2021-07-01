@@ -119,7 +119,7 @@ about:
 #    url: ## Your weibo's url e.g.  http://weibo.com/zhengchaooo
 #    title: ## Your weibo's name e.g.  秋过冬漫长
 # - label: twitter
-#   url: 
+#   url:
 #   title:
 # - label: facebook
 #   url:
@@ -127,11 +127,13 @@ about:
 
 # Links widget. Empty links will hide widget.
 links:
-  - title: 联系方式QQ:1097625354 
+  - title: 联系方式QQ:1097625354
     url: https://github.com/
   - title: github
     url: https://github.com/
   - title: Jetbrains
-    url: https://www.jetbrains.com/ 
+    url: https://www.jetbrains.com/
   - title: 飛鳥的学习日记
-    url: http://blog.jamci.cn/   
+    url: http://blog.jamci.cn/
+  - title: 三哥的日常
+    url: https://icewak.github.io/
