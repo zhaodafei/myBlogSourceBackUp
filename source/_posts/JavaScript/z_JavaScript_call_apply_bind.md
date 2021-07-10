@@ -51,7 +51,6 @@ Book.showName.bind(news)(); // 不会立即执行，需要调用
 Math.min.apply(Math, [1,5,9,3,5,7]);
 Math.min.call(Math, 1,5,9,3,5,7);
 
-```javascript
 // .call() 和 .apply() 的区别？ 
 // 主要是 第二个参数不一样, 
 // demo: 实现继承(最常见的使用)

@@ -114,7 +114,7 @@ bar = 18;
 泛型（Generics）是指在定义函数、接口或类的时候，不预先指定具体的类型，而在使用的时候再指定类型的一种特性
 
 ```typescript
-// T 是随便写的(写啥都行),T会捕获用户传入的类型
+// T 是随便写的(自定义),T会捕获用户传入的类型
 function foo<T>(name: T): T {
     return name;
 }
@@ -188,6 +188,33 @@ function foo(name:string|number):number {
 }
 ```
 
+### 忽略检查`@ts-ignore`
+
+```typescript
+function bar(name:string|number):number {
+    //@ts-ignore
+    if (name.length) { // todo:fei 忽略检查
+        return (name as string).length;
+    }else{
+        // 说明name是number
+        return name.toString().length;
+    }
+}
+
+
+// 或者用判断 --------------
+function hello(name:string|number):number {
+    if (typeof name !== "number" && name.length) { // todo:fei 用判断
+        return (name as string).length;
+    }else{
+        // 说明name是number
+        return name.toString().length;
+    }
+}
+```
+
+
+
 ### 属性封装
 
 ```typescript
@@ -221,12 +248,31 @@ per.name = "史记"; //  ES6 语法
 console.log(per);
 ```
 
+### 内置对象--类型声明使用
 
+1. ECMAScript 的内置对象
+
+> Boolean
+> Number
+> String
+> Date
+> RegExp
+> Error
+
+1. BOM 和 DOM 的内置对象
+
+> Window
+> Document
+> HTMLElement
+> DocumentFragment
+> Event
+> NodeList
 
 
 
 [`TypeScript` 手册](https://typescript.bootcss.com/basic-types.html)
-[`TypeScript` 备用手册 ](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)
+[`TypeScript` 备用手册1 ](https://24kcs.github.io/vue3_study/chapter1/03_HelloWorld.html)
+[`TypeScript` 备用手册2 ](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)
 
 
 
