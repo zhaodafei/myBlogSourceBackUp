@@ -1,13 +1,13 @@
 ---
-title: -TypeScript 数据类型
+title: -TypeScript 数据类型01
 categories: 
 - TypeScript
 tags:
 - TypeScript
 ---
-`TypeScript` 数据类型
-`TypeScript` 数据类型
-`TypeScript` 数据类型
+`TypeScript` 数据类型01
+`TypeScript` 数据类型01
+`TypeScript` 数据类型01
 
 ### 可选参数
 

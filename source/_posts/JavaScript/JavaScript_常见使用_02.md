@@ -101,6 +101,10 @@ console.log(xxx,obj);
         console.log("daFei");
     }())
 
+    (()=>{ // ES6中箭头函数
+        console.log("daFei");
+    })()
+    
     let demo=function(){
         console.log("daFei_002");
     }();

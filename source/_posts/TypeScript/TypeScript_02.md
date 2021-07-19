@@ -1,13 +1,13 @@
 ---
-title: -TypeScript 数据类型
+title: -TypeScript 数据类型02
 categories: 
 - TypeScript
 tags:
 - TypeScript
 ---
-`TypeScript` 数据类型, 一个简单`demo`图书添加查询
-`TypeScript` 数据类型, 一个简单`demo`图书添加查询
-`TypeScript` 数据类型, 一个简单`demo`图书添加查询
+`TypeScript` 数据类型02, 一个简单`demo`图书添加查询
+`TypeScript` 数据类型02, 一个简单`demo`图书添加查询
+`TypeScript` 数据类型02, 一个简单`demo`图书添加查询
 
 demo:
 
