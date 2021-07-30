@@ -39,6 +39,49 @@ encodeURIComponent(bar); // a%3D123%26b%3D456
 decodeURIComponent("a%3D123%26b%3D456"); // a=123&b=456
 ```
 
+### `Blob` 和 `String`相互转换
+
+```javascript
+// 将String字符串转换成Blob对象
+var blob = new Blob(['daFei'], {
+    type: 'text/plain'
+});
+console.log(blob);
+
+//将Blob 对象转换成字符串
+var reader = new FileReader();
+reader.readAsText(blob, 'utf-8');
+reader.onload = function (e) {
+    console.info(reader.result);
+}
+```
+
+### 参数
+
+解构参数  和  方法参数
+
+```javascript
+// 解构参数
+function foo({name = "daFei", age = 18}={}) {
+    console.log(name,age);
+}
+foo({name:"foo",age:20});
+foo({age:22});
+
+// 方法参数
+function bar(name="daFei",callBack) {
+    if (callBack) {
+        callBack();
+    }else{
+        console.log("没有执行");
+    }
+}
+bar("bar", () => {
+    console.log("开始执行");
+});
+bar("bar2")
+```
+
 
 
 
