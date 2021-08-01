@@ -1,5 +1,5 @@
 ---
-title: other JavaScript
+title: other JavaScript02
 categories: 
 - JavaScript
 tags:

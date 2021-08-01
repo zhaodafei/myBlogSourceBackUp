@@ -109,8 +109,67 @@ flex-flow       (是flex-direction 和 flex-wrap 的简写)
 ![flex](/img/css/flex/flex.png "flex")
 ![flexbox](/img/css/flex/flexbox.png "flexbox")
 
-### 弹性盒布局相关词汇
-[`flex`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex) 属性是 [`flex-grow`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-grow)、[`flex-shrink`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-shrink) 和 [`flex-basis`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-basis) 属性的简写，描述弹性项目的整体的伸缩性
+### flex的三个属性
+
+```
+flex:0 1 auto;
+flex: flex-grow flex-shrink flex-basic
+```
+
+[`flex`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex) 属性是 [`flex-grow`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-grow)、[`flex-shrink`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-shrink) 和 [`flex-basis`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-basis) 属性的简写，描述弹性项目的整体的伸缩性zi
+
+###  自动分配空间,不超长
+
+`flex: 1;width: 0;`
+
+```html
+<style>
+    .wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 300px;
+        background: #eee8aa;
+        padding: 4px;
+        border-radius: 4px;
+        border: 2px solid #808080;
+    }
+
+    .right {
+        flex-shrink: 0;
+        margin-left: 8px;
+    }
+
+    .left {
+        display: flex;
+        flex: 1;
+        /*flex-basis: 0;*/
+        /*flex-grow: 1;*/
+        width: 0;
+    }
+
+    .start,.end {
+        background: #ff6b81;
+    }
+
+    .center {
+        margin: 0 8px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+</style>
+<div class="wrapper">
+    <div class="left">
+        <div class="start">左侧</div>
+        <div class="center">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
+        <div class="end">标题</div>
+    </div>
+    <div class="right">其他</div>
+</div>
+```
+
+
 
 [使用 CSS 弹性盒子](https://developer.mozilla.org/zh-CN/docs/conflicting/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox/ "使用 CSS 弹性盒子")
 [对齐弹性容器中的弹性项目](https://developer.mozilla.org/ca/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container "对齐弹性容器中的弹性项目")
