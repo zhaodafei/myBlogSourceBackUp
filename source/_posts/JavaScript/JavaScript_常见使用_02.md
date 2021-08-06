@@ -187,26 +187,65 @@ checkObj({}); // true
 
 ###  数据类型
 
-最新的 ECMAScript 标准定义了 8 种数据类型:
+> ***`JavaScript` 数据类型***
+>
+> 基本类型：Number Boolean  String  undefined null
+> 引用类型：Object  Function
 
-- 6 种
+> ***类型判断***
+>
+> typeof    Object.prototype.toString.call();
+>
+> ```javascript
+> Object.prototype.toString.call("daFei"); // [object String]
+> Object.prototype.toString.call(20); // [object Number]
+> Object.prototype.toString.call(null); // [object Null]
+> Object.prototype.toString.call(undefined); // [object Undefined]
+> Object.prototype.toString.call(true); // [object Boolean]
+> Object.prototype.toString.call(false); // [object Boolean]
+> 
+> Object.prototype.toString.call(new Date); // [object Date]
+> Object.prototype.toString.call({name: "daFei", age: 18}); // [object Object]
+> Object.prototype.toString.call(["daFei", 18, "Hello"]); // [object Array]
+> Object.prototype.toString.call(function foo(){}); // [object Function]
+> ```
+>
+> ```javascript
+> (typeof "abc123"); // string
+> (typeof 123); // number
+> (typeof a); // undefined
+> (typeof true); // boolean
+> (typeof Symbol('fei')); // symbol
+> (typeof function fei() {}); // function
+> 
+> 
+> (typeof null); // object  *****************************
+> (typeof []); // object
+> (typeof {}); // object
+> ```
 
-  原始类型，使用 typeof 运算符检查:
+> 最新的 ECMAScript 标准定义了 8 种数据类型:
+>
+> - 6 种
+>
+>   原始类型，使用 typeof 运算符检查:
+>
+>   - [undefined](https://developer.mozilla.org/zh-CN/docs/Glossary/undefined)：`typeof instance === "undefined"`
+>   - [Boolean](https://developer.mozilla.org/zh-CN/docs/Glossary/Boolean)：`typeof instance === "boolean"`
+>   - [Number](https://developer.mozilla.org/zh-CN/docs/Glossary/Number)：`typeof instance === "number"`
+>   - [String](https://developer.mozilla.org/zh-CN/docs/Glossary/String)：`typeof instance === "string`
+>   - [BigInt](https://developer.mozilla.org/zh-CN/docs/Glossary/BigInt)：`typeof instance === "bigint"`
+>   - [Symbol](https://developer.mozilla.org/zh-CN/docs/Glossary/Symbol) ：`typeof instance === "symbol"`
+>
+> - [null](https://developer.mozilla.org/zh-CN/docs/Glossary/Null)：`typeof instance === "object"`。
+>
+> - [Object](https://developer.mozilla.org/zh-CN/docs/Glossary/Object)：`typeof instance === "object"`。任何 constructed 对象实例的特殊非数据结构类型，也用做数据结构：new [Object](https://developer.mozilla.org/zh-CN/docs/Glossary/Object)，new [Array](https://developer.mozilla.org/zh-CN/docs/Glossary/array)，new Map，new Set，new WeakMap，new WeakSet，new Date，和几乎所有通过 new keyword 创建的东西。
+>
+> 记住 `typeof` 操作符的唯一目的就是检查数据类型，如果我们希望检查任何从 Object 派生出来的结构类型，使用 `typeof` 是不起作用的，因为总是会得到 `"object"`。检查 Object 种类的合适方式是使用 instanceof 关键字。但即使这样也存在误差。
+>
+> [JavaScript 数据类型和数据结构](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Data_structures)
 
-  - [undefined](https://developer.mozilla.org/zh-CN/docs/Glossary/undefined)：`typeof instance === "undefined"`
-  - [Boolean](https://developer.mozilla.org/zh-CN/docs/Glossary/Boolean)：`typeof instance === "boolean"`
-  - [Number](https://developer.mozilla.org/zh-CN/docs/Glossary/Number)：`typeof instance === "number"`
-  - [String](https://developer.mozilla.org/zh-CN/docs/Glossary/String)：`typeof instance === "string`
-  - [BigInt](https://developer.mozilla.org/zh-CN/docs/Glossary/BigInt)：`typeof instance === "bigint"`
-  - [Symbol](https://developer.mozilla.org/zh-CN/docs/Glossary/Symbol) ：`typeof instance === "symbol"`
 
-- [null](https://developer.mozilla.org/zh-CN/docs/Glossary/Null)：`typeof instance === "object"`。
-
-- [Object](https://developer.mozilla.org/zh-CN/docs/Glossary/Object)：`typeof instance === "object"`。任何 constructed 对象实例的特殊非数据结构类型，也用做数据结构：new [Object](https://developer.mozilla.org/zh-CN/docs/Glossary/Object)，new [Array](https://developer.mozilla.org/zh-CN/docs/Glossary/array)，new Map，new Set，new WeakMap，new WeakSet，new Date，和几乎所有通过 new keyword 创建的东西。
-
-记住 `typeof` 操作符的唯一目的就是检查数据类型，如果我们希望检查任何从 Object 派生出来的结构类型，使用 `typeof` 是不起作用的，因为总是会得到 `"object"`。检查 Object 种类的合适方式是使用 instanceof 关键字。但即使这样也存在误差。
-
-[JavaScript 数据类型和数据结构](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Data_structures)
 
 
 
