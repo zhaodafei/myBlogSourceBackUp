@@ -81,6 +81,17 @@ if ([2, 5, 8, 1, 4].some(x => x > 22)) {
 }
 ```
 
+### `find`遍历对象
+
+01) 可以跳出当前循环   [Array.prototype.find()](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/find)
+02) **find()** 方法返回数组中满足提供的测试函数的第一个元素的值。否则返回 `undefined`
+
+```javascript
+const array1 = [5, 12, 8, 130, 44];
+const found = array1.find(element => element > 10);
+console.log(found); // 12
+```
+
 ### 序列化和反序列化
 
 ```javascript
@@ -174,16 +185,7 @@ $foo = []; // false
 $foo = (object)[]; // true
 ```
 
-### 判断一个对象是否是空对象
 
-```javascript
-function checkObj(obj) {
-    return Object.keys(obj).length === 0;
-}
-
-checkObj([]); // true
-checkObj({}); // true
-```
 
 ###  数据类型
 
@@ -222,6 +224,18 @@ checkObj({}); // true
 > (typeof null); // object  *****************************
 > (typeof []); // object
 > (typeof {}); // object
+> ```
+
+> ```javascript
+> let foo = [];
+> 
+> if (Array.isArray(foo)) {
+>     console.log("这是一个数组");
+> }else if (Object.prototype.toString.call(foo) === '[object Object]') {
+>     console.log("这是一个json对象");
+> }else {
+>     console.warn("数据类型错误" + Object.prototype.toString.call(foo).slice(8, -1));
+> }
 > ```
 
 > 最新的 ECMAScript 标准定义了 8 种数据类型:

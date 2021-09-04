@@ -293,6 +293,26 @@ new Promise((resolve, reject) => {
 
 [JS事件循环机制(event loop)之宏任务/微任务](https://juejin.cn/post/6844903638238756878)
 
+## 其他
+
+###  `Promise` 和`catch`
+
+`catch`之后,`then`还会继续执行
+
+```javascript
+new Promise((resolve) => {
+  console.log("---1");
+  resolve();// *******************
+}).then(() => {
+  console.log("---2");
+  throw "出错了,准备执行catch,然后继续then"
+}).catch( (reason) => {
+  console.log('---3 处理失败的 promise ('+reason+')');
+}).then(() => {
+  console.log("---4");
+});
+```
+
 
 
 

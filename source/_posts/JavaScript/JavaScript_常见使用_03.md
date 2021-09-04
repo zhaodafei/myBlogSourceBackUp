@@ -13,6 +13,14 @@ tags:
 ### 判断空对象
 
 ```javascript
+function checkObj(obj) {
+    return Object.keys(obj).length === 0;
+}
+checkObj([]); // true
+checkObj({}); // true
+//-------------------------------------------
+
+
 Object.keys({}).length; // 长度为0
 Object.keys({foo: "bar"}).length; // 长度为1
 
@@ -80,6 +88,41 @@ bar("bar", () => {
     console.log("开始执行");
 });
 bar("bar2")
+```
+
+### 判断浏览器类型
+
+```javascript
+  // Browser environment sniffing
+  var inBrowser = typeof window !== 'undefined';
+  var inWeex = typeof WXEnvironment !== 'undefined' && !!WXEnvironment.platform;
+  var weexPlatform = inWeex && WXEnvironment.platform.toLowerCase();
+  var UA = inBrowser && window.navigator.userAgent.toLowerCase();
+  var isIE = UA && /msie|trident/.test(UA);
+  var isIE9 = UA && UA.indexOf('msie 9.0') > 0;
+  var isEdge = UA && UA.indexOf('edge/') > 0;
+  var isAndroid = (UA && UA.indexOf('android') > 0) || (weexPlatform === 'android');
+  var isIOS = (UA && /iphone|ipad|ipod|ios/.test(UA)) || (weexPlatform === 'ios');
+  var isChrome = UA && /chrome\/\d+/.test(UA) && !isEdge;
+  var isPhantomJS = UA && /phantomjs/.test(UA);
+  var isFF = UA && UA.match(/firefox\/(\d+)/);
+```
+
+### 抛出异常
+
+```javascript
+  try {
+    throw  "抛出异常";
+  } catch (err) {
+    console.error("捕获___" + err);
+  }
+```
+
+### 解构重命名
+
+```javascript
+const {fei: fei_temp, foo: foo_temp} = {fei: "123", foo: "helloWorld"};
+console.log(fei_temp, foo_temp); // 对 fei 和 foo 重新定义名字
 ```
 
 
