@@ -140,14 +140,12 @@ git clone ssh://git_dafei@192.168.1.113:22 /home/git_dafei/code/test.git  [指�
 
 
 
-
+### Git 下载
 
 [Ubuntu git官方文档](https://help.ubuntu.com/lts/serverguide/git.html "Ubuntu git官方文档")
 [git官方文档](https://git-scm.com/book/en/v2/Git-on-the-Server-Setting-Up-the-Server"git官方文档")
-
-
-
-
+[git Download 国内镜像](http://npm.taobao.org/mirrors/git-for-windows/)
+[git 官方下载](https://github.com/git-for-windows/git/releases)
 
 
 

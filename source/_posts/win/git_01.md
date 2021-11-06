@@ -62,6 +62,35 @@ git push origin :refs/tags/<tagname>       可以删除一个远程标签
 git ls-files                            如何知道目录里的文件是否在git仓库里
 ```
 
+### 设置提交用户名
+
+#### 本项目用户名
+
+修改的文件位置为 `项目名称/.git/config`
+
+```bash
+git config user.name "dafei"
+git config user.email "123333333@qq.com"
+```
+
+#### 全局用户名  
+
+```bash
+git config --global user.name "dafei"
+git config --global user.email "123333333@qq.com"
+```
+
+#### 查看用户名
+
+```ba
+git config user.name
+git config user.email
+```
+
+![git 用户名](/img/win/git/git_username.jpg "git 用户名")
+
+
+
 ###  回滚代码
 
 4 个时期回滚代码
@@ -114,7 +143,9 @@ git push origin  --delete 远程分支  #删除远程分支
 git push origin 本地回退分支上代码    #把本地回退分支上代码推送到远程
 ```
 
-
+### Git 下载
+[git Download 国内镜像](http://npm.taobao.org/mirrors/git-for-windows/)
+[git 官方下载](https://github.com/git-for-windows/git/releases)
 
 
 
