@@ -41,3 +41,6 @@ npx hexo -v
 
 03) 开始使用 
 npx hexo g
+npx hexo d
+npx hexo b
+npx hexo s -p5000
