@@ -86,7 +86,7 @@ hexo  迁移环境
 
 
 
-[Hexo 官网](https://hexo.io/zh-cn/docs/
+[Hexo 官网](https://hexo.io/zh-cn/docs/)
 
 
 
