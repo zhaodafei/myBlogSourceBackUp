@@ -24,6 +24,8 @@ $$
 
 ### 其他
 
+LaTex 语法
+
  [在线公式编辑](https://latex.codecogs.com/eqneditor/editor.php)
 
 1. 上标`^`  下标`_`    demo:   $C_n^2$
@@ -33,6 +35,8 @@ $$
 5. xxx
 6. xxx
 7. $f^{\prime}(x)=\frac{1}{x \ln a}(a>0 \text { 且 } a \neq 1)$
+8. 换行 ` \\`
+9. 空格 `\qquad`
 
 
 
