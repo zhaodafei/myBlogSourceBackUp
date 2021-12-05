@@ -37,6 +37,93 @@ LaTex 语法
 7. $f^{\prime}(x)=\frac{1}{x \ln a}(a>0 \text { 且 } a \neq 1)$
 8. 换行 ` \\`
 9. 空格 `\qquad`
+10. 空格 `\quad `
 
+### demo
+换行和空格
+$$
+y=\sin(x) \\
+y=\sin(x) \\
+y=\sin(x) \\
+y=\sin(x) \qquad
+y=\sin(x) \qquad
+y=\sin(x) \qquad
+y=\sin(x)
+$$
+
+$$
+\lim_{x \to 0} f(x) = 8
+$$
+
+$$
+\int \frac{1}{x} dx = \ln \left| x \right| + C
+$$
+
+$$ {demo}
+\\  \lim _{x \rightarrow 0} \frac{\sin x}{x}=1
+
+\\  \lim _{x \rightarrow \infty}\left(1+\frac{1}{x}\right)^{x}=e
+
+\\ f^{\prime}(x)=\frac{1}{x \ln a}(a>0 \text { 且 } a \neq 1)
+
+\\ y=\frac{1}{x}
+
+\\ a^{x}-\ln a
+
+\\ \frac{1}{x \ln a}(a>0 \text { 且 } a \neq 1)
+
+\\ y=\sin x
+$$
+
+$$
+\\ [f(x) \pm g(x)]^{\prime}=f^{\prime}(x) \pm g^{\prime}(x)
+
+\\  [f(x) \cdot g(x)]^{\prime}=f^{\prime}(x) \cdot g(x)+f(x) \cdot g^{\prime}(x)
+
+\\ \left[\frac{f(x)}{g(x)}\right] \cdot=\frac{f^{\prime}(x) \cdot g(x)-f(x) \cdot g^{\prime}(x)}{g^{2}(x)}
+
+
+\\ \left[\frac{1}{g(x)}\right]^{\prime}=-\frac{g^{\prime}(x)}{g^{2}(x)}
+
+\\ \frac{f^{\prime}(x) g(x)-f(x) g^{\prime}(x)}{g^{2}(x)}
+
+\\ \left[\frac{f(x)}{g(x)}\right]^{\prime}=\frac{f^{\prime}(x) g(x)-f(x) g^{\prime}(x)}{g^{2}(x)}
+$$
+
+### demo
+
+$$
+\\ y=\sqrt{x}
+\\ y=\sqrt[7]{x^{3}}
+$$
+
+$$
+\tan x=\frac{\sin x}{\cos x}(\cos x \neq 0)
+$$
+
+$$
+y=\sqrt{u}, y=\sqrt[2 \pi]{u} \quad u \geqslant 0
+$$
+
+$$
+\text { (3) } y=2 n+\sqrt{x} \quad x \in(-\infty,+\infty)
+$$
+
+$$
+y=\log _{a} x
+$$
+
+$$
+\text { (5) } \text {abc}
+$$
+
+$$
+x \in[-1,1]
+$$
+
+
+$$
+
+$$
 
 
