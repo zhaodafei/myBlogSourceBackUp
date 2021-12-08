@@ -1,5 +1,6 @@
 ---
 title: mysql -Documentation  手册
+date: 2015-11-01
 categories: 
 - MySQL
 tags:

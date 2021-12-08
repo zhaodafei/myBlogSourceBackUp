@@ -1,5 +1,6 @@
 ---
 title: -MySQL8
+date: 2015-11-01
 categories: 
 - MySQL8
 tags:

@@ -1,5 +1,6 @@
 ---
 title: -vuex 状态管理
+date: 2020-07-04
 categories: 
 - WEB
 - Vue

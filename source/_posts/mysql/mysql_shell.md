@@ -1,5 +1,6 @@
 ---
 title: -mysql-shell 工具使用(windows篇)
+date: 2015-11-01
 categories: 
 - MySQL
 tags:

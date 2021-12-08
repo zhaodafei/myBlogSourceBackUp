@@ -1,5 +1,6 @@
 ---
 title: vue中main.js文件解析 
+date: 2020-07-04
 categories: 
 - WEB
 - Vue

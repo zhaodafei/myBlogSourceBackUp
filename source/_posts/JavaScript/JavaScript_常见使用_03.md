@@ -125,6 +125,44 @@ const {fei: fei_temp, foo: foo_temp} = {fei: "123", foo: "helloWorld"};
 console.log(fei_temp, foo_temp); // 对 fei 和 foo 重新定义名字
 ```
 
+### 高阶函数 `filter` `map` `reduce`
+
+```javascript
+// 高阶函数 filter map reduce  用es6语法
+// 过滤小于20的值,返回布尔值 true 或者 false
+// 循环数组中的每一个元素
+//接受一个函数作为参数，这个函数作为一个累加器，从左到右遍历整个类型数组，最后返回一个单一的值
+const nums = [10, 15, 18, 25, 34];
+let newNums = nums.filter(item => item < 20) 
+.map(item2 => item2 * 2) 
+.reduce((total, item3) => total + item3); 
+
+//--------------------
+const nums = [10, 15, 18, 25, 34];
+let newNum_1 = nums.filter(function (item1) {
+    return item1 < 20;
+});
+console.log(newNum_1); // [10, 15, 18]
+
+let newNum_2 = newNum_1.map(function (item2) {
+    return item2 * 2;
+});
+console.log(newNum_2); // [20, 30, 36]
+
+let newNum_3 = newNum_2.reduce(function (total, item3) {
+    return total + item3;
+})
+console.log(newNum_3); // 86
+```
+
+### `set` 和 `map`
+
+`set` 利用唯一,数组去重
+
+```javascript
+[...new Set([1, 1, 2, 2, 5, 7])]
+```
+
 
 
 

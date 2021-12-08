@@ -1,5 +1,6 @@
 ---
 title: 标题demo模板
+date: 2013-07-04
 categories: 
 - 计算机
 tags:

@@ -1,5 +1,6 @@
 ---
 title: -mysql -sql other02
+date: 2015-11-01
 categories: 
 - MySQL
 tags:

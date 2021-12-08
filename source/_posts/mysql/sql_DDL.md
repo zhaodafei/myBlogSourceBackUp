@@ -1,5 +1,6 @@
 ---
 title: -sql -DDL
+date: 2015-11-01
 categories: 
 - MySQL
 tags:

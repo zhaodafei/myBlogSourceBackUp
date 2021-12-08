@@ -1,5 +1,6 @@
 ---
 title: -computed 和 -watch
+date: 2020-07-04
 categories: 
 - Vue
 tags:

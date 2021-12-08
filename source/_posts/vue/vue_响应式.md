@@ -1,5 +1,6 @@
 ---
 title: vue 响应式
+date: 2020-07-04
 categories: 
 - Vue
 tags:

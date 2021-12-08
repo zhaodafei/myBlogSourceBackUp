@@ -1,5 +1,6 @@
 ---
 title: vue 组件之间传值
+date: 2020-07-04
 categories: 
 - WEB
 - Vue

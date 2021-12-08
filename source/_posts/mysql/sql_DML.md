@@ -1,5 +1,6 @@
 ---
 title: -sql DML (insert update delete select)基本使用
+date: 2015-11-01
 categories: 
 - MySQL
 tags:
