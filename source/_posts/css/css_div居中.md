@@ -1,10 +1,17 @@
 ---
 title: div 居中
+date: 2015-03-04
 categories: 
 - CSS
 tags:
 - CSS
 ---
+`div` 居中
+`div` 居中
+`div` 居中
+
+<!-- more -->
+
 ## 水平居中
 
 ### *margin

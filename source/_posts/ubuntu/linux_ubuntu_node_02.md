@@ -1,5 +1,6 @@
 ---
 title: WIN -node 修改npm全局模式的默认安装路径
+date: 2014-02-05
 categories: 
 - WIN
 tags:
@@ -11,6 +12,8 @@ tags:
 WIN -node 修改`npm`全局模式的默认安装路径
 WIN -node 修改`npm`全局模式的默认安装路径
 WIN -node 修改`npm`全局模式的默认安装路径
+
+<!-- more -->
 
 ### 查看当前配置
 

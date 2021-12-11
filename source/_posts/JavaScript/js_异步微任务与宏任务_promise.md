@@ -1,5 +1,6 @@
 ---
 title: 异步微任务与宏任务
+date: 2015-08-04
 categories: 
 - WEB
 - JavaScript
@@ -12,6 +13,8 @@ tags:
 `JavaScript`是单线程执行的,`JavaScript`中的任务按顺序一个一个的执行，但是一个任务耗时太长;那么后面的任务就需要等待,为了解决这种情况,将任务分为了<font color="#ff6b81">同步任务</font>和<font color="#ff6b81">异步任务</font>；而异步任务又可以分为<font color="#ff6b81">微任务</font>和<font color="#ff6b81">宏任务</font>。
 
 > 主线程从"任务队列"中读取事件，这个过程是循环不断的，所以整个的这种运行机制又称为 `Event Loop`（事件循环）
+
+<!-- more -->
 
 ### 执行顺序总则
 

@@ -1,10 +1,17 @@
 ---
 title: -Apache 安装
+date: 2015-01-01
 categories: 
 - Apache
 tags:
 - Apache
 ---
+
+Apache 安装
+Apache 安装
+Apache 安装
+
+<!-- more -->
 
 ### apache 安装
 

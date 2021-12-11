@@ -1,5 +1,6 @@
 ---
 title: -MyEclipse导入其他人的MyEclipse项目
+date: 2015-07-04
 categories: 
 - MyEclipse
 tags:
@@ -8,6 +9,8 @@ tags:
 `MyEclipse`导入其他人的`MyEclipse`项目
 
 `MyEclipse`导入其他人的`MyEclipse`项目
+
+<!-- more -->
 
 ### 01) 开始导入项目
 

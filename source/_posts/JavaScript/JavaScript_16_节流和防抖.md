@@ -1,5 +1,6 @@
 ---
 title: -JavaScript   防抖和节流
+date: 2015-08-04
 categories: 
 - JavaScript
 tags:
@@ -16,6 +17,8 @@ tags:
 节流:
 
 所谓节流，就是指连续触发事件但是在 n 秒中只执行一次函数
+
+<!-- more -->
 
 ### 防抖
 

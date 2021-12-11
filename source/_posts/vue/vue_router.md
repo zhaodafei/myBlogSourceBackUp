@@ -16,6 +16,8 @@ tags:
 `$router` 为`VueRouter` 实例,想要导航到不同的`URL`,则使用 `$router.push`方法
 `$route` 为当前 `router`跳转对象里面可以获取 `name`、`path`、`query`、`params`等
 
+<!-- more -->
+
 ### 01) 基本目录结构
 
 ![vue-router](/img/vue/vue_router.png "vue-router")

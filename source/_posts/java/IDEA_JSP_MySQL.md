@@ -1,5 +1,6 @@
 ---
 title: -IDEA -JSP 操作MySQL
+date: 2015-07-04
 categories: 
 - IDEA
 tags:
@@ -10,6 +11,8 @@ tags:
 IDEA 中JSP页面操作MySQL
 IDEA 中JSP页面操作MySQL
 IDEA 中JSP页面操作MySQL
+
+<!-- more -->
 
 ### 新建`Java web` 工程
 

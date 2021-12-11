@@ -1,5 +1,6 @@
 ---
 title: -find 文件查找
+date: 2014-01-04
 categories: 
 - Linux
 tags:
@@ -7,6 +8,8 @@ tags:
 - find
 ---
 ...... find 命令用来指定目录文件下查找
+
+<!-- more -->
 
 ### 命令格式
 

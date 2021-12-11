@@ -1,5 +1,6 @@
 ---
 title:  -JavaScript  -闭包
+date: 2015-08-04
 categories: 
 - JavaScript
 tags:
@@ -11,6 +12,8 @@ tags:
 一句话概括 :函数的作用域取决于声明时,而不取决于调用时!!!
 函数的作用取决于声明时,而非调用时,
 函数内部声明变量的时候,一定要用 `var` 命令.如果不用的话,就是声明了一个全局变量
+
+<!-- more -->
 
 ```javascript
 function t1() {

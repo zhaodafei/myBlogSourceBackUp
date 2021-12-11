@@ -1,13 +1,16 @@
 ---
 title: 美化表单form
+date: 2015-03-04
 categories: 
 - form
 tags:
 - form
 ---
 美化表单`form`
+美化表单`form` 
 美化表单`form`
-美化表单`form`
+
+<!-- more -->
 
 ### 输入框 `input`
 

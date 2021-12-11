@@ -1,5 +1,6 @@
 ---
 title: -CSS 常见布局
+date: 2015-03-04
 categories: 
 - CSS
 tags:
@@ -8,6 +9,8 @@ tags:
 CSS 常见布局
 CSS 常见布局
 CSS 常见布局
+
+<!-- more -->
 
 ### 下面的待写..........
 

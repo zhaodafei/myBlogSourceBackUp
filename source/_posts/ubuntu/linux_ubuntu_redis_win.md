@@ -1,5 +1,6 @@
 ---
 title:  -redis 在windows中使用
+date: 2014-02-05
 categories: 
 - Redis
 tags:
@@ -8,6 +9,8 @@ tags:
 `redis` 在windows中使用
 `redis` 在windows中使用
 `redis` 在windows中使用
+
+<!-- more -->
 
 ### 启动 `redis`
 

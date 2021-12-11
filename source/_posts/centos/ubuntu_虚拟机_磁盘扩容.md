@@ -1,5 +1,6 @@
 ---
 title: linux ubuntu 磁盘扩容
+date: 2015-02-04
 categories: 
 - Linux
 - Ubuntu
@@ -7,6 +8,12 @@ tags:
 - Linux
 - Ubuntu
 ---
+linux ubuntu 磁盘扩容
+linux ubuntu 磁盘扩容
+linux ubuntu 磁盘扩容
+
+<!-- more -->
+
 ### 在虚拟机`VMware`上增加磁盘空间
 
 使用了一段时间虚拟机后发现磁盘不够用了,需要扩容。在客户端操作扩容出现`磁盘已成功扩展。您必须从客户机操作系统内部对磁盘重新进行分区和扩展文件系统。`  然后进ubuntu系统进行操作

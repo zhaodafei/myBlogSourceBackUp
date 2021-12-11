@@ -1,5 +1,6 @@
 ---
 title: -CSS 常见布局_左右
+date: 2015-03-04
 categories: 
 - CSS
 tags:
@@ -9,6 +10,8 @@ CSS 常见布局`左右`
 CSS 常见布局`左右`
 CSS 常见布局`左右`
 左边固定宽度,右边自适应
+
+<!-- more -->
 
 ### 浮动和`margin-left`
 

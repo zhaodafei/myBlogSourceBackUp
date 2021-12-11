@@ -7,6 +7,12 @@ tags:
 - MySQL
 ---
 
+sql other
+sql other
+sql other
+
+<!-- more -->
+
 ### mysql 简单整理
 
  group by  ;  group_concat 

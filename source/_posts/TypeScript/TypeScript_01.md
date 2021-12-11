@@ -1,5 +1,6 @@
 ---
 title: -TypeScript 数据类型01
+date: 2015-05-04
 categories: 
 - TypeScript
 tags:
@@ -8,6 +9,8 @@ tags:
 `TypeScript` 数据类型01
 `TypeScript` 数据类型01
 `TypeScript` 数据类型01
+
+<!-- more -->
 
 ### 可选参数
 

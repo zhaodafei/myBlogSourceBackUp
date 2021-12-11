@@ -1,5 +1,6 @@
 ---
 title: Postman 中设置全局变量,token
+date: 2015-03-04
 categories: 
 - Postman
 tags:
@@ -10,6 +11,8 @@ tags:
 `Postman`  中设置全局变量,解决token传参更新问题
 
 背景: 使用`postman`的时候调用接口添加`token`越来越多,每次手动更新token太浪时间
+
+<!-- more -->
 
 ### 全局添加变量
 

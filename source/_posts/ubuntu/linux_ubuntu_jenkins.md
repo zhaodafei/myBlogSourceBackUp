@@ -1,10 +1,17 @@
 ---
 title: ubuntu -jenkins 
+date: 2014-02-05
 categories: 
 - Jenkins
 tags:
 - Jenkins
 ---
+ubuntu -jenkins 
+ubuntu -jenkins 
+ubuntu -jenkins 
+
+<!-- more -->
+
 ### 下载war 包
 
 #### 第一种安装方式：

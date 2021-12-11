@@ -1,5 +1,6 @@
 ---
 title: -CSS 常见布局_多列等高
+date: 2015-03-04
 categories: 
 - CSS
 tags:
@@ -8,6 +9,8 @@ tags:
 CSS 常见布局`多列等高`
 CSS 常见布局`多列等高`
 CSS 常见布局`多列等高`
+
+<!-- more -->
 
 ###  对冲
 使用负`margin-bottom`和正`padding-bottom`对冲实现

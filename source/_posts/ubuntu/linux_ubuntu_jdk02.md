@@ -1,14 +1,17 @@
 ---
 title: Windows -jdk
+date: 2014-02-05
 categories: 
 - Java
 tags:
 - Java
 - jdk
 ---
+Windows -jdk
 `Windwos7` 中测试 `jdk`是否安装成功,并编写第一个`HelloWorld`程序,用命令行运行
 `Windwos7` 中测试 `jdk`是否安装成功,并编写第一个`HelloWorld`程序,用命令行运行
-`Windwos7` 中测试 `jdk`是否安装成功,并编写第一个`HelloWorld`程序,用命令行运行
+
+<!-- more -->
 
 ### 测试 `jdk` 环境
 

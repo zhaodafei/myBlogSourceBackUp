@@ -11,6 +11,8 @@ Vue之性能优化篇
 Vue之性能优化篇 
 Vue之性能优化篇 
 
+<!-- more -->
+
 1. `v-if` 和 `v-show` 分场景使用
 2. `computed` 和 `watch` 分场景使用
 3. `v-for` 遍历添加 `key`

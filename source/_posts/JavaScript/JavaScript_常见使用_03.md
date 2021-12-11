@@ -1,14 +1,17 @@
 ---
 title: JavaScript_常见使用_03
+date: 2015-08-04
 categories: 
 - JavaScript
 tags:
 - JavaScript
 ---
 
- JavaScript常用使用
- JavaScript常用使用
- JavaScript常用使用
+ JavaScript常用使用_03
+ JavaScript常用使用_03
+ JavaScript常用使用_03
+
+<!-- more -->
 
 ### 判断空对象
 

@@ -1,11 +1,18 @@
 ---
 title: -多态
+date: 2015-10-04
 categories: 
 - PHP
 tags:
 - PHP
 - 多态
 ---
+
+PHP多态
+PHP多态
+PHP多态
+
+<!-- more -->
 
 ### 多态满足三个条件:
 

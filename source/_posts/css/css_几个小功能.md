@@ -1,5 +1,6 @@
 ---
 title: -CSS 几个小功能
+date: 2015-03-04
 categories: 
 - CSS
 tags:
@@ -8,6 +9,8 @@ tags:
 CSS 几个小功能
 CSS 几个小功能
 CSS 几个小功能
+
+<!-- more -->
 
 ### 三角形
 

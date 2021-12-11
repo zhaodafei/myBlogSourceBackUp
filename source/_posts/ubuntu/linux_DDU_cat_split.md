@@ -1,5 +1,6 @@
 ---
 title:  -cat  连接文件并打印到标准输出设备上 -split 切割文件
+date: 2014-01-04
 categories: 
 - Linux
 tags:
@@ -7,6 +8,12 @@ tags:
 - cat
 - split
 ---
+cat  连接文件并打印到标准输出设备上 -split 切割文件
+cat  连接文件并打印到标准输出设备上 -split 切割文件
+cat  连接文件并打印到标准输出设备上 -split 切割文件
+
+<!-- more -->
+
 ### 命令格式
 
 ```

@@ -1,5 +1,6 @@
 ---
 title: CSS 属性 -position
+date: 2015-03-04
 categories: 
 - CSS
 tags:
@@ -11,6 +12,8 @@ tags:
 `CSS` 定位属性 `position`,四个定位类型 `static/relative/absolute/fixed`,
 `top,right,bottom,left `属性则决定了该元素的最终位置
 `position`默认值`static`,此时`top,right,bottom,left `和`z-index`无效
+
+<!-- more -->
 
 `static`  静态定位[ 默认值 ]
 `relative`  相对定位[ 相对于元素自己原来的位置 ]

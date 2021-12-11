@@ -1,5 +1,6 @@
 ---
 title: -Webpack 优化
+date: 2015-08-04
 categories: 
 - Webpack
 tags:
@@ -9,6 +10,8 @@ tags:
 `Webpack` 优化
 `Webpack`优化
 待续 ...
+
+<!-- more -->
 
 >Webpack具有四个核心的概念，分别是Entry（入口）、Output（输出）、loader和Plugins
 >

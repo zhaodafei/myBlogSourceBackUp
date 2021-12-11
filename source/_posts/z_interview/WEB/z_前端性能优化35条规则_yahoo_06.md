@@ -1,5 +1,6 @@
 ---
 title: 前端性能优化35条规则 yahoo -images
+date: 2015-10-04
 categories: 
 - WEB
 tags:
@@ -8,6 +9,8 @@ tags:
 前端性能优化35条规则 yahoo -images
 前端性能优化35条规则 yahoo -images
 前端性能优化35条规则 yahoo -images
+
+<!-- more -->
 
 #### 01)  优化图片
 

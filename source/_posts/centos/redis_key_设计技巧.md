@@ -1,5 +1,6 @@
 ---
 title: --redis key 设计技巧
+date: 2015-02-04
 categories: 
 - Linux
 - CentOS
@@ -9,6 +10,12 @@ tags:
 - CentOS
 - Redis
 ---
+
+redis key 设计技巧
+redis key 设计技巧
+redis key 设计技巧
+
+<!-- more -->
 
 ### redis  key 设计技巧
 

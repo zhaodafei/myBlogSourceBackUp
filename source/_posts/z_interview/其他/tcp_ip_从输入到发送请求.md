@@ -1,5 +1,6 @@
 ---
 title: tcp ip
+date: 2015-10-04
 categories: 
 - Other
 tags:
@@ -19,3 +20,4 @@ IP层        IP + tcp  + hello world
 链路层    帧头 + IP + tcp  + hello world + 帧尾
 ```
 
+<!-- more -->

@@ -1,5 +1,6 @@
 ---
 title: -CSS 特性
+date: 2015-03-04
 categories: 
 - CSS
 tags:
@@ -8,6 +9,8 @@ tags:
 css特性
 css特性
 css特性
+
+<!-- more -->
 
 ### 继承
 

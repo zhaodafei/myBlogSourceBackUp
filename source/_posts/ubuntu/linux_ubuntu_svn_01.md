@@ -1,5 +1,6 @@
 ---
 title: ubuntu16 --svn01 源码编译安装
+date: 2014-02-05
 categories: 
 - SVN
 tags:
@@ -7,6 +8,8 @@ tags:
 ---
 
 ubuntu16 系统通过源码编译安装 subversion-1.11.1   && apt-get 安装
+
+<!-- more -->
 
 ### 安装apr
 

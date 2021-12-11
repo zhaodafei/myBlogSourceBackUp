@@ -1,11 +1,18 @@
 ---
 title: BlueLake 主题配置
+date: 2014-01-04
 categories: 
 - Hexo
 tags:
 - Hexo
 - BlueLake
 ---
+BlueLake 主题配置
+BlueLake 主题配置
+BlueLake 主题配置
+
+<!-- more -->
+
 ### 添加本地搜索
 
 安装插件[hexo-generator-json-content](https://github.com/alexbruno/hexo-generator-json-content)来创建JSON数据文件

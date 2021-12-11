@@ -1,11 +1,18 @@
 ---
 title: laravel -Command
+date: 2015-09-04
 categories: 
 - PHP
 - Laravel
 tags:
 - Laravel
 ---
+laravel `command`  简单使用
+laravel `command`  简单使用
+laravel `command`  简单使用
+
+<!-- more -->
+
 ### `command`  简单使用
 
 ```php

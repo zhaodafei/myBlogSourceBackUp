@@ -12,6 +12,8 @@ tags:
 ---
 vue 父子之间传值 `props` 和  `emit`
 
+<!-- more -->
+
 ### `vue` 父组件传值子组件 `props`
 
 ```html

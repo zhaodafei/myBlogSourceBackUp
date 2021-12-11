@@ -1,11 +1,14 @@
 ---
 title:  -oracle 简单使用
+date: 2015-02-04
 categories: 
 - Oracle
 tags:
 - Oracle
 ---
 oracle 简单SQL的使用................
+
+<!-- more -->
 
 ### sql
 

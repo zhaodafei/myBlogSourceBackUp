@@ -1,10 +1,17 @@
 ---
-title: -apache 三种工作模式
+title: -Apache 三种工作模式
+date: 2015-01-01
 categories: 
 - Apache
 tags:
 - Apache
 ---
+Apache 三种工作模式
+Apache 三种工作模式
+Apache 三种工作模式
+
+<!-- more -->
+
 Apache2.0 支持插入式并行处理模块,成为多路处理模块( MPM)
 
 下面以我使用的 `Apache/2.4.33` 为例子:  

@@ -1,5 +1,6 @@
 ---
 title: YII2搭建后台并实现rbac权限控制
+date: 2015-09-04
 categories: 
 - PHP
 - Yii
@@ -7,6 +8,12 @@ tags:
 - PHP
 - Yii
 ---
+
+YII2搭建后台并实现rbac权限控制
+YII2搭建后台并实现rbac权限控制
+YII2搭建后台并实现rbac权限控制
+
+<!-- more -->
 
 ### 安装Yii2 
 

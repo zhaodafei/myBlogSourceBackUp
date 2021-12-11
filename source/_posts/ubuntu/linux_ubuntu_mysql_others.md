@@ -1,11 +1,18 @@
 ---
 title: ubuntu -mysql others
+date: 2014-02-05
 categories: 
 - MySQL
 tags:
 - MySQL
 - MySQL5.6
 ---
+ubuntu -mysql5.6 others
+ubuntu -mysql5.6 others
+ubuntu -mysql5.6 others
+
+<!-- more -->
+
 ### mysql 5.6 其他
 
 ### 查看 MySQL 配置;

@@ -1,5 +1,6 @@
 ---
 title: ubuntu -shipyard
+date: 2014-02-05
 categories: 
 - Shipyard
 tags:
@@ -10,6 +11,8 @@ tags:
 待完善。。。。。。。
 
 Shipyard 是一个基于 Web 的 Docker 管理工具，支持多 host，可以把多个 Docker host 上的 containers 统一管理；可以查看 images，甚至 build images；并提供 RESTful API 等
+
+<!-- more -->
 
 ### 安装 shipyard
 

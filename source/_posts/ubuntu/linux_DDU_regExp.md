@@ -1,5 +1,6 @@
 ---
 title: -RegExp 正则
+date: 2014-01-04
 categories: 
 - RegExp
 tags:
@@ -8,6 +9,8 @@ tags:
 `Regular Expression` 简写 `RegExp`  正则表达式
 `Regular Expression` 简写 `RegExp`  正则表达式
 `Regular Expression` 简写 `RegExp`  正则表达式
+
+<!-- more -->
 
 ### 基本常见
 
@@ -52,6 +55,15 @@ tags:
 ```
 
 ![正则](/img/ubuntu/linux_command/linux_regexp/RegExp_02.png "正则")
+
+### 手机号变`*`
+
+```javascript
+// 中间4为变为*号
+"13685468080".replace(/^(\d{3})\d{4}(\d{4})$/,"$1****$2") 
+```
+
+
 
 [正则_菜鸟教程](https://www.runoob.com/regexp/regexp-metachar.html)
 

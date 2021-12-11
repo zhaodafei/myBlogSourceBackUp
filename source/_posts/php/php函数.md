@@ -1,10 +1,17 @@
 ---
 title: php -函数
+date: 2015-04-04
 categories: 
 - PHP
 tags:
 - PHP
 ---
+
+php -函数
+php -函数
+php -函数
+
+<!-- more -->
 
 ### http_build_query  
 

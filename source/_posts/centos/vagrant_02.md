@@ -1,5 +1,6 @@
 ---
 title: linux-DDU  -vagrant 简单使用02
+date: 2015-02-04
 categories: 
 - Linux
 - Vagrant
@@ -7,6 +8,12 @@ tags:
 - Linux
 - Vagrant
 ---
+
+vagrant 简单使用02
+vagrant 简单使用02
+vagrant 简单使用02
+
+<!-- more -->
 
 ### 添加一个 box 
 

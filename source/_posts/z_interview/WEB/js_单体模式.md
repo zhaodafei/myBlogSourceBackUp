@@ -1,5 +1,6 @@
 ---
 title: 单体模式
+date: 2015-10-04
 categories: 
 - WEB
 - JavaScript
@@ -8,6 +9,8 @@ tags:
 - 单体模式
 ---
 单体模式
+
+<!-- more -->
 
 ### 单体模式
 

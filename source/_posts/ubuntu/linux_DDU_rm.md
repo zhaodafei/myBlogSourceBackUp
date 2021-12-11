@@ -1,11 +1,18 @@
 ---
 title: -rm  删除文件或目录
+date: 2014-01-04
 categories: 
 - Linux
 tags:
 - Linux
 - rm
 ---
+rm  删除文件或目录
+rm  删除文件或目录
+rm  删除文件或目录
+
+<!-- more -->
+
 ### 命令格式
 
 ```

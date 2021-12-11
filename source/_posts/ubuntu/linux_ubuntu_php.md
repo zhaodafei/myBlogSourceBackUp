@@ -1,11 +1,16 @@
 ---
 title: ubuntu16 -php7.0.28
+date: 2014-02-05
 categories: 
 - PHP
 tags:
 - PHP
 ---
-源码编译安装php7.0
+ubuntu16 源码编译安装php7.0
+ubuntu16 源码编译安装php7.0
+ubuntu16 源码编译安装php7.0
+
+<!-- more -->
 
 ### 依赖安装，安装依赖
 

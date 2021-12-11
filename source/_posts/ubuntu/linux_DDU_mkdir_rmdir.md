@@ -1,5 +1,6 @@
 ---
 title: -mkdir  -rmdir 显示目录列表
+date: 2014-01-04
 categories: 
 - Linux
 tags:
@@ -7,7 +8,11 @@ tags:
 - mkdir
 - rmdir
 ---
+
+-mkdir  -rmdir 显示目录列表
 mkdir 不指定参数，创建文件默认权限 为 755  rwxr-xr-x
+
+<!-- more -->
 
 ### 命令格式
 

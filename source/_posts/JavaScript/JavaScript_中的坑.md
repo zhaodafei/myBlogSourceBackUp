@@ -1,10 +1,15 @@
 ---
 title: JavaScript_中的坑
+date: 2015-08-04
 categories: 
 - JavaScript
 tags:
 - JavaScript
 ---
+暂无介绍
+
+<!-- more -->
+
 ### 排序 `sort`
 
 `MDN` 中说明

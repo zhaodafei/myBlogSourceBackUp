@@ -1,12 +1,16 @@
 ---
 title: ubuntu16 -php7 extension redis
+date: 2014-03-06
 categories: 
 - PHP
 tags:
 - PHP
 - Redis
 ---
-### Extension 之 redis
+PHP Extension 之 redis
+PHP Extension 之 redis
+
+<!-- more -->
 
 ### 下载 redis 包
 

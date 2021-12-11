@@ -1,5 +1,6 @@
 ---
 title: -CSS 常见导航nav
+date: 2015-03-04
 categories: 
 - CSS
 tags:
@@ -9,6 +10,8 @@ tags:
 CSS 常见导航`nav`
 CSS 常见导航`nav`
 CSS 常见导航`nav`
+
+<!-- more -->
 
 ### 水平导航
 

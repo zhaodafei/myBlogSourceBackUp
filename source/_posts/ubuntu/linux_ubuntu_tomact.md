@@ -1,10 +1,17 @@
 ---
 title: ubuntu -tomact
+date: 2014-02-05
 categories: 
 - Tomact
 tags:
 - Tomact
 ---
+ubuntu -tomact
+ubuntu -tomact
+ubuntu -tomact
+
+<!-- more -->
+
 #### 官网下载 Tomact 包上传到服务器
 
 ```

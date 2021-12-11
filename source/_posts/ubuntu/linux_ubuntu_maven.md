@@ -1,5 +1,6 @@
 ---
 title: -maven  centos7
+date: 2014-02-05
 categories: 
 - Java
 - Maven
@@ -7,6 +8,12 @@ tags:
 - Java
 - Maven
 ---
+maven  centos7
+maven  centos7
+maven  centos7
+
+<!-- more -->
+
 ## maven   Binary方式安装使用
 
 安装maven之前区别系统中安装了 JDK,  

@@ -1,11 +1,18 @@
 ---
 title: -Yii2 验证器  -不为人知的秘密
+date: 2015-09-04
 categories: 
 - PHP
 - Yii
 tags:
 - Yii
 ---
+-Yii2 验证器  -不为人知的秘密
+-Yii2 验证器  -不为人知的秘密
+-Yii2 验证器  -不为人知的秘密
+
+<!-- more -->
+
 ### required : 必须值验证属性
 
 ```php

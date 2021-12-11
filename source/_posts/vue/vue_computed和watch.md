@@ -12,6 +12,8 @@ tags:
 `computed` 和 `watch` 计算属性和监听属性
 `computed` 和 `watch` 计算属性和监听属性
 
+<!-- more -->
+
 > computed:
 >
 > 1. 它支持***缓存***，只有依赖的数据发生了变化，才会重新计算

@@ -1,11 +1,16 @@
 ---
 title: ubuntu15 -redis安装
+date: 2014-02-05
 categories: 
 - Redis
 tags:
 - Redis
 ---
-redis2种安装方式
+ubuntu15 中 redis2种安装方式
+ubuntu15 中 redis2种安装方式
+ubuntu15 中 redis2种安装方式
+
+<!-- more -->
 
 ### 安装redis
 

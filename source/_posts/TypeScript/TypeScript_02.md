@@ -1,5 +1,6 @@
 ---
 title: -TypeScript 数据类型02
+date: 2015-05-04
 categories: 
 - TypeScript
 tags:
@@ -8,6 +9,8 @@ tags:
 `TypeScript` 数据类型02, 一个简单`demo`图书添加查询
 `TypeScript` 数据类型02, 一个简单`demo`图书添加查询
 `TypeScript` 数据类型02, 一个简单`demo`图书添加查询
+
+<!-- more -->
 
 demo:
 

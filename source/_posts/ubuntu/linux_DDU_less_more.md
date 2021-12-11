@@ -1,5 +1,6 @@
 ---
 title: -less -more  显示目录列表
+date: 2014-01-04
 categories: 
 - Linux
 tags:
@@ -8,6 +9,8 @@ tags:
 - more
 ---
 less 与 more 类似，但使用 less 可以随意浏览文件，而且 less 在查看之前不会加载整个文件 
+
+<!-- more -->
 
 ## 命令 less
 

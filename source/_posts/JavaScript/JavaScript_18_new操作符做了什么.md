@@ -1,5 +1,6 @@
 ---
 title: -JavaScript   new 操作符具体干了什么呢？如何实现？
+date: 2015-08-04
 categories: 
 - JavaScript
 tags:
@@ -8,6 +9,8 @@ tags:
 `new` 操作符具体干了什么呢？如何实现？
 `new` 操作符具体干了什么呢？如何实现？
 `new` 操作符具体干了什么呢？如何实现？
+
+<!-- more -->
 
 1. 首先创建了一个新的空对象
 2. 设置原型,，将对象的原型设置为函数的 prototype对象

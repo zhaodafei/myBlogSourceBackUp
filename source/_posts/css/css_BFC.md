@@ -1,5 +1,6 @@
 ---
 title: -BFC
+date: 2015-03-04
 categories: 
 - CSS
 tags:
@@ -10,7 +11,7 @@ tags:
 **块格式化上下文（Block Formatting Context，BFC）**
 **块格式化上下文（Block Formatting Context，BFC）**
 
-
+<!-- more -->
 
 ### 什么是`BFC`
 > 浮动元素和绝对定位元素,非块级盒子的块级容器(例如 `inline-blocks`, `table-cells`, 和 `table-captions`),以及`overflow`值不为`visiable`的块级盒子,都会为他们的内容创建新的BFC(块级格式上下文),

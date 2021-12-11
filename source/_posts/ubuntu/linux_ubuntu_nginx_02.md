@@ -1,10 +1,14 @@
 ---
-title: Ubuntu -nginx
+title: Ubuntu -nginx配置
+date: 2014-02-05
 categories: 
 - Nginx
 tags:
 - Nginx
 ---
+Ubuntu -nginx配置
+Ubuntu -nginx配置
+
 ### 日志切割  testlog.sh
 
 使用脚本切割 nginx 日志，脚本内容如下

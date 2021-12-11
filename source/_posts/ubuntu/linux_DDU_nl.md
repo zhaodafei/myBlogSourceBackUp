@@ -1,12 +1,15 @@
 ---
-title: -nl  计算文件中行号
+title: -nl 计算文件中行号
+date: 2014-01-04
 categories: 
 - Linux
 tags:
 - Linux
 - nl
 ---
-介绍： 计算文件中行号；
+介绍： `nl` 计算文件中行号；
+
+<!-- more -->
 
 ### 命令格式
 

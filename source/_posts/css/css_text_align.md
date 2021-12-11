@@ -1,14 +1,17 @@
 ---
 title: CSS 之 text-align
+date: 2015-03-04
 categories: 
 - CSS
 tags:
 - CSS
 - text-align
 ---
- css 之 text-align
- css 之 text-align
- css 之 text-align
+ css 之 `text-align`
+ css 之` text-align`
+ css 之 `text-align`
+
+<!-- more -->
 
 ### ` text-align`  文本对齐
 

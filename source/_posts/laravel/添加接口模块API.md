@@ -1,11 +1,18 @@
 ---
 title: laravel 添加一个V1 接口模块 -api
+date: 2015-09-04
 categories: 
 - PHP
 - Laravel
 tags:
 - Laravel
 ---
+laravel 添加一个V1 接口模块 -api
+laravel 添加一个V1 接口模块 -api
+laravel 添加一个V1 接口模块 -api
+
+<!-- more -->
+
 ###  app/Providers/RouteServiceProvider.php  中添加
 
 ```php

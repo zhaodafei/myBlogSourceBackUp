@@ -1,5 +1,6 @@
 ---
 title: -php -vagrant[centos] -xdebug
+date: 2015-02-04
 categories: 
 - Linux
 - CentOS
@@ -14,6 +15,8 @@ tags:
 !!!! 温馨提醒 PHP版本一点要和xdebug版本对应
 !!!! 温馨提醒 PHP版本一点要和xdebug版本对应
 !!!! 温馨提醒 PHP版本一点要和xdebug版本对应
+
+<!-- more -->
 
 ### 查看安装的xdebug  01
 

@@ -1,5 +1,6 @@
 ---
 title: PHP -常用功能
+date: 2015-04-04
 categories: 
 - PHP
 tags:

@@ -1,5 +1,6 @@
 ---
 title: -kill -pkill -killall 终结进程
+date: 2014-02-05
 categories: 
 - Linux
 tags:
@@ -10,6 +11,10 @@ tags:
 ---
 
 -kill -pkill -killall 终结进程
+-kill -pkill -killall 终结进程
+-kill -pkill -killall 终结进程
+
+<!-- more -->
 
 ### kill 发送指定信号到相应进程
 

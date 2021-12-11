@@ -1,5 +1,6 @@
 ---
 title: 浏览器访问网页时发生了什么
+date: 2015-10-04
 categories: 
 - WEB
 - HTTP
@@ -14,6 +15,8 @@ tags:
 4. 浏览器将数据包聚集成完整的网页然后将网页呈现给你（商品到了你的门口 —— 新东西，好棒！）。
 
 [万维网是如何工作的](https://developer.mozilla.org/zh-CN/docs/Learn/Getting_started_with_the_web/How_the_Web_works)
+
+<!-- more -->
 
 ### 其他
 

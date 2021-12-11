@@ -1,5 +1,6 @@
 ---
 title: -JavaScript  词法分析期  执行期
+date: 2015-08-04
 categories: 
 - JavaScript
 tags:
@@ -9,6 +10,8 @@ tags:
 词法分析期  执行期
 词法分析期  执行期
 词法分析期  执行期
+
+<!-- more -->
 
 ###   词法分析期  执行期
 

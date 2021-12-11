@@ -1,5 +1,6 @@
 ---
 title: hexo 迁移环境
+date: 2014-01-04
 categories: 
 - Hexo
 tags:
@@ -9,6 +10,8 @@ hexo  迁移环境
 hexo  迁移环境
 hexo  迁移环境
 迁移后为了确保 `node` 版本一致,这里采用 `nvm` 管理 `node`方式
+
+<!-- more -->
 
 ### 安装环境`nvm`
 

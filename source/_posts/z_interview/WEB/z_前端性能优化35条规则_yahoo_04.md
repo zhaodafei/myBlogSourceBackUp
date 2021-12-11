@@ -1,5 +1,6 @@
 ---
 title: 前端性能优化35条规则 yahoo -CSS
+date: 2015-10-04
 categories: 
 - WEB
 tags:
@@ -8,6 +9,8 @@ tags:
 前端性能优化35条规则 yahoo -CSS
 前端性能优化35条规则 yahoo -CSS
 前端性能优化35条规则 yahoo -CSS
+
+<!-- more -->
 
 ### 01) 把样式表放在`<head>`中
 

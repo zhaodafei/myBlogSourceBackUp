@@ -1,5 +1,6 @@
 ---
 title: web-Emmet  快捷使用  -Emmet
+date: 2015-03-04
 categories: 
 - WEB
 - Emmet
@@ -7,6 +8,12 @@ tags:
 - WEB
 - Emmet
 ---
+快捷使用  -Emmet
+快捷使用  -Emmet
+快捷使用  -Emmet
+
+<!-- more -->
+
 ### `HTML` 布局_01  `子元素`
 
 ```html

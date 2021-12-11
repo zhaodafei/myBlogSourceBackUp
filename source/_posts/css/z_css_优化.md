@@ -1,5 +1,6 @@
 ---
 title: -CSS 优化
+date: 2015-03-04
 categories: 
 - CSS
 tags:
@@ -9,6 +10,8 @@ tags:
 CSS 优化
 CSS 优化
 CSS 优化
+
+<!-- more -->
 
 ### 加载性能
 1. `css` 压缩:将写好的 `css` 进行打包压缩,可以减少很多的体积
@@ -50,7 +53,6 @@ CSS 优化
 ### 其他
 
 [JavaScript 优化](../../JavaScript/z_JavaScript_优化/ "JavaScript 优化")
-
 
 
 

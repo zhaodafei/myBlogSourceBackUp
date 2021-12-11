@@ -1,5 +1,6 @@
 ---
 title: -nginx 
+date: 2015-01-04
 categories: 
 - Nginx
 tags:
@@ -9,6 +10,8 @@ tags:
 nginx 相关使用文章介绍
 
 --------飞-  nginx--------
+
+<!-- more -->
 
 ### 防盗链
 

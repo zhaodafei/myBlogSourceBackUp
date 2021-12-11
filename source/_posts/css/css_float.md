@@ -1,5 +1,6 @@
 ---
 title: CSS 属性 -float
+date: 2015-03-04
 categories: 
 - CSS
 tags:
@@ -13,6 +14,8 @@ tags:
 `css` 属性`float`,`六`个基本规则
 `css` 属性`float`,`六`个基本规则
 `css` 属性`float`,`六`个基本规则
+
+<!-- more -->
 
 ### 规则一
 

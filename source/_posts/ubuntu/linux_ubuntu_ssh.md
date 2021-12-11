@@ -1,11 +1,18 @@
 ---
 title: Ubuntu -ssh
+date: 2014-02-05
 categories: 
 - Linux
 tags:
 - Linux
 - ssh
 ---
+Ubuntu -ssh
+Ubuntu -ssh
+Ubuntu -ssh
+
+<!-- more -->
+
 ### 安装客户端
 
 ```

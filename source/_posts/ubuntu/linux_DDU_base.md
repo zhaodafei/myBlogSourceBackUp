@@ -1,5 +1,6 @@
 ---
 title: Linux 目录结构
+date: 2014-01-04
 categories: 
 - Linux
 tags:
@@ -8,6 +9,8 @@ tags:
 Linux 目录结构
 Linux 目录结构
 Linux 目录结构
+
+<!-- more -->
 
 ### Linux 目录结构
 

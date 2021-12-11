@@ -1,5 +1,6 @@
 ---
 title:  -JavaScript arguments
+date: 2015-08-04
 categories: 
 - JavaScript
 tags:
@@ -13,6 +14,8 @@ argumets 是什么?
 arguments 内容是什么???  
 
 答: arguments是函数运行时的实体参数列表
+
+<!-- more -->
 
 ```javascript
 /**

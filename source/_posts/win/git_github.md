@@ -1,5 +1,6 @@
 ---
 title: 添加ssh key 到 GitHub
+date: 2015-08-04
 categories: 
 - Git
 tags:
@@ -9,6 +10,8 @@ tags:
 添加ssh key 到 GitHub
 添加ssh key 到 GitHub
 添加ssh key 到 GitHub
+
+<!-- more -->
 
 ### 检查本机是否有ssh设置
 

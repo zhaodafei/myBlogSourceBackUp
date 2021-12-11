@@ -1,10 +1,17 @@
 ---
 title: linux -grep  查找文件里符合条件的字符串
+date: 2014-01-04
 categories: 
 - Linux
 tags:
 - Linux
 ---
+
+grep  查找文件里符合条件的字符串
+grep  查找文件里符合条件的字符串
+grep  查找文件里符合条件的字符串
+
+<!-- more -->
 
 ### 命令格式
 

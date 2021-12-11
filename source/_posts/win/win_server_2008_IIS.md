@@ -8,6 +8,12 @@ tags:
 - PHP
 - IIS
 ---
+win server 2008 部署php
+win server 2008 部署php
+win server 2008 部署php
+
+<!-- more -->
+
 ### 配置IIS （安装好 PHPstudy 后测试php）
 
 在计算机右击,选择管理，出现服务器管理界面；或者打开“开始”菜单→“服务器管理”，出现服务器管理界面

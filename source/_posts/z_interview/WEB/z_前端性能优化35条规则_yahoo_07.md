@@ -1,5 +1,6 @@
 ---
 title: 前端性能优化35条规则 yahoo -mobile
+date: 2015-10-04
 categories: 
 - WEB
 tags:
@@ -9,7 +10,7 @@ tags:
 前端性能优化35条规则 yahoo -mobile
 前端性能优化35条规则 yahoo -mobile
 
-
+<!-- more -->
 
 ### 01) 保证所有组件都小于`25K`
 

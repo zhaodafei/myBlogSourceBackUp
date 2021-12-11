@@ -1,5 +1,6 @@
 ---
 title:  --login 登录系统后常用命令
+date: 2014-02-05
 categories: 
 - Linux
 tags:
@@ -8,7 +9,9 @@ tags:
 
 介绍：
 
-登录新系统后常用命令
+Linux登录新系统后常用命令
+
+<!-- more -->
 
 ### uname 打印系统相关信息
 

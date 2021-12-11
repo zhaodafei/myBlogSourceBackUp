@@ -1,5 +1,6 @@
 ---
 title:  -JavaScript 作用域   词法分析
+date: 2015-08-04
 categories: 
 - JavaScript
 tags:
@@ -9,6 +10,8 @@ tags:
 ### 注意
 ​          以 window.xxx 引用全局变量寻找不到,作为某个属性不存在,返回 undefined
 ​          直接以 xxx 引用某变量,寻找不到,则是报错 xxx is not defined 错误       
+
+<!-- more -->
 
 ### 作用域 入门
 

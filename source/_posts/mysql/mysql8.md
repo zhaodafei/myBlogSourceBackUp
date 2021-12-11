@@ -10,6 +10,8 @@ MySQL8 使用
 MySQL8 使用
 MySQL8 使用
 
+<!-- more -->
+
 ### mysql8忘记密码
 
 01) 停止mysql服务

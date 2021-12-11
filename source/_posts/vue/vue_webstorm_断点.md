@@ -14,6 +14,8 @@ vue 和 debug 断点调试
 
 vue 和 debug 断点调试
 
+<!-- more -->
+
 ### vue 打断点debug [ 普通断点]
 
 ![vue debug](/img/vue/other/vue_debug.png "vue debug")

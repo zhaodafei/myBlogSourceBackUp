@@ -14,6 +14,8 @@ vuex 状态管理demo
 
 `vuex` 5个属性 `state`, `getters`, `mutations`, `actions`, `modules`
 
+<!-- more -->
+
 ####  01) 基本目录结构(自己创建)
 
 ```html

@@ -1,11 +1,18 @@
 ---
 title: -sh  shell 脚本
+date: 2014-01-04
 categories: 
 - Linux
 tags:
 - Linux
 - shell
 ---
+sh  shell 脚本
+sh  shell 脚本
+sh  shell 脚本
+
+<!-- more -->
+
 ### 简单shell，打印昨天时间，并输出到屏幕上，注意 反引号
 
 echo  把执行命令的返回结果输出到屏幕上

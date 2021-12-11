@@ -11,6 +11,8 @@ tags:
 `vue-cli3` 中 `vue.config.js` 配置
 `vue-cli3` 中 `vue.config.js` 配置
 
+<!-- more -->
+
 ### `vue.config.js`  配置文件
 
  在根目录下创建 vue.config.js 即可使用  [ 和 package.json 同级]

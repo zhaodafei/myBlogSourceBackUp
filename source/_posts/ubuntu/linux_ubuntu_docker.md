@@ -1,10 +1,17 @@
 ---
 title: ubuntu -docker
+date: 2014-02-05
 categories: 
 - Docker
 tags:
 - Docker
 ---
+ubuntu -docker
+ubuntu -docker
+ubuntu -docker
+
+<!-- more -->
+
 ### Linux ubuntu docker
 
 前提条件 Docker要求Ubuntu系统内核版本高于3.10，查看内核版本

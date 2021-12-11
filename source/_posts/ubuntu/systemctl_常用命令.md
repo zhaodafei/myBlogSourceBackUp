@@ -1,5 +1,6 @@
 ---
 title: -systemctl 常用命令
+date: 2014-03-06
 categories: 
 - Linux
 tags:
@@ -7,6 +8,9 @@ tags:
 - Imagick
 ---
 systemctl 常用命令
+systemctl 常用命令
+
+<!-- more -->
 
 常用命令
 

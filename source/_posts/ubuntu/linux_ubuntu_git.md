@@ -1,10 +1,17 @@
 ---
 title: Ubuntu -git
+date: 2014-02-05
 categories: 
 - Git
 tags:
 - Git
 ---
+Ubuntu -git
+Ubuntu -git
+Ubuntu -git
+
+<!-- more -->
+
 ### 前言：  
 
 本地:  windows7   ip: 192.168.1.105                                                        

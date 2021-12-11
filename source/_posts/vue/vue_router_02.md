@@ -13,6 +13,8 @@ tags:
 
 路由 `vue-router` 基本使用
 
+<!-- more -->
+
 ### 全局导航守卫`beforeEach`处理元数据`meta`
 
 ```javascript

@@ -1,11 +1,18 @@
 ---
 title: -rename  文件重命名
+date: 2014-01-04
 categories: 
 - Linux
 tags:
 - Linux
 - rename
 ---
+rename  文件重命名
+rename  文件重命名
+rename  文件重命名
+
+<!-- more -->
+
 ### 命令格式，文件重命名
 
 ```

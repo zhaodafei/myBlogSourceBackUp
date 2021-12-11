@@ -1,5 +1,6 @@
 ---
 title: -typeof 和 -instanceof 运算符
+date: 2015-08-04
 categories: 
 - JavaScript
 tags:
@@ -10,6 +11,8 @@ tags:
 typeof 和 instanceof
 typeof 和 instanceof
 typeof 和 instanceof
+
+<!-- more -->
 
 ### typeof
 
@@ -40,7 +43,6 @@ typeof 和 instanceof
 
 (null instanceof Object) ? "ok" : "no"; // no   *****************************
 ```
-
 
 
 

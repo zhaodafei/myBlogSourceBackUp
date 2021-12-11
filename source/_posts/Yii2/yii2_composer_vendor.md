@@ -1,5 +1,6 @@
 ---
 title: win -Yii2 添加扩展
+date: 2015-09-04
 categories: 
 - Win
 - Yii
@@ -7,6 +8,12 @@ tags:
 - Win
 - Yii
 ---
+
+win -Yii2 添加扩展
+win -Yii2 添加扩展
+win -Yii2 添加扩展
+
+<!-- more -->
 
 ### 安装完 Yii2 没有vendor目录
 

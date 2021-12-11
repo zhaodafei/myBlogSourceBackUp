@@ -1,5 +1,6 @@
 ---
 title: -IntelliJ IDEA 导入项目
+date: 2015-07-04
 categories: 
 - JetBrains
 tags:
@@ -8,6 +9,8 @@ tags:
 使用`idea`做开发,需要从`MyEclipse`导入老项目.
 
 使用`idea`做开发,需要从`MyEclipse`导入老项目.
+
+<!-- more -->
 
 ```
 如果没有import 导入,在File-->New-->Project from Existing Source

@@ -1,11 +1,18 @@
 ---
 title: ubuntu15 -mysql5.7
+date: 2014-02-05
 categories: 
 - MySQL
 tags:
 - MySQL
 - MySQL5.7
 ---
+ubuntu15 -mysql5.7
+ubuntu15 -mysql5.7
+ubuntu15 -mysql5.7
+
+<!-- more -->
+
 ### mysql 5.7安装
 
 ### 在终端执行 以下命令

@@ -1,5 +1,6 @@
 ---
 title: linux php -PDO_OCI 扩展
+date: 2015-04-04
 categories: 
 - PHP
 tags:
@@ -7,6 +8,10 @@ tags:
 - PDO_OCI
 ---
 PHP连接到oracle数据库需要pdo_oci 扩展
+PHP连接到oracle数据库需要pdo_oci 扩展
+PHP连接到oracle数据库需要pdo_oci 扩展
+
+<!-- more -->
 
 ### 下载文件
 

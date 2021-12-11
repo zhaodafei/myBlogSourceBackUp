@@ -1,10 +1,17 @@
 ---
 title: -vnc server
+date: 2015-03-04
 categories: 
 - Other
 tags:
 - Other
 ---
+`vnc`linux桌面使用
+`vnc`linux桌面使用
+`vnc`linux桌面使用
+
+<!-- more -->
+
 ### `centos7`  `gnome`桌面,安装vnc
 
 ````shell

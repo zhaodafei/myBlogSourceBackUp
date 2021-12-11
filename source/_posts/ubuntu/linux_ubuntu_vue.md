@@ -1,5 +1,6 @@
 ---
 title: linux-vue vue-cli 使用
+date: 2014-02-05
 categories: 
 - WEB
 - Vue
@@ -7,6 +8,8 @@ tags:
 - Vue
 ---
 !!! node vue 在linux中使用注意环境变量,用户权限
+
+<!-- more -->
 
 本文的主要以vue3.0以上版本
 

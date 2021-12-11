@@ -1,10 +1,17 @@
 ---
 title: Markdown语法02
+date: 2014-01-04
 categories: 
 - Markdown
 tags:
 - Markdown
 ---
+
+Markdown语法02
+Markdown语法02
+Markdown语法02
+
+<!-- more -->
 
 ### 列表嵌套
 

@@ -1,10 +1,17 @@
 ---
 title: Markdown语法01
+date: 2014-01-04
 categories: 
 - Markdown
 tags:
 - Markdown
 ---
+Markdown语法01
+Markdown语法01
+Markdown语法01
+
+<!-- more -->
+
 ### 在头部显示大纲
 
 使用 [TOC]  可以在顶部显示目录，在Markdown中写如下 demo：
@@ -191,7 +198,6 @@ blockcode：表示程序的代码块
 
 *斜体字体*
 **加粗字体**
-
 
 
 

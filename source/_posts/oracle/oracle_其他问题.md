@@ -1,11 +1,14 @@
 ---
 title:  -oracle 其他问题
+date: 2015-02-04
 categories: 
 - Oracle
 tags:
 - Oracle
 ---
 oracle 其他问题
+
+<!-- more -->
 
 ### `Navicat` 连接  `oracle` 报错
 

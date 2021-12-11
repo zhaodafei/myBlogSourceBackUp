@@ -1,5 +1,6 @@
 ---
 title: hexo常用命令笔记
+date: 2014-01-04
 categories: 
 - Hexo
 tags:
@@ -9,6 +10,8 @@ tags:
 hexo常用命令笔记
 hexo常用命令笔记
 hexo常用命令笔记
+
+<!-- more -->
 
 ### hexo
 

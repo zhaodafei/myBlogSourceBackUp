@@ -1,11 +1,18 @@
 ---
 title: -cp  创建文件和目录的副本
+date: 2014-01-04
 categories: 
 - Linux
 tags:
 - Linux
 - cp
 ---
+cp  创建文件和目录的副本
+cp  创建文件和目录的副本
+cp  创建文件和目录的副本
+
+<!-- more -->
+
 ### 不带任何参数,运行cp
 
 cp最基本命令，拷贝file_3.txt 从一个位置复制到另一个位置

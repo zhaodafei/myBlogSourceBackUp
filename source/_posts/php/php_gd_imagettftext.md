@@ -1,11 +1,18 @@
 ---
 title: php -GD -imagettftext库制作图片
+date: 2015-04-04
 categories: 
 - PHP
 tags:
 - PHP
 - GD
 ---
+php -GD -imagettftext库制作图片
+php -GD -imagettftext库制作图片
+php -GD -imagettftext库制作图片
+
+<!-- more -->
+
 ### php GD  用 `STHUPO.TTF` 字体向图像写入文本
 
 `php GD`  用 `STHUPO.TTF` 字体向图像写入文本

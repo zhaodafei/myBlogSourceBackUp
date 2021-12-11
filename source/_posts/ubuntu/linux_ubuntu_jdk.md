@@ -1,11 +1,18 @@
 ---
 title: Ubuntu -jdk
+date: 2014-02-05
 categories: 
 - Java
 tags:
 - Java
 - jdk
 ---
+Ubuntu 安装 jdk 2 种方式
+Ubuntu 安装 jdk 2 种方式
+Ubuntu 安装 jdk 2 种方式
+
+<!-- more -->
+
 ## Ubuntu 安装 jdk 2 种方式
 
 1、 通过 ppa 源方式安装 jdk8

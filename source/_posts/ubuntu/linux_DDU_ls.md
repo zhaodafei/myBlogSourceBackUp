@@ -1,11 +1,18 @@
 ---
-title:  -ls 显示目录列表  
+title:  -ls 显示目录列表 
+date: 2014-01-04 
 categories: 
 - Linux
 tags:
 - Linux
 - ls
 ---
+ls 显示目录列表 
+ls 显示目录列表 
+ls 显示目录列表 
+
+<!-- more -->
+
 ### 命令格式
 
 ``` php

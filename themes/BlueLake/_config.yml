@@ -128,12 +128,14 @@ about:
 # Links widget. Empty links will hide widget.
 links:
   - title: 联系方式QQ:1097625354
-    url: https://github.com/
+    url: https://www.cnblogs.com/dafei4
   - title: github
-    url: https://github.com/
+    url: https://github.com
   - title: Jetbrains
-    url: https://www.jetbrains.com/
+    url: https://www.jetbrains.com
   - title: 飛鳥的学习日记
-    url: http://blog.jamci.cn/
+    url: http://blog.jamci.cn
   - title: 三哥的日常
-    url: https://icewak.github.io/
+    url: https://icewak.github.io
+  - title: BlueLake主题
+    url: https://chaoo.oschina.io

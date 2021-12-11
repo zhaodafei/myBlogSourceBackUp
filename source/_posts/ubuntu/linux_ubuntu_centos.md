@@ -1,5 +1,6 @@
 ---
-title: ubuntu系统
+title: ubuntu系统 和 CentOS系统
+date: 2014-02-05
 categories: 
 - CentOS
 - Ubuntu
@@ -7,7 +8,14 @@ tags:
 - CentOS
 - Ubuntu
 ---
+ubuntu系统 和 CentOS系统
+ubuntu系统 和 CentOS系统
+ubuntu系统 和 CentOS系统
+
+<!-- more -->
+
 ### 虚拟机安装完ubuntu后root没有密码
+
 ```
 设置root密码
 sudo passwd

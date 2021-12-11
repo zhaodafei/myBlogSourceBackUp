@@ -1,5 +1,6 @@
 ---
 title: -CSS 常见布局_上中下
+date: 2015-03-04
 categories: 
 - CSS
 tags:
@@ -8,6 +9,8 @@ tags:
 CSS 常见布局`上中下`
 CSS 常见布局`上中下`
 CSS 常见布局`上中下`
+
+<!-- more -->
 
 情景描述: 上下固定中间自适应布局
 

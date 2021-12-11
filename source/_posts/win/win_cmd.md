@@ -1,5 +1,6 @@
 ---
 title: windows cmd 命令
+date: 2015-08-04
 categories: 
 - command
 - Win
@@ -9,6 +10,10 @@ tags:
 ---
 
 windows中常用命令
+windows中常用命令
+windows中常用命令
+
+<!-- more -->
 
 ### 帮助命令 help
 

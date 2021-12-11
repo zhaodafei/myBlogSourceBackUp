@@ -1,5 +1,6 @@
 ---
 title: 选择器 -CSS
+date: 2015-03-04
 categories: 
 - CSS
 tags:
@@ -9,6 +10,8 @@ tags:
 选择器 -css  
 选择器 -css  
 项目和实际中使用频率高的`后代选择器` 和  `子代选择器` 和 `伪元素`
+
+<!-- more -->
 
 1. （01）id 选择器（#myid）
 2. （02）类选择器（.myclassname）

@@ -1,5 +1,6 @@
 ---
 title: -flex布局
+date: 2015-03-04
 categories: 
 - CSS
 tags:
@@ -8,6 +9,8 @@ tags:
 ---
 flex 布局
 flex 布局
+
+<!-- more -->
 
 ### `flex container` 的7个容器属性
 

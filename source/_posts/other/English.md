@@ -1,10 +1,17 @@
 ---
 title: 编程与English
+date: 2015-03-04
 categories: 
 - English
 tags:
 - English
 ---
+编程与English
+编程与English
+编程与English
+
+<!-- more -->
+
 ### 前缀加强
 
 前缀: `ab-, ac-, ad-, af-, ag-, an-, ap-, ar-, as-, at`等加在同辅音字母的词根前, 表示"一再"等加强意义

@@ -1,11 +1,18 @@
 ---
 title: linux-DDU  -git基本使用
+date: 2015-08-04
 categories: 
 - Git
 tags:
 - Git
 ---
-### git基本使用
+Git基本使用
+Git基本使用
+Git基本使用
+
+<!-- more -->
+
+### Git基本使用
 
 git常用分支：master主分支、dev开发分支、bug分支、feature临时功能分支
 

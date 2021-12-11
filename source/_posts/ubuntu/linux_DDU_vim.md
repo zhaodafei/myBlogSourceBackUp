@@ -1,11 +1,18 @@
 ---
 title: -vim  编辑文件
+date: 2014-01-04
 categories: 
 - Linux
 tags:
 - Linux
 - vim
 ---
+vim  编辑文件
+vim  编辑文件
+vim  编辑文件
+
+<!-- more -->
+
 ### 跳转到指定行
 
 ```

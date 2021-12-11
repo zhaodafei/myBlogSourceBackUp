@@ -1,5 +1,6 @@
 ---
 title: ubuntu16 Redmine
+date: 2014-03-06
 categories: 
 - Redmine
 tags:
@@ -8,6 +9,8 @@ tags:
 ### Rvm+Ruby+Rails  【具体细节效果以后版本修改……】
 
 rvm是用于管理多个ruby版本的一个管理器
+
+<!-- more -->
 
 ```
 sudo apt-get update 

@@ -1,10 +1,17 @@
 ---
 title: -drools 笔记
+date: 2015-05-04
 categories: 
 - drools
 tags:
 - drools
 ---
+
+drools 简单使用
+drools 简单使用
+drools 简单使用
+
+<!-- more -->
 
 ### 逗号 comma
 

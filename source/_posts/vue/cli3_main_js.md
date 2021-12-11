@@ -10,6 +10,8 @@ tags:
 ---
 入口文件`mian.js` 中 `render`函数
 
+<!-- more -->
+
 ### 01) 入口文件 `mians.js` 中 `render` 函数
 
 ```javascript

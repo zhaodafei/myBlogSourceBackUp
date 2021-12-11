@@ -1,5 +1,6 @@
 ---
 title: CSS 之 -margin 兼容文字方向
+date: 2015-03-04
 categories: 
 - CSS
 tags:
@@ -8,6 +9,8 @@ tags:
 ---
  `css` 之 `margin-block-start`  和 `margin-top`
  `css` 之 `margin-inline-start` 和 `margin-left`
+
+<!-- more -->
 
 ### 兼容文字阅读方向 `margin-inline-start`
 

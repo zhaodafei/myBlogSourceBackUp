@@ -1,5 +1,6 @@
 ---
 title: 前端性能优化35条规则 yahoo -cookie
+date: 2015-10-04
 categories: 
 - WEB
 tags:
@@ -8,6 +9,8 @@ tags:
 前端性能优化35条规则 yahoo -cookie
 前端性能优化35条规则 yahoo -cookie
 前端性能优化35条规则 yahoo -cookie
+
+<!-- more -->
 
 ### 01) 减少`Cookie`的大小
 

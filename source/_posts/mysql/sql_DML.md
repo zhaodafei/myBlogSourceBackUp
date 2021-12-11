@@ -7,6 +7,12 @@ tags:
 - MySQL
 ---
 
+(insert update delete select)基本使用
+(insert update delete select)基本使用
+(insert update delete select)基本使用
+
+<!-- more -->
+
 ### 事务
 
 ```mysql

@@ -1,5 +1,6 @@
 ---
 title: other JavaScript03 深拷贝注意问题
+date: 2015-08-04
 categories: 
 - JavaScript
 tags:
@@ -8,6 +9,8 @@ tags:
 `JSON.parse(JSON.stringify(obj))` 进行深拷贝时注意问题
 `JSON.parse(JSON.stringify(obj))` 进行深拷贝时注意问题
 `JSON.parse(JSON.stringify(obj))` 进行深拷贝时注意问题
+
+<!-- more -->
 
 1、时间: 如果obj里面存在***时间对象***，`JSON.parse(JSON.stringify(obj))`之后，时间对象变成了字符串。
 2、正则: 如果obj里有***RegExp、Error***对象，则序列化的结果将只得到空对象。

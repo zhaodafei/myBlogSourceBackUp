@@ -1,11 +1,18 @@
 ---
 title: -工厂方法
+date: 2015-10-04
 categories: 
 - PHP
 tags:
 - PHP
 - 工厂方法
 ---
+
+PHP工厂方法
+PHP工厂方法
+PHP工厂方法
+
+<!-- more -->
 
 ### 工厂方法
 

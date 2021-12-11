@@ -1,5 +1,6 @@
 ---
 title: Postman 中批量运行多个请求
+date: 2015-03-04
 categories: 
 - Postman
 tags:
@@ -10,6 +11,8 @@ tags:
 `Postman`  中批量运行请求
 
 背景: 使用`postman`的时候调用接口做测试的时候需要大量测试数据
+
+<!-- more -->
 
 ### 批量运行
 

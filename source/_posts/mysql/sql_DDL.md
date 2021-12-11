@@ -1,11 +1,16 @@
 ---
-title: -sql -DDL
+title: -sql -DDL表操作
 date: 2015-11-01
 categories: 
 - MySQL
 tags:
 - MySQL
 ---
+
+sql -DDL表操作
+sql -DDL表操作
+
+<!-- more -->
 
 ### 列操作
 

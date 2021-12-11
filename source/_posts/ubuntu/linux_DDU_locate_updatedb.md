@@ -1,12 +1,16 @@
 ---
 title:  -locate 搜索 
+date: 2014-01-04
 categories: 
 - Linux
 tags:
 - Linux
 - locate
 ---
+locate 搜索 
 使用 locate 搜索前一般先执行 updatedb 来更新
+
+<!-- more -->
 
 ### 命令格式
 

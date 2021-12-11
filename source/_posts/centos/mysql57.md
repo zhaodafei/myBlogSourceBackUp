@@ -1,5 +1,6 @@
 ---
 title: centos7  -mysql5.7.22 安装
+date: 2015-02-04
 categories: 
 - Linux
 - CentOS
@@ -9,6 +10,12 @@ tags:
 - CentOS
 - MySQL5
 ---
+
+centos7  -mysql5.7.22 安装
+centos7  -mysql5.7.22 安装
+centos7  -mysql5.7.22 安装
+
+<!-- more -->
 
 ### 安装依赖
 

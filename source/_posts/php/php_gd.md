@@ -1,11 +1,18 @@
 ---
 title: php -GD 库制作图片
+date: 2015-04-04
 categories: 
 - PHP
 tags:
 - PHP
 - GD
 ---
+php -GD 库制作图片
+php -GD 库制作图片
+php -GD 库制作图片
+
+<!-- more -->
+
 ### php GD 库制作图片
 
 使用 `PHP GD` 库制作一张图片,并在图片中输出文字

@@ -1,5 +1,6 @@
 ---
 title: ubuntu16 -php7 extension imagick
+date: 2014-03-06
 categories: 
 - PHP
 tags:
@@ -9,6 +10,8 @@ tags:
 ### Extension 之 imagick 
 
 温馨提示: 在安装过程中出现错误，一般是由于缺少编译工具包导致，可根据提示参照第一步安装相应的工具包即可
+
+<!-- more -->
 
 ### 安装 ImageMagick
 

@@ -1,12 +1,16 @@
 ---
-title: computer install ubuntu16
+title: 电脑安装 ubuntu16
+date: 2014-03-06
 categories: 
 - Ubuntu
 tags:
 - Ubuntu
 - Ubuntu16
 ---
-### 电脑安装ubuntu系统
+电脑安装ubuntu16系统
+电脑安装ubuntu16系统
+
+<!-- more -->
 
 ### 下载： [ubuntu下载](https://www.ubuntu.com/download/desktop "ubuntu下载")
 

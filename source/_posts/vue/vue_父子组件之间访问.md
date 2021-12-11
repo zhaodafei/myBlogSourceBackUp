@@ -11,6 +11,8 @@ vue 父子组件之间访问 `this.$refs` 和 `this.$parent`
 
 访问跟组件 `this.$root.xxxxxxxx`
 
+<!-- more -->
+
 ### `vue` 父组件访问子组件 `this.$refs`
 
 ```html

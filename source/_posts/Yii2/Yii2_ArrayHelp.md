@@ -1,11 +1,17 @@
 ---
 title: Yii2 ArrayHelp类
+date: 2015-09-04
 categories: 
 - PHP
 - Yii
 tags:
 - Yii
 ---
+
+Yii2 ArrayHelp类
+Yii2 ArrayHelp类
+Yii2 ArrayHelp类
+<!-- more -->
 
 ### ArrayHelper::toArray
 

@@ -1,5 +1,6 @@
 ---
 title: Chrome 和 Firefox 中 Developer 模式使用技巧tips
+date: 2015-03-04
 categories: 
 - Browser
 - Developer
@@ -16,6 +17,8 @@ Chrome 和 Firefox 中 Developer 模式使用技巧tips
 `Chrome` 和 `Firefox` 中 `developer` 模式使用技巧 `tips`
 
 本文以`Chrome`为主,以`Firefox`为辅,大致相同不在详细描述,特殊地方单独提示`tips`
+
+<!-- more -->
 
 ### 配置网速
 

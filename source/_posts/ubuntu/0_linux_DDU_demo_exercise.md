@@ -1,10 +1,17 @@
 ---
 title: Linux 命令综合运用
+date: 2014-01-04
 categories: 
 - Linux
 tags:
 - Linux
 ---
+Linux 命令综合运用
+Linux 命令综合运用
+Linux 命令综合运用
+
+<!-- more -->
+
 ### 统计日志访问量
 
 统计`nginx`中`access.log` 某个接口访问量

@@ -1,5 +1,6 @@
 ---
 title: ubuntu -docker
+date: 2015-04-04
 categories: 
 - Docker
 tags:
@@ -7,6 +8,8 @@ tags:
 ---
 
 `docker`使用建议,一个`docker` 容器中运行一种服务
+
+<!-- more -->
 
 ### ubuntu  安装 `docker`
 

@@ -1,11 +1,18 @@
 ﻿---
 title: Yii2  -model层不为人知的秘密
+date: 2015-09-04
 categories: 
 - PHP
 - Yii
 tags:
 - Yii
 ---
+
+Yii2  -model层不为人知的秘密
+Yii2  -model层不为人知的秘密
+Yii2  -model层不为人知的秘密
+
+<!-- more -->
 
 ###  属性
 

@@ -1,5 +1,6 @@
 ---
 title: -JavaScript -this
+date: 2015-08-04
 categories: 
 - JavaScript
 tags:
@@ -7,6 +8,8 @@ tags:
 ---
 
 js 的 this 到底是谁???  js 中函数的4中调用方式
+
+<!-- more -->
 
 ### 1). 作为普通函数来调用
 

@@ -1,13 +1,16 @@
 ---
 title: -Eclipse创建项目
+date: 2015-07-04
 categories: 
 - Eclipse
 tags:
 - Eclipse
 ---
 Eclipse创建项目
-
 Eclipse创建项目
+Eclipse创建项目
+
+<!-- more -->
 
 ### 01) Eclipse 配置Tomcat
 

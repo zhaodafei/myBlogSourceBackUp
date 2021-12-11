@@ -1,5 +1,6 @@
 ---
 title: -- JavaScript -面向对象之静态方法
+date: 2015-08-04
 categories: 
 - JavaScript
 tags:
@@ -13,7 +14,7 @@ JS 面向对象中的静态方法
 但反观豆浆机本身,也是台机器,也是个对象
 豆浆机身上也有属性---如开关,进水口等
 
-
+<!-- more -->
 
 
 ```javascript

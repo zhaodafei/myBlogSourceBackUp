@@ -1,11 +1,16 @@
 ---
 title: ubuntu16 --svn02 编译安装后使用
+date: 2014-02-05
 categories: 
 - SVN
 tags:
 - SVN
 ---
-编译安装后使用
+svn编译安装后使用
+svn编译安装后使用
+svn编译安装后使用
+
+<!-- more -->
 
 ### 创建svn 版本库
 

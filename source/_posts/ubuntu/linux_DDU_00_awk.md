@@ -1,10 +1,17 @@
 ---
 title: linux -DDU  文本处理  -awk
+date: 2014-01-04
 categories: 
 - Linux
 tags:
 - Linux
 ---
+文本处理  -awk
+文本处理  -awk
+文本处理  -awk
+
+<!-- more -->
+
 ### 命令格式
 
 ```shell

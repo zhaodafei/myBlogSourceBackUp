@@ -1,5 +1,6 @@
 ---
 title: -CSS 常见属性使用_01
+date: 2015-03-04
 categories: 
 - CSS
 tags:
@@ -8,6 +9,8 @@ tags:
 CSS 常见属性使用1
 CSS 常见属性使用1
 CSS 常见属性使用1
+
+<!-- more -->
 
 ### `border` 和 `outline` 区别
 

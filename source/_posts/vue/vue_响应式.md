@@ -11,6 +11,8 @@ tags:
 响应式可以刷新视图中数据
 响应式可以刷新视图中数据
 
+<!-- more -->
+
 ```javascript
 this.$set(对象, '属性', '值');
 /// this.$set(this.obj, 'hobby', 'obj.Hobby');

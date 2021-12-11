@@ -1,10 +1,17 @@
 ---
 title: -虚拟机 -centos7 -扩容
+date: 2015-02-04
 categories: 
 - CentOS
 tags:
 - CentOS
 ---
+
+虚拟机 -centos7 -扩容
+虚拟机 -centos7 -扩容
+虚拟机 -centos7 -扩容
+
+<!-- more -->
 
 ### 在虚拟机`VMware`上增加磁盘空间
 

@@ -1,5 +1,6 @@
 ---
 title: 前端性能优化35条规则 yahoo -All
+date: 2015-10-04
 categories: 
 - WEB
 tags:
@@ -10,6 +11,8 @@ tags:
 前端性能优化35条规则 yahoo -All
 
 前端性能优化7个分类: **页面内容**、 **服务器**、 **Cookie**、 **CSS**、 **JavaScript**、 **图片**、 **移动端**
+
+<!-- more -->
 
 ### 一、页面内容
 

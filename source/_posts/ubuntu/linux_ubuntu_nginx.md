@@ -1,10 +1,17 @@
 ---
 title: Ubuntu16 -nginx
+date: 2014-02-05
 categories: 
 - Nginx
 tags:
 - Nginx
 ---
+Ubuntu16 -nginx
+Ubuntu16 -nginx
+Ubuntu16 -nginx
+
+<!-- more -->
+
 ## 安装nginx 01
 
 ### 安装nginx

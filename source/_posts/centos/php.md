@@ -1,5 +1,5 @@
 ---
-title: centos -PHP7
+title: centos -PHP7安装
 categories: 
 - Linux
 - CentOS
@@ -9,6 +9,12 @@ tags:
 - CentOS
 - PHP7
 ---
+centos -PHP7安装
+centos -PHP7安装
+centos -PHP7安装
+
+<!-- more -->
+
 ### centos  PHP7 安装
 
 ### 安装依赖

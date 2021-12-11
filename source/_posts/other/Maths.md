@@ -1,10 +1,15 @@
 ---
 title: 编程与Maths
+date: 2015-03-04
 categories: 
 - Maths
 tags:
 - Maths
 ---
+
+编程与Maths
+编程与Maths
+编程与Maths
 
 ### demo
 
@@ -17,7 +22,7 @@ $$
 \int \frac{1}{x} dx = \ln \left| x \right| + C
 $$
 
-
+<!-- more -->
 
 ### 换行和空格
 $$

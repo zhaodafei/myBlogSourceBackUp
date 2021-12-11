@@ -1,5 +1,6 @@
 ---
 title: call apply bind 的用法以及区别
+date: 2015-08-04
 categories: 
 - JavaScript
 tags:
@@ -8,6 +9,8 @@ tags:
 call apply bind 的用法以及区别
 call apply bind 的用法以及区别
 call apply bind 的用法以及区别
+
+<!-- more -->
 
 ***相同之处***:  改变函数体内`this`的指向
 

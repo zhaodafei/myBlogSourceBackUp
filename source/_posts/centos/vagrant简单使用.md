@@ -1,5 +1,6 @@
 ---
 title: linux-DDU  -vagrant 简单使用
+date: 2015-02-04
 categories: 
 - Linux
 - Vagrant
@@ -7,11 +8,15 @@ tags:
 - Linux
 - Vagrant
 ---
+vagrant 简单使用
+vagrant 简单使用
+vagrant 简单使用
+
+<!-- more -->
+
 ### 常用命令
 
 vagrant 常用命令介绍
-
-
 
 ```
 vagrant init  [初始化]

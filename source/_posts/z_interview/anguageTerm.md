@@ -1,11 +1,19 @@
 ---
 title: -anguageTerm
+date: 2015-10-04
 categories: 
 - xxx
 tags:
 - xxx
 ---
+专业词汇
+专业词汇
+专业词汇
+
+<!-- more -->
+
 ### 前端
+
 1. JavaScript
 2. CSS
 3. HTML

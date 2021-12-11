@@ -5,6 +5,10 @@ categories:
 tags:
 - JavaScript
 ---
+重绘和回流
+
+<!-- more -->
+
 ### 重绘(repaint)和回流(reflow)
 
 全局回流(reflow),   部分重画(重绘 repaint)

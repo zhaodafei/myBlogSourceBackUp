@@ -1,11 +1,18 @@
 ---
 title: Yii2 杂项整理
+date: 2015-09-04
 categories: 
 - PHP
 - Yii
 tags:
 - Yii
 ---
+
+ Yii2 杂项整理
+ Yii2 杂项整理
+ Yii2 杂项整理
+
+<!-- more -->
 
 ### JavaScript 引入
 

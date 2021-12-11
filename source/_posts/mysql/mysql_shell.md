@@ -17,6 +17,8 @@ MySQL Shell是MySQL Server的高级客户端和代码编辑器。除了提供的
 
  [mysql-shell 文档](https://dev.mysql.com/doc/mysql-shell/8.0/en/mysql-shell-features.html "mysql-shell")
 
+<!-- more -->
+
 ### 基本使用
 
 ```

@@ -7,6 +7,11 @@ tags:
 - MySQL
 ---
 
+mysql -Documentation  手册
+mysql -Documentation  手册
+
+<!-- more -->
+
 ###  sql
 
 ```mysql

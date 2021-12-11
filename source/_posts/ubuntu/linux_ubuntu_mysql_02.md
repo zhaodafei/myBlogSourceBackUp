@@ -1,11 +1,18 @@
 ---
 title: ubuntu -mysql5.6.39
+date: 2014-02-05
 categories: 
 - MySQL
 tags:
 - MySQL
 - MySQL5.6
 ---
+ubuntu -mysql5.6.39
+ubuntu -mysql5.6.39
+ubuntu -mysql5.6.39
+
+<!-- more -->
+
 ### mysql5.6.39
 
 ### 编译环境

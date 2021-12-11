@@ -10,6 +10,8 @@ tags:
 ---
 ### `webstrom` 和 `vue`
 
+<!-- more -->
+
 webstorm 设置 vue 模板快捷方式
 
 ```html

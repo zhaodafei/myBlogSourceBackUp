@@ -1,5 +1,6 @@
 ---
 title: JavaScript_常见使用
+date: 2015-08-04
 categories: 
 - JavaScript
 tags:
@@ -8,6 +9,8 @@ tags:
  JavaScript常用使用
  JavaScript常用使用
  JavaScript常用使用
+
+<!-- more -->
 
 ### 随机数测试
 

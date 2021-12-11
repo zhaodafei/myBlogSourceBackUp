@@ -1,11 +1,18 @@
 ---
 title: ubuntu16 -swoole 
+date: 2014-02-05
 categories: 
 - PHP
 - Swoole
 tags:
 - Swoole
 ---
+ubuntu16 -swoole 
+ubuntu16 -swoole 
+ubuntu16 -swoole 
+
+<!-- more -->
+
 ### swoole 
 
 php7 中安装swoole1.9.1

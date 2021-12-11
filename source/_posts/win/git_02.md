@@ -1,10 +1,16 @@
 ---
 title: linux-DDU  -git git-bash
+date: 2015-08-04
 categories: 
 - Git
 tags:
 - Git
 ---
+git-bash  中添加 wget命令
+git-bash  中添加 wget命令
+
+<!-- more -->
+
 ### git-bash  中添加 wget命令
 
 01) 下载weget二进制包

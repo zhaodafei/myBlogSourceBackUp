@@ -1,10 +1,15 @@
 ---
 title: other JavaScript
+date: 2015-08-04
 categories: 
 - JavaScript
 tags:
 - JavaScript
 ---
+暂无介绍
+
+<!-- more -->
+
 ###  event.target.value 获取当前点击事件的值
 
 ```html

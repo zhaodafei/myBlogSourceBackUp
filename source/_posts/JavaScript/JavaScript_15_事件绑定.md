@@ -1,10 +1,16 @@
 ---
 title:   --JavaScript -3种事件绑定
+date: 2015-08-04
 categories: 
 - JavaScript
 tags:
 - JavaScript
 ---
+JavaScript -3种事件绑定
+JavaScript -3种事件绑定
+JavaScript -3种事件绑定
+
+<!-- more -->
 
 ```javascript
 /**

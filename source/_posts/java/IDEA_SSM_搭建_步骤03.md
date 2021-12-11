@@ -1,5 +1,6 @@
 ---
 title: -IDEA搭建-SSM 步骤03
+date: 2015-07-04
 categories: 
 - SSM
 tags:
@@ -12,6 +13,8 @@ tags:
  01: 创建maven 工程; 
  02: 创建spring工程
  03: 写个查询demo测试
+
+<!-- more -->
 
 ## 第三步,写个查询demo测试
 

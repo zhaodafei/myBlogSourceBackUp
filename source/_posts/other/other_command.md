@@ -1,5 +1,6 @@
 ---
 title: -other -command 其他命令
+date: 2015-03-04
 categories: 
 - Linux
 - command
@@ -9,6 +10,12 @@ tags:
 - Win
 - Linux
 ---
+command 其他命令
+command 其他命令
+command 其他命令
+
+<!-- more -->
+
 ###  `explorer ` 直接打开可视化目录
 
 ```shell

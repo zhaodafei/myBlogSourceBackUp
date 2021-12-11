@@ -1,11 +1,14 @@
 ---
 title: ubuntu15 -tengine
+date: 2014-02-05
 categories: 
 - Tengine
 tags:
 - Tengine
 ---
 Tengine 官网安装相当简略，这里详细安装一次（ubuntu15 安装 tengine）
+
+<!-- more -->
 
 ### 安装必要的编译环境
 

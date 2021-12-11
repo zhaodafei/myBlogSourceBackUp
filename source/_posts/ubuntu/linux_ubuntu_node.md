@@ -1,5 +1,6 @@
 ---
 title: Linux -node 编译安装, 需要配置环境变量
+date: 2014-02-05
 categories: 
 - Linux
 tags:
@@ -7,7 +8,11 @@ tags:
 - Node
 ---
 
-node
+Linux -node 编译安装, 需要配置环境变量
+Linux -node 编译安装, 需要配置环境变量
+Linux -node 编译安装, 需要配置环境变量
+
+<!-- more -->
 
 ### 源码编译安装node
 

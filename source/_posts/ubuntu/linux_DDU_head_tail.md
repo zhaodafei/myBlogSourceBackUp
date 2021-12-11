@@ -1,5 +1,6 @@
 ---
 title:  -head -tail -sed 输出文件中的内容
+date: 2014-01-04
 categories: 
 - Linux
 tags:
@@ -8,6 +9,12 @@ tags:
 - tail
 - sed
 ---
+ -head -tail -sed 输出文件中的内容
+ -head -tail -sed 输出文件中的内容
+ -head -tail -sed 输出文件中的内容
+
+<!-- more -->
+
 ## 命令 head
 
 ### 命令格式

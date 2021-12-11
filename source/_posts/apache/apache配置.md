@@ -1,5 +1,6 @@
 ---
 title: -Apache 配置
+date: 2015-01-01
 categories: 
 - Apache
 tags:
@@ -7,6 +8,10 @@ tags:
 ---
 
 Apache  配置.. httpd.conf 
+Apache  配置.. httpd.conf 
+Apache  配置.. httpd.conf 
+
+<!-- more -->
 
 
 

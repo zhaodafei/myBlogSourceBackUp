@@ -1,14 +1,17 @@
 ---
 title: JavaScript_常见使用_02
+date: 2015-08-04
 categories: 
 - JavaScript
 tags:
 - JavaScript
 ---
 
- JavaScript常用使用
- JavaScript常用使用
- JavaScript常用使用
+ JavaScript常用使用_02
+ JavaScript常用使用_02
+ JavaScript常用使用_02
+
+<!-- more -->
 
 ### 定义
 
