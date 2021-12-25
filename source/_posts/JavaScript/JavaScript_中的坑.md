@@ -25,7 +25,24 @@ sort() 方法用原地算法对数组的元素进行排序，并返回数组。�
 
  [MDN sort](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/sort "MDN sort")
 
+### 正则`RegExp.prototype.test()` 
 
+`MDN` 中说明
+
+如果正则表达式设置了全局标志，`test() `的执行会改变正则表达式  [`lastIndex`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex)属性。连续的执行`test()`方法，后续的执行将会从 `lastIndex` 处开始匹配字符串，([`exec()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) 同样改变正则本身的 `lastIndex属性值`).
+
+```javascript
+var regex = /foo/g;
+
+// regex.lastIndex is at 0
+regex.test('foo'); // true
+
+// regex.lastIndex is now at 3
+regex.test('foo'); // false
+
+```
+
+建议: 使用正则的时候不要加`g`
 
 
 

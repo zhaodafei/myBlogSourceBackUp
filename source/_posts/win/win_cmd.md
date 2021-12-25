@@ -105,3 +105,13 @@ start explorer .  #注意这里有个点
 explorer .    #注意这里有个点
 ```
 
+### 创建文件,写入内容
+
+```powershell
+#创建写入
+echo "fei" > zzz.txt
+
+#查看
+type aaa.txt
+```
+

@@ -166,6 +166,56 @@ console.log(newNum_3); // 86
 [...new Set([1, 1, 2, 2, 5, 7])]
 ```
 
+### 获取当前之后的时间
+
+JavaScript获取当前时间减去10分钟
+
+```javascript
+// JavaScript获取当前时间减去10分钟
+function dateDecrease(dStr,interval = 10) {
+    let d = new Date(
+        dStr.substring(0, 4),
+        dStr.substring(5, 7) - 1,
+        dStr.substring(8, 10),
+        dStr.substring(11, 13),
+        dStr.substring(14, 16),
+        dStr.substring(17, 19)
+    );
+    d.setTime(d.getTime() - interval * 60 * 1000);
+    //小于10前面补0
+    let getMonth = (d.getMonth() + 1) < 10 ? "0" + (d.getMonth() + 1) : d.getMonth() + 1;
+    let getDate = d.getDate() < 10 ? "0" + (d.getDate()) : d.getDate();
+    let getHours = d.getHours() < 10 ? "0" + (d.getHours()) : d.getHours();
+    let getMinutes = d.getMinutes() < 10 ? "0" + (d.getMinutes()) : d.getMinutes();
+    return d.getFullYear() + "-" + getMonth + "-" + getDate + " " + getHours + ":" + getMinutes;
+}
+console.log(dateDecrease('2022-02-04 08:00'))
+```
+
+JavaScript获取当前时间加上10分钟
+
+```javascript
+// JavaScript获取当前时间加上10分钟
+function dateAdd(dStr, interval = 10) {
+    let d = new Date(
+        dStr.substring(0, 4),
+        dStr.substring(5, 7) - 1,
+        dStr.substring(8, 10),
+        dStr.substring(11, 13),
+        dStr.substring(14, 16),
+        dStr.substring(17, 19)
+    );
+    d.setTime(d.getTime() + interval * 60 * 1000);
+    //小于10前面补0
+    let getMonth = (d.getMonth() + 1) < 10 ? "0" + (d.getMonth() + 1) : d.getMonth() + 1;
+    let getDate = d.getDate() < 10 ? "0" + (d.getDate()) : d.getDate();
+    let getHours = d.getHours() < 10 ? "0" + (d.getHours()) : d.getHours();
+    let getMinutes = d.getMinutes() < 10 ? "0" + (d.getMinutes()) : d.getMinutes();
+    return d.getFullYear() + "-" + getMonth + "-" + getDate + " " + getHours + ":" + getMinutes;
+}
+console.log(dateAdd('2022-02-20 08:00'))
+```
+
 
 
 

@@ -58,7 +58,7 @@ ls[选项][文件][目录]
 
 ### 选项  a  、c 、 l  显示目录
 
-```
+```shell
 ls -a
 ls -A
 
@@ -73,7 +73,7 @@ ls -L
 
 ### 选项  full-time 
 
-```
+```shell
 ls --full-time
 ls -l --time-style=long-iso
 ls -l --time-style=local
@@ -85,7 +85,7 @@ ls -l --time-style=local
 
 ### 排除某些文件显示
 
-```
+```shell
 ls *.txt|egrep -v '(*.md)'
 ls *.txt|egrep -v *.md
 

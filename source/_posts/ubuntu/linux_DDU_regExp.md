@@ -63,6 +63,12 @@ tags:
 "13685468080".replace(/^(\d{3})\d{4}(\d{4})$/,"$1****$2") 
 ```
 
+### 去除空格
+
+```javascript
+"bar  ".replace(/(^\s*)|(\s*$)/g, "")
+```
+
 
 
 [正则_菜鸟教程](https://www.runoob.com/regexp/regexp-metachar.html)

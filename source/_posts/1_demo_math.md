@@ -36,15 +36,17 @@ LaTex 语法
  [在线公式编辑](https://latex.codecogs.com/eqneditor/editor.php)
 
 1. 上标`^`  下标`_`    demo:   $C_n^2$
-2. 导数`{'}`   demo:   $y{'}$ 
-3. 分数`\frac`  demo:  $\frac{2}{3}$
-4. 求和  $\sum$
-5. xxx
+2. 上标  x²
+3. 导数`{'}`   demo:   $y{'}$ 
+4. 分数`\frac`  demo:  $\frac{2}{3}$
+5. 求和  $\sum$
 6. xxx
-7. $f^{\prime}(x)=\frac{1}{x \ln a}(a>0 \text { 且 } a \neq 1)$
-8. 换行 ` \\`
-9. 空格 `\qquad`
-10. 空格 `\quad `
+7. xxx
+8. $f^{\prime}(x)=\frac{1}{x \ln a}(a>0 \text { 且 } a \neq 1)$
+9. 换行 ` \\`
+10. 空格 `\qquad`
+11. 空格 `\quad `
+12. 根号 `\sqrt`    $\sqrt{x}$
 
 ### demo
 换行和空格

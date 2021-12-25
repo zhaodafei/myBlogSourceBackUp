@@ -30,6 +30,14 @@ nginx 相关使用文章介绍
     }
 ```
 
+### 强制 Nginx 返回一个404状态码
+
+```nginx
+return 404;  
+#return 403;
+#return 500;
+```
+
 ### 强制 Apache 返回一个404状态码
 
 ```apacheconf

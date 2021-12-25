@@ -136,7 +136,64 @@ new Vue({
 
 这里暂时不做介绍
 
- [vuex状态管理](https://vuex.vuejs.org/zh/installation.html "vuexzh状态管理")
+### 辅助函数
+
+辅助函数 `mapState` `mapGetters` `mapMutations` `mapActions`
+
+```javascript
+const book={
+    state:{
+        bookState:"001",
+        bookStateName:"大飞",
+        foo: "123",
+        bar: "456"
+    },
+    getters: {
+      bookFoo: state => state.bookStateName + '123',
+    },
+    mutations: {
+      SET_FOO: (state, newVal) => {
+        state.foo = newVal;
+      },
+      SET_BAR: (state, newVal) => {
+        state.bar = newVal;
+      }
+    },
+    actions: {
+      update({commit}, info) {
+        commit('SET_BAR', info);
+      }
+    },
+
+}
+
+export { book }
+```
+
+```javascript
+// vue文件中使用
+export default {
+  data() {
+    return {}
+  },
+  computed: {
+    ...mapState(['book']),
+    ...mapGetters(['bookFoo']),
+  },
+  created() {
+    this.SET_FOO('abc')
+    this.update('xyz')
+  },
+  methods: {
+    ...mapMutations(['SET_FOO']),
+    ...mapActions(['update']),
+  },
+};
+```
+
+
+
+ [vuex状态管理](https://vuex.vuejs.org/zh/installation.html "vuex状态管理")
 
 
 
