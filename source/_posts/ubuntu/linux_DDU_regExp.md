@@ -14,7 +14,7 @@ tags:
 
 ### 基本常见
 
-```
+```javascript
 // ^  开始位置  $ 结束位置
 // [具体内容]{次数}
 
@@ -71,11 +71,13 @@ tags:
 
 
 
+[常用正则表达式](https://c.runoob.com/front-end/854/)
+
 [正则_菜鸟教程](https://www.runoob.com/regexp/regexp-metachar.html)
 
 [MDN_正则](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)
 
-### 
+
 
 
 
