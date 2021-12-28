@@ -12,24 +12,6 @@ Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [docume
 
 ## Quick Start
 
-### 使用项目提示--fei
-
-新系统下载完这个项目后，`node`自行安装，开发使用的`node`版本为`node-v10.13.0-x64.msi`
-
-```shell
-#node-v10.13.0-x64.msi 自行安装 
-npm install hexo-cli -g
-hexo -v
-npm install
-hexo g
-hexo server -p5000
-#这时候会出现访问地址，就启动OK
-
-#考虑node安装完后npm下载速度可以使用yarn-1.15.2.msi这个版本
-```
-
-
-
 ### Create a new post
 
 ``` bash
