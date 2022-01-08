@@ -1,5 +1,5 @@
 ---
-title: Vue + ECharts实现中国地图背景色
+title: Vue + ECharts4.0 实现地图背景色
 date: 2020-07-04
 categories: 
 - Vue
@@ -7,9 +7,12 @@ categories:
 tags:
 - Vue
 ---
-Vue + ECharts实现中国地图背景色
-Vue + ECharts实现中国地图背景色
-Vue + ECharts实现中国地图背景色
+Vue + ECharts4.0 之前版本 实现中国地图背景色
+Vue + ECharts4.0 之前版本 实现中国地图背景色
+Vue + ECharts4.0 之前版本 实现中国地图背景色
+
+4.0 之前版本 中自带数据
+
 <!-- more -->
 
 ### demo

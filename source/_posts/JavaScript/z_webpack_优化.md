@@ -50,7 +50,7 @@ tags:
 
 ### 简单demo
 
-```wiki
+```tex
 这里是一个简单的webpack demo
 入口,出口,打包后结果ok, htmlwebpackPlugin(打包后自动生成html首页)
 webpack-dev 自动刷新()---webpack-dev-serve
@@ -60,7 +60,17 @@ bable  语法转化(支持各种浏览器--兼容性)
 
 
 
+### 项目中`@`
 
+`WebStorm ` 处理`Vue`项目中 `@/utils`有下划线
+解决`Vue`项目中`import xxx from '@/utils'` 符号下有灰色波浪线的问题
+
+在 WebStorm --->Settings---> languagges & Frameworks --->Webpack
+
+然后选择 Automatically 或者 Manually
+
+![webpack](/img/JavaScript/webpack_01.png "webpack")
+![webpack](/img/JavaScript/webpack_02.png "webpack")
 
 
 
