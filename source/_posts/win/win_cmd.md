@@ -23,6 +23,14 @@ help xcopy #查看xcopy所有参数
 
 ```
 
+### 清除
+
+```shell
+cls  #清除cmd控制台
+```
+
+
+
 ### 不是内部命令
 
 > '.' 不是内部或外部命令，也不是可运行的程序
@@ -42,9 +50,11 @@ help xcopy #查看xcopy所有参数
 /e 复制目录和子目录，包括空的。
 /c 即使有错误，也继续复制
 /y 禁止提示以确认改写一个
+/Q 复制时不显示文件名
 
 xcopy E:\web\win_web\aaa  E:\web\win_web\bbb\bbb_01 /e/c/y   #注意目录文件后面不要有\
-
+xcopy  dist\ dist2\ /e/c/y   #递归复制,直接确认
+xcopy  dist\ dist2\ /e/c/q
 ```
 
 ### tree 显示目录树

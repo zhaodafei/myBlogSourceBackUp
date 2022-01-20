@@ -192,6 +192,19 @@ export default {
 </script>
 ```
 
+### 世界地图显示中文
+
+使用 `nameMap`,自定义地区的名称映射
+
+```json
+nameMap:{
+    'China' : '中华人民共和国',
+    'Australia': '澳大利亚',
+    'Canada': '加拿大',
+     'Brazil': '巴西',
+}
+```
+
 
 
 ### footer

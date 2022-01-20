@@ -211,7 +211,14 @@ demo:
    
    ```
    
+   ### 背景透明---显示下层
    
+   ```css
+   background: transparent; 
+   background-color: transparent;
+   ```
+   
+   尽管在大多数情况下，没有必要使用 transparent。不过如果您不希望某元素拥有背景色，同时又不希望用户对浏览器的颜色设置影响到您的设计，那么设置 transparent 值还是有必要的
 
 
 

@@ -145,7 +145,18 @@ router.beforeEach((to, from, next) => {
 <div> {{ $route.meta.title}} </div>
 ```
 
+### 历史模式
 
+使用`mode: 'history'`模式的时候 `vue.config.js` 配置中 `publicPath: '/',`历史模式中不能加点
+
+```js
+module.exports = {
+    // 基本路径
+    publicPath: '/', // 历史模式中不能加点
+}
+```
+
+否则报错 `Uncaught SyntaxError: Unexpected token '<'`
 
 
 
