@@ -2,11 +2,9 @@
 title: vue 插槽 -slot
 date: 2020-07-04
 categories: 
-- WEB
 - Vue
 tags:
 - Vue
-- slot
 ---
 具名插槽、作用域插槽、理解编译作用域
 

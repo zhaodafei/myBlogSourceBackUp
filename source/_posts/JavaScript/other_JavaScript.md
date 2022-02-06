@@ -93,6 +93,19 @@ console.log(brr, brrNew);
 
 ![map](/img/JavaScript/map.png "map")
 
+### fill,填充数组
+
+```javascript
+const item = {
+  date: '2016-05-02',
+  name: 'daFei',
+  address: '北京',
+}
+Array(20).fill(item)
+```
+
+
+
 
 
 

@@ -2,11 +2,9 @@
 title: -vue_axios 
 date: 2020-07-04
 categories: 
-- WEB
-- Vue
+- Axios
 tags:
-- Vue
-- axios
+- Axios
 ---
 ### `vue` 和 `axios`
 

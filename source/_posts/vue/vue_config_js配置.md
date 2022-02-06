@@ -2,11 +2,9 @@
 title: -vue-router 路由
 date: 2020-07-04
 categories: 
-- WEB
 - Vue
 tags:
 - Vue
-- vue.config.js
 ---
 `vue-cli3` 中 `vue.config.js` 配置
 `vue-cli3` 中 `vue.config.js` 配置

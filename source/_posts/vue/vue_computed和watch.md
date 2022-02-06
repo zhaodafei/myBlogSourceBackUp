@@ -5,8 +5,6 @@ categories:
 - Vue
 tags:
 - Vue
-- computed
-- watch
 ---
 `computed` 和 `watch` 计算属性和监听属性
 `computed` 和 `watch` 计算属性和监听属性

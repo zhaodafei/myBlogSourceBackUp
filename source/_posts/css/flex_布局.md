@@ -2,21 +2,41 @@
 title: -flex布局
 date: 2015-03-04
 categories: 
-- CSS
+- Flex
 tags:
-- CSS
-- flex
+- Flex
 ---
 flex 布局
 flex 布局
 
+启用flex:   `diplay:flex | inline-flex  (块级 | 行内)`
+
+容器属性6个
+
+```css
+flex-direction
+justify-content, align-items, 
+align-content, flex-wrap, flex-flow
+```
+
+项目属6个
+
+```css
+flex   
+flex-grow, flex-shrink, flex-basis
+order,  align-self
+```
+
+常用 一共4个属性`flex-direction`, `justify-content`, `align-items`, `flex`
+
 <!-- more -->
 
-### `flex container` 的7个容器属性
+### 容器属性6个
 
-```html
+```css
 diplay:flex | inline-flex  (块级 | 行内)
 
+// 容器属性6个
 flex-direction  (主轴方向)
 justify-content (主轴对齐方式)
 align-items     (交叉轴对齐方式)
@@ -112,6 +132,19 @@ flex-flow       (是flex-direction 和 flex-wrap 的简写)
 ![flex](/img/css/flex/flex.png "flex")
 ![flexbox](/img/css/flex/flexbox.png "flexbox")
 
+### 项目属性6个
+
+```css
+flex    (属性是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto。后两个属性可选。)
+flex-grow      (项目的放大比例)
+flex-shrink    (项目的缩小比例)
+flex-basis
+order          (项目的排列顺序)
+align-self
+```
+
+
+
 ### flex的三个属性
 
 ```
@@ -174,6 +207,7 @@ flex: flex-grow flex-shrink flex-basic
 
 
 
+[Flex 布局教程：语法篇](https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html)
 [使用 CSS 弹性盒子](https://developer.mozilla.org/zh-CN/docs/conflicting/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox/ "使用 CSS 弹性盒子")
 [对齐弹性容器中的弹性项目](https://developer.mozilla.org/ca/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container "对齐弹性容器中的弹性项目")
 [flex](https://philipwalton.github.io/solved-by-flexbox/ "flex")

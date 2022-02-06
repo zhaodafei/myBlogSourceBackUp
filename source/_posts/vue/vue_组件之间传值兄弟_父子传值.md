@@ -2,14 +2,12 @@
 title: vue 组件之间传值
 date: 2020-07-04
 categories: 
-- WEB
 - Vue
 tags:
 - vuex
-- Bus
-- props
-- emit
 ---
+vue 父子之间传值 `props` 和  `emit`
+vue 父子之间传值 `props` 和  `emit`
 vue 父子之间传值 `props` 和  `emit`
 
 <!-- more -->

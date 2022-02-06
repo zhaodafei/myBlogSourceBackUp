@@ -4,10 +4,7 @@ date: 2015-03-04
 categories: 
 - CSS
 tags:
-- static
-- relative
-- absolute
-- fixed
+- position
 ---
 `CSS` 定位属性 `position`,四个定位类型 `static/relative/absolute/fixed`,
 `top,right,bottom,left `属性则决定了该元素的最终位置

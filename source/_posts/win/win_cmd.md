@@ -2,11 +2,9 @@
 title: windows cmd 命令
 date: 2015-08-04
 categories: 
-- command
 - Win
 tags:
 - Win
-- command
 ---
 
 windows中常用命令

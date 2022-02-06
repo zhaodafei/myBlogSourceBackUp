@@ -2,11 +2,9 @@
 title: vue中main.js文件解析 
 date: 2020-07-04
 categories: 
-- WEB
 - Vue
 tags:
 - Vue
-- main.js
 ---
 入口文件`mian.js` 中 `render`函数
 

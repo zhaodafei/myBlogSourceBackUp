@@ -6,9 +6,6 @@ categories:
 tags:
 - CSS
 - float
-- left
-- right
-
 ---
 
 `css` 属性`float`,`六`个基本规则

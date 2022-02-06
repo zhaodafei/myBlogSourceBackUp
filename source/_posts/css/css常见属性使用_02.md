@@ -45,6 +45,89 @@ CSS 常见属性使用2
 </div>
 ```
 
+#### 图片垂直居中1
+
+```html
+<style>
+    .box {
+        background-color: #c0c0c0;
+        height: 300px;
+    }
+
+    .box-body:after{
+        content: " ";
+        height: 100%;
+        display: inline-block;
+        vertical-align: middle;
+        /*width: 0;*/
+        /*overflow: hidden;*/
+    }
+</style>
+
+<div class="box">
+    <div class="box-body" style="height: 100%">
+        <img src="./images/star.png" width="32" height="32" alt="">
+    </div>
+</div>
+```
+
+
+
+#### 图片垂直居中2
+
+```html
+<style>
+    .box {
+        background-color: #c0c0c0;
+        height: 300px;
+    }
+
+    img {
+        position: relative;
+        top: 50%;
+        transform: translate(0, -50%);
+        /*vertical-align: middle;*/ /* 不能使用这个居中,基线问题 */
+    }
+</style>
+
+<div class="box">
+    <img src="./images/star.png" alt="">
+</div>
+```
+
+#### 图片水平居中+垂直居中
+
+```html
+<style>
+    .box {
+        background-color: #c0c0c0;
+        height: 600px;
+        /*overflow: hidden;*/
+    }
+
+    img {
+        position: relative;
+        /* 垂直居中*/
+        /*top: 50%;*/
+        /*transform: translate(0, -50%);*/
+        /* 水平居中*/
+        /*left: 50%;*/
+        /*transform: translate(-50%,0);*/
+        /* 水平居中+垂直居中*/
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+</style>
+<h3>图片,实现垂直居中和水平居中</h3>
+<div class="box">
+    <!--<img src="./images/img_center_01.png" alt="这是一张大图">-->
+    <img src="./images/star.png" alt="这是一张小图">
+</div>
+```
+
+
+
 ### `li`之间的空白间隙
 
 ```html
@@ -123,7 +206,7 @@ demo:
 
 ### overflow 文本溢出省略号
 
-1. 单行文本溢出后省略
+####  单行文本溢出后省略
 
    ```html
    <style>
@@ -147,7 +230,7 @@ demo:
    </div>
    ```
 
-2. 多行文本溢出后省略
+#### 多行文本溢出后省略
 
    ```html
    <style>
@@ -171,7 +254,7 @@ demo:
    </div>
    ```
 
-3. 多行文本溢出后省略(出现省略号)
+#### 多行文本溢出后省略(出现省略号)
 
    ```html
    <style>
@@ -204,21 +287,26 @@ demo:
    </div>
    ```
 
-   ### 特效属性
-   
-   ```css
-   linear-gradient #线性渐变
-   
-   ```
-   
    ### 背景透明---显示下层
-   
+
    ```css
    background: transparent; 
    background-color: transparent;
    ```
-   
+
    尽管在大多数情况下，没有必要使用 transparent。不过如果您不希望某元素拥有背景色，同时又不希望用户对浏览器的颜色设置影响到您的设计，那么设置 transparent 值还是有必要的
+
+   ### CSS 函数
+
+1. 线性渐变的图像 `linear-gradient`
+2. 动态计算长度值 `calc`
+3. 自定义属性 `var`
+
+### CSS 单位
+
+1. `px`
+2. `vh`
+3. `%`
 
 
 

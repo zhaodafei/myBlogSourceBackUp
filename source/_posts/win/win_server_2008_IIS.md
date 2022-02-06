@@ -1,8 +1,7 @@
 ---
 title: win server 2008 部署php
 categories: 
-- Win
-- PHP
+- IIS
 tags:
 - Win
 - PHP

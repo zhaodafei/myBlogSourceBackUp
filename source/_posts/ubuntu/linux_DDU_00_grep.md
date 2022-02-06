@@ -183,6 +183,17 @@ grep -C1 -n  php aaa.php
 
 ![grep 前后](/img/ubuntu/linux_command/linux_grep/grep_ABC.png "grep 前后")
 
+### 常见使用
+
+递归搜索目录文件中某个内容
+
+```shell
+#r 递归
+#o 只输出文件中匹配到的部分
+#n 显示行号
+grep -ron PHP ./home/www/test
+```
+
 
 
 ### 其他：

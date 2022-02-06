@@ -9,6 +9,8 @@ tags:
 CSS 常见布局
 CSS 常见布局
 CSS 常见布局
+布局的传统解决方案，基于[盒状模型](https://developer.mozilla.org/en-US/docs/Web/CSS/box_model)，依赖 [`display`](https://developer.mozilla.org/en-US/docs/Web/CSS/display) 属性 + [`position`](https://developer.mozilla.org/en-US/docs/Web/CSS/position)属性 + [`float`](https://developer.mozilla.org/en-US/docs/Web/CSS/float)属性,
+新方案使用 `flex`布局
 
 <!-- more -->
 
@@ -49,13 +51,14 @@ CSS 常见布局
     display: flex;
 }
 .menu-item{
+    flex: 1; /* body-menu 的项目属性 */
     height: 180px;
     margin-right: 10px;
     border: 1px dashed #e7e7eb;
-    flex: 1;
+
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     cursor: pointer;
 }
 

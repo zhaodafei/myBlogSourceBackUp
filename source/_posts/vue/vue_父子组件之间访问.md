@@ -2,7 +2,6 @@
 title: vue 父子组件之间访问
 date: 2020-07-04
 categories: 
-- WEB
 - Vue
 tags:
 - Vue

@@ -2,11 +2,9 @@
 title: -vuex 状态管理
 date: 2020-07-04
 categories: 
-- WEB
-- Vue
+- Vuex
 tags:
-- Vue
-- vuex
+- Vuex
 ---
 ### `vuex` 状态管理
 

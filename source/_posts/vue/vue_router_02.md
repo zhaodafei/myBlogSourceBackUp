@@ -2,11 +2,9 @@
 title: -vue-router 路由02
 date: 2020-07-04
 categories: 
-- WEB
 - Vue
 tags:
 - Vue
-- vue-router
 ---
 路由 `vue-router`
 路由 `vue-route` 基本使用

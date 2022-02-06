@@ -165,6 +165,7 @@ background-image 和 img 的选择使用
 08) HTML中常用颜色 #add8e6    lightblue（淡蓝） 
 09) HTML中常用颜色 #ff6b81      Wild Watermelon(野生西瓜)
 10) HTML中常用颜色 #00ffff        aqua（水绿）
+11) [网络安全色](https://www.runoob.com/cssref/css-colors.html)
 
 ![color](/img/css/css_01/color.png "color")
 
@@ -174,7 +175,7 @@ background-image 和 img 的选择使用
 /****** reset.css 常见公用样式 ******/
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,hr,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td { margin:0; padding:0; }
 
-body { color:#555;background:#FFF; font-size:12px; font-family:  "microsoft yahei", sans-serif, arial; }
+body { color:#555;background:#FFF; font-size:16px; font-family:  "microsoft yahei", sans-serif, arial; }
 a {text-decoration: none;}
 a:hover{text-decoration:underline;}
 img {border: 0;vertical-align: middle;}

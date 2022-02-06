@@ -2,13 +2,9 @@
 title: -other -command 其他命令
 date: 2015-03-04
 categories: 
-- Linux
-- command
 - Win
 tags:
-- command
 - Win
-- Linux
 ---
 command 其他命令
 command 其他命令
