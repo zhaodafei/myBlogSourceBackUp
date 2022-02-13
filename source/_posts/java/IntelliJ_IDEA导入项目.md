@@ -2,7 +2,7 @@
 title: -IntelliJ IDEA 导入项目
 date: 2015-07-04
 categories: 
-- JetBrains
+- IDEA
 tags:
 - IDEA
 ---

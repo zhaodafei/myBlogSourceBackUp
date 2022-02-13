@@ -104,6 +104,15 @@ const item = {
 Array(20).fill(item)
 ```
 
+### findIndex,数组中查找位置
+
+```java
+// 查找数组中某一元素的位置
+let test = "a";
+let foo = ["a", "b", "c"].findIndex((item) => item === test)
+console.log(foo); 
+```
+
 
 
 

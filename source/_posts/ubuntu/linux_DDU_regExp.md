@@ -69,7 +69,16 @@ tags:
 "bar  ".replace(/(^\s*)|(\s*$)/g, "")
 ```
 
+### 匹配二级目录
 
+```javascript
+let dirname = window.location.pathname;
+let arr = dirname.match(/(\/.*\/)/g);
+console.log(arr);
+if (arr) { // 如果是二级目录
+  console.log(arr[0].split("/"));
+}
+```
 
 [常用正则表达式](https://c.runoob.com/front-end/854/)
 
