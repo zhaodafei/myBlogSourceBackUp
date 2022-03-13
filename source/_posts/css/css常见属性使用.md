@@ -169,6 +169,35 @@ background-image 和 img 的选择使用
 
 ![color](/img/css/css_01/color.png "color")
 
+#### 16进制和透明度
+
+透明度从00-FF，一共256个梯度
+下面以黑色为例，标准黑色是`#000000`，透明度加在最后面，即`#000000XX`（XX代表透明度）；实际效果如下：
+
+```html
+<div style="display: flex">
+    <div style="background:#00000000;width:20px;height:20px"></div>
+    <div style="background:#00000010;width:20px;height:20px"></div>
+    <div style="background:#00000020;width:20px;height:20px"></div>
+    <div style="background:#00000030;width:20px;height:20px"></div>
+    <div style="background:#00000040;width:20px;height:20px"></div>
+    <div style="background:#00000050;width:20px;height:20px"></div>
+    <div style="background:#00000060;width:20px;height:20px"></div>
+    <div style="background:#00000070;width:20px;height:20px"></div>
+    <div style="background:#00000080;width:20px;height:20px"></div>
+    <div style="background:#00000090;width:20px;height:20px"></div>
+    <div style="background:#000000A0;width:20px;height:20px"></div>
+    <div style="background:#000000B0;width:20px;height:20px"></div>
+    <div style="background:#000000C0;width:20px;height:20px"></div>
+    <div style="background:#000000D0;width:20px;height:20px"></div>
+    <div style="background:#000000E0;width:20px;height:20px"></div>
+    <div style="background:#000000F0;width:20px;height:20px"></div>
+    <div style="background:#000000FF;width:20px;height:20px"></div>
+</div>
+```
+
+
+
 ### 常见公用CSS
 
 ```css
@@ -176,8 +205,8 @@ background-image 和 img 的选择使用
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,hr,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td { margin:0; padding:0; }
 
 body { color:#555;background:#FFF; font-size:16px; font-family:  "microsoft yahei", sans-serif, arial; }
-a {text-decoration: none;}
-a:hover{text-decoration:underline;}
+a {text-decoration: none;color: #1a1b1c;}
+a:hover{text-decoration:none;}
 img {border: 0;vertical-align: middle;}
 ul,ol{list-style:none;}
 table{border-collapse:collapse;border-spacing:0;}

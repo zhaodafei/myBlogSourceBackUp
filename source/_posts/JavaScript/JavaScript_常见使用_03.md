@@ -128,6 +128,46 @@ const {fei: fei_temp, foo: foo_temp} = {fei: "123", foo: "helloWorld"};
 console.log(fei_temp, foo_temp); // 对 fei 和 foo 重新定义名字
 ```
 
+#### 剩余
+
+```javascript
+let {a, b, ...fei} = {a: 10, b: 20, c: 30, d: 40};
+```
+
+####  默认
+
+```javascript
+let {foo, b = 5} = {foo: 3};
+let {foo, b: bb = 5} = {foo: 3};
+```
+
+#### demo
+
+```html
+<script>
+  let foo = [];
+  let bar = [];
+  let fei = [];
+
+  const testFun = () => {
+    let foo = [1, 2, 3];
+    let bar = ['a', 'b', 'c'];
+    let fei = ['hello', 'world'];
+    return {foo, bar, fei}
+  }
+
+  try {
+    ({foo, bar, fei} = testFun())
+  } catch (e) {
+    ({foo, bar, fei} = testFun())
+  }
+
+  console.log(foo, bar, fei)
+</script>
+```
+
+
+
 ### 高阶函数 `filter` `map` `reduce`
 
 ```javascript

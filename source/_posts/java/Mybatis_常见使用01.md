@@ -24,6 +24,66 @@ SELECT * FROM goods where id in
 </foreach>
 ```
 
+### 动态`SQL`
+
+选择语句
+
+```mysql
+#choose、when、otherwise  类型其他语言中 switch 
+select id="findActiveBlogLike" resultType="Blog">
+  SELECT * FROM BLOG WHERE state = ‘ACTIVE’
+  <choose>
+    <when test="title != null">
+      AND title like #{title}
+    </when>
+    <when test="author != null and author.name != null">
+      AND author_name like #{author.name}
+    </when>
+    <otherwise>
+      AND featured = 1
+    </otherwise>
+  </choose>
+</select>
+```
+
+```mysql
+<choose>
+    <when test="status == 0">
+        AND status = 0
+    </when>
+    <otherwise>
+        AND status >= #{status}
+    </otherwise>
+</choose>
+```
+
+```mysql
+<if test="status != null and status != ''">
+    <choose>
+        <when test="status == 0">
+            AND status = 0
+        </when>
+        <otherwise>
+            AND status >= #{status}
+        </otherwise>
+    </choose>
+</if>
+```
+
+[MyBatis 官网,动态SQL](https://mybatis.org/mybatis-3/zh/dynamic-sql.html)
+
+
+
+
+
+
+
+
+
+### 其他
+
+[MyBatis官网](https://mybatis.org/mybatis-3/zh)
+
 
 
 
