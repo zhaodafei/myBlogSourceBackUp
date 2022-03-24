@@ -60,6 +60,12 @@ tags:
 >plus:常用于加法.如：What is five plus six?
 >increase:表示增加.如：The population is increasing fast.
 
+### 前端
+
+```html
+variable(变量var)  和  constant(常量const)
+```
+
 
 
 
