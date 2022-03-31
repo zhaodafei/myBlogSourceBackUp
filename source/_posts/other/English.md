@@ -41,6 +41,14 @@ tags:
 > 3. NCK: (Negative Acknowledg) 否认字符
 > 4. ...
 
+程序的基本编写方法`IOP`全称:
+
+> I: input 输入,程序的输入
+>
+> P: process 处理,程序的主要逻辑
+>
+> O: output 输出,程序的输出
+
 ### 加减
 
 ```wiki
@@ -64,6 +72,12 @@ tags:
 
 ```html
 variable(变量var)  和  constant(常量const)
+```
+
+### C语言
+
+```wiki
+standard input (stdin)  标准输入
 ```
 
 

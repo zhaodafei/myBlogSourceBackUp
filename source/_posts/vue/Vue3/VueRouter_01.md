@@ -12,7 +12,7 @@ VueRouter4.x 简单使用
 
 <!-- more -->
 
-### ### 组合式API
+### 组合式API
 
 ```javascript
 import { useRouter, useRoute } from 'vue-router'
