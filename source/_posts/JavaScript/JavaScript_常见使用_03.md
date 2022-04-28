@@ -198,6 +198,23 @@ let newNum_3 = newNum_2.reduce(function (total, item3) {
 console.log(newNum_3); // 86
 ```
 
+#### `map` 妙用
+
+转换数组中类型
+
+```javascript
+// 字符数组转数字数组
+let strArr = ["1", "2", "3"];
+let numArr = strArr.map(Number)
+console.log(numArr)
+
+// number数组转为string数组
+let numArr1 = [1, 2, 3]
+let strArr1 = numArr1.map(String)
+
+console.log(strArr1)
+```
+
 ### `set` 和 `map`
 
 `set` 利用唯一,数组去重

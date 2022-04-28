@@ -14,11 +14,24 @@ tags:
 
 ### 启动 `redis`
 
-```
+```shell
 在redis目录下面执行(执行完后窗口不要关闭)
 
 redis-server.exe redis.windows.conf
+
 ```
+
+### 固定服务安装
+
+```shell
+#这种方式不会有cmd窗口,#此时window service服务列表中出现名为Redis的服务
+redis-server.exe --service-install redis.windows.conf
+
+#卸载服务,从windows service服务列表中移除
+redis-server.exe --service-uninstall
+```
+
+
 
 ### 连接`redis` 三种方法
 
@@ -42,6 +55,13 @@ auth ***(输入密码)
 
 ```
 requirepass 123456
+```
+
+### 测试
+
+```shell
+set key1 "hello world"
+get key1
 ```
 
 

@@ -71,5 +71,10 @@ SimpleDateFormat sdFormatter = new SimpleDateFormat("yyyy-MM-dd"); // yyyy-MM-dd
 System.out.println(sdFormatter.format(nowTime));
 ```
 
+### 唯一识别码
 
+```java
+String fei = UUID.randomUUID().toString(); // 通用唯一识别码
+System.out.println(fei);
+```
 
