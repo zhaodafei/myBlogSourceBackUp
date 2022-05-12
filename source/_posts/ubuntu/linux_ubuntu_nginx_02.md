@@ -116,6 +116,28 @@ location /api {
 }
 ```
 
+### rewrite 重写 SpringBoot 和 Vue 部署
+
+```nginx
+server {
+    listen        80;
+    #server_name  localhost demo.fei.com;
+    server_name  demo.fei.com;
+    # 配置 Vue 打包首页地址
+    root   "E:/self_web/git_dev/vue/zFei_vue/dist";
+    location / {
+        try_files $uri $uri/ /index.html;
+        index  index.html index.htm;
+    }
+    # 代理到 Java 的8072接口
+    # 访问 http://localhost:80/api/test/detail
+    # 调用 Java 接口 http://localhost:8072/api/test/detail
+    location /api/ {
+        proxy_pass http://127.0.0.1:8072/api/;
+    }
+}
+```
+
 
 
 
