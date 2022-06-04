@@ -202,6 +202,9 @@ background-image 和 img 的选择使用
 
 ```css
 /****** reset.css 常见公用样式 ******/
+html {height: 100%;}
+body {height: 100%; padding: 0;margin: 0;}
+
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,hr,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td { margin:0; padding:0; }
 
 body { color:#555;background:#FFF; font-size:16px; font-family:  "microsoft yahei", sans-serif, arial; }
