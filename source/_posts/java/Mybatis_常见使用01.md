@@ -72,6 +72,13 @@ select id="findActiveBlogLike" resultType="Blog">
 
 [MyBatis 官网,动态SQL](https://mybatis.org/mybatis-3/zh/dynamic-sql.html)
 
+### resultMap和resultType区别
+
+resultMap可以映射集合 resultType不可以,
+简单理解: resultMap可以自定义字段值,并返回
+
+![resultMap和resultType](/img/java/Mybatis/Mybatis_01.png "resultMap和resultType")
+
 
 
 

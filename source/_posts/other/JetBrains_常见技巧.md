@@ -27,6 +27,8 @@ demo模板
     * */
    ```
 
+2. ctrl + 回车： 自动添加连接符换行
+
 2. Ctrl+G：定位到文件某一行
 
 3. Ctrl+D:复制当前行
@@ -55,7 +57,21 @@ demo模板
 
 15. Ctrl+Shift+Z：反撤销
 
+17. 
 
+15. 
+
+### 配置
+
+1. 配置自己的模板---快捷键字母
+
+   > Settings-->Editor-->Live Templates 在这里添加自己的的快捷字母和模板
+
+2. xxx
+
+3. xxx
+
+4. xxx
 
 
 

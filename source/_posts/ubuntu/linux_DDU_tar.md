@@ -80,6 +80,13 @@ tar -cvf fei_$(date '+%m%d')_01.tar  codeFileName
 
 ![tar cvf date](/img/ubuntu/linux_command/linux_tar/tar_cvf_date.png "tar cvf date")
 
+### 排除某个文件打包
+
+```bash
+#排除 fei_01.tar 文件打包
+tar -cvf xm_$(date '+%m%d')_backups.tar  --exclude fei_01.tar  codeFileName
+```
+
 
 
 
