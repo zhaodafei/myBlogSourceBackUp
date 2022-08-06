@@ -104,6 +104,19 @@ telnet 127.0.0.1 80
 
 ![tree](/img/win/cmd/telent.png)
 
+### 显示当前目录
+
+```powershell
+:: 显示当前目录
+pwd
+
+:: 显示当前目录和目录下面文件
+dir
+
+```
+
+
+
 ### 打开当前目录
 
 ```shell

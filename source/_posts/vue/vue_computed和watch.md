@@ -76,7 +76,7 @@ tags:
                 }
             }
         },
-        watch: {
+        watch: { // 默认初始时不执行回调, 但可以通过配置immediate为true, 来指定初始时立即执行第一次
             price(current, pre) { // 最新值, 之前值
                 // 异步操作/
                 setTimeout(()=>{

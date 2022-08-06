@@ -85,6 +85,7 @@ tar -cvf fei_$(date '+%m%d')_01.tar  codeFileName
 ```bash
 #排除 fei_01.tar 文件打包
 tar -cvf xm_$(date '+%m%d')_backups.tar  --exclude fei_01.tar  codeFileName
+tar -cvf xm_$(date '+%m%d')_backups.tar  --exclude xm_$(date '+%m%d')_backups.tar  codeFileName
 ```
 
 
