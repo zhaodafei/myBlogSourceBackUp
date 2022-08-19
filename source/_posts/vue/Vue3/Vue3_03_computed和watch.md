@@ -41,7 +41,7 @@ tags:
 
 ### computed
 
-### cmoputed--set
+### cmoputed--set--只读
 
 ```html
 <template>
@@ -71,7 +71,7 @@ const fullName1 = computed(() => {
 
 ```
 
-### computed--set-get
+### computed--set-get--读和写
 
 ```html
 <template>
@@ -112,87 +112,239 @@ const fullName2 = computed({
 
 ### watch
 
+常用1和4
+
+#### 简单使用
+
 ```html
 <template>
-  <h3>watch</h3>
-  <p>
-    fistName: <input v-model="user.firstName"/><br>
-    lastName: <input v-model="user.lastName"/><br>
-    fullName3: <input v-model="fullName3"><br>
-  </p>
+  <h3>监听 ref 定义的响应式数据</h3>
+  <div>
+    <p>{{ sum }}</p>
+    <button @click="sum++">点击我fei</button>
+  </div>
 </template>
 
 <script setup>
-import {ref,reactive, watch} from "vue";
+import {ref, reactive, watch} from "vue";
 
-const user = reactive({
-  firstName: '孔',
-  lastName: '仲尼'
-})
+const sum = ref(0);
+// 01) 监听 ref 定义的响应式数据
+watch(sum,(newVal,oldVal)=>{
+  console.log(newVal, oldVal);
+}, {immediate: true, deep: true})
+// immediate 第一次执行
+// deep 深度监听
+</script>
 
-const fullName3 = ref('')
+```
 
-/**
- * 使用watch的2个特性:
- *   01)深度监视
- *   02)初始化立即执行
- */
-watch(user, () => {
-  console.log("ddddd");
-  fullName3.value = user.firstName + '-' + user.lastName
-}, {
-  immediate: true,  // 是否初始化立即执行一次, 默认是false
-  deep: true, // 是否是深度监视, 默认是false
-})
+#### 监听ref多个数据
 
+```vue
+<template>
+  <h3>监听 ref 多个数据</h3>
+  <div>
+    <p>{{ sum }} __ {{ msg }}</p>
+    <button @click="sum++">点击我fei</button>
+    <button @click="msg+='!'">点击我fei</button>
+  </div>
+</template>
 
-/**
- * watch一个数据
- *   默认在数据发生改变时执行回调
- */
-watch(fullName3, (value) => {
-  // 这个例子不太好,让人误解为死循环,---该例子只是说明功能而已
-  console.log('watch__fullName3改变后,我就执行')
-  const names = value.split('-')
-  user.firstName = names[0]
-  user.lastName = names[1]
+<script setup>
+import {ref, reactive, watch} from "vue";
+
+const sum = ref(0);
+const msg = ref('daFei')
+// 01) 监听 ref 定义的多个响应式数据
+watch([sum, msg], (newVal, oldVal) => {
+  console.log(newVal, oldVal);
 })
 
 </script>
 
 ```
 
-### watch 多个值
+#### 小坑,监听reactive对象
 
-```html
+无法获取到oldVal
+
+```vue
 <template>
-  <h3>watch</h3>
-  <h4> 只要用到就监听 </h4>
-  <p>
-    fistName: <input v-model="user.firstName"/><br>
-    lastName: <input v-model="user.lastName"/><br>
-    fullName3: <input v-model="fullName3"><br>
-  </p>
+  <h3>监听 reactive 对象,无法获取到oldVal</h3>
+  <div>
+    <p>{{person.name}} ___ {{person.period}}</p>
+    <button @click="person.name+='!'">点击我name</button>
+    <button @click="person.period+='!'">点击我period</button>
+  </div>
 </template>
 
 <script setup>
-import {ref,reactive, watch} from "vue";
+import {ref, reactive, watch} from "vue";
 
-const user = reactive({
-  firstName: '孔',
-  lastName: '仲尼'
+const sum = ref(0);
+const msg = ref('daFei')
+const person = reactive({
+  name: "孔丘",
+  period: "春秋末期"
+})
+// 监听reactive所定义的响应式数据,此出无法获取到oldVal
+watch(person, (newVal, oldVal) => {
+  console.log("newVal 和 oldVal都是新值",newVal, oldVal);
+})
+</script>
+
+```
+
+#### 小坑,监听reactive对象2
+
+可以监听全部深层对象,无法关闭
+
+```vue
+<template>
+  <h3>监听reactive所定义的响应式数据,强制开启了深度监视(deep配置无效)</h3>
+  <div>
+    <p>{{person.name}} ___ {{person.period}}</p>
+    <p>{{person.extra.info1.name}}</p>
+    <button @click="person.name+='!'">点击我name</button>
+    <button @click="person.period+='!'">点击我period</button>
+    <button @click="person.extra.info1.name+='!'">点击我info1.name</button>
+  </div>
+</template>
+
+<script setup>
+import {ref, reactive, watch} from "vue";
+
+const sum = ref(0);
+const msg = ref('daFei')
+const person = reactive({
+  name: "孔丘",
+  period: "春秋末期",
+  extra:{
+    info1:{
+      name: '颜回',
+    }
+  }
+})
+// 监听reactive所定义的响应式数据,强制开启了深度监视(deep配置无效)
+watch(person, (newVal, oldVal) => {
+  console.log("deep配置无效", newVal, oldVal);
+}, {deep: false})
+</script>
+
+```
+
+#### !!!注意点,监听reactive某个属性
+
+监视reactive所定义的一个响应式数据中的某个属性,要用函数
+
+```vue
+<template>
+  <h3>监视reactive所定义的一个响应式数据中的某个属性,要用函数</h3>
+  <div>
+    <p>{{person.name}} ___ {{person.period}}</p>
+    <p>{{person.extra.info1.name}}</p>
+    <button @click="person.name+='!'">点击我name</button>
+    <button @click="person.period+='!'">点击我period</button>
+    <button @click="person.extra.info1.name+='!'">点击我period</button>
+  </div>
+</template>
+
+<script setup>
+import {ref, reactive, watch} from "vue";
+
+const sum = ref(0);
+const msg = ref('daFei')
+const person = reactive({
+  name: "孔丘",
+  period: "春秋末期",
+  extra:{
+    info1:{
+      name: '颜回',
+    }
+  }
+})
+// 监视reactive所定义的一个响应式数据中的某个属性,要用函数
+watch(() => person.period, (newVal, oldVal) => {
+  console.log("监视reactive某个属性,要用函数", newVal, oldVal);
+})
+</script>
+
+```
+
+#### 特殊情况
+
+```vue
+<template>
+  <h3>监视reactive所定义的一个响应式数据中的某个属性中对象,要开启deep</h3>
+  <div>
+    <p>{{person.name}} ___ {{person.period}}</p>
+    <p>{{person.extra.info1.name}}</p>
+    <button @click="person.name+='!'">点击我name</button>
+    <button @click="person.period+='!'">点击我period</button>
+    <button @click="person.extra.info1.name+='!'">点击我info1.name</button>
+  </div>
+</template>
+
+<script setup>
+import {ref, reactive, watch} from "vue";
+
+const sum = ref(0);
+const msg = ref('daFei')
+const person = reactive({
+  name: "孔丘",
+  period: "春秋末期",
+  extra:{
+    info1:{
+      name: '颜回',
+    }
+  }
+})
+// 监视reactive所定义的一个响应式数据中的某个属性中对象,要开启deep
+watch(() => person.extra, (newVal, oldVal) => {
+  console.log("监视reactive某个属性中对象", newVal, oldVal);
+},{deep:true})
+</script>
+
+```
+
+#### 不常用监听,但是有坑ref
+
+```vue
+<template>
+  <h3>不常用,但是有坑</h3>
+  <div>
+    <p>{{person.name}} ___ {{person.period}}</p>
+    <p>{{person.extra.info1.name}}</p>
+    <button @click="person.name+='!'">点击我name</button>
+    <button @click="person.period+='!'">点击我period</button>
+    <button @click="person.extra.info1.name+='!'">点击我info1.name</button>
+  </div>
+</template>
+
+<script setup>
+import {ref, reactive, watch} from "vue";
+
+const sum = ref(0);
+const msg = ref('daFei')
+const person = ref({
+  name: "孔丘",
+  period: "春秋末期",
+  extra:{
+    info1:{
+      name: '颜回',
+    }
+  }
 })
 
-const fullName3 = ref('')
+// 这时候,ref定义的为复杂对象,里面有个value,深度监听
+// 下面2中写法都可以
+watch(person, (newVal, oldVal) => {
+  console.log("监视reactive某个属性中对象", newVal, oldVal);
+},{deep:true})
 
-/**
- * watch多个数据:
- *   01)使用数组来指定
- *   02)如果是ref对象, 直接指定
- *   03)如果是reactive对象中的属性,  必须通过函数来指定
- */
-watch([user, () => user.firstName, () => user.lastName, fullName3], (values) => {
-  console.log('监视多个数据', values)
+watch(person.value, (newVal, oldVal) => {
+  console.log("监视reactive某个属性中对象", newVal, oldVal);
 })
 
 </script>
@@ -233,8 +385,6 @@ watchEffect(() => {
 </script>
 
 ```
-
-
 
 
 

@@ -262,6 +262,33 @@ $foo = (object)[]; // true
 >
 > [JavaScript 数据类型和数据结构](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Data_structures)
 
+### 字符串转数字类型
+
+```javascript
+let fei = '123';
+Object.prototype.toString.call(fei); // [object String]
+
+let fei = '123';
+Object.prototype.toString.call(Number(fei));  // [object Number]
+
+// 利用乘法运算
+let fei = '123';
+Object.prototype.toString.call(fei * 1); // [object Number]
+
+// >>> 运算符,右位移零位会将非number数据转化成number类型
+let fei = '123';
+Object.prototype.toString.call(fei >>> 0); // [object Number]
+```
+
+扩展知识,右位移运算
+
+```javascript
+// 将目标数据先转换成二进制,然后移动指定的位数
+let fei = 3; // 二进制为 0011
+console.log(fei >>> 2); // 输出 0, 二进制为 0000
+console.log(fei >>> 1); // 输出 1, 二进制为 0001
+```
+
 
 
 

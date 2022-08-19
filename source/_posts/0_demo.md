@@ -57,8 +57,8 @@ markdown是最好的文档编辑工具之一   <font color="#ff6b81">#ff6b81野�
 
 ### 图片
 
-
 ![这是一张本地图片](/img/linux/root_passwd.png "这是一张本地图片")
+![这是一张本地图片](/img/octocat.png "这是一张本地图片")
 
 ![这是一张图片](https://github.githubassets.com/images/icons/emoji/octocat.png "这是一张图片")
 

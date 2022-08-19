@@ -215,6 +215,27 @@ let strArr1 = numArr1.map(String)
 console.log(strArr1)
 ```
 
+#### `filter` 双重循环去重
+
+场景,对个一个数组去重,条件是根据另一个数组中的数据
+
+```javascript
+// filter中 双重循环去重
+const words1 = ['fei', 'foo', 'bar']; // 实际场景为对象数组
+const words2 = ['fei'];
+let newArr = words1.filter(item => {
+    const found = words2.findIndex(row => item === row)
+    if (found === -1) { // 没有找到,说明当前值唯一
+        return true;
+    }
+})
+console.log(newArr); // 输出 ['foo', 'bar']
+```
+
+
+
+
+
 ### `set` 和 `map`
 
 `set` 利用唯一,数组去重
@@ -271,6 +292,27 @@ function dateAdd(dStr, interval = 10) {
     return d.getFullYear() + "-" + getMonth + "-" + getDate + " " + getHours + ":" + getMinutes;
 }
 console.log(dateAdd('2022-02-20 08:00'))
+```
+
+### 获取当天时间戳
+
+```javascript
+//**** 单位都是毫秒
+
+// 当天00点00分00秒 时间戳 1659974400000
+new Date(new Date().toLocaleDateString()).getTime()
+
+// 当天23点59分59秒 时间戳 1660060799999
+new Date(new Date().toLocaleDateString()).getTime() + 24 * 60 * 60 * 1000 - 1
+
+// 当前时间戳 1659976187168
+new Date().getTime()
+
+// 当前日期 '2022/8/9'
+new Date().toLocaleDateString()
+
+// 当前时间 '2022/8/9 00:29:14'
+new Date().toLocaleString()
 ```
 
 

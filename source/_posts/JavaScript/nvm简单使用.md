@@ -23,6 +23,10 @@ https://github.com/coreybutler/nvm-windows/releases/download/1.1.8/nvm-setup.zip
    nvm install 14.18.0
    nvm install 8.17.0
 
+4. 卸载node.js 版本
+   nvm uninstall 10.13.0
+   nvm uninstall 10.14.0
+
 5. 列出已经安装的node版本 
    nvm ls
 

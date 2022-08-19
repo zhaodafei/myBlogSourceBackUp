@@ -10,6 +10,52 @@ tags:
 
 <!-- more -->
 
+### toRef 响应式
+
+使用一个`hooks`做测试, 把数据变为响应式
+
+```vue
+<template>
+  <h3>toRef</h3>
+  <div>
+    <p>{{person}} </p>
+    <p>{{name}} {{period}} {{infoName}}</p>
+    <button @click="person.name+='!'">点击我name</button>
+    <button @click="person.period+='!'">点击我period</button>
+    <button @click="person.extra.info1.name+='!'">点击我info1.name</button>
+  </div>
+</template>
+
+<script setup>
+import {reactive, toRef} from "vue";
+
+const useFei = () => {
+  const person = reactive({
+    name: "孔丘",
+    period: "春秋末期",
+    extra:{
+      info1:{
+        name: '颜回',
+      }
+    }
+  })
+
+  // 使用 toRef 后, 值变为响应式,并且值地址引用
+  return {
+    person,
+    name: toRef(person,'name'),
+    period: toRef(person,'period'),
+    infoName: toRef(person.extra.info1,'name'),
+  }
+}
+const {person,name,period,infoName} = useFei();
+
+</script>
+
+```
+
+
+
 ### toRefs 响应式
 
 使用一个`hooks`做测试
@@ -43,7 +89,7 @@ const useFeiHooks = () => {
   }, 1000)
 
   // return user  这样出去的是非响应式
-  // 利用 toRefs 可以将一个响应式 reactive 对象的所有原始属性转换为响应式的 ref 属性
+  // 利用 toRefs 可以将一个响应式 reactive 对象的所有原始属性转换为响应式的 ref 属性,并且是地址引用
   return toRefs(user)
 }
 
@@ -102,7 +148,7 @@ const updateFei = () => {
 
 ### toRaw 普通对象
 
-把响应式数据还原为普通对象
+把响应式数据还原为普通对象,只能处理reactive的对象
 
 ```vue
 <template>

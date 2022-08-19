@@ -56,6 +56,8 @@ tar -xvf node-v10.15.3-linux-x64.tar.xz -C /data/server
 ### 其他
 
 ```
+npm init #初始化一个package.json
+npm init -y  #初始化一个package.json 全部使用默认值
 npm config list   #查看npm配置信息
 npm config edit   #编辑配置信息
 npm config get cache  #查看npm缓存目录

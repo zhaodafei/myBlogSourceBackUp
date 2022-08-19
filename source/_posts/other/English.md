@@ -72,6 +72,7 @@ tags:
 
 ```html
 variable(变量var)  和  constant(常量const)
+deg( degree )  / dɪˈɡriː / 度数,度
 ```
 
 ### C语言

@@ -93,3 +93,27 @@ CSS 几个小功能
 <div class="square"></div>
 ```
 
+### 阴影效果
+
+四周阴影的正方形
+
+```html
+<style type="text/css">
+  .fei {
+    width: 100px;
+    height: 100px;
+    border: 1px solid red;
+    /** 主要属性box-shadow */
+    box-shadow: 0 0 15px #ff6b81;
+  }
+</style>
+<div class="fei"></div>
+
+
+属性可设置的值包括阴影的 X 轴偏移量、Y 轴偏移量、模糊半径、扩散半径和颜色
+
+/* x 偏移量 | y 偏移量 | 阴影模糊半径 | 阴影颜色 */
+box-shadow: 0px 0px 15px black;
+
+```
+
