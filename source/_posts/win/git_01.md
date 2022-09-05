@@ -18,7 +18,7 @@ git常用分支：master主分支、dev开发分支、bug分支、feature临时�
 
 origin：默认远程分支；
 
-```
+```shell
 初始化一个Git仓库，使用git init命令。
 git add <file>   注意，可反复多次使用，添加多个文件【 git add .】【git commit readme.md -m"readme备注信息"】
 git commit       完成。 git commit -m"备注"
@@ -63,10 +63,16 @@ git tag -a <tagname> -m "blablabla..."     可以指定标签信息
 git tag -s <tagname> -m "blablabla..."     可以用PGP签名标签
 git tag                                    可以查看所有标签
 git push origin <tagname>                  可以推送一个本地标签
+git push --tags                            可以推送全部未推送过的本地标签
 git push origin --tags                     可以推送全部未推送过的本地标签
 git tag -d <tagname>                       可以删除一个本地标签
 git push origin :refs/tags/<tagname>       可以删除一个远程标签
+
+git pull   #获取所有远程的tag标签 ---或者用下面
+#git fetch  #获取所有远程的tag标签
+
 git ls-files                            如何知道目录里的文件是否在git仓库里
+
 ```
 
 ### 设置提交用户名
@@ -150,7 +156,53 @@ git push origin  --delete 远程分支  #删除远程分支
 git push origin 本地回退分支上代码    #把本地回退分支上代码推送到远程
 ```
 
+### 标签功能
+
+记住一点: 本地和远程可以理解为单独的2类tag
+
+```shell
+git tag   #查看所有标签
+git tag v1.0.0 #新建一个标签 git tag <name>  
+git tag v1.0.1
+git tag v1.1.0
+git show v1.0.1  #查看某个标签做了什么操作
+
+git push origin v1.0.1 #推送具体某个tag到远程
+git push --tags #推送所有tag标签到远程服务端 ---或者用下面
+#git push origin --tags #推送所有tag标签到远程服务端
+git pull   #获取所有远程的tag标签 ---或者用下面
+#git fetch  #获取所有远程的tag标签
+
+git tag -d v1.0.1 #删除一个本地标签
+git push origin :refs/tags/v1.0.2  #可以删除一个远程标签(注意这样删除后拉取不到远程删除信息)
+git push origin --delete v1.0.2 #可以删除一个远程标签(注意这样删除后拉取不到远程删除信息)
+git tag -l | xargs git tag -d  #删除本地所有tag
+
+#实战demo
+git tag 
+git tag v1.0.0
+##修正bug1
+git add .
+git commit -m "fei bug1"
+git tag v1.0.1
+git tag
+##修正bug2
+git add .
+git commit -m "fei bug2"
+git tag v1.0.2
+git tag
+##添加新业务功能
+git add .
+git commit -m "添加新业务功能added feature1."
+git tag v1.1.0
+git tag
+
+```
+
+
+
 ### Git 下载
+
 [git Download 国内镜像](http://npm.taobao.org/mirrors/git-for-windows/)
 [git 官方下载](https://github.com/git-for-windows/git/releases)
 

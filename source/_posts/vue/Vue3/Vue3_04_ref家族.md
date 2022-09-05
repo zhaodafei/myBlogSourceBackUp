@@ -122,6 +122,29 @@ onMounted(() => {
 
 ```
 
+`ref` 的另一个作用,获取页面元素的`innerHTML`
+获取`vue`页面内容转为`html`格式
+`Vue3`如何通过`ref`获取真实 `DOM` 元素
+
+```html
+<div ref="feiRef" class="print-test">
+  <p class="title">fei</p>
+  <p class="content">hello 大飞</p>
+</div>
+
+<script setup>
+import {getCurrentInstance, ref} from "vue";
+
+const fei = () => {
+  // const { proxy } = getCurrentInstance()
+  // console.log(proxy.$refs.printBodyRef.innerHTML) // 获取到的是字符串
+
+  const feiRef = ref()
+  console.log(feiRef.value.innerHTML) // 获取到的是字符串
+}
+</script>
+```
+
 ### readonly 只读
 
 ```vue

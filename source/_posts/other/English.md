@@ -81,6 +81,12 @@ deg( degree )  / dɪˈɡriː / 度数,度
 standard input (stdin)  标准输入
 ```
 
+### 服务器
+
+```html
+binary(bin 二进制)
+```
+
 
 
 

@@ -63,4 +63,6 @@ https://zhaodafei.github.io/categories/mysql/
 6. temp_vue2
 7. temp_webpack
 8. temp_springBoot
+8. temp_uniapp
+8. temp_wxamp
 
