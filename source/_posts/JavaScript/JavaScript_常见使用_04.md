@@ -47,6 +47,19 @@ let strArr1 = numArr1.map(String)
 console.log(strArr1)
 ```
 
+### 网页中右键和选取功能
+
+```javascript
+document.oncontextmenu = new Function('event.returnValue=false;')
+document.onselectstart = new Function('event.returnValue=false;')
+```
+
+```html
+<div @contextmenu.prevent="event => (event.returnValue = false)">
+    这个是Vue最外层
+</div>
+```
+
 
 
 

@@ -50,7 +50,18 @@ modules: [
 npm install axios -S
 ```
 
+### 启动端口
 
+自定义启动端口,在`package.json`文件中配置
+
+```json
+"config": {
+    "nuxt": {
+        "host": "127.0.0.1",
+        "port": "3001"
+    }
+},
+```
 
 ### 路由
 
@@ -110,8 +121,11 @@ export default function ({store, route, redirect, params, query}) {
 ***/
 ```
 
-#### validate
-```vue
+#### validate路由校验
+
+这个里面一般做路由校验
+
+```html
 // 文件位置 pages/index.vue --- 如下 ----- validate 生命周期
 <template><div>首页</div></template>
 
@@ -131,7 +145,7 @@ export default function ({store, route, redirect, params, query}) {
 
 ***主要用在主页面中获取接口数据***
 
-```vue
+```html
 <!--  注意:
 	在asyncData中没有this
 -->
@@ -151,7 +165,7 @@ export default function ({store, route, redirect, params, query}) {
 </script>
 ```
 
-```vue
+```html
 <template>
   <div>
     这里是详情页面-- asyncData 通过data也赋值
@@ -223,7 +237,7 @@ export default {
 </script>
 ```
 
-```vue
+```html
 <template>
   <div>
     这里是详情页面
@@ -290,7 +304,7 @@ export default {
 
 ### 生命周期-服务端和客户端共有
 
-```vue
+```html
 created, fetch, mounted
 // 文件位置 pages/index.vue --- 如下 ----- created, fetch, mounted 生命周期
 // https://www.nuxtjs.cn/api/pages-fetch
@@ -314,7 +328,7 @@ created, fetch, mounted
 
 和`vue`中一样
 
-```vue
+```html
 <template>
   <div>首页</div>
 </template>
@@ -341,7 +355,7 @@ created, fetch, mounted
 
 ### 路由
 
-```vue
+```html
 <NuxtLink to="/">Home page</NuxtLink>
 <NuxtLink :to="{name:'list',query:{id:111},params:{id:222}}">Home page</NuxtLink>
 
@@ -390,7 +404,7 @@ created, fetch, mounted
 css: [ '~/static/css/fei.css' ],
 ```
 
-```vue
+```html
 <template>
 <div>
   这里是详情页面--动态显示title
