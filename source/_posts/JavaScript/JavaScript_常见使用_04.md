@@ -60,6 +60,54 @@ document.onselectstart = new Function('event.returnValue=false;')
 </div>
 ```
 
+### 地址参数
+
+获取地址中某个参数值
+
+```javascript
+/***
+ * 获取地址中某个参数值
+ * @param variable 参数名字
+ * @returns {string} 参数值
+ */
+function GetQueryVariable(variable) {
+    // ?foo=123&bar=456
+    let query = window.location.search.substring(1);
+    let vars = query.split("&");
+    for (let i = 0; i < vars.length; i++) {
+        let pair = vars[i].split("=");
+        if (pair[0] === variable) {
+            return String(pair[1]);
+        }
+    }
+    return "";
+}
+```
+
+获取地址栏参数转为json格式
+
+```javascript
+/**
+ * 获取地址栏参数转为json格式
+ * @param url    demo:    www.demo.com/index.html?foo=123&bar=789
+ * @returns {{}} demo:    {"foo": "123", "bar": "789"}
+ * @constructor
+ */
+function GetQueryVariable_to_json(url) {
+    let obj = {};
+    let keyValue = [];
+    let key = "", value = "";
+    let paraString = url.substring(url.indexOf("?") + 1, url.length).split("&");
+    for (let i in paraString) {
+        keyValue = paraString[i].split("=");
+        key = keyValue[0];
+        value = keyValue[1];
+        obj[key] = value;
+    }
+    return obj;
+}
+```
+
 
 
 

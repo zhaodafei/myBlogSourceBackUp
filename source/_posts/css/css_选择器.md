@@ -304,6 +304,16 @@ h2:not([data-fei]){  /* 不含data-fei 属性 */
 <h2>333333333333</h2>
 ```
 
+#### 通配符选择器
+
+```css
+[attribute^=value]	a[src^="https"]	选择每一个src属性的值以"https"开头的元素
+[attribute$=value]	a[src$=".pdf"]	选择每一个src属性的值以".pdf"结尾的元素
+[attribute*=value]	a[src*="fei"]	选择每一个src属性的值包含子字符串"fei"的元素
+
+[attribute*=value]	a[id*="fei"]	选择每一个id属性的值包含子字符串"fei"的元素
+```
+
 
 
 ## 其他
