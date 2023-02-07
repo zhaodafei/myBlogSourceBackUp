@@ -77,7 +77,53 @@ root@ubuntu:/home/fei/web# cat /etc/shells
 root@ubuntu:/home/fei/web# 
 ```
 
+### 判断语句
 
+1. 每个 `case` 分支用右圆括号开始，
+2. 用两个分号 `;;` 表示 `break`，即执行结束，跳出整个 case ... esac 语句，
+3. esac（就是 case 反过来）作为结束标记
+
+```bash
+#!/bin/bash
+echo ":::::::::服务管理系统::::::::::::::::::::::::::::"
+echo "++ 作者:赵大飞, QQ:1097625354 ++"
+echo ""
+echo "请选择你要的操作"
+echo "     1、选择A"
+echo "     2、选择B"
+echo "     3、跳过"
+echo ""
+read num
+case "$num" in
+	1)
+	  echo "1111"
+		#ls
+	;;
+	2)
+	  #这是注释
+	  echo "222222222"
+	  #ls  这里可以写linux命令
+	;;
+	3)
+		echo "跳过3"
+	;;
+	8|9)
+		echo "输入的是8或者9"
+	;;
+	999)
+		echo "跳过999"
+	;;
+	*)
+	    echo "输入错误,退出"
+	;;
+esac
+echo ""
+echo ""
+echo " ***已经退出***"
+
+```
+
+参考学习:  [Shell 流程控制](https://www.runoob.com/linux/linux-shell-process-control.html) 
 
 
 

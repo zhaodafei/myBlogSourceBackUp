@@ -105,3 +105,19 @@ FROM  student2
 ```
 
 ![添加列](/img/mysql/mysql_other_01.png "添加列")
+
+### update
+
+#### 两张表关联更新
+
+用一张表数据去update另一张表数据
+
+```mysql
+### !!! 注意此操作比较危险,没有where条件,谨慎操作 !!!
+
+#用表fei_002中course_01取更新表fei_001中course_01
+UPDATE `fei_001` AS a
+INNER JOIN `fei_002` AS b ON a.num = b.num
+SET a.`course_01` = b.course_01
+```
+

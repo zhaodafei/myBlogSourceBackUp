@@ -115,6 +115,23 @@ dafei
 
 ![transform](/img/css/transform_02.png "transform")
 
+### 内容居中
+
+```html
+<div class="el-message">
+  left 和 transform 可以让这里的文字居中,浏览器窗口变化也是居中的
+    
+  aaaaaaaaaaaaaaaa 消息success 成功了 消息success 成功了 消息success 成功了 消息success 成功了 消息success 成功了 消息success 成功了 消息success 成功了 消息success 成功了 消息success 成功了 消息success 成功了 消息success 成功了 消息success 成功了 消息success 成功了 消息success 成功了 消息success 成功了 消息success 成功了 消息success 成功了 消息success 成功了 消息success 成功了 消息success 成功了 消息success 成功了 消息success 成功了 消息success 成功了 消息success 成功了 消息success 成功了 消息success 成功了 消息success 成功了 消息success 成功了 消息success 成功了 消息success 成功了 消息success 成功了 消息success 成功了 消息success 成功了 消息success 成功了 消息success 成功了 消息success 成功了ssssssssssssssssss
+</div>
+<style>
+  .el-message{
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+</style>
+```
+
 
 
 

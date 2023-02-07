@@ -176,6 +176,35 @@ animation 属性是一个简写属性，用于设置六个动画属性,
 </style>
 ```
 
+### 2个动画属性
+
+```html
+<style> 
+    div {
+        width:100px;
+        height:100px;
+        background:#ff6b81;
+        position:relative;
+        animation: mymove 5s infinite,message-tip-rotating 5s infinite;
+    }
+
+    @keyframes mymove
+    {
+        from {left:0px;}
+        to {left:200px;}
+    }
+
+    @keyframes message-tip-rotating {
+        0% { transform: rotate(0) }
+        to { transform: rotate(360deg) }
+    } 
+	
+</style>
+<p>定义2个动画属性</p>
+<div>动画_fei</div>
+
+```
+
 
 
 
