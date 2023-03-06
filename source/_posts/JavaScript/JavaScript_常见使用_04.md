@@ -108,6 +108,110 @@ function GetQueryVariable_to_json(url) {
 }
 ```
 
+### 秒转为小时分钟秒
+
+```javascript
+  /**
+   * 秒转为小时
+   * @param value  秒
+   * @returns {string}
+   */
+  const timeFormat = value => {
+    let theTime = parseInt(value) // 需要转换的时间秒
+    let theTime1 = 0 // 分
+    let theTime2 = 0 // 小时
+    let theTime3 = 0 // 天
+    if (theTime > 60) {
+      theTime1 = parseInt(theTime / 60)
+      theTime = parseInt(theTime % 60)
+      if (theTime1 > 60) {
+        theTime2 = parseInt(theTime1 / 60)
+        theTime1 = parseInt(theTime1 % 60)
+        if (theTime2 > 24) {
+          //大于24小时
+          theTime3 = parseInt(theTime2 / 24)
+          theTime2 = parseInt(theTime2 % 24)
+        }
+      }
+    }
+    let result = ''
+    if (theTime > 0) {
+      result = '' + parseInt(theTime) + '秒'
+    }
+    if (theTime1 > 0) {
+      result = '' + parseInt(theTime1) + '分' + result
+    }
+    if (theTime2 > 0) {
+      result = '' + parseInt(theTime2) + '小时' + result
+    }
+    if (theTime3 > 0) {
+      result = '' + parseInt(theTime3) + '天' + result
+    }
+    return result
+  }
+  
+// 36000000 毫秒
+// 36000 秒
+// 600 分
+// 10 小时
+timeFormat(36000000 / 1000); // 10个小时
+```
+
+### 格式化时间
+
+```javascript
+// 格式化时间 demo:  parseTime(new Date(), '{y}-{m}-{d} {h}:{i}:{s}')
+function parseTime(time, pattern) {
+    if (arguments.length === 0 || !time) {
+        return null;
+    }
+    const format = pattern || "{y}-{m}-{d} {h}:{i}:{s}";
+    let date;
+    if (typeof time === "object") {
+        date = time;
+    } else {
+        if (typeof time === "string" && /^[0-9]+$/.test(time)) {
+            time = parseInt(time);
+        } else if (typeof time === "string") {
+            time = time
+                .replace(new RegExp(/-/gm), "/")
+                .replace("T", " ")
+                .replace(new RegExp(/\.[\d]{3}/gm), "");
+        }
+        if (typeof time === "number" && time.toString().length === 10) {
+            time = time * 1000;
+        }
+        date = new Date(time);
+    }
+    const formatObj = {
+        y: date.getFullYear(),
+        m: date.getMonth() + 1,
+        d: date.getDate(),
+        h: date.getHours(),
+        i: date.getMinutes(),
+        s: date.getSeconds(),
+        a: date.getDay(),
+    };
+    const time_str = format.replace(/{(y|m|d|h|i|s|a)+}/g, (result, key) => {
+        let value = formatObj[key];
+        // Note: getDay() returns 0 on Sunday
+        if (key === "a") {
+            return ["日", "一", "二", "三", "四", "五", "六"][value];
+        }
+        if (result.length > 0 && value < 10) {
+            value = "0" + value;
+        }
+        return value || 0;
+    });
+    return time_str;
+}
+
+// demo
+parseTime(new Date(), '{y}-{m}-{d} {h}:{i}:{s}')
+```
+
+
+
 
 
 

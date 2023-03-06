@@ -1,17 +1,32 @@
 ---
-title: 标题demo模板
-date: 2013-07-04
+title: Lodop打印
+date: 2023-02-11
 categories: 
-- 计算机
+- Lodop
 tags:
-- 编程
+- Lodop
 ---
-demo模板
-demo模板
-demo模板
+WEB 打印控件 Lodop
+WEB 打印控件 Lodop
+WEB 打印控件 Lodop
 下面more是分隔符
 
 <!-- more -->
+
+### 打印图片
+
+```html
+#直接使用图片URL,可以打印内网图片
+#这种打印出来的图也无白边
+LODOP.ADD_PRINT_IMAGE(10,10,300,160,"https://github.githubassets.com/images/icons/emoji/octocat.png");
+
+#使用img标签
+LODOP.ADD_PRINT_IMAGE(10,10,300,160,"<img src=’https://github.githubassets.com/images/icons/emoji/octocat.png’/>");
+
+
+```
+
+
 
 ### 基本常见
 
@@ -138,10 +153,6 @@ console.log("hello JavaScript")
 我是分割线之后
 
 aaa
-
-
-
-
 
 ### 底部
 

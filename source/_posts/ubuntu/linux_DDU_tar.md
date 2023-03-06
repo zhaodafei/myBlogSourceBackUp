@@ -36,10 +36,14 @@ tar [选项] [参数]
 
 #### 普通打包
 
-```
+```shell
 tar -cvf aaa_ccc.tar aaa_bbb   #仅打包不压缩
 tar -tvf aaa_ccc.tar   #查看包里面文件
 tar -xvf aaa_ccc.tar -C /home/fei/web/  #解压到 /home/fei/web/ 目录下
+
+#打包当前目录,  解压到当前目录
+tar -cvf xm_$(date '+%m%d')_01.tar .   #不要丢了这个点
+tar -xvf xxx.tar
 ```
 
 ![tar cvf](/img/ubuntu/linux_command/linux_tar/tar_cvf.png "tar cvf")
@@ -82,10 +86,31 @@ tar -cvf fei_$(date '+%m%d')_01.tar  codeFileName
 
 ### 排除某个文件打包
 
+参数`exclude`后面不能用正则,可以是目录或者文件名字
+
 ```bash
-#排除 fei_01.tar 文件打包
+#排除 fei_01.tar 文件打包codeFileName文件
 tar -cvf xm_$(date '+%m%d')_backups.tar  --exclude fei_01.tar  codeFileName
 tar -cvf xm_$(date '+%m%d')_backups.tar  --exclude xm_$(date '+%m%d')_backups.tar  codeFileName
+
+#排除 fei_01.tar 文件打包当前文件下所有文件
+tar -cvf xm_$(date '+%m%d')_backups.tar  --exclude fei_01.tar  .  #不要丢了这个点
+```
+
+### 常用命令
+
+```shell
+tar -tvf aaa_ccc.tar   #查看包里面文件
+
+#打包当前目录,  解压到当前目录
+tar -cvf xm_$(date '+%m%d')_01.tar .  #不要丢了这个点
+tar -xvf xxx.tar   #解压到当前目录
+
+#排除fei_01.tar打包当前目录
+tar -cvf xm_$(date '+%m%d')_01.tar --exclude fei_01.tar  .  #不要丢了这个点
+tar -xvf xxx.tar   #解压到当前目录
+
+
 ```
 
 

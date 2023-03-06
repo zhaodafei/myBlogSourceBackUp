@@ -48,6 +48,13 @@ LaTex 语法
 11. 空格 `\quad `
 12. 根号 `\sqrt`    $\sqrt{x}$
 
+### html写特殊符号
+
+1. 2<sup>K</sup>
+2. n<sub>2</sub>
+3. n<sup>2</sup>=n+1
+4. a=log<sub>2</sub>b
+
 ### demo
 换行和空格
 $$
