@@ -108,6 +108,28 @@ function GetQueryVariable_to_json(url) {
 }
 ```
 
+### 获取当前文件目录位置
+
+```javascript
+/**
+ * 在windows系统中获取当前文件目录位置
+ * @param newFilename 新文件名字
+ * @returns {string|string} 目录 或者 目录+文件地址
+ */
+function getWinDir(newFilename) {
+  const pathName = window.document.location.pathname;
+  let arr = pathName.split('/')
+  let filename = arr[arr.length - 1]
+  let pos = pathName.indexOf(filename)
+  let dirName = pathName.substring(0, pos).substring(1)
+  return newFilename ? dirName + newFilename : dirName;
+}
+```
+
+
+
+
+
 ### 秒转为小时分钟秒
 
 ```javascript
