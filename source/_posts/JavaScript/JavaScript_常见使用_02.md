@@ -289,6 +289,20 @@ console.log(fei >>> 2); // 输出 0, 二进制为 0000
 console.log(fei >>> 1); // 输出 1, 二进制为 0001
 ```
 
+转为数字
+
+```js
+/**
+ * 转为数字
+ * @param num 一个任意类型:undefined, null, NaN, string,{},[]
+ * @returns {number|number} 返回一个数字
+ */
+export function toNumber(num) {
+  console.log("当前类型:", Object.prototype.toString.call(num));
+  return isNaN(num * 1) ? 0 : num * 1
+}
+```
+
 
 
 
