@@ -161,6 +161,13 @@ watch([sum, msg], (newVal, oldVal) => {
   console.log(newVal, oldVal);
 })
 
+//02) 监听多个值 === 根据实际情况写
+// watch(
+//     () => [props.aaa, props.bbb],
+//     (newVal, oldVal) => {
+//       console.log('校验开始', newVal)
+//     }
+// )
 </script>
 
 ```

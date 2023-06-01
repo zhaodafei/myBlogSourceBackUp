@@ -137,6 +137,16 @@ mv -f /home/soruce_file2/file_new_time2.txt  /home/destination_file/
 
 移动文件和目录命令是Linux系统的基本命令。通常你可以通过man mv 或者 mv –help显示mv的手册页以了解更多详细信息。
 
+### demo
+
+```bash
+#移动某个目录下文件到当前目录
+#当前所在目录位置 /data/fei 
+##有个目录文件 dist,现在需要把dist目录下面文件全部移动到 /data/fei 目录下面
+在 /data/fei 下面执行命令
+mv dist/*  .  #注意这个点不要丢了
+```
+
 
 
 

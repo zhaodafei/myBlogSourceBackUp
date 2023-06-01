@@ -12,6 +12,22 @@ tags:
 
 <!-- more -->
 
+### console
+
+```javascript
+// 让输出的 console 带样式
+console.log("%c大飞信息跟踪", "color:#FF6B81")
+
+console.log(
+    '%c[fei-bar] %c fei-line:88 %c fei-data ',
+    'color:#fff;background:#FF6B81;padding:3px;border-radius:2px',
+    'color:#fff;background:#808080;padding:3px;border-radius:2px;margin:0 3px;',
+    'color:#fff;background:#000000;padding:3px;border-radius:2px',
+)
+```
+
+[MDN console 其他资料](https://developer.mozilla.org/zh-CN/docs/Web/API/console#%E7%A4%BA%E4%BE%8B)
+
 ### 随机数测试
 
 ```javascript

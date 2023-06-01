@@ -40,7 +40,7 @@ JavaScript_常见使用_05_校验
         var taxIdObject = $("#taxId");
         var taxId = taxIdObject.val().replace(/\s+/g, "");
         taxIdObject.val(taxId.toLocaleUpperCase());
-        var reg_number=/(^([A-Z0-9]){10,20}$)/;
+        var reg_number=/(^([A-Z0-9]){15,20}$)/;
         if (taxId=="") {
             console.log("纳税人识别号不能为空");
             result = false;

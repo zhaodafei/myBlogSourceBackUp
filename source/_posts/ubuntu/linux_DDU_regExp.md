@@ -80,6 +80,34 @@ if (arr) { // 如果是二级目录
 }
 ```
 
+### $符号正则
+
+```javascript
+// $1,$2,$3... 可以保留原来的内容
+let str_fei = '欢迎[[123]]登录大飞[[135管理系统,初次密码为[[456]]，请放心使用!'
+// str_fei = str_fei.replace(/(\d+)/g,'=abc')
+// str_fei = str_fei.replace(/(\[\[\d+)/g,'abc')
+// str_fei = str_fei.replace(/(\[\[\d+\]\])/g,'abc')
+
+// str_fei = str_fei.replace(/(\d+)/g,'$1_abc')
+// str_fei = str_fei.replace(/(\[\[\d+)/g,'$1_abc')
+str_fei = str_fei.replace(/(\[\[\d+\]\])/g,'$1_abc')
+
+console.log(str_fei);
+```
+
+```javascript
+// 将yyyy-mm-dd格式转换为年月日格式
+let str_fei2 = "2023-05-01"
+let reg =/(\d{4})\-(\d{2})\-(\d{2})/;
+let foo = str_fei2.replace(reg,"$1年$2月$3日")
+console.log(foo);
+```
+
+
+
+
+
 [常用正则表达式](https://c.runoob.com/front-end/854/)
 
 [正则_菜鸟教程](https://www.runoob.com/regexp/regexp-metachar.html)
