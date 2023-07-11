@@ -50,7 +50,7 @@ tar -xvf xxx.tar
 
 #### 以 gzip 压缩
 
-```
+```shell
 tar -zcvf aaa_bbb.tar.gz aaa_bbb   #打包后，以 gzip 压缩 
 tar -ztvf aaa_bbb.tar.gz     #查看包里面文件
 tar -zxvf aaa_bbb.tar.gz -C /home/fei/web/  #解压到 /home/fei/web/ 目录下
@@ -64,7 +64,7 @@ tip: 在这里其实没有 z 这个参数有可以查看
 
 #### 以 bzip2  压缩
 
-```
+```shell
 tar -jcvf aaa_bbb.tar.bz2 aaa_bbb      #打包后，以 bzip2 压缩 
 tar -jtvf aaa_bbb.tar.bz2                 #查看包里面文件
 tar -jxvf aaa_bbb.tar.bz2 -C /home/fei/web/  #解压到 /home/fei/web/ 目录下
@@ -77,7 +77,7 @@ tip: 在这里其实没有 j 这个参数有可以查看
 
 #### 打包后用当前时间命名
 
-```
+```shell
 tar -cvf fei_$(date '+%Y-%m-%d').tar codeFileName
 tar -cvf fei_$(date '+%m%d')_01.tar  codeFileName
 ```
@@ -109,6 +109,20 @@ tar -xvf xxx.tar   #解压到当前目录
 #排除fei_01.tar打包当前目录
 tar -cvf xm_$(date '+%m%d')_01.tar --exclude fei_01.tar  .  #不要丢了这个点
 tar -xvf xxx.tar   #解压到当前目录
+
+
+
+#在任意目录下打包指定目录下的文件(容易出现问题,打包后把目录也带上了)
+## 文件夹后面不直接跟文件夹名字,中间空格
+tar -cvf /home/fei/web2/aaa_ccc.tar -C  /home/fei/web/  fei.txt 
+##完整文件夹路径后面加一个"."
+tar -cvf /home/fei/web2/aaa_ccc.tar -C  /home/fei/web/ . 
+## 或者用管道符
+cd /home/fei/web/ && tar -cvf /home/fei/web2/aaa_ccc.tar  fei.txt
+## windows中测试
+tar -cvf ~/Desktop/fei2/aaa_ccc.tar -C  ~/Desktop/fei/  fei.txt 
+tar -cvf ~/Desktop/fei2/aaa_ccc.tar -C  ~/Desktop/fei/  . 
+cd  ~/Desktop/fei/ && tar -cvf ~/Desktop/fei2/aaa_ccc.tar  fei.txt
 
 
 ```

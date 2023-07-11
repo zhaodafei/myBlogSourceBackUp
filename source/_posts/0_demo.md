@@ -139,7 +139,12 @@ console.log("hello JavaScript")
 
 aaa
 
+### HTML编写
 
+<div style="color:red">
+    <div>dafei  /  年龄</div>
+    <div>张三  /  性别</div>
+</div>
 
 
 

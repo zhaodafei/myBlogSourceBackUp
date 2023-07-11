@@ -67,10 +67,6 @@ FROM
 	`user`
 ```
 
-
-
-
-
  [流程控制语句 CASE](https://dev.mysql.com/doc/refman/5.7/en/case.html "流程控制语句 CASE")
 
 ### 排序
@@ -84,6 +80,20 @@ SELECT * FROM user WHERE id<10 ORDER BY id in (3,4) DESC #3,4数据放到开始
 ```
 
 ![ORDER BY](/img/mysql/demo01/order_by.png "ORDER BY")
+
+### 按照行字段求和
+
+```mysql
+SELECT
+	id, num, name,flag,
+	SUM( course_01 + course_02 + course_03 ) AS total_score  #对一行这几个字段求和
+FROM
+	`foo`.`fei` 
+WHERE
+	`flag` = '1' 
+GROUP BY num #分组
+ORDER BY `total_score` DESC #排序(求和后排序)
+```
 
 
 
