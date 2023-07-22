@@ -64,6 +64,15 @@ set key1 "hello world"
 get key1
 ```
 
+### 常见命令
+
+```bash
+#查看所有keys
+keys *
+keys fei*
+keys bar*
+```
+
 
 
 
