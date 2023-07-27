@@ -80,7 +80,11 @@ if (arr) { // 如果是二级目录
 }
 ```
 
-### $符号正则
+### $符号正则(插入语)
+
+插入语: 任何正则表达式的插入语都会使这部分匹配的副字符串被记忆
+
+[插入语](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions#%E4%BD%BF%E7%94%A8%E6%8F%92%E5%85%A5%E8%AF%AD)
 
 ```javascript
 // $1,$2,$3... 可以保留原来的内容
@@ -104,6 +108,45 @@ let foo = str_fei2.replace(reg,"$1年$2月$3日")
 console.log(foo);
 ```
 
+### 可变正则
+
+```js
+//官方原话: 以下三种表达式都会创建相同的正则表达式：
+/ab+c/i; //字面量形式
+new RegExp('ab+c', 'i'); // 首个参数为字符串模式的构造函数
+new RegExp(/ab+c/, 'i'); // 首个参数为常规字面量的构造函数
+```
+
+当表达式被赋值时，字面量形式提供正则表达式的编译（compilation）状态，当正则表达式保持为常量时使用字面量。例如当你在循环中使用字面量构造一个正则表达式时，正则表达式<font color="#ff6b81">不会</font>在每一次迭代中都被重新编译（recompiled）。
+
+而正则表达式对象的构造函数，如 `new RegExp('ab+c')` 提供了正则表达式运行时编译（runtime compilation）。如果你知道<font color="#ff6b81">正则表达式模式将会改变</font>，或者你事先不知道什么模式，而是从另一个来源获取，如用户输入，这些情况都可以使用构造函数。
+
+```js
+// demo:
+// 以下三种等效
+"123".match(/^[0-9]*$/g); // ["123"]
+"123".match(new RegExp(/^[0-9]*$/, 'g')); // ["123"]
+"123".match(new RegExp("^[0-9]*$", 'g')); // ["123"]
+
+// 以下三种等效
+"abbbc".match(/ab+c/g); // ['abbbc']
+"abbbc".match(new RegExp(/ab+c/,'g')); // ['abbbc']
+"abbbc".match(new RegExp("ab+c",'g')); // ['abbbc'], 写成这样就可以动态拼接正则
+```
+
+```js
+let str ='<span class="{width} {fei} {class}" data-tip="{width} {fei} {class}">替换花括号中内容</span>'
+let dataFei = {
+  fei: '替换',
+  class: "small",
+  width: 10,
+};
+for (let k in dataFei) {
+  str = str.replace(RegExp('{' + k + '}', 'g'), dataFei[k] == null ? '' : dataFei[k]);
+}
+console.log(str);//<span class="a1 10 替换 small" data-tip="a2 10 替换 small">替换花括号中内容</span>
+```
+
 
 
 
@@ -112,7 +155,9 @@ console.log(foo);
 
 [正则_菜鸟教程](https://www.runoob.com/regexp/regexp-metachar.html)
 
-[MDN_正则](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)
+[MDN_正则表达式](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)
+
+[MDN_RegExp(正则表达式)](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
 
 
 
