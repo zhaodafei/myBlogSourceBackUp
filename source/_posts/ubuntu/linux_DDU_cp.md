@@ -17,7 +17,7 @@ cp  创建文件和目录的副本
 
 cp最基本命令，拷贝file_3.txt 从一个位置复制到另一个位置
 
-```
+```shell
 ls -all     【递归展示目录本文中会多次用到】
 ----------------------------
 cp file_3.txt /home/destination_file
@@ -31,7 +31,7 @@ cp /home/soruce_file2/file_3.txt /home/destination_file
 
 拷贝多个文件，我们只需将文件名字用空格隔开。或者使用*拷贝所有文件
 
-```
+```shell
 cp file_3.txt file_4.txt /home/destination_file
 cp *  /home/destination_file       【拷贝所有文件，注意观察截图，aaa目录没有拷贝成功，稍后解决】
 ```
@@ -42,7 +42,7 @@ cp *  /home/destination_file       【拷贝所有文件，注意观察截图，
 
 -r 或者 -R ，不论目录是否为空都会拷贝
 
-```
+```shell
 cp -r aaa/ /home/destination_file     【这就解决上次没有拷贝aaa目录】
 ```
 
@@ -52,7 +52,7 @@ cp -r aaa/ /home/destination_file     【这就解决上次没有拷贝aaa目录
 
 拷贝文件意味着你必须使用一些存储空间来储存拷贝的文件。有时候出于某种原因，你可能想要创建“快捷方式”或者链接到文件，而不是拷贝它们。要做到这一点，我们可以使用-l选项。
 
-```
+```shell
 cp -l file_3.txt /home/destination_file
 ```
 
@@ -62,7 +62,7 @@ cp -l file_3.txt /home/destination_file
 
 软连接（符号链接）用 -s实现
 
-```
+```shell
 cp -s file_3.txt file_44.txt
 ```
 
@@ -72,7 +72,7 @@ cp -s file_3.txt file_44.txt
 
 使用 -a 选项来归档文件。保留链接和文件属性，递归拷贝目录，相当于下面的d、p、r三个选项组合。
 
-```
+```shell
 cp -a  * /home/destination_file/
 ```
 
@@ -82,7 +82,7 @@ cp -a  * /home/destination_file/
 
 只拷贝文件属性，不拷贝文件内容，使用 --attributes-only 选项
 
-```
+```shell
 cp --attributes-only file_3.txt /home/destination_file/
 ```
 
@@ -94,7 +94,7 @@ cp --attributes-only file_3.txt /home/destination_file/
 
 默认情况下，拷贝是不会显示拷贝时发生了什么，我们可以使用 -v选项
 
-```
+```shell
 cp -v  * /home/destination_file/
 ```
 
@@ -104,7 +104,7 @@ cp -v  * /home/destination_file/
 
 拷贝时，目标文件先存着和源文件同名文件，切目标文件时间是最新更改，使用 -u,不会覆盖最新文件
 
-```
+```shell
 cp -vu file_3.txt file_4.txt /home/destination_file/
 ```
 
@@ -114,7 +114,7 @@ cp -vu file_3.txt file_4.txt /home/destination_file/
 
 交互模式下会询问是否覆盖目标目录下的文件。使用 -i 选项
 
-```
+```shell
 cp -i file_3.txt file_4.txt /home/destination_file/
 ```
 
@@ -124,7 +124,7 @@ cp -i file_3.txt file_4.txt /home/destination_file/
 
 目标文件中存在与源文件同名文件，使用 -b 选项，备份目标文件，拷贝新文件
 
-```
+```shell
  cp -bv * /home/destination_file/
 ```
 
@@ -134,7 +134,7 @@ cp -i file_3.txt file_4.txt /home/destination_file/
 
 使用 -f 强制拷贝文件。如果目标文件不能打开，可以用 -f 尝试一下。
 
-```
+```shell
 cp -f * /home/destination_file/
 ```
 
@@ -144,7 +144,7 @@ cp -f * /home/destination_file/
 
 可以用，--remove-destination 选项 实现。这个选项与上面的-f选项形成对照。如果 cp 命令在目标目录下发现同名文件， cp 命令会先删除目标文件，然后再拷贝一份新的。
 
-```
+```shell
 cp --remove-destination -v * /home/destination_file/
 ```
 
@@ -152,10 +152,18 @@ cp --remove-destination -v * /home/destination_file/
 
 其他：
 
-```
+```shell
 一般情况下用这个命令 【参数avr】
 cd /home/www/Downloads
 cp -avr * /data/www/
+```
+
+### 常用命令
+
+```shell
+#复制一个文件
+cp -iv index.html  index.html_backup 
+cp -iv index.html  index.html_$(date '+%m%d')_01_backup #按时间命名新文件
 ```
 
 
