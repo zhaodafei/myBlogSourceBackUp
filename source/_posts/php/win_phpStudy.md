@@ -90,7 +90,11 @@ set php_nts=D:\soft_position\phpStudy20161103\php\php-7.3.4-nts
 %php_nts%\php-cgi.exe -b demo.test.com:9001 -c %php_nts%\php.ini
 ```
 
+### 多个版本的nginx
 
+在`phpstudy_pro`最新版本中开始支持安装2个`nginx`版本; 在低版本中很多是不支持的
+
+![phpstudy_pro](/img/php/phpstudy_pro.png "phpstudy_pro")
 
 
 

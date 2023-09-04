@@ -16,7 +16,7 @@ Ubuntu16 -nginx
 
 ### 安装nginx
 
-```
+```shell
 sudo apt-get install nginx
 
 启动 ngnnx:  
@@ -32,7 +32,7 @@ service nginx restart
 
 ### 查看nginx配置文件目录
 
-```
+```shell
 ps -aux | grep nginx   【返回结果包含安装目录】
 nginx -t               【返回结果包含配置文件目录】
 cat /etc/nginx/nginx.conf
@@ -46,7 +46,7 @@ cat /etc/nginx/nginx.conf
 
 Tengine 安装需要使用源代码自行编译，所以安装前需要安装必要的编译工具
 
-```
+```shell
 sudo apt-get install build-essential
 sudo apt-get install libtool
 sudo apt-get install g++
@@ -60,7 +60,7 @@ yum install gcc gcc-c++
 
 ### PCRE
 
-```
+```shell
 !!!只需要解压即可,nginx安装的时候,指定到解压目录就ok
 wget ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.38.tar.gz
 解压到你指定的目录
@@ -75,7 +75,7 @@ make && make install
 
 ### OpenSSL
 
-```
+```shell
 !!!只需要解压即可,nginx安装的时候,指定到解压目录就ok
 wget http://www.openssl.org/source/openssl-1.0.2.tar.gz
 解压到你指定的目录
@@ -90,7 +90,7 @@ make && make install
 
 ### Zlib
 
-```
+```shell
 !!!只需要解压即可,nginx安装的时候,指定到解压目录就ok
 wget http://zlib.net/zlib-1.2.11.tar.gz
 解压到你指定的目录
@@ -105,7 +105,7 @@ make && make install
 
 ### 下载nginx安装包，我选择的是 1.4.2
 
-```
+```shell
 ./configure --help  可以查看nginx的编译参数说明,这里可以看到nginx需要的【pcre、openssl、zlib】的源码位置
 ,所有者三个东西可以不用需要编译安装,只需要有源码即可
 
@@ -165,7 +165,7 @@ make install
 
 ### 检测是否可用
 
-```
+```shell
 /data/server/nginx/nginx -t
 ./nginx -t 
 ```
@@ -176,7 +176,7 @@ make install
 
 ### 报错：
 
-```
+```shell
 安装完会有异常,没有 pid 文件，那就创建一个 pid  文件
 root@ubuntu:/data/server/nginx# /data/server/nginx/nginx -s reload
 nginx: [error] open() "/data/server/nginx/nginx.pid" failed (2: No such file or directory)
@@ -192,7 +192,7 @@ root@ubuntu:/data/server/nginx# /data/server/nginx/nginx -s reload
 
 ### 命令
 
-```
+```shell
 /data/server/nginx/nginx -t          【检查配置】
 /data/server/nginx/nginx             【启动命令】
 /data/server/nginx/nginx -s stop     【停止命令】
@@ -206,7 +206,7 @@ pid出错时，可以使用这个：
 
 ### 下载
 
-```
+```shell
 当前操作目录位置：  /home/fei/server
 wget http://nginx.org/download/nginx-1.4.2.tar.gz
 tar -zxvf nginx-1.4.2.tar.gz  -C /home/fei/server
@@ -217,7 +217,7 @@ cd nginx-1.4.2
 
 ### 配置
 
-```
+```shell
 ./configure --prefix=/data/server/nginx-1.4.2
 发现少包，安装缺少的包
 sudo apt-get install libpcre3 libpcre3-dev 
@@ -239,7 +239,7 @@ sudo apt-get install zlib1g-dev
 
 ### 编译安装
 
-```
+```shell
 make && make install
 ```
 
@@ -247,7 +247,7 @@ make && make install
 
 ### 检测是否可用
 
-```
+```shell
 /data/server/nginx-1.4.2/sbin/nginx -t
 ```
 
@@ -261,7 +261,7 @@ make && make install
 
 ### 命令
 
-```
+```shell
 /data/server/nginx/nginx -t          【检查配置】
 /data/server/nginx/nginx             【启动命令】
 /data/server/nginx/nginx -s stop     【停止命令】
@@ -281,7 +281,7 @@ return 500;
 
 ### 让普通用户可以启动nginx
 
-```
+```shell
 用root用户进入....nginx/sbin
 然后chown root nginx
 chmod u+s nginx
@@ -290,7 +290,29 @@ chmod u+s nginx
 
 ![nginx 普通用户启动nginx](/img/ubuntu/nginx/common_star.png "普通用户启动nginx")
 
+## windows中命令
 
+```wiki
+在Nginx1.15.11目录下面执行命令
+
+#查看nginx版本
+C:\fei\Nginx1.15.11>.\nginx.exe -v
+
+#启动nginx (注意有个点)
+C:\fei\Nginx1.15.11>.\nginx.exe
+
+#停止nginx(注意有个点)
+C:\fei\Nginx1.15.11>.\nginx.exe -s stop
+
+#重新载入nginx(注意有个点)
+C:\fei\Nginx1.15.11>.\nginx.exe -s reload
+
+#检查nginx配置(注意有个点)
+C:\fei\Nginx1.15.11>.\nginx.exe -t
+
+#停止nginx所有进程
+taskkill /f /t /im nginx.exe
+```
 
 
 
