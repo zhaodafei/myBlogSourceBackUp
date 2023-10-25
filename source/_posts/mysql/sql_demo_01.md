@@ -95,6 +95,12 @@ GROUP BY num #分组
 ORDER BY `total_score` DESC #排序(求和后排序)
 ```
 
+### 字符串转数字排序
+
+```mysql
+SELECT id, name FROM dbfei ORDER BY CAST(id AS UNSIGNED);
+```
+
 
 
 ## 其他

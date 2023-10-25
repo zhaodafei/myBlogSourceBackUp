@@ -271,7 +271,7 @@ const person = reactive({
     }
   }
 })
-// 监视reactive所定义的一个响应式数据中的某个属性,要用函数
+// 监视reactive所定义的一个响应式数据中的某个属性,要用箭头函数
 watch(() => person.period, (newVal, oldVal) => {
   console.log("监视reactive某个属性,要用函数", newVal, oldVal);
 })

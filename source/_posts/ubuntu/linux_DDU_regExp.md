@@ -147,6 +147,16 @@ for (let k in dataFei) {
 console.log(str);//<span class="a1 10 替换 small" data-tip="a2 10 替换 small">替换花括号中内容</span>
 ```
 
+### 不能有某个字符
+
+```javascript
+/^[^y]+$/.test("string") // 没有字符y返回true
+```
+
+```js
+/^[^\*]+$/.test("string") // 没有字符*号返回true
+```
+
 
 
 

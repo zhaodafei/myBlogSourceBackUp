@@ -24,6 +24,15 @@ console.log(
     'color:#fff;background:#808080;padding:3px;border-radius:2px;margin:0 3px;',
     'color:#fff;background:#000000;padding:3px;border-radius:2px',
 )
+
+
+// 常见demo
+let fei = {name: '大飞', age: 18, gender: '男',}
+let str_1 =
+    `%c 姓名${fei.name}, ` +
+    `%c 年龄${fei.age}, ` +
+    `%c 性别${fei.gender}, `
+console.log(str_1, 'color:blue', 'color:red', 'color:blue')
 ```
 
 [MDN console 其他资料](https://developer.mozilla.org/zh-CN/docs/Web/API/console#%E7%A4%BA%E4%BE%8B)
@@ -102,14 +111,6 @@ let arr = obj.map(item => item.hobby);
 console.log(arr); // 输出 ["JavaScript", "HTML", "CSS"]
 ```
 
-### 获取一个对象中的所有属性
-
-````javascript
-let obj = {name: "daFei", age: "18", hobby: "JavaScript"};
-let arr = Object.keys(obj);
-console.log(arr); // 输出 ["name", "age", "hobby"]
-````
-
 ### 判断一个数组或者字符串中存在某个值
 
 indexOf ,不存在则返回-1
@@ -128,7 +129,15 @@ console.log(index_str);
 
 [数组中属性](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) 和  [字符串中属性](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf)
 
+### 获取一个对象中的所有属性
 
+```js
+let obj = {name: "daFei", age: "18", hobby: "JavaScript"};
+let arr = Object.keys(obj);
+console.log(arr); // 输出 ["name", "age", "hobby"]
+```
+
+使用`map`获取数组中某个值集合,参考文件`other_JavaScript.md`中的`map,获取对象中某个属性的所有值ES6`
 
 
 

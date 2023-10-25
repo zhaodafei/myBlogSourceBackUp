@@ -61,6 +61,16 @@ let obj = [
 ];
 let arr = obj.map(item => item.hobby);
 console.log(arr); // 输出 ["JavaScript", "HTML", "CSS"]
+
+// 弊端, 如果这个属性没有回返回 [undefined, undefined, undefined]
+// 针对以上情况优化,加个filter
+let obj = [
+  {name: "daFei", age: "18", hobby: "JavaScript"},
+  {name: "daFei", age: "18", hobby: "HTML"},
+  {name: "daFei", age: "18", hobby: "CSS"},
+];
+let arr = obj.map(item => item.hobby_xxxx).filter(notUndefined => notUndefined !== undefined);
+console.log(arr); // 输出 []
 ```
 
 ###  map,保留原数组修改数据

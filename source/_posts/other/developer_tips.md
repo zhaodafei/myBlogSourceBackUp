@@ -83,6 +83,16 @@ chrome://branding/content/about-logo.png
 chrome://branding/content/icon16.png
 ```
 
+### 禁用火狐缓存
+
+```wiki
+1. 在地址栏中输入 about:config
+2. 找到 network.http.use-cache ，双击把值变为false
+3. 找到 browser.cache.disk.enable ，双击把值变为false
+```
+
+
+
 ### 网络请求`filter`
 
 控制台左上角`filter`中输入中划线可以看到各种过滤选项,`Vue`常用过滤选项 `-.json  -sockjs`
