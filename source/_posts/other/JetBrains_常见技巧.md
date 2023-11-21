@@ -13,6 +13,37 @@ demo模板
 
 <!-- more -->
 
+### 个人偏好设置
+
+1. 单行注释挨着代码,并添加个空格
+
+   > phpstorm
+   >
+   > > 是在Preferences->Editor->Code Style->PHP->Other里面取消Line comment at first column之前的勾选就行了！
+   > >  是在file->settings->Editor->Code Style->php->other 里面取消Line comment at first column之前的勾选就行了！
+   >
+   > webstorm:
+   >
+   > > 是在file->settings->Editor->Code Style->JavaScript->Code Generation里面取消Line comment at first column之前的勾选就行了！
+   >
+   > idea:
+   >
+   > > 是在file->settings->Editor->Code Style->java->Code Generation里面取消Line comment at first column之前的勾选就行了！
+   >
+   > 
+   >
+   > 添加个空格
+   >
+   > Add a space at line comment start
+
+2. 字体大小
+
+   > 是在file->settings->Editor->Font->(  Size:16, Line height:1.2  )
+
+3. xx
+
+4. xx
+
 ### 基本快捷键
 
 1. Ctrl+Shift+J：将选中的行合并成一行 (也可以把多行注释前面的*去掉)
@@ -68,7 +99,7 @@ demo模板
     >
     > `ctrl + shift + 数字` 标记后,可以用 `ctrl + 数字` 快速回到标记地方
 
-19. xxx
+19. `Java 开发中`局部变量改为公用 `Ctrl + Alt + f`
 
 15. xxx
 
@@ -83,6 +114,20 @@ demo模板
 3. xxx
 
 4. xxx
+
+### Recent Project 清空
+
+清空最近打开项目历史记录`Recent Project`
+
+```wiki
+#AndroidStudio2022 的 Recent Project 位置
+C:\Users\fei\AppData\Roaming\Google\AndroidStudio2022.3\options\recentProjects.xml
+
+#IDEA2021.3 的 Recent Project 位置
+C:\Users\fei\AppData\Roaming\JetBrains\IntelliJIdea2021.3\options\recentProjects.xml
+#WebStorm2022.2 的 Recent Project 位置
+C:\Users\fei\AppData\Roaming\JetBrains\WebStorm2022.2\options\recentProjects.xml
+```
 
 
 

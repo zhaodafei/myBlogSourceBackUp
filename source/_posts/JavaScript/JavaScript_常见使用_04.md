@@ -62,7 +62,7 @@ document.onselectstart = new Function('event.returnValue=false;')
 
 ### 地址参数
 
-获取地址中某个参数值
+#### 获取地址中某个参数值
 
 ```javascript
 /***
@@ -84,7 +84,7 @@ function GetQueryVariable(variable) {
 }
 ```
 
-获取地址栏参数转为json格式
+#### 获取地址栏参数转为json格式
 
 ```javascript
 /**
@@ -107,6 +107,31 @@ function GetQueryVariable_to_json(url) {
     return obj;
 }
 ```
+
+#### 把json转为get请求参数
+
+```js
+/**
+ * 把json转为get请求参数
+ * @param requestParams demo: {id: 111, name: '大飞', age: 18}
+ * @returns {string}    demo: id=111&name=大飞&age=18
+ */
+const convertToUrl = requestParams => {
+  let params = [];
+  Object.entries(requestParams).forEach(([key, value]) => {
+    let param = key + '=' + value;
+    params.push(param);
+  });
+  return params.join('&');
+}
+
+let params = {id: 111, name: '大飞', age: 18}
+let urlParams = convertToUrl(params)
+
+console.log(urlParams); // 输出; id=111&name=大飞&age=18
+```
+
+
 
 ### 获取当前文件目录位置
 
