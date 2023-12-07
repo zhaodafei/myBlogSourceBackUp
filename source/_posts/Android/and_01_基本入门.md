@@ -25,7 +25,7 @@ Android入门之`hello world`
 ### 模拟器
 
 ```wiki
-模拟器从习惯用: Pixel 7 API 30, 这个手机又返回键,用起来适合我
+模拟器我习惯用: Pixel 7 API 30, 这个手机有返回键,用起来适合我
 Pixel 7 API 30
 Pixel 7 API 30
 ```

@@ -17,6 +17,8 @@ Android入门之`WebView`
 ### 让`APP`可以上网
 
 ```html
+!!!如果是本地开发,请把2个参数配置都加上!!!
+
 01) 修改配置文件 app/src/main/AndroidManifest.xml 添加上网权限
 
 <?xml version="1.0" encoding="utf-8"?>
@@ -27,7 +29,9 @@ Android入门之`WebView`
 </manifest>
 
 
-02) 添加配置:  android:usesCleartextTraffic="true", 可以考虑石头添加
+02) 添加配置:  android:usesCleartextTraffic="true", 可以考虑是否添加
+    添加上这个参数后可以使用IP来访问本地电脑中数据
+02-2) android：usesCleartextTraffic 指示应用程序是否打算使用明文网络流量
 
     <application
         android:label="@string/app_name"
