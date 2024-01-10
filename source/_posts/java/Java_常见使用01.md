@@ -78,3 +78,11 @@ String fei = UUID.randomUUID().toString(); // 通用唯一识别码
 System.out.println(fei);
 ```
 
+### 随机数
+
+```java
+System.out.println(new SplittableRandom(20231203).nextInt(1,20));
+```
+
+
+

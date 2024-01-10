@@ -35,6 +35,31 @@ let str_1 =
 console.log(str_1, 'color:blue', 'color:red', 'color:blue')
 ```
 
+#### 简单封装console
+
+```js
+// 简单封装后方便上线的时候统一去掉consol.log的输出内容
+
+function log() {
+  console.log.apply(console, arguments)
+}
+const log2 = (...rest) => {
+  console.log.apply(console, rest)
+}
+
+let str = 'fei'
+let array = [1, 3, 4]
+let obj = {name: '大飞', age: '18'}
+
+log(str, array, obj, '测试')
+log('%c 参数出错了', 'color:red')
+log2('%c 参数出错了22', 'color:blue')
+```
+
+
+
+
+
 [MDN console 其他资料](https://developer.mozilla.org/zh-CN/docs/Web/API/console#%E7%A4%BA%E4%BE%8B)
 
 ### 随机数测试
@@ -42,6 +67,14 @@ console.log(str_1, 'color:blue', 'color:red', 'color:blue')
 ```javascript
 Math.floor(Math.random()*10000)
 ```
+
+#### 时间戳
+
+```js
+new Date().getTime()
+```
+
+
 
 ### 获取逗号拼接字符串
 
