@@ -84,5 +84,56 @@ System.out.println(fei);
 System.out.println(new SplittableRandom(20231203).nextInt(1,20));
 ```
 
+### 自定义随机数
+
+```java
+// 使用: makeString("abc123", 6);
+public static String makeString(String from, int len) {
+    if (len <= 1) {
+        return "";
+    }else {
+        char[] chars = from.toCharArray();
+        StringBuilder str = new StringBuilder();
+        for (int i = 0; i < len; i++) {
+            Random random = new Random();
+            int j = random.nextInt(chars.length);
+            char c = chars[j];
+            str.append(c);
+        }
+        return str.toString();
+    }
+}
+```
+
+### 非空字符串
+
+```java
+public static boolean isEmpty(String str)
+{
+    return isNull(str) || NULLSTR.equals(str.trim());
+}
+```
+
+### 日期格式化
+
+```java
+public static Date parseDate(String dateString, String format) throws ParseException {
+    SimpleDateFormat sdf = new SimpleDateFormat(format);
+    return sdf.parse(dateString);
+}
+
+public static String formatDate(Date date, String format) {
+    SimpleDateFormat sdf = new SimpleDateFormat(format);
+    return sdf.format(date);
+}
+
+// 使用
+Date s = parseDate("2024-01-20", "yyyy-MM-dd");
+System.out.println(s); // Sat Jan 20 00:00:00 CST 2024
+
+String date = formatDate(new Date(), "yyyy-MM-dd hh:mm:ss");
+System.out.println(date); // 2024-01-20 08:58:23
+```
+
 
 

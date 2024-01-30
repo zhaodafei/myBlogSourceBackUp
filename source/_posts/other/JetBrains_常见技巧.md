@@ -101,6 +101,28 @@ demo模板
 
 19. `Java 开发中`局部变量改为公用 `Ctrl + Alt + f`
 
+20. `Java` 开发中,`Ctrl + o`显示复写方法
+
+21. `Java`开发中, `Ctrl + p`,显示这个调用的参数
+
+    > `new ArrayList();` 鼠标放到括号上,然后`Ctrl+p`可以显示出参数都有啥
+
+22. `Java`中写for循环
+
+    > 遍历for循环
+    >
+    > ```java
+    > HashMap map = new HashMap();
+    > map.put("1", "s");
+    > 
+    > Set keys = map.keySet();
+    > // 先写 keys然后点for
+    > for (Object key : keys) {
+    > }
+    > ```
+    >
+    > 
+
 15. xxx
 
 ### 配置
@@ -129,7 +151,16 @@ C:\Users\fei\AppData\Roaming\JetBrains\IntelliJIdea2021.3\options\recentProjects
 C:\Users\fei\AppData\Roaming\JetBrains\WebStorm2022.2\options\recentProjects.xml
 ```
 
+### IDEA社区版本
 
+```wiki
+#IntelliJ IDEA Ultimate  旗舰版
+#IntelliJ IDEA Community Edition  社区版
+
+用社区版本当记事本是个不错的选择
+```
+
+[IntelliJ IDEA Community Edition 社区版本](https://www.jetbrains.com/idea/download/?section=windows)
 
 
 

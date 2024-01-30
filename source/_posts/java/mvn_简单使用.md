@@ -42,6 +42,19 @@ mvn deploy, 包含mvn install,然后，上传到私服
 </activeProfiles>
 ```
 
+### IDEA配置`mvn`
+
+```wiki
+创建mvn的项目后,需要在idea中配置自己的mvn,尽量不使用idea自带的mvn
+File->Settings->Maven
+01) Maven home path
+    D:/soft_position/Java/apache-maven-3.6.0
+02)User settings file
+    D:\soft_position\Java\apache-maven-3.6.0\conf\settings.xml
+03)Local repository
+    D:\soft_position\Java\mvn_repository
+```
+
 
 
 ### 其他

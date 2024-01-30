@@ -14,6 +14,8 @@ Linux -node 编译安装, 需要配置环境变量
 
 <!-- more -->
 
+`nodejs`所有版本下载地址`https://nodejs.org/dist/`
+
 ### 源码编译安装node
 
 ```shell
@@ -53,7 +55,7 @@ tar -xvf node-v10.15.3-linux-x64.tar.xz -C /data/server
 解压后可以直接使用,需要配置环境变量,方法同上
 ```
 
-### 其他
+### 其他常见命令
 
 ```shell
 #npm命令文档 https://nodejs.cn/npm/cli/v6/commands/npm/
@@ -65,7 +67,9 @@ npm config edit   #编辑配置信息
 npm config get cache  #查看npm缓存目录
 npm config set cacat  #设置缓存目录位置
 npm config get registry  #获取配置使用的地址
-npm config set registry https://registry.npm.taobao.org  #设为淘宝地址
+#npm config set registry https://registry.npm.taobao.org  #设为淘宝地址(过期了)
+npm config set registry https://registry.npmmirror.com #设为淘宝地址(新源:2024年1月25日)
+npm config set registry https://registry.npmjs.org   #设置为官方地址
 
 windows中显示配置文件位置: C:\Users\Administrator\.npmrc 
 ubuntu图中在用户: /home/fei/.npmrc
@@ -116,3 +120,8 @@ npm install
 
 没有了
 
+[npmjs 依赖包查看网站](https://www.npmjs.com/)
+[npmjs 依赖包查看网站](https://www.npmjs.com/)
+
+[nodejs所有版本下载地址](https://nodejs.org/dist/)
+[nodejs所有版本下载地址](https://nodejs.org/dist/)

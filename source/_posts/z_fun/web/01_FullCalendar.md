@@ -293,6 +293,53 @@ https://fullcalendar.io/docs/events-function
 
 //注意版权
 
+dayMaxEvents: true // 根据日历高度自动显示内容条数
+```
+
+### 按`月,周,日`显示
+
+```js
+const calendarOptions = {
+  buttonText: {
+    today: "今天???",
+    month: "月 111",
+    week: "周 111",
+    day: "日 111",
+  },
+  headerToolbar: {
+    // left: "today,dayGridMonth",
+    // center: "prevYear,prev,title,next,nextYear",
+    // dayGridMonth: 月, resourceTimelineWeek:周, resourceTimelineDay:日; addFei:自定义
+    right: "dayGridMonth,resourceTimelineWeek,resourceTimelineDay,addFei",
+  },
+  customButtons: {
+    addFei: {
+      // addFei: 对应上面的 ↑↑↑
+      text: "自定义!",
+      click: function (mouseEvent, htmlElement) {
+        // htmlElement.click();
+      },
+    },
+  },
+}
+```
+
+### 构建数据中对象
+
+```js
+const eventList= [{
+  id: "xxx",
+  backgroundColor: "#ff6b81",
+  borderColor: "#00ffff",
+  textColor: '#FFFFFF', // 根据类型设置
+  // 日历上面准备回显的数据,要放在title中,因为日历组件只能识别 title
+  title:JSON.stringify({
+    id: "001",
+    name: "大飞",
+    age: "18",
+    desc: "我是内容描述",
+  })
+}]
 ```
 
 

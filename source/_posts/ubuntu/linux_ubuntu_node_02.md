@@ -67,21 +67,7 @@ npm config ls
 
 ![mpm config5](/img/ubuntu/node/npm_config/npm_05.png "mpm config5")
 
-### 常见命令
 
-```bash
-#设置镜像(源)
-npm config set registry https://registry.npm.taobao.org
-npm config set registry https://registry.npmjs.org
-
-#查看当前配置
-npm config list
-```
-
-
-
-[npmjs 依赖包查看网站](https://www.npmjs.com/)
-[npmjs 依赖包查看网站](https://www.npmjs.com/)
 
 
 
