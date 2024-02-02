@@ -64,6 +64,12 @@ this.$set(对象, '属性', '值');
 </script>
 ```
 
+### 强制刷新数据
+
+```js
+ this.$forceUpdate();
+```
+
 
 
 

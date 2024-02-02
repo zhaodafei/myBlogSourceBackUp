@@ -222,6 +222,25 @@ class FeiComparator implements Comparator<Integer> {
 }
 ```
 
+### `Set`接口
+
+```java
+// Set 同时因为其是一个抽象的接口：所以不能直接实例化一个set对象。(Set s = new Set() )错误
+// 该接口主要继承于Collections接口，所以具有Collection的一些常见的方法
+
+// add( )	向集合中添加元素
+// clear( )	去掉集合中所有的元素
+// contains( )	判断集合中是否包含某一个元素
+// isEmpty( )	判断集合是否为空
+// iterator( )	主要用于递归集合，返回一个Iterator()对象
+// remove( )	从集合中去掉特定的对象
+// size( )	返回集合的大小
+
+// Set接口最长用的两大实现：HashSet TreeSet
+```
+
+
+
 ### `HashSet`
 
 ```java

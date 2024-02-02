@@ -20,8 +20,10 @@ tags:
 module.exports = {
     // 基本路径
     publicPath: './',
+    // publicPath: process.env.NODE_ENV === 'development' ? './' : '/',
     // 打包输出文件目录
-    outputDir: 'dist',
+    // outputDir: 'dist',
+    outputDir: process.env.NODE_ENV === 'development' ? 'dist-staging' : 'dist',
     // eslint-loader 是否在保存的时候检查
     lintOnSave: false,
     // use the full build with in-browser compiler?
@@ -30,7 +32,13 @@ module.exports = {
     // webpack配置
     // see https://github.com/vuejs/vue-cli/blob/dev/docs/webpack.md
     chainWebpack: () => {},
-    configureWebpack: () => {},
+    configureWebpack: () => {
+        output: {
+          // 防止打包js不在js文件夹下
+          filename: `js/[name].[hash].js`,
+          chunkFilename: `js/[name].[hash].js`
+        }
+    },
     // 生产环境是否生成 sourceMap 文件
     productionSourceMap: false,
     // css相关配置
@@ -150,6 +158,12 @@ export default defineConfig(({ mode, command }) => {
   }
 })
 ```
+
+### 底部
+
+没有了
+
+[Vue CLI](https://cli.vuejs.org/zh/config/#outputdir)
 
 
 

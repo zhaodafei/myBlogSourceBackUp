@@ -207,9 +207,9 @@ nameMap:{
 
 
 
-### footer
+### 底部
 
-xxx
+没有了
 
 
 
@@ -217,7 +217,7 @@ xxx
 
  [series-map 配置](https://echarts.apache.org/zh/option.html#series-map "series-map 配置")
 
-
+[echarts 在线预览数据效果](https://www.ppchart.com/#/)
 
 
 

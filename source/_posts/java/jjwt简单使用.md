@@ -23,9 +23,6 @@ import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.stereotype.Component;
 
-import javax.crypto.spec.SecretKeySpec;
-import javax.xml.bind.DatatypeConverter;
-import java.security.Key;
 import java.util.Date;
 
 
@@ -47,36 +44,31 @@ public class TokenService {
         long nowMillis  = System.currentTimeMillis();
         Date now = new Date(nowMillis);
         Date exp = new Date(nowMillis + 1000 * 30); // 过期时间 30秒
-
         SignatureAlgorithm signatureAlgorithm = SignatureAlgorithm.HS256; // 签名算法
-        // 设置秘钥
-        byte[] apiKeySecretBytes = DatatypeConverter.parseBase64Binary(myApiKeySecret);
-        Key signKey = new SecretKeySpec(apiKeySecretBytes, signatureAlgorithm.getJcaName());
-
 
         JwtBuilder builder = Jwts.builder()
                 .setId("fei123") // 置唯一编号
-                .setIssuedAt(now)  //设置签发日期
-                .setExpiration(exp) // 设置过期时间
+                // .setIssuedAt(now)  //设置签发日期
+                // .setExpiration(exp) // 设置过期时间
                 // .setAudience("iot")
                 // .setIssuer("fei") // 设置发行人
                 .setSubject( "fei_setSubject" )
                 .claim("userName", "username_01")
                 .claim("userPwd", "123456")
-                .signWith(signatureAlgorithm, signKey); // 设置签名 使用HS256算法，并设置SecretKey(字符串)
+                .signWith(signatureAlgorithm, myApiKeySecret); // 设置签名 使用HS256算法，并设置SecretKey(字符串)
 
         return builder.compact();
     }
 
     /**
-     * 获取 token
-     * @param jwt String
+     * 校验 token 是否正确
+     * @param jwt String 用createToken方法中的返回值
      * @return {}
      */
     public Boolean parseJWT(String jwt) {
         try {
             Claims claims = Jwts.parser()
-                    .setSigningKey(DatatypeConverter.parseBase64Binary(myApiKeySecret))
+                    .setSigningKey(myApiKeySecret)
                     .parseClaimsJws(jwt)
                     .getBody();
 
