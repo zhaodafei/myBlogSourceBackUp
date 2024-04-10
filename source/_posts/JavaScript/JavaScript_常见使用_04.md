@@ -60,6 +60,24 @@ document.onselectstart = new Function('event.returnValue=false;')
 </div>
 ```
 
+### 复制网页链接
+
+```js
+const onSelect = () => {
+  // let url = 'https://www.baidu.com'
+  let url = window.location.href
+  let oInput = document.createElement('input')
+  oInput.value = url
+  document.body.appendChild(oInput)
+  oInput.select() // 选择对象;
+  console.log(oInput.value)
+  document.execCommand('Copy') // 执行浏览器复制命令
+  oInput.remove()
+}
+```
+
+
+
 ### 地址参数
 
 #### 获取地址中某个参数值

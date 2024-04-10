@@ -163,7 +163,7 @@ background-image 和 img 的选择使用
 06) HTML中常用颜色 #afeeee     paleturquoise（苍宝石绿）
 07) HTML中常用颜色 #ffd700      gold（金）
 08) HTML中常用颜色 #add8e6    lightblue（淡蓝） 
-09) HTML中常用颜色 #ff6b81      Wild Watermelon(野生西瓜)
+09) HTML中常用颜色 #ff6b81      Wild Watermelon(野生西瓜; rgb(255,107,129) )
 10) HTML中常用颜色 #00ffff        aqua（水绿）
 11) [网络安全色](https://www.runoob.com/cssref/css-colors.html)
 

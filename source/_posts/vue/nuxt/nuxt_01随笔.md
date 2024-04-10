@@ -536,6 +536,16 @@ export default {
 
 ### 打包上线
 
+打包说明:
+
+> 部署
+>
+> 三种部署形式:
+>
+> - SSR渲染部署。先nuxt build，再nuxt start
+> - 静态部署。先nuxt generate编译成静态文件，会生成dist 文件夹，所有静态化后的资源文件均在其中。然后扔到nginx上
+> - SPA部署。nuxt build --spa, 自动生成dist/文件夹，然后扔到nginx上
+
 ```wiki
 #01)执行打包命令
 npm run build
@@ -554,6 +564,17 @@ npm run build
 使用nginx做代理到localhost:3000上面
 ```
 
+### 打包上线2
+
+```wiki
+#静态部署。
+##先nuxt generate编译成静态文件，会生成dist 文件夹，所有静态化后的资源文件均在其中。然后扔到nginx上
+
+执行命令:  nuxt generate
+```
+
+
+
 代理
 
 ```nginx
@@ -565,6 +586,35 @@ server {
   }
   error_page 404 = http://www.fei.com/404.html;
 }
+```
+
+
+
+## 其他
+
+### 开发`proxy`代理
+
+```js
+module.exports = {
+  modules: [
+    '@nuxtjs/axios',
+  ],
+  axios: {
+    proxy: true,
+    prefix: '/api', // baseURL
+    credentials: true,
+  },
+  proxy: {
+    '/api': {
+      target: 'http://192.168.0.1:3000', // 代理地址
+      changeOrigin: true,
+      pathRewrite: {
+        '^/api': '', // 将 /api 替换掉,如果请求地址中有 /api 则不必替换
+      },
+    },
+  }
+}
+
 ```
 
 

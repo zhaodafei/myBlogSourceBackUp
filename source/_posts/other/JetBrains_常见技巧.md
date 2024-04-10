@@ -162,13 +162,43 @@ C:\Users\fei\AppData\Roaming\JetBrains\WebStorm2022.2\options\recentProjects.xml
 
 [IntelliJ IDEA Community Edition 社区版本](https://www.jetbrains.com/idea/download/?section=windows)
 
+### IDEA安装插件位置
+
+场景描述: `webstorm`安装了插件`element`,那么安装后的插件位置在电脑的哪里
+
+```wiki
+#C:\Users\用户名\AppData\Roaming\JetBrains\WebStorm2022.2\plugins
+
+我的实际位置为:
+C:\Users\fei\AppData\Roaming\JetBrains\WebStorm2022.2\plugins
+
+这个目录下面的所有文件就是已经安装的插件
+```
 
 
 
 
 
+## WebStorm专题
 
+### WebStorm开发uni-app项目
 
+背景: 有些项目使用`HBuilder`创建后需要使用`HBuilder`软件工具开发,本人习惯了`WebStorm`,现在使用`WebStorm`来开发`HBuilder`的`uni-app`项目
+
+目前我这里用有点卡
+
+### 常用插件
+
+1. element
+2. Nuxt.js
+3. uniapp Tool
+4. wechat-mini-program-support
+5. xxx
+
+## 通用插件
+
+1. changefile export
+2. xxx
 
 
 

@@ -114,6 +114,18 @@ ncu -u
 npm install
 ```
 
+### node版本和npm版本
+
+查看`node`版本和`npm`版本之间对应版本
+
+```wiki
+https://nodejs.org/download/release/index.json
+https://nodejs.org/download/release/index.json
+
+#node版本  "version": "v21.0.0",
+#npm版本   "npm": "10.2.0",  
+```
+
 
 
 ### 底部
