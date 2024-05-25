@@ -159,6 +159,63 @@ export default defineConfig(({ mode, command }) => {
 })
 ```
 
+### vite代理
+
+```js
+server: {
+  proxy: {
+    // 字符串简写方式
+    '/api': 'http://localhost:9000' 
+    // 选项写法
+    '/api: {
+      // 所要代理的目标地址
+      target: 'http://localhost:9000', 
+      // 重写要代理到远程服务器的path,
+      // 比如在本地项目, baseUrl是 `/api/xxx`, 被重写之后就变成 `/xxx`,
+      // 被重写之后的path也正是我们要代理到远程的接口路径
+      rewrite: path => path.replace(/^\/api/, ''), 
+      changeOrigin: true,
+    }
+  }
+}
+
+// demo, 代理api, 同时代理一个文件地址
+server: {
+  port: 8282,
+  host: true,
+  // open: true,
+  proxy: {
+    // https://cn.vitejs.dev/config/#server-proxy
+    '^/api': {
+      target: 'http://localhost:8182',
+      changeOrigin: true
+      // rewrite: (p) => p.replace(/^\/api/, '')
+    },
+    '/profilePath': {
+      target: 'http://localhost:8182',
+      changeOrigin: true,
+      // *** 把 profilePath 代理成为 api/profilePath *****
+      rewrite: p => p.replace(/^\/profilePath/, 'api/profilePath')
+    }
+  }
+},
+    
+// 文件代理说明
+// http://localhost:8282/api/profilePath/upload/2024/05/19/001_20240519165819A003.png
+// http://localhost:8282/profilePath/upload/2024/05/19/001_20240519165819A003.png
+
+// 后端地址:
+// http://localhost:8182/api/profilePath/upload/2024/05/19/001_20240519165819A003.png
+
+// 后端地址需要给 api, 但是这时候前端地址中没有api, 这时候需要代理 profilePath 这个路径
+// 把 http://localhost:8282/profilePath/upload/001.png
+// 代理成为 http://localhost:8282/api/profilePath/upload/001.png
+```
+
+
+
+
+
 ### 底部
 
 没有了

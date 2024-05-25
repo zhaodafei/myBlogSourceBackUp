@@ -66,7 +66,9 @@ el-transfer默认宽度是200px
 </style>
 ```
 
-### 日期限制
+### 日期
+
+#### 日期限制
 
 ```vue
 <template>
@@ -104,6 +106,48 @@ const disabledDate = (time) => {
 </script>
 
 ```
+
+#### 其他按钮打开日历弹窗
+
+```js
+// 核心代码:  proxy.$refs.refDatePicker.focus()
+```
+
+```vue
+<template>
+  <div class="app-container">
+    <el-button @click="openDate"> 点击我打开日历弹窗 </el-button>
+    <div>
+      <el-date-picker
+        ref="refDatePicker"
+        v-model="dateFei"
+        value-format="YYYY-MM-DD HH:mm:ss"
+        format="YYYY-MM-DD HH:mm:ss"
+        type="date"
+        placeholder="请选择日期"
+        @change="changeDate"
+      />
+    </div>
+  </div>
+</template>
+
+<script setup>
+  import { getCurrentInstance, ref } from 'vue'
+
+  const { proxy } = getCurrentInstance()
+  const refDatePicker = ref()
+  const dateFei = ref()
+
+  const openDate = () => {
+    proxy.$refs.refDatePicker.focus()
+  }
+  const changeDate = val => {
+    console.log('选择的值为', val)
+  }
+</script>
+```
+
+
 
 ### 表格合并
 
@@ -367,6 +411,66 @@ onMounted(()=>{
 | 2024-08-10 | 五年级一班 | 李四 | 数学 | 80   |
 | 2024-08-11 | 五年级三班 | 大飞 | 语文 | 60   |
 | 2024-08-11 | 五年级三班 | 大飞 | 数学 | 60   |
+
+
+
+### 表格排序
+
+```js
+const resetSort = () => {
+  proxy.$refs.tableList.sort('score_fei', 'ascending')
+}
+```
+
+```vue
+<template>
+  <div class="table">
+    <el-table :data="tableData" ref="tableList" @sort-change="sortChange" border >
+
+      <el-table-column label="年级" prop="grade"  />
+      <el-table-column
+          label="排序"
+          prop="score"
+          sortable="custom"
+          :sort-orders="['ascending', 'ascending', 'ascending']"
+      >
+        <template #default="{ row }">
+          <el-input v-model.number="row.score" />
+        </template>
+      </el-table-column>
+    </el-table>
+  </div>
+</template>
+<script setup>
+import {ref, getCurrentInstance} from "vue";
+const {proxy} = getCurrentInstance();
+const tableData = ref([
+  { grade: '五年级二班', name: '张三',  time: '2024-08-10',subjects: '语文', score: 80 },
+  { grade: '五年级二班', name: '张三',  time: '2024-08-10',subjects: '数学', score: 89 },
+  { grade: '五年级一班', name: '李四',  time: '2024-08-10',subjects: '语文', score: 70 },
+  { grade: '五年级三班', name: '大飞',  time: '2024-08-11',subjects: '语文', score: 54 },
+  { grade: '五年级三班', name: '大飞',  time: '2024-08-11',subjects: '数学', score: 60 },
+  { grade: '五年级一班', name: '李四',  time: '2024-08-10',subjects: '数学', score: 23 },
+])
+
+const tableList = ref()
+const sortChange = ({column,prop,order}) => {
+  if (prop ==='score'&& order ==='ascending') {
+    tableData.value.sort((a,b)=>{
+      return a.score - b.score;
+    });
+  }
+}
+
+</script>
+<style scoped lang="scss">
+::v-deep(.caret-wrapper) {
+  // 隐藏表头上排序按钮
+  //display: none;
+}
+</style>
+
+```
 
 
 

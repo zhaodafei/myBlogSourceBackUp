@@ -103,16 +103,46 @@ console.log(brr, brrNew);
 
 ![map](/img/JavaScript/map.png "map")
 
-### filter ,find ,some循环
+#### map,获取数组中一部分对象
+
+```js
+let arr = [
+  {name: "daFei", age: "18", hobby: "JavaScript"},
+  {name: "daFei", age: "18", hobby: "HTML"},
+  {name: "daFei", age: "18", hobby: "CSS"},
+];
+
+let arrNew = arr.map(item => {
+  return {
+    // 只要 id 和 hobby 属性
+    id: item.name,
+    hobby: item.hobby,
+  };
+});
+console.log(arr, arrNew);
+
+// 简写
+let arrNew2 = arr.map(item => ({
+  // 只要 id 和 hobby 属性
+  id: item.name,
+  hobby: item.hobby,
+}));
+console.log(arr, arrNew2);
+```
+
+
+
+### filter, find, some循环
 
 ```js
 let arr = [
   {id: 1, name: "daFei", age: "18", hobby: "JavaScript"},
+  {id: 1, name: "daFei", age: "18", hobby: "JS_我会不会找到???"},
   {id: 2, name: "daFei", age: "18", hobby: "HTML"},
   {id: 3, name: "daFei", age: "18", hobby: "CSS"},
 ];
 
-// 返回id===1这一行的数组; 【结果:Array】
+// 返回 id===1 所有行的数组; 【结果:Array】;  找不到返回 【结果:Array】是空数组
 let arrRows1 = arr.filter(item => {
   return item.id === 1
 })
@@ -121,7 +151,7 @@ console.log("aaa_111", arrRows1);
 console.log("aaa_222", arrRows2);
 
 // ==========================================================
-// 找打id===1,然后返回这一行对象; 【结果:Object】
+// 找到 id===1 第一次出现, 然后返回这一行对象; 【结果:Object】; 找不到返回 【结果:undefined】
 let objItem1 = arr.find(item => {
   return item.id === 1
 })
@@ -131,7 +161,7 @@ console.log("bbb_111", objItem1);
 console.log("bbb_222", objItem2);
 
 // ==========================================================
-// 找到id===1,然后返回true,否则返回false; 【结果:Boolean】
+// 找到 id===1, 然后返回true,否则返回false; 【结果:Boolean】
 let barS1 = arr.some(item => {
   return item.id === 1
 })
@@ -202,6 +232,19 @@ if (resIndex !== -1) {
   arr.splice(resIndex, 1); // 从第 resIndex 个开始删除, 只删除一个
   console.log(arr); // 结果数组中只剩下 3个值了
 }
+```
+
+### 遍历obj格式数组
+
+```js
+const obj = {
+  a: ['a001', 'a002'],
+  b: ['b001', 'b002'],
+  c: ['c001', 'c002']
+};
+Object.keys(obj).forEach(key => {
+  console.log(key, obj[key]);
+});
 ```
 
 

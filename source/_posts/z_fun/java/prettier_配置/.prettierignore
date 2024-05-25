@@ -1,0 +1,9 @@
+.vscode/
+bin/
+dist/
+dist-staging/
+node_modules/
+/public/*
+**/*.svg
+**/*.sh
+*.html
