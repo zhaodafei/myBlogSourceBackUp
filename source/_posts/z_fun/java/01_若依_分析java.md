@@ -17,6 +17,16 @@ tags:
 
 ## 后端代码
 
+### 入口文件
+
+```java
+// 项目启动入口文件 ruoyi-admin/src/main/java/com/ruoyi/RuoYiApplication.java
+@SpringBootApplication(exclude = { DataSourceAutoConfiguration.class })
+public static void main(String[] args){}
+```
+
+
+
 ### 退出接口
 
 ```wiki
@@ -177,6 +187,21 @@ http://localhost:8281/dev-api/profile/upload/2024/05/19/001_20240519094130A002.p
     }
 ```
 
+#### 图片名字中文访问
+
+```java
+// 解决中文名字访问不到; 注意springboot版本不同可能有差异
+@Override
+public void configurePathMatch(PathMatchConfigurer configurer) {
+    UrlPathHelper urlPathHelper=new UrlPathHelper();
+    urlPathHelper.setUrlDecode(false);
+    urlPathHelper.setDefaultEncoding(StandardCharsets.UTF_8.name());
+    configurer.setUrlPathHelper(urlPathHelper);
+}
+```
+
+
+
 ### 代码模板生产
 
 ```wiki
@@ -224,20 +249,208 @@ public String username(@PathVariable(value="name") String username) {
 > 
 > 
 > <update id="removeEscortByEscortIds" parameterType="String">
->   update bus_escort set del_flag = 2 where escort_id in
->   <foreach item="escortId" collection="array" open="(" separator="," close=")">
->     #{escortId}
->   </foreach>
+>       update bus_escort set del_flag = 2 where escort_id in
+>       <foreach item="escortId" collection="array" open="(" separator="," close=")">
+>         #{escortId}
+>       </foreach>
 > </update>
 > ```
 >
 > 
 
+### 关联查询[ 用户管理/修改 ]
+
+```shell
+#接口: api/system/user/4
+#文件: SysUserController.java
+#方法: getInfo
+#核心代码: ajax.put("roleIds", sysUser.getRoles().stream().map(SysRole::getRoleId).collect(Collectors.toList()));
+
+这个行代码对应的查询在 mapper/system/SysUserMapper.xml 中,然后找到 id="SysUserResult" 这里面有2个核心代码:
+
+<association property="dept"    javaType="SysDept"         resultMap="deptResult" />
+<collection  property="roles"   javaType="java.util.List"  resultMap="RoleResult" />
+
+这2行分别对应的 id="deptResult" 和 id="RoleResult" 
+
+#对应属性: domain/entity/SysUser.java, 这里会把对应属性回显出来
+private List<SysRole> roles; /** 角色对象 */
+public List<SysRole> getRoles(){ return roles; }
+public void setRoles(List<SysRole> roles){ this.roles = roles; }
+
+#扩展
+指定一方关系(1对1)使用 <association />
+指定多方关系(1对多,多对对)使用 <collection />
+```
+
+### 给用户分配角色[  遍历 ]
+
+```shell
+#接口 api/system/user/authRole?userId=4&roleIds=2,3
+#文件 SysUserController.java
+#方法 insertAuthRole   找这里put请求方法
+#文件: SysUserServiceImpl.java 中有个遍历对参数roleIds
+#对应的mapper文件: mapper/system/SysUserRoleMapper.xml 中 id="batchUserRole"
+
+```
+
+```java
+/**
+ * 新增用户角色信息
+ * 
+ * @param userId 用户ID
+ * @param roleIds 角色组
+ */
+public void insertUserRole(Long userId, Long[] roleIds)
+{
+    if (StringUtils.isNotEmpty(roleIds))
+    {
+        // 新增用户与角色管理
+        List<SysUserRole> list = new ArrayList<SysUserRole>(roleIds.length);
+        for (Long roleId : roleIds)
+        {
+            SysUserRole ur = new SysUserRole();
+            ur.setUserId(userId);
+            ur.setRoleId(roleId);
+            list.add(ur);
+        }
+        userRoleMapper.batchUserRole(list);
+    }
+}
+```
+
+```xml
+<insert id="batchUserRole">
+    insert into sys_user_role(user_id, role_id) values
+    <foreach item="item" index="index" collection="list" separator=",">
+        (#{item.userId},#{item.roleId})
+    </foreach>
+</insert>
+```
+
+
+
+## xml查询
+
+```wiki
+#gt,gte,lt,lte缩写的含义
+## 这几个单词在范围查询的时候会用到
+gt:  greater than 大于
+gte: greater than or equal 大于等于
+lt:  less than 小于
+lte: less than or equal 小于等于
+```
+
+#### 简单查询
+
+```xml
+<!-- 一定要加个where 1=1 这样可以防止报错 -->
+<select id="selectTest1" parameterType="BusEscort" resultMap="EscortResultMap">
+    select t1.ac from table1 t1
+    where 1=1
+    <if test="username != null and username != ''">#{username} </if>
+</select> 
+
+<!-- 关联表查询 -->
+<select id="selectTest" parameterType="BusEscort" resultMap="EscortResultMap">
+    select t1.a ,t2.b ,t1.c from table1 t1,table t2
+    where t1.a=t2.a
+    <if test="username != null and username != ''">#{username}</if>
+</select>
+
+
+```
+
+#### 范围查询
+
+```xml
+<!-- 范围查询, 注意这里大于小于符号 -->
+<where>
+    <if test="username != null and username != ''">
+        AND username like concat('%', #{username}, '%')
+    </if>
+    <if test="beginTime != null and beginTime != ''">
+        and  create_time &gt;= #{beginTime}
+    </if>
+    <if test="endTime != null and endTime != ''">
+        and  create_time &lt;= #{endTime}
+    </if>
+    AND del_flag = 0
+</where>
+```
+
+### 查询字段
+
+```xml
+  <sql id="columnList01">
+    id, name, age
+  </sql>
+  <sql id="columnList02">
+    nickname
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="Long" resultMap="EscortResultMap">
+    select 
+    <include refid="columnList01" />
+    ,
+    <include refid="columnList02" />
+    from table_fei
+    where id = #{id}
+  </select>
+```
+
+
+
+xxxx
+
+# 官方手册摘要
+
+## 文件结构
+
+### 后端结构
+
+```shell
+com.ruoyi     
+├── common            // 工具类
+│       └── annotation                    // 自定义注解
+│       └── config                        // 全局配置
+│       └── constant                      // 通用常量
+│       └── core                          // 核心控制
+│       └── enums                         // 通用枚举
+│       └── exception                     // 通用异常
+│       └── filter                        // 过滤器处理
+│       └── utils                         // 通用类处理
+├── framework         // 框架核心
+│       └── aspectj                       // 注解实现
+│       └── config                        // 系统配置
+│       └── datasource                    // 数据权限
+│       └── interceptor                   // 拦截器
+│       └── manager                       // 异步处理
+│       └── security                      // 权限控制
+│       └── web                           // 前端控制
+├── ruoyi-system      // 系统代码
+├── ruoyi-admin       // 后台服务
+
+
+├── ruoyi-generator   // 代码生成（可移除）
+├── ruoyi-quartz      // 定时任务（可移除）
+├── ruoyi-xxxxxx      // 其他模块
+```
+
+
+
+# 遗留问题
+
+```xml
+01) 关联查询中xml怎么写数据
+02）插入自定义id
+03)
+```
+
 
 
 ### 底部
 
-没有了
+[前后端分离手册](https://doc.ruoyi.vip/ruoyi-vue/)
 
 
 

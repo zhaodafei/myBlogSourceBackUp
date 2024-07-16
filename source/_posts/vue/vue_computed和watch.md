@@ -52,6 +52,7 @@ tags:
         data() {
             return {
                 price: 5,
+                price2: 5,
                 vipPrice: 0,
             }
         },
@@ -82,6 +83,13 @@ tags:
                 setTimeout(()=>{
                     this.vipPrice = current * 0.5;
                 },2000)
+            },
+            price2: {
+              handler(newValue, oldValue) {
+          		//.........
+              },
+              deep: true, // 深度监听
+              immediate: true // 第一次要执行
             }
         }
     });

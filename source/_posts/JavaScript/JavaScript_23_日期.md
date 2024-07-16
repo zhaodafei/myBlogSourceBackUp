@@ -23,6 +23,26 @@ js常用日期函数, js常用日期函数
   console.log(isNaN(date.valueOf()));
 ```
 
+### 时间计时器
+
+```js
+// 借助一下 dayjs 时间库
+let form = {feiTime: undefined}
+let timer = null
+const setTime = () => {
+  timer = setTimeout(() => {
+    form.reportTime = dayjs().format('YYYY-MM-DD HH:mm:ss')
+    setTime()
+  }, 1000)
+}
+const clearTimeoutFn = () => {
+  if (timer) {
+    clearTimeout(timer)
+    timer = null
+  }
+}
+```
+
 
 
 

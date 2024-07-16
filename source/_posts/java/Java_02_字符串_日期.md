@@ -255,7 +255,7 @@ Date d = new Date();
 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
 // SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 String dateFormatString = sdf.format(d);
-System.out.println(dateFormatString);
+System.out.println(dateFormatString); // 输出: 2024-01-14 09:47:29
 
 // String -> Date
 String dateString = "2024-01-14 06:52:09";

@@ -510,6 +510,21 @@ Arrays.binarySearch(is,3);
 Arrays.equals(is, is1);
 ```
 
+### stream 处理集合
+
+```java
+List<Integer> list = Arrays.asList(111, 222, 3333, 4444);
+List<Integer> filterList = list.stream().filter(d -> d > 222).collect(Collectors.toList());
+System.out.println(list);
+System.out.println(filterList); // 找出大于222的所有值
+```
+
+```java
+List<Integer> num = Arrays.asList(1, 2, 3, 4, 5);
+List<Integer> collect1 = num.stream().map(n -> n * 2).collect(Collectors.toList());
+System.out.println(collect1); // 输出: [2, 4, 6, 8, 10]  对每个值都乘以2
+```
+
 
 
 ### 底部

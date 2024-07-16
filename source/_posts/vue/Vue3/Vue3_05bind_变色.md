@@ -70,6 +70,20 @@ let color-fei = ref("#90ee90");
 
 
 
+### 遇到css函数calc
+
+```css
+/* 核心代码 */
+let size-fei = ref("158px");
+
+.text {
+  /** height: v-bind(height); */
+  height: calc(100vh - v-bind(size-fei));
+}
+```
+
+
+
 ### 其他
 
 [ CSS 中的 v-bind() ](https://cn.vuejs.org/api/sfc-css-features.html#v-bind-in-css)

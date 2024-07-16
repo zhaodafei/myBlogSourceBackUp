@@ -76,6 +76,65 @@ const onSelect = () => {
 }
 ```
 
+### 复制文本内容
+
+```js
+  // 复制文本
+  const copyText = text => {
+    try {
+      var copyDom = document.createElement('div')
+      copyDom.innerText = text
+      copyDom.style.position = 'absolute'
+      copyDom.style.top = '0px'
+      copyDom.style.right = '-9999px'
+      document.body.appendChild(copyDom)
+      //创建选中范围
+      var range = document.createRange()
+      range.selectNode(copyDom)
+      //移除剪切板中内容
+      window.getSelection().removeAllRanges()
+      //添加新的内容到剪切板
+      window.getSelection().addRange(range)
+      //复制
+      var successful = document.execCommand('copy')
+      copyDom.parentNode.removeChild(copyDom)
+      alert('复制成功')
+    } catch (err) {
+      alert('复制失败')
+    }
+  }
+```
+
+```html
+<h1 id="content">被复制的内容</h1>
+<button id="button">点击复制</button>
+
+<script>
+  (function(){
+    button.addEventListener('click', function(){
+      var copyDom = document.querySelector('#content');
+      //创建选中范围
+      var range = document.createRange();
+      range.selectNode(copyDom);
+      //移除剪切板中内容
+      window.getSelection().removeAllRanges();
+      //添加新的内容到剪切板
+      window.getSelection().addRange(range);
+      //复制
+      var successful = document.execCommand('copy');
+
+      try{
+        var msg = successful ? "successful" : "failed";
+        alert('Copy command was : ' + msg);
+      } catch(err){
+        alert('Oops , unable to copy!');
+      }
+    })
+  })()
+</script>
+
+```
+
 
 
 ### 地址参数

@@ -138,7 +138,36 @@ server {
 }
 ```
 
+### 重写文件地址
 
+```wiki
+#场景描述
+文件上传后再某个具体的访问地址下面，需要给代理访问到
+```
+
+
+
+```nginx
+location /profile/ {
+    # 方式一：指向地址
+    proxy_pass http://127.0.0.1:8072/profile/; 
+}
+```
+
+```nginx
+location /profile/
+{
+    # 方式二：指向目录，对应后台`application.yml`中的`profile`配置
+    #       这种方法是指向Linux服务器上的一个地址
+    alias /home/ruoyi/uploadPath/;
+}
+```
+
+
+
+### 底部
+
+没有了
 
 
 

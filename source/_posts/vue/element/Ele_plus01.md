@@ -476,8 +476,45 @@ const sortChange = ({column,prop,order}) => {
 
 ### 表单校验
 
-```html
+#### rules
 
+```js
+const rules = {
+	feiArr: [{ required: true, message: '数组不能为空', trigger: 'blur', type: 'array' }],
+    
+    email: [
+      { required: true, message: '邮箱地址不能为空', trigger: 'blur' },
+      { type: 'email', message: '请输入正确的邮箱地址', trigger: ['blur', 'change'] }
+    ],
+    
+    shortName: [
+      {
+        required: true, // 直接改为 false 是不可以的
+        trigger: 'blur',
+        validator: (_, value, callback) => {
+          if (!value) {
+            callback(new Error('请输入名字简称'))
+          } else {
+            if (value.includes(' ')) {
+              callback(new Error('简称不能输入空格'))
+            } else {
+              callback()
+            }
+          }
+        }
+      },
+      { max: 255, trigger: 'blur', message: '内容长度最多255个字符' }
+    ],
+}
+```
+
+#### 验证具体某个字段
+
+```js
+// <el-form ref="formRefValid_1"  />
+
+const formRefValid = ref()
+formRefValid.value.validateField('name_字段名') // 使用回调
 ```
 
 

@@ -101,6 +101,16 @@ ORDER BY `total_score` DESC #排序(求和后排序)
 SELECT id, name FROM dbfei ORDER BY CAST(id AS UNSIGNED);
 ```
 
+### 关联查询
+
+```mysql
+SELECT
+	* 
+FROM
+	user AS a
+	LEFT JOIN user_detail AS b ON a.id = b.user_id
+```
+
 
 
 ## 其他
