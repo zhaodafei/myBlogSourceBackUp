@@ -155,8 +155,7 @@ location /profile/ {
 ```
 
 ```nginx
-location /profile/
-{
+location /profile/ {
     # 方式二：指向目录，对应后台`application.yml`中的`profile`配置
     #       这种方法是指向Linux服务器上的一个地址
     alias /home/ruoyi/uploadPath/;

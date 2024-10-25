@@ -25,6 +25,16 @@ tags:
 public static void main(String[] args){}
 ```
 
+### 基本配置文件
+
+```java
+// MySQL配置  ruoyi-admin/src/main/resources/application-druid.yml
+// Reids 和 登录token配置 ruoyi-admin/src/main/resources/application.yml
+
+// ruoyi-admin/src/main/resources/banner.txt 中获取变量名称
+
+```
+
 
 
 ### 退出接口

@@ -247,6 +247,26 @@ Object.keys(obj).forEach(key => {
 });
 ```
 
+### `Object.keys`删除对象中值
+
+```js
+const params = {
+  id: 1,
+  name:"fei",
+  age:"18",
+  xxx1:'',
+  xxx2:undefined
+};
+
+// 删除多余值
+Object.keys(params).forEach(item => {
+    const key = params[item]
+    if (key === '' || key === null || key === undefined) {
+        delete params[item]
+    }
+})
+```
+
 
 
 

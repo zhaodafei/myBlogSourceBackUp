@@ -38,6 +38,9 @@ git push -u origin master      关联后，使用命令git push -u origin master
 
 git clone   克隆一个仓库
 git clone -b name(分支名称)   克隆一个分支仓库
+#demo
+git clone 地址  自定义名字 -b name(分支名称)   克隆一个分支仓库
+git clone https://gihub.com/dafei4/vue.git zzz_dafei -b springBoot
 
 ////////分支修改后，分支提交了，切换到master后才会看不到内容，分支不提交，master可以看到修改内容///////
 git branch   查看分支

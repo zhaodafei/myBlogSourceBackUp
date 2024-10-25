@@ -65,14 +65,20 @@ console.log(pxConversionMm(96));
 ### 打印图片
 
 ```html
+!!! === 注意这里图片地址不能使用https,只能是http, 或者用base64
 #直接使用图片URL,可以打印内网图片
 #这种打印出来的图也无白边
-LODOP.ADD_PRINT_IMAGE(10,10,300,160,"https://github.githubassets.com/images/icons/emoji/octocat.png");
+LODOP.ADD_PRINT_IMAGE(10,10,300,160,"http://www.c-lodop.com/demolist/PrintSample8.jpg");
 
 #使用img标签
-LODOP.ADD_PRINT_IMAGE(10,10,300,160,"<img src=’https://github.githubassets.com/images/icons/emoji/octocat.png’/>");
+LODOP.ADD_PRINT_IMAGE(10,10,300,160,"<img src=’http://www.c-lodop.com/demolist/PrintSample8.jpg’/>");
 
+#https的图片地址处理(具体没试过)
+http://www.c-lodop.com/faq/pp32.html
+http://www.c-lodop.com/faq/pp32.html
 ```
+
+[官网:打印图片](http://www.c-lodop.com/demolist/PrintSample8.html)
 
 ### 基本常见
 
@@ -120,6 +126,14 @@ LODOP.SET_PRINT_STYLEA(0, "Stretch", 2); // Stretch 的值:2--按原图长和宽
 LODOP.ADD_PRINT_IMAGE('60mm', '30mm', 50, 50, "imgUrl图片地址");
 LODOP.SET_PRINT_STYLEA(0, "Stretch", 2);
 LODOP.SET_PRINT_STYLEA(0, "Angle", 10);//图片旋转:逆时针旋转角度数,单位是度,0度表示不旋转,旋转时以对象的左上角为原点
+
+// 图片打印不了https解决方法
+//  把路径用img标签包裹起来
+let w1 = mmConversionPx(88);
+let h1 = mmConversionPx(120);
+let srcImg = 'https://pic.cnblogs.com/avatar/1551357/20200522184107.png'
+    
+LODOP.ADD_PRINT_IMAGE('0mm', '0mm', '88mm', '120mm', `<img border='0' src=${src} width=${w1} height=${h1} />`);
 
 ```
 

@@ -117,3 +117,43 @@ box-shadow: 0px 0px 15px black;
 
 ```
 
+### 超过行数显示省略号
+
+```html
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+  <!-- 过期时间 -->
+  <meta http-equiv="Expires" content="0">
+  <!-- 禁止浏览器从本地机的缓存中调阅页面内容,设定后一旦离开网页就无法从Cache中再调出 -->
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cache-control" content="no-cache">
+  <meta http-equiv="Cache" content="no-cache">
+  <title>超过行数显示省略号</title>
+</head>
+<style>
+  .header,.footer {
+    height: 100px;
+    background: #ff6b81;
+  }
+  .container {
+    background: #c0c0c0;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; /* 显示行数, 超过后显示省略号 */
+  }
+</style>
+<div class="fei">
+  <div class="header"> 头部信息 </div>
+  <div class="container">
+    超文本标记语言（英语：HyperText Markup Language，简称：HTML） 是一种用于创建网页的标准标记语言。
+    HTML是一种基础技术， 常与CSS、JavaScript一起被众多网站用于设计网页、网页应用程序以及移动应用程序的用户界面。
+    网页浏览器可以读取HTML文件，并将其渲染成可视化网页。
+    HTML描述了一个网站的结构语义随着线索的呈现，使之成为一种标记语言而非编程语言。
+  </div>
+  <div class="footer"> 底部信息 </div>
+</div>
+
+```
+

@@ -78,8 +78,10 @@ tip: 在这里其实没有 j 这个参数有可以查看
 #### 打包后用当前时间命名
 
 ```shell
+#年月日: date +"+%Y-%m-%d %H:%M:%S" 该命令会以 "年-月-日 时:分:秒" 的格式显示当前日期和时间
 tar -cvf fei_$(date '+%Y-%m-%d').tar codeFileName
 tar -cvf fei_$(date '+%m%d')_01.tar  codeFileName
+tar -cvf fei_$(date '+%m%d_%H%M')_01.tar  codeFileName
 ```
 
 ![tar cvf date](/img/ubuntu/linux_command/linux_tar/tar_cvf_date.png "tar cvf date")

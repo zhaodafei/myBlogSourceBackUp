@@ -614,7 +614,7 @@ calendarApi.changeView('timeGridDay'); // 切换视图
 ```js
 let calendarOptions = {
     nowIndicator: true, // 是否显示当前时间轴
-    allDaySlot: false,  // 是否显示全天
+    allDaySlot: false,  // 是否显示全天: (注: 针对start和end, 不是全天有时间段的处理)
     slotEventOverlap: true, // 事件是否可重叠
     editable: false,  // 能否编辑事件。如果需要拖拽事件，必须开启它
     droppable: true,   // 是否把其它日历上的事件拖拽到这个日历上
