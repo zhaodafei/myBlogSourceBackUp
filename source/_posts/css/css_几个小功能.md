@@ -157,3 +157,69 @@ box-shadow: 0px 0px 15px black;
 
 ```
 
+#### 标签中超过行数
+
+```html
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+  <title>超过行数显示省略号</title>
+</head>
+<style>
+  .fei{
+    display: grid;
+    gap: 10px; /* 可以根据需要调整间距 */
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .tag-item{
+    height: 60px;
+    background-color: #969799;
+    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    padding: 4px 8px;
+    font-size: 14px;
+    border-radius: 4px;
+  }
+
+  .name{
+    color: red;
+    white-space: normal;
+    word-wrap: break-word;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+</style>
+
+<div>
+  <div class="fei">
+    <span class="tag-item">
+      <span class="name">
+        1-71HTML的全称为超文本标记语言，是一种标记语言。它包括一
+        使分散的Internet资源连接为一个逻辑整体。
+        HTML文本是由HTML命令组成的描述性文本，HTML命令可以说明文字，
+        图形、动画、声音、表格、链接等。 [1]
+        超文本是一种组织信息的方式，它通过超级链接方法将文本中的文字、图表与其他信
+        也可能是其他文件，或是地理位置相距遥远的某台计算机上的文件。这种组织信息方
+        为人们查找，检索信息提供方便。超长了超长了超长了超长了超长了超长了超长了
+        超长了超长了超长了超长了超长了超长了超长了超长了超长了超长了超长了超长了超长了超长了
+        超长了超长了超长了超长了超长了超长了超长了超长了超长了超长了超长了超长了超长了超长了
+      </span>
+    </span>
+    <span class="tag-item">
+      <span class="name">afdfdfdsafsfasfafdfdfdsafsfasfafdfdfdsafsfasfafdfdfdsafsfasf超长了超长了</span>
+    </span>
+    <span class="tag-item">
+      <span class="name">不超过</span>
+    </span>
+  </div>
+</div>
+```
+

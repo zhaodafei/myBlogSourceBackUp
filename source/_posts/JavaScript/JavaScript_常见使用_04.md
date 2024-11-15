@@ -79,7 +79,7 @@ const onSelect = () => {
 ### 复制文本内容
 
 ```js
-  // 复制文本
+  // 复制文本(在有些情况下可能会失效)
   const copyText = text => {
     try {
       var copyDom = document.createElement('div')
@@ -133,6 +133,35 @@ const onSelect = () => {
   })()
 </script>
 
+```
+
+### 复制文本内容2
+
+```js
+//创建输入框元素
+let input = document.createElement('input')
+//给输入框赋 需要复制的 值
+input.value = "123456789"
+//页面底部追加输入框
+document.body.appendChild(input)
+//选中输入框
+input.select()
+//制定浏览器复制命令
+document.execCommand('Copy')
+//复制后移除输入框
+input.remove()
+
+
+//=========== 另一种写法同一种思路
+//创建输入框元素
+const input = document.createElement('input')
+input.setAttribute('readonly', 'readonly')
+input.setAttribute('value', '123456789') //给输入框赋 需要复制的 值
+document.body.appendChild(input)
+input.setSelectionRange(0, 9999)
+input.select()
+document.execCommand('copy')
+document.body.removeChild(input)
 ```
 
 
