@@ -97,6 +97,17 @@ sudo systemctl restart sshd.service
 
 证书登录、无密码登录这里不在写，有需要的自己网上找资料；这个也是修改 sshd_config 文件
 
+### 常见使用
+
+```shell
+#远程登录
+ssh root@192.168.10.88
+ssh root@192.168.10.89
+ssh root@192.168.10.90
+```
+
+
+
 扩展：
  [Ubuntu ssh](https://help.ubuntu.com/lts/serverguide/openssh-server.html"Ubuntu ssh")
 

@@ -48,11 +48,64 @@ module.exports = {
 
 ![webstrom vue 波浪线](/img/vue/idea/web_02.png "webstrom vue 波浪线")
 
+### vite 中波浪线2
 
+```wiki
+#主要文件 jsconfig.json 和 vite.config.mjs
+```
 
+> 01)在项目根目录`jsconfig.json`文件如下
+>
+> ```json
+> {
+>   "compilerOptions": {
+>     "baseUrl": "./",
+>     "paths": {
+>       "@/*": [
+>         "src/*"
+>       ]
+>     }
+>   },
+>   "exclude": [
+>     "node_modules",
+>     "dist"
+>   ]
+> }
+> ```
+>
+> 
 
+> 02)在项目根目录`vite.config.mjs`中添加
+>
+> ```js
+> import { resolve } from 'path'
+> 
+> 
+> resolve: {
+>   alias: {
+>     '~': resolve(__dirname, './'),
+>     '@': resolve(__dirname, './src'),
+>     components: resolve(__dirname, './src/components'),
+>     styles: resolve(__dirname, './src/styles'),
+>     utils: resolve(__dirname, './src/utils'),
+>   },
+> },
+> server: { // 给resolve中的alias一个参考
+>   port: 8001,
+>   proxy: {
+>     '/api': {
+>       changeOrigin: true,
+>       secure: false,
+>       target: env.VITE_APP_SERVER,
+>       rewrite: path => path.replace(/^\/api/, '')
+>     }
+>   },
+> },
+> ```
+>
+> 
 
-
+![webstrom vue3 波浪线](/img/vue/idea/web_06.jpg "webstrom vue3 波浪线")
 
 
 

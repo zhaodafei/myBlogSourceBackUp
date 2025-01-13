@@ -191,9 +191,7 @@ onShareTimeline((res)=>{
    > 1.  [如何获取公众号链接地址](https://developers.weixin.qq.com/community/develop/doc/0006ec96f08e288e9ecbb960256000)
    > 2.  [通过链接打开公众号的方法](https://mp.weixin.qq.com/s/OzGuPYyMLqqq4eXLSBSfAA)
 
-
-
-## hello-uniapp 示例工程
+### hello-uniapp 示例工程
 
 ```wiki
 https://ext.dcloud.net.cn/plugin?id=4941
@@ -204,7 +202,17 @@ https://m3w.cn/uniapp
 在这个项目中用微信扫码, 打开微信小程序,可以体验uniapp的功能效果
 ```
 
+### webstorm支持uni语法提示
 
+```wiki
+01)安装插件  Uniapp Support
+   插件地址: https://plugins.jetbrains.com/plugin/19675-uniapp-support
+   
+02) settings/Languages & Frameworks /JavaScript /Libraries/  
+    把这个里面的配置 uni-api 勾选上就可以了
+```
+
+![uni语法提示](/img/vue/idea/web_04_uniapp.jpg "uni语法提示")
 
 
 ### 底部
