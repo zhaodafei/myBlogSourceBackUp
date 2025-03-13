@@ -1,3 +1,12 @@
+---
+title: FullCalendar 官方文档翻译
+date: 2024-05-25
+categories: 
+- FullCalendar
+tags:
+- FullCalendar
+---
+
 FullCalendar 官方文档翻译
 1. 使用方式, 引入相关js, css后, $(‘#div_name’).fullCalendar({//options});  接受的是一个option对象
 

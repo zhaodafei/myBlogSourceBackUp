@@ -1,3 +1,12 @@
+---
+title: FullCalendar 官方文档翻译
+date: 2024-05-25
+categories: 
+- FullCalendar
+tags:
+- FullCalendar
+---
+
 #                 [     FullCalendar 日历插件中文说明文档       ](https://www.cnblogs.com/ymnets/p/7052818.html)             
 
 FullCalendar提供了丰富的属性设置和方法调用，开发者可以根据FullCalendar提供的API快速完成一个日历日程的开发，本文将FullCalendar的常用属性和方法、回调函数等整理成中文文档，以供参阅
