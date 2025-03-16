@@ -67,6 +67,16 @@ npm config ls
 
 ![mpm config5](/img/ubuntu/node/npm_config/npm_05.png "mpm config5")
 
+### 其他
+
+```shell
+#临时使用指定 源 安装依赖( 以单独 jquery 为例)
+npm install jquery --registry https://registry.npmjs.org 
+
+#临时使用指定 源 安装依赖( 所有依赖 )
+npm install --registry https://registry.npmjs.org 
+```
+
 
 
 

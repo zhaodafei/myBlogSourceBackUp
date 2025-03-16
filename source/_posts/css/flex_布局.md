@@ -147,9 +147,14 @@ align-self
 
 ### flex的三个属性
 
-```
+```css
 flex:0 1 auto;
 flex: flex-grow flex-shrink flex-basic
+
+
+flex: 0 1 auto; //默认值: 不放大,可收缩, 初始宽度
+flex: 1 1 auto; //项目自动放大或收缩适应容器
+flex: 0 0 100px; //按计算大小填充到容器中
 ```
 
 [`flex`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex) 属性是 [`flex-grow`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-grow)、[`flex-shrink`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-shrink) 和 [`flex-basis`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-basis) 属性的简写，描述弹性项目的整体的伸缩性zi
