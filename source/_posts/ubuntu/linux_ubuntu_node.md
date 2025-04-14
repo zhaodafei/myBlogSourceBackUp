@@ -70,6 +70,8 @@ npm config get registry  #获取配置使用的地址
 #npm config set registry https://registry.npm.taobao.org  #设为淘宝地址(过期了)
 npm config set registry https://registry.npmmirror.com #设为淘宝地址(新源:2024年1月25日)
 npm config set registry https://registry.npmjs.org   #设置为官方地址
+npm install jquery  #安装依赖
+npm uninstall jquery #移除依赖
 
 windows中显示配置文件位置: C:\Users\Administrator\.npmrc 
 ubuntu图中在用户: /home/fei/.npmrc

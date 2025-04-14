@@ -164,6 +164,38 @@ document.execCommand('copy')
 document.body.removeChild(input)
 ```
 
+### 下载文件
+
+```html
+<div>
+    <img id="img" src="./logo.png" alt="">
+    <div><a href="./logo.png" download="fei_01.png">download_01</a></div>
+    <div><button onclick="foo()">download_02</button></div>
+</div>
+
+<script>
+    function foo() {
+        const a = document.createElement('a')
+        a.download = 'fei_02.png'; // 下载名字
+        a.href = './logo.png' // 图片地址(tip:不要带https http)
+        a.click();
+        a.remove()
+    }
+</script>
+```
+
+```js
+  
+const downloadTemplate = () => {
+    const link = document.createElement('a')
+    link.href = '/files/文件名称.xlsx'
+    link.download = '文件名称.xlsx'
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+}
+```
+
 
 
 ### 地址参数
@@ -235,6 +267,41 @@ let params = {id: 111, name: '大飞', age: 18}
 let urlParams = convertToUrl(params)
 
 console.log(urlParams); // 输出; id=111&name=大飞&age=18
+```
+
+#### 替换字符中所有花括号
+
+```js
+  /**
+   * 替换地址URL中特殊参数{{}}
+   * @param template demo1: www.demo.com/#/myOrder/{{bar}}/{{openId}}
+   * @param template demo2: www.demo.com?token={{token}}&openId={{openId}}
+   * @param data  demo: {"foo": "123", "bar": "789"}
+   * @returns  返回替换后的字符串
+   */
+  const parseUrl = (template, data) => {
+    return template.replace(/\{\{(\w+)\}\}/g, (_, key) => {
+      return data[key] !== undefined ? data[key] : `{{${key}}}` // 替换占位符为对象值，未匹配则保留原样
+    })
+  }
+
+  const urlTemp = 'www.demo.com/#/myOrder/{{bar}}/{{openId}}'
+  const param = {
+    bar:'val_111',
+    openId:'val_222',
+  }
+  // 输出: http://www.demo.com/#/myOrder/val_111/val_222
+  const newUrl = parseUrl(urlTemp,param)
+  console.log(newUrl);
+
+  const urlTemp2 = 'www.demo.com?token={{token}}&openId={{openId}}'
+  const param2 = {
+    token:'val_111',
+    openId:'val_222',
+  }
+  // 输出: http://www.demo.com?token=val_111&openId=val_222
+  const newUrl2 = parseUrl(urlTemp2,param2)
+  console.log(newUrl2);
 ```
 
 

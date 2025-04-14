@@ -80,6 +80,33 @@ tags:
 "13685468080".replace(/^(\d{3})\d{4}(\d{4})$/,"$1****$2") 
 ```
 
+### 数据变`*`
+
+```js
+// 数据脱敏  
+export const desensitizationFun = t => {
+    let str = String(t)
+
+    if (/^\d{17}([0-9]|X|x)$/.test(str)) {
+      // 身份证号脱敏
+      return str.replace(/(\d{6})\d{8}(\d{3}[0-9xX])/, '$1********$2')
+    } else if (/^1[0-9]{10}$/.test(str)) {
+      // 手机号脱敏
+      return str.replace(/^(1[0-9][0-9])\d{4}(\d{4}$)/, '$1****$2')
+    } else if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(str)) {
+      // 邮箱脱敏
+      return str.replace(/^(.)(.*)(.@.*)$/, function (match, firstChar, middleChars, domain) {
+        const sanitizedMiddleChars = '*'.repeat(middleChars.length)
+        return firstChar + sanitizedMiddleChars + domain
+      })
+    } else {
+      return t
+    }
+  }
+```
+
+
+
 ### 去除空格
 
 ```javascript
@@ -263,13 +290,12 @@ console.log(str);//<span class="a1 10 替换 small" data-tip="a2 10 替换 small
 
 
 
-[常用正则表达式](https://c.runoob.com/front-end/854/)
+### 底部
 
-[正则_菜鸟教程](https://www.runoob.com/regexp/regexp-metachar.html)
-
-[MDN_正则表达式](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)
-
-[MDN_RegExp(正则表达式)](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
+1. [常用正则表达式](https://c.runoob.com/front-end/854/)
+2. [正则_菜鸟教程](https://www.runoob.com/regexp/regexp-metachar.html)
+3. [MDN_正则表达式](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)
+4. [MDN_RegExp(正则表达式)](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
 
 
 

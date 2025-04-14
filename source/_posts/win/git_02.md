@@ -25,11 +25,29 @@ git-bash  中添加 wget命令
 
 ```
 
+### 仓库迁移
+
+目标: 最完整的迁移方法，会保留所有分支、标签和提交历史
+
+```bash
+#注意, 在新仓库中不要设置受保护分支,否则会推送新仓库失败!!!
+
+# 克隆原始仓库（镜像方式）
+git clone --mirror 原始仓库URL
+
+# 进入克隆的目录
+cd 原始仓库.git
+
+# 推送到新仓库
+git push --mirror 新仓库URL
+```
 
 
- [在哪里可以下载Wget ](https://www.gnu.org/software/wget/faq.html "这里是title")
 
- [windwos 二进制文件由JernejSimončič提供](https://eternallybored.org/misc/wget/ "windwos 二进制文件由JernejSimončič提供")
+### 底部
+
+1.  [在哪里可以下载Wget ](https://www.gnu.org/software/wget/faq.html "这里是title")
+2.  [windwos 二进制文件由JernejSimončič提供](https://eternallybored.org/misc/wget/ "windwos 二进制文件由JernejSimončič提供")
 
 
 

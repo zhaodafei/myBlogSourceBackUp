@@ -87,6 +87,22 @@ let endDay = dayjs().endOf('month').format('YYYY-MM-DD 23:59:59')
 
 console.log(startDay)
 console.log(endDay)
+
+// 具体月份的第一天和最后一天
+const startDay1 = dayjs('2022-06').startOf('month').format('YYYY-MM-DD 00:00:00')
+const endDay1 = dayjs('2022-06').endOf('month').format('YYYY-MM-DD 23:59:59')
+```
+
+### 获取当年第一天和最后一天
+
+```js
+// 当年1月1号
+let startDay = dayjs().startOf('year').format('YYYY-MM-DD 00:00:00')
+// 当年最后一天
+let endDay = dayjs().endOf('year').format('YYYY-MM-DD 23:59:59')
+
+console.log(startDay)
+console.log(endDay)
 ```
 
 

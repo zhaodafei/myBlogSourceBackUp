@@ -93,7 +93,7 @@ option = {
 
 ### 底部`footer`
 
-
+[pie饼图](https://echarts.apache.org/examples/zh/editor.html?c=pie-doughnut)
 
 
 

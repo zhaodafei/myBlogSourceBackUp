@@ -43,6 +43,9 @@ align-items     (交叉轴对齐方式)
 align-content   (多根轴线在交叉轴上对齐方式)(属性类似align-items)
 flex-wrap       (轴线上换行)
 flex-flow       (是flex-direction 和 flex-wrap 的简写)
+
+// 其他属性:间隙
+gap: 20px 5px;
 ```
 
 #### 1-01)`flex-direction` 属性决定主轴的方向
@@ -210,14 +213,47 @@ flex: 0 0 100px; //按计算大小填充到容器中
 </div>
 ```
 
+### 间隙gap
+
+```html
+<div id="flexbox">
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+
+<style>
+  #flexbox {
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+    gap: 20px 5px;
+    outline: 1px solid #ff6b81;
+  }
+
+  #flexbox > div {
+    border: 1px solid green;
+    background-color: lime;
+    flex: 1 1 auto;
+    width: 100px;
+    height: 50px;
+  }
+</style>
+
+```
 
 
-[Flex 布局教程：语法篇](https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html)
-[使用 CSS 弹性盒子](https://developer.mozilla.org/zh-CN/docs/conflicting/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox/ "使用 CSS 弹性盒子")
-[对齐弹性容器中的弹性项目](https://developer.mozilla.org/ca/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container "对齐弹性容器中的弹性项目")
-[flex](https://philipwalton.github.io/solved-by-flexbox/ "flex")
 
+### 底部
 
+1. [Flex 布局教程：语法篇](https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html)
+2. [使用 CSS 弹性盒子](https://developer.mozilla.org/zh-CN/docs/conflicting/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox/ "使用 CSS 弹性盒子")
+3. [对齐弹性容器中的弹性项目](https://developer.mozilla.org/ca/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container "对齐弹性容器中的弹性项目")
+4. [flex](https://philipwalton.github.io/solved-by-flexbox/ "flex")
+5. [间隙 gap](https://developer.mozilla.org/zh-CN/docs/Web/CSS/gap)
 
 
 

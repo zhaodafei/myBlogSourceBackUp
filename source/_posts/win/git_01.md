@@ -206,8 +206,8 @@ git tag
 
 ### Git 下载
 
-[git Download 国内镜像](http://npm.taobao.org/mirrors/git-for-windows/)
-[git 官方下载](https://github.com/git-for-windows/git/releases)
+1. [git Download 国内镜像](http://npm.taobao.org/mirrors/git-for-windows/)
+2. [git 官方下载](https://github.com/git-for-windows/git/releases)
 
 
 

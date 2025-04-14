@@ -517,6 +517,20 @@ const formRefValid = ref()
 formRefValid.value.validateField('name_字段名') // 使用回调
 ```
 
+### 消息提示
+
+```js
+const { proxy } = getCurrentInstance()
+proxy.$message({ type: 'success', message: '操作成功!' })
+
+const loadingInstance = proxy.$loading({
+      lock: true,
+      text: '正在加载服务监控数据，请稍候！',
+      background: 'rgba(0, 0, 0, 0.7)'
+})
+loadingInstance.close()
+```
+
 
 
 ### 文件上传
