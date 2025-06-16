@@ -17,20 +17,35 @@ tags:
 
 ```javascript
 option = {
+  // title: { text: '', left: 'center' },
+  tooltip: {
+    trigger: 'axis'
+  },
+  legend: {
+    data: ['A人数', 'B人数']
+  },
   xAxis: {
     type: 'category',
     data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
   },
   yAxis: {
-    type: 'value'
+    type: 'value',
+    min: 0
+    max: 30 // 最大最小值控制
   },
   series: [
     {
-      data: [120, 200, 250, 80, 70, 110, 130],
-      type: 'bar',
+      name: 'A人数',
+      data: [150, 230, 224, 218, 135, 147, 260],
+      type: 'line'
+    },
+    {
+      name: 'B人数',
+      data: [100, 220, 274, 118, 165, 47, 200],
+      type: 'line'
     }
   ]
-};
+}
 ```
 
 #### 控制最大最小值
@@ -46,26 +61,6 @@ yAxis: [
 ```
 
 
-
-### 柱状图__`水平`
-
-```javascript
-option = {
-  xAxis: {
-    type: 'value',
-  },
-  yAxis: {
-    type: 'category',
-    data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
-  },
-  series: [
-    {
-      data: [120, 200, 250, 80, 70, 110, 130],
-      type: 'bar',
-    }
-  ]
-};
-```
 
 ### 底部`footer`
 

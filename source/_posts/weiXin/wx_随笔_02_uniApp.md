@@ -214,6 +214,16 @@ https://m3w.cn/uniapp
 
 ![uni语法提示](/img/vue/idea/web_04_uniapp.jpg "uni语法提示")
 
+### 组件
+
+`uni-app`中创建公用组件, 在目录`/components/file-name-a`,创建文件名字后用哪个驼峰`-`命名可以直接使用
+
+```wiki
+根目录:  components/file-name-a
+使用: <file-name-a />
+```
+
+
 
 ### 底部
 

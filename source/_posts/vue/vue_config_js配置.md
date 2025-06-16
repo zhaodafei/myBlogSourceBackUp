@@ -174,6 +174,7 @@ server: {
       // 比如在本地项目, baseUrl是 `/api/xxx`, 被重写之后就变成 `/xxx`,
       // 被重写之后的path也正是我们要代理到远程的接口路径
       rewrite: path => path.replace(/^\/api/, ''), 
+      secure: false, // 如果是https接口需要进行此配置 
       changeOrigin: true,
     }
   }

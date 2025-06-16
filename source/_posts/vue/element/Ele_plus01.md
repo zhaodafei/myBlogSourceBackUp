@@ -517,6 +517,40 @@ const formRefValid = ref()
 formRefValid.value.validateField('name_字段名') // 使用回调
 ```
 
+#### !!!扩展
+
+> ```js
+> const rules = {
+>   role: { type: 'enum', enum: ['admin', 'user', 'guest'] },
+>   data: [{type: 'date', required: true, trigger: 'change', message: "日期不能为空"}],
+>   time: [{type: 'array', required: true, trigger: 'change', message: "时间不能为空"}],
+> };
+> ```
+>
+> #### Type
+>
+> Indicates the `type` of validator to use. Recognised type values are:
+>
+> - `string`: Must be of type `string`. `This is the default type.`
+> - `number`: Must be of type `number`.
+> - `boolean`: Must be of type `boolean`.
+> - `method`: Must be of type `function`.
+> - `regexp`: Must be an instance of `RegExp` or a string that does not generate an exception when creating a new `RegExp`.
+> - `integer`: Must be of type `number` and an integer.
+> - `float`: Must be of type `number` and a floating point number.
+> - `array`: Must be an array as determined by `Array.isArray`.
+> - `object`: Must be of type `object` and not `Array.isArray`.
+> - `enum`: Value must exist in the `enum`.
+> - `date`: Value must be valid as determined by `Date`
+> - `url`: Must be of type `url`.
+> - `hex`: Must be of type `hex`.
+> - `email`: Must be of type `email`.
+> - `any`: Can be any type.
+>
+> [ ant-design-vue 的Form表单校验](https://www.antdv.com/components/form-cn)
+>
+> 官方地址 [ async-validator](https://github.com/yiminghe/async-validator#type)
+
 ### 消息提示
 
 ```js

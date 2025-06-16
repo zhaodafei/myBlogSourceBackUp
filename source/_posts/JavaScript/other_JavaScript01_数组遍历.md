@@ -247,6 +247,21 @@ Object.keys(obj).forEach(key => {
 });
 ```
 
+### 遍历obj格式数组2
+
+```js
+const obj = {
+  a: ['a001'],
+  b: ['b001', 'b002'],
+  c: ['c001', 'c002']
+};
+for (const [key, value] of Object.entries(obj)) {
+  console.log(`${key}: ${value}`);
+}
+```
+
+
+
 ### `Object.keys`删除对象中值
 
 ```js

@@ -231,6 +231,44 @@ css
 
 <div style="width: 240px;height: 80px;background: repeating-radial-gradient(powderblue, powderblue 8px, white 8px, white 16px);"></div>
 
+
+
+### 中间文字带线
+
+```html
+<div class="line-with-text">
+  <span>使用 text-align 和背景渐变</span>
+</div>
+<style>
+  .line-with-text {
+    text-align: center;
+    position: relative;
+    color: #333;
+  }
+
+  .line-with-text::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, #c7c7c7 50%, transparent 50%);
+    background-size: 6px 100%;
+    z-index: -1;
+  }
+
+  .line-with-text span {
+    background: white;
+    padding: 0 10px;
+  }
+</style>
+
+
+```
+
+
+
 ### 底部
 
 1. [mdn:  linear-gradient](https://developer.mozilla.org/zh-CN/docs/Web/CSS/gradient/linear-gradient)
