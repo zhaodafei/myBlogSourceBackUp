@@ -25,7 +25,8 @@ this.form.setFieldsValue({"username":['username_ddddd'],"nickname":['nickname_dd
 this.form.setFieldsValue({"username": 'username_ddddd', "nickname": 'nickname_ddddd'}); //设置值
 
 this.form.getFieldsValue();// 获取所有值
-this.form.getFieldsValue(['username','nickname']); // 获取某一个值
+this.form.getFieldsValue(['username','nickname']); // 获取某些个值
+this.form.getFieldValue(['username']) // 获取某一个值
 
 this.form.resetFields();  // 重置表单值
 
@@ -211,7 +212,8 @@ export default {
     },
     handleGetVal() {
       const fei = this.form.getFieldsValue()// 获取所有值
-      const fei2 = this.form.getFieldsValue(['xxx1', 'WEB_xxx3']) // 获取某一个值
+      const fei2 = this.form.getFieldsValue(['xxx1', 'WEB_xxx3']) // 获取某些个值
+      const fei3 = this.form.getFieldValue(['xxx1']) // 获取某一个值
     },
     handleSetVal() {
       // 设置值

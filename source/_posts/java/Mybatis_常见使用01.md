@@ -30,7 +30,7 @@ SELECT * FROM goods where id in
 
 ```mysql
 #choose、when、otherwise  类型其他语言中 switch 
-select id="findActiveBlogLike" resultType="Blog">
+<select id="findActiveBlogLike" resultType="Blog">
   SELECT * FROM BLOG WHERE state = ‘ACTIVE’
   <choose>
     <when test="title != null">
@@ -202,6 +202,167 @@ mybatis:
 ```
 
 [MyBatis如何返回插入主键？](http://www.mybatis.cn/archives/743.html)
+
+### 动态SQL标签
+
+#### 条件判断`if`
+
+```xml
+作用：根据条件决定是否包含某段 SQL。
+说明：
+    test 属性是 OGNL 表达式，返回 true 时才会包含 SQL 片段。
+    通常结合 <where> 使用，避免 WHERE 1=1 这样的写法。
+
+<select id="findUser" resultType="User">
+  SELECT * FROM user
+  WHERE 1=1
+  <if test="name != null"> AND name = #{name} </if>
+  <if test="age != null"> AND age = #{age} </if>
+</select>
+```
+
+#### 多条件分支`choose`
+
+```xml
+<choose>、<when>、<otherwise>（类似 Java 的 switch-case）
+作用：多条件分支选择，类似 if-else if-else。
+说明：
+	只执行第一个匹配的 <when>，如果没有匹配则执行 <otherwise>。
+    
+<select id="findUser" resultType="User">
+  SELECT * FROM user
+  WHERE
+  <choose>
+    <when test="name != null"> name = #{name} </when>
+    <when test="age != null"> age = #{age} </when>
+    <otherwise> 1=1 </otherwise>
+  </choose>
+</select>
+```
+
+#### 智能`where`
+
+```xml
+作用：自动处理 WHERE 条件，避免 WHERE AND 语法错误。
+说明：
+    如果 <where> 内的内容为空，则不会生成 WHERE。
+    如果内容非空，会自动去掉开头的 AND 或 OR。
+        
+<select id="findUser" resultType="User">
+  SELECT * FROM user
+  <where>
+    <if test="name != null"> AND name = #{name} </if>
+    <if test="age != null"> AND age = #{age} </if>
+  </where>
+</select>
+```
+
+#### 智能`update`
+
+```xml
+作用：动态生成 UPDATE 语句，自动去掉末尾的 ,。
+说明：
+    自动去除最后的 ,，避免 UPDATE user SET name=?, age=?, WHERE id=? 这样的语法错误。
+
+<update id="updateUser">
+  UPDATE user
+  <set>
+    <if test="name != null"> name = #{name}, </if>
+    <if test="age != null"> age = #{age}, </if>
+  </set>
+  WHERE id = #{id}
+</update>
+```
+
+#### 自定义`trim`修剪`SQL`
+
+```xml
+作用：自定义 SQL 片段的前缀、后缀，并去除多余的字符（如 ,、AND、OR）。
+说明：
+    prefix：在 SQL 前添加内容（如 WHERE、SET）。
+    prefixOverrides：去掉 SQL 开头匹配的字符（如 AND、OR）。
+    suffixOverrides：去掉 SQL 末尾匹配的字符（如 ,）。
+
+<!-- 类似 <where> 的实现 -->
+<trim prefix="WHERE" prefixOverrides="AND | OR ">
+  <if test="name != null"> AND name = #{name} </if>
+</trim>
+
+<!-- 类似 <set> 的实现 -->
+<trim prefix="SET" suffixOverrides=",">
+  <if test="name != null">name = #{name}, </if>
+</trim>
+```
+
+#### 遍历集合`foreach`
+
+```xml
+作用：遍历集合（如 List、Array、Map），生成 IN 或批量操作 SQL。
+参数说明：
+    collection：要遍历的集合（如 list、array、map.keys）。
+    item：当前遍历的元素变量名。
+    open/close：循环开始/结束时添加的字符（如 ( 和 )）。
+    separator：元素之间的分隔符（如 ,）。
+
+<!-- IN 查询 -->
+<select id="findUsersByIds" resultType="User">
+  SELECT * FROM user
+  WHERE id IN
+  <foreach collection="ids" item="id" open="(" separator="," close=")">
+    #{id}
+  </foreach>
+</select>
+
+<!-- 批量插入 -->
+<insert id="batchInsert">
+  INSERT INTO user (name, age) VALUES
+  <foreach collection="users" item="user" separator=",">
+    (#{user.name}, #{user.age})
+  </foreach>
+</insert>
+```
+
+#### 绑定变量`bind`
+
+```xml
+作用：创建变量，用于 SQL 拼接或复杂表达式计算。
+说明：
+    适用于模糊查询、字符串拼接等场景。
+
+<select id="findUserByName" resultType="User">
+  <bind name="pattern" value="'%' + name + '%'" />
+  SELECT * FROM user
+  WHERE name LIKE #{pattern}
+</select>
+```
+
+
+
+### 树形结构数据
+
+嵌套结果映射`MyBatis`中,demo
+
+```xml
+<resultMap id="treeNodeResultMap" type="com.fei.domain.TreeNode">
+    <id property="id" column="id"/>
+    <result property="name" column="name"/>
+    <result property="parentId" column="parent_id"/>
+    <result property="sortOrder" column="sort_order"/>
+    <collection property="children" ofType="TreeNode" select="selectChildren" column="{parentId=id}"/>
+</resultMap>
+
+<select id="selectTree" resultMap="treeNodeResultMap">
+    SELECT * FROM tree_table WHERE parent_id = 0
+    ORDER BY sort_order
+</select>
+
+<select id="selectChildren" resultMap="treeNodeResultMap">
+    SELECT * FROM tree_table WHERE parent_id = #{id}
+    ORDER BY sort_order
+</select>
+```
+
+
 
 ### 其他
 

@@ -55,10 +55,11 @@ tar -xvf node-v10.15.3-linux-x64.tar.xz -C /data/server
 解压后可以直接使用,需要配置环境变量,方法同上
 ```
 
-### 其他常见命令
+### 常见命令
 
 ```shell
 #npm命令文档 https://nodejs.cn/npm/cli/v6/commands/npm/
+#npm缓存位置: C:\Users\xxx\AppData\Roaming\npm-cache
 
 npm init #初始化一个package.json
 npm init -y  #初始化一个package.json 全部使用默认值
@@ -88,6 +89,20 @@ npm install -g cnpm --registry=https://registry.npm.taobao.org   #安装配置cn
 
  [npm中文文档](https://nodejs.cn/npm/cli/v6/commands/npm/ "npm中文文档")
  [npm英文文档](https://docs.npmjs.com/cli/v6/commands/npm "npm英文文档")
+
+### 常见命令`yarn`
+
+```shell
+#yarn缓存位置:  C:\Users\xxx\AppData\Local\Yarn\Cache\v4
+
+#常见命令
+yarn cache clean  #清除缓存
+yarn cache clean element-ui  #清楚特定包element-ui 
+yarn install --force #强制重新下载并重新构建所有依赖
+yarn install --no-cache #跳过缓存安装
+```
+
+
 
 ### 多个node环境共存
 

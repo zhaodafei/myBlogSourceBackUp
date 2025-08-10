@@ -338,6 +338,16 @@ public void insertUserRole(Long userId, Long[] roleIds)
 </insert>
 ```
 
+### 代码模板生成
+
+```wiki
+#修改生成代码模板
+01)位置: ruoyi-generator/src/main/resources/vm/
+02)修改生成vue代码: ruoyi-generator/src/main/resources/vm/vue
+03)修改生成vue的js: ruoyi-generator/src/main/resources/vm/js
+04)修改生成Java代码: ruoyi-generator/src/main/resources/vm/java
+```
+
 
 
 ## xml查询

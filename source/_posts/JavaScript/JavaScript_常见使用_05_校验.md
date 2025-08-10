@@ -58,6 +58,8 @@ JavaScript_常见使用_05_校验
 <p> 税号:  <input type="text" id="taxId" value="" onblur="validateTaxId();"> </p>
 ```
 
+
+
 ### 注册电话
 
 广范围电话校验: 座机,手机号都校验

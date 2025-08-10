@@ -199,6 +199,7 @@ Run eslint --fix on save
 
 ```shell
 .vscode/
+.idea/
 bin/
 dist/
 dist-staging/
@@ -215,7 +216,7 @@ node_modules/
 module.exports = {
   semi: false,
   singleQuote: true,
-  printWidth: 100,
+  printWidth: 120,
   tabWidth: 2,
   useTabs: false,
   trailingComma: 'none',
@@ -256,28 +257,32 @@ Run on save All actions save...
 
 ![vscode中prettier](/img/vue/prettier/prettier_001.png "vscode中prettier")
 
+### 规则翻译
+
+```js
+  semi: false,  // 禁止在语句末尾添加分号
+  singleQuote: true, // 强制使用单引号'而不是双引号"
+  printWidth: 120, // 每行代码的最大宽度为 120 个字符，超过时会自动换行（格式化时生效）
+  tabWidth: 2, // 缩进使用 2 个空格（而不是 4 个空格或 Tab 制表符）。
+  useTabs: false, // 禁止使用 Tab 制表符缩进，强制使用 空格（由 tabWidth 控制空格数）。
+  trailingComma: 'none',  // 禁止在对象、数组等末尾添加多余的逗号。
+  arrowParens: 'avoid', // 当箭头函数只有一个参数时，省略参数的括号。
+  vueIndentScriptAndStyle: true, //  Vue 文件中，缩进 <script> 和 <style> 标签内的代码（与模板保持一致）
+  endOfLine: 'auto', // 自动检测换行符（LF（\n）或 CRLF（\r\n），保持原有风格。
+  proseWrap: 'never', // 禁止自动换行 Markdown 等文本内容（保持原样）。
+  htmlWhitespaceSensitivity: 'strict' // 严格处理 HTML 中的空格（避免破坏布局）。
+```
 
 
 
 
 
 
-
-
-
-
-
-### 图片
-
-![这是一张本地图片](/img/linux/root_passwd.png "这是一张本地图片")
-![这是一张本地图片](/img/octocat.png "这是一张本地图片")
-
-![这是一张图片](https://github.githubassets.com/images/icons/emoji/octocat.png "这是一张图片")
 
 
 ### 底部
 
- [这是github](https://github.com "这是github")
+没有了
 
 
 
