@@ -187,6 +187,23 @@ list.pop(); // 弹出数据
 
 ```
 
+#### 扩展
+
+```java
+// 判断 list 是否有值
+List<String> listA = new ArrayList<>();
+System.out.println(listA.isEmpty()); // true
+listA.add("Hello===");
+System.out.println(listA.isEmpty()); // false
+
+List<String> listB = new ArrayList<>();
+System.out.println(listB.size() > 0); // false
+listB.add("Hello1111");
+System.out.println(listB.size() > 0); // true
+```
+
+
+
 ### 泛型
 
 ```java
@@ -512,6 +529,32 @@ Arrays.equals(is, is1);
 
 ### stream 处理集合
 
+```wiki
+#Stream优势
+01)Stream 提供了函数式编程范式，使代码更简洁、表达力更强
+02)Stream 支持将多个操作链接在一起形成处理流水线
+03)Stream 操作分为中间操作和终止操作，只有遇到终止操作时才会真正执行
+04)内置丰富的操作
+05)Stream 与 Lambda 表达式和方法引用完美配合
+
+##常识:
+#以下代码不会立即执行过滤操作
+Stream<String> stream = list.stream().filter(s -> s.length() > 3);
+#只有调用 collect() 时才会真正执行
+List<String> result = stream.collect(Collectors.toList());
+
+#内置操作
+Stream 提供了大量内置操作，简化集合处理：
+    filter() - 过滤
+    map() - 映射转换
+    flatMap() - 扁平化映射
+    distinct() - 去重
+    sorted() - 排序
+    limit()/skip() - 分页
+    reduce() - 归约
+    collect() - 收集结果
+```
+
 ```java
 List<Integer> list = Arrays.asList(111, 222, 3333, 4444);
 List<Integer> filterList = list.stream().filter(d -> d > 222).collect(Collectors.toList());
@@ -523,6 +566,54 @@ System.out.println(filterList); // 找出大于222的所有值
 List<Integer> num = Arrays.asList(1, 2, 3, 4, 5);
 List<Integer> collect1 = num.stream().map(n -> n * 2).collect(Collectors.toList());
 System.out.println(collect1); // 输出: [2, 4, 6, 8, 10]  对每个值都乘以2
+```
+
+```java
+// demo:
+import java.util.Arrays;
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
+
+// 不可变数据类
+record Student(String name, int age, double score) {}
+
+public class FunctionalExample {
+    public static void main(String[] args) {
+        List<Student> students = Arrays.asList(
+            new Student("Alice", 20, 85.5),
+            new Student("Bob", 22, 75.0),
+            new Student("Charlie", 21, 90.0),
+            new Student("David", 20, 60.5)
+        );
+        
+        // 1. 筛选年龄 >= 21 且分数 > 70 的学生，提取姓名并排序
+        List<String> qualifiedStudents = students.stream()
+            .filter(s -> s.age() >= 21 && s.score() > 70) // 筛选
+            .map(Student::name)                          // 提取姓名（方法引用）
+            .sorted()                                    // 排序
+            .collect(Collectors.toList());                // 收集结果
+        
+        System.out.println("合格学生：" + qualifiedStudents);
+        
+        // 2. 计算所有学生的平均分（处理空集合情况）
+        double averageScore = students.stream()
+            .mapToDouble(Student::score)
+            .average()
+            .orElse(0.0); // 若集合为空，返回默认值 0.0
+        
+        System.out.println("平均分：" + averageScore);
+        
+        // 3. 查找分数最高的学生
+        Optional<Student> topStudent = students.stream()
+            .max((s1, s2) -> Double.compare(s1.score(), s2.score()));
+        
+        topStudent.ifPresent(student -> 
+            System.out.println("最高分学生：" + student.name() + "，分数：" + student.score())
+        );
+    }
+}
+
 ```
 
 

@@ -151,6 +151,16 @@ C:\Users\fei\AppData\Roaming\JetBrains\IntelliJIdea2021.3\options\recentProjects
 C:\Users\fei\AppData\Roaming\JetBrains\WebStorm2022.2\options\recentProjects.xml
 ```
 
+`webstorm`由于打开太多项目奔溃后,再次打开,好多功能不能正常使用
+
+```wiki
+#WebStorm2024.3 的 project 位置
+C:\Users\fei\AppData\Local\JetBrains\WebStorm2024.3\projects
+在这个目录下找到那个项目不正常删掉,重新打开项目即可
+```
+
+
+
 ### IDEA社区版本
 
 ```wiki

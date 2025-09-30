@@ -42,6 +42,34 @@ jdk 安装目录 D:\soft_position\Java\jdk1.8.0_191\bin 这个下面值java相�
 
 ![java 入门](/img/java/base/base_01.png "java 入门")
 
+### 简单运行一个`java`文件
+
+```wiki
+以Windows10 系统为例
+01) 找到 java 的 jdk 安装位置: 我的在 D:\soft_position\Java\jdk1.8.0_191\bin
+02) 创建 文件 HelloWorld.java
+03) 执行2条命令 
+D:\soft_position\Java\jdk1.8.0_191\bin\javac .\HelloWorld.java
+
+D:\soft_position\Java\jdk1.8.0_191\bin\java HelloWorld
+
+04) 看到输出内容 Hello World
+```
+
+```java
+// 文件名字为 HelloWorld.java; 文件名字和类同名
+public class HelloWorld {
+    /* 第一个Java程序
+     * 它将输出字符串 Hello World
+     */
+    public static void main(String[] args) {
+        System.out.println("Hello World"); // 输出 Hello World
+    }
+}
+```
+
+
+
 ### 逻辑运算符
 
 #### 与或
@@ -371,8 +399,11 @@ public class Fei01_HelloWorld {
         names[2] = "王五";
         // names[3] = "大飞"; // 会发生数组越界
 
+        // 输出为 ['张三', '李四', '王五']
+        System.out.println(Arrays.toString(names));
+        
         for (int i = 0; i < names.length; i++) {
-            System.out.println(names[i]);
+            System.out.println(names[i]); // 依次输出单个内容
         }
         // 和上面for循环等效
         for (String name : names) {

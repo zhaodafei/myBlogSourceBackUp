@@ -348,6 +348,33 @@ public void insertUserRole(Long userId, Long[] roleIds)
 04)修改生成Java代码: ruoyi-generator/src/main/resources/vm/java
 ```
 
+### 分页接口
+
+为啥分页接口的`mapper.xml`没有写`limit`却可以实现分页???
+
+```wiki
+01) 在接口 list 开始有一行代码 startPage(); 调用 PageUtils.startPage(); 这是使用分页
+02) xxx
+
+#扩展
+01)原生 MyBatis 必须手动写 LIMIT，而插件（如 PageHelper、MyBatis-Plus）可以自动完成。
+02)如果你的项目没有显式配置分页插件，但分页生效，可能是 某些 Starter 包（如 mybatis-plus-boot-starter）默认启用了分页功能。
+03)分页插件
+########PageHelper
+<dependency>
+    <groupId>com.github.pagehelper</groupId>
+    <artifactId>pagehelper-spring-boot-starter</artifactId>
+    <version>最新版本</version>
+</dependency>
+
+########MyBatis-Plus
+<dependency>
+    <groupId>com.baomidou</groupId>
+    <artifactId>mybatis-plus-boot-starter</artifactId>
+    <version>最新版本</version>
+</dependency>
+```
+
 
 
 ## xml查询

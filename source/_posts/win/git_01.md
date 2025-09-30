@@ -202,7 +202,21 @@ git tag
 
 ```
 
+### 通过标签创建分支
 
+功能描述: 创建`tag`标签后,基于这个标签创建新分支
+
+场景描述: 在生产分支中需要回退某些功能
+
+方案: 在生产分支中找到某个节点创建`tag`标签, 在基于这个标签创建个新的分支
+
+![tag步骤01](/img/win/git/git_tag_01.jpg "tag步骤01")
+
+![tag步骤02](/img/win/git/git_tag_02.jpg "tag步骤02")
+
+![tag步骤03](/img/win/git/git_tag_03.jpg "tag步骤03")
+
+![tag步骤04](/img/win/git/git_tag_04.jpg "tag步骤04")
 
 ### Git 下载
 

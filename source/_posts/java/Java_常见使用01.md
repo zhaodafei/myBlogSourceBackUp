@@ -137,3 +137,80 @@ System.out.println(date); // 2024-01-20 08:58:23
 
 
 
+### 常识
+
+#### 01)前后端类型对应
+
+| Js类型    | Java类型    | 说明                                  |
+| --------- | ----------- | ------------------------------------- |
+| string    | string      | 字符串                                |
+| boolean   | boolean     | 布尔值                                |
+| undefined | null        | JS 的 undefined 通常对应 Java 的 null |
+| null      | null        | 两者都有 null 概念                    |
+| object    | object      | JS 对象对应 Java 对象                 |
+| Array     | List / 数组 | JS 数组对应 Java 集合或数组           |
+
+> 举例说明
+>
+> ```java
+> // 前端传递:  ['a', 'b', 'c'] 数组类型数据, 到了后端可以使用 List和数组 这2种方式接受,常用List
+> 
+> // 在Java中 ['a', 'b', 'c'] 这个既可以是 List 也可以是 数组
+> 
+> // 下面这2个输出是一样的: [Google, Taobao, Weibo]
+> ArrayList<String> sites = new ArrayList<String>();
+> sites.add("Google");
+> sites.add("Taobao");
+> sites.add("Weibo");
+> System.out.println(sites);
+> 
+> String[] names = new String[3];
+> names[0] = "Google";
+> names[1] = "Taobao";
+> names[2] = "Weibo";
+> System.out.println(Arrays.toString(names));
+> ```
+>
+> 
+>
+> ```js
+> // 发送字符串数组( 这个注意一下, 后端出现2种情况 list和数组 )
+> fetch('/example', {
+>  method: 'POST',
+>  headers: {
+>      'Content-Type': 'application/json'
+>  },
+>  body: JSON.stringify(['a', 'b', 'c'])
+> });
+> 
+> // 发送对象数组
+> fetch('/example2', {
+>  method: 'POST',
+>  headers: {
+>      'Content-Type': 'application/json'
+>  },
+>  body: JSON.stringify([
+>      {id: 1, name: 'Alice'},
+>      {id: 2, name: 'Bob'}
+>  ])
+> });
+> ```
+>
+> ```java
+> // 使用 List 接收
+> // Java 后端
+> @PostMapping("/example")
+> public void handleArray(@RequestBody List<String> array) {
+>  // 处理字符串数组
+> }
+> 
+> @PostMapping("/example2")
+> public void handleObjectArray(@RequestBody List<MyObject> list) {
+>  // 处理对象数组
+> }
+> ```
+>
+> 
+
+
+

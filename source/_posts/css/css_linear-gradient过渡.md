@@ -267,6 +267,297 @@ css
 
 ```
 
+## 边角
+
+### 基本直角
+
+```html
+<div class="rectangle">
+  <div style="color: red">四个基本直角边框</div>
+</div>
+<style>
+  .rectangle {
+    width: 200px;
+    height: 150px;
+    background:
+        /* 上边框 */
+        linear-gradient(to right, #000 0%, #000 100%) 0 0,
+          /* 右边框 */
+        linear-gradient(to bottom, #000 0%, #000 100%) 100% 0,
+          /* 下边框 */
+        linear-gradient(to right, #000 0%, #000 100%) 0 100%,
+          /* 左边框 */
+        linear-gradient(to bottom, #000 0%, #000 100%) 0 0;
+    background-size:
+        100% 2px,  /* 上/下边框高度 */
+        2px 100%;  /* 左/右边框宽度 */
+    background-repeat: no-repeat;
+  }
+</style>
+```
+
+<div class="rectangle" style=" width: 200px;height: 150px;background: linear-gradient(to right, #dda0dd 0%, #dda0dd 100%) 0 0, linear-gradient(to bottom, #dda0dd 0%, #dda0dd 100%) 100% 0, linear-gradient(to right, #dda0dd 0%, #dda0dd 100%) 0 100%, linear-gradient(to bottom, #dda0dd 0%, #dda0dd 100%) 0 0;background-size: 100% 2px, 2px 100%;background-repeat: no-repeat;"><div style="color: red">四个基本直角边框</div></div>
+
+### 基本虚线框
+
+```html
+<div class="dashed-border">
+  <div>四个边框都是虚线</div>
+</div>
+<style>
+  .dashed-border {
+    width: 200px;
+    height: 150px;
+
+    /* 清除默认边框 */
+    border: none;
+
+    /* 使用背景渐变创建虚线效果 */
+    background-image:
+        linear-gradient(to right, red 50%, transparent 50%), /* 上边框 */
+        linear-gradient(to bottom, red 50%, transparent 50%), /* 右边框 */
+        linear-gradient(to right, red 50%, transparent 50%), /* 下边框 */
+        linear-gradient(to bottom, red 50%, transparent 50%);  /* 左边框 */
+
+    background-size:
+        10px 1px,  /* 上边框 - 10px长，1px高 */
+        1px 10px,  /* 右边框 - 1px宽，10px高 */
+        10px 1px,  /* 下边框 - 10px长，1px高 */
+        1px 10px;  /* 左边框 - 1px宽，10px高 */
+
+    background-position:
+        0 0,        /* 上边框 - 顶部 */
+        right 0,    /* 右边框 - 右侧 */
+        0 bottom,   /* 下边框 - 底部 */
+        0 0;        /* 左边框 - 左侧 */
+
+    background-repeat:
+        repeat-x,  /* 上边框水平重复 */
+        repeat-y,  /* 右边框垂直重复 */
+        repeat-x,  /* 下边框水平重复 */
+        repeat-y;  /* 左边框垂直重复 */
+  }
+</style>
+
+```
+
+<div class="dashed-border" style="  width: 200px;height: 150px;border: none;background-image: linear-gradient(to right, red 50%, transparent 50%), linear-gradient(to bottom, red 50%, transparent 50%), linear-gradient(to right, red 50%, transparent 50%), linear-gradient(to bottom, red 50%, transparent 50%);background-size: 10px 1px, 1px 10px, 10px 1px, 1px 10px;background-position: 0 0, right 0, 0 bottom, 0 0;background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;"><div>四个边框都是虚线</div></div>
+
+### 四个边角直角
+
+```html
+<div class="cross-corners"><span>四个角都是直角</span></div>
+<style>
+  .cross-corners {
+    position: relative;
+    width: 200px;
+    height: 150px;
+    background: #f5f5f5;
+  }
+
+  /* 创建四个角 */
+  .cross-corners::before,
+  .cross-corners::after,
+  .cross-corners span::before,
+  .cross-corners span::after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+  }
+
+  /* 左上角 */
+  .cross-corners::before {
+    top: 0;
+    left: 0;
+
+    /* background-image: 垂直部分,      水平部分; */
+    /* background-size:  垂直部分(宽高), 水平部分(宽,高); */
+    /* background-position: 垂直部分(x,y), 水平部分(x,y); */
+    /*background: linear-gradient(#333, #333), linear-gradient(#333, #333);
+    background-size: 2px 100%, 100% 2px;
+    background-position: 0 top, right 0;
+    background-repeat: no-repeat;*/
+
+    /* background-image: 水平部分, 垂直部分; */
+    /* background-size:  水平部分高度(宽高), 垂直部分宽度(宽高); */
+    /* background-position: 水平部分在顶部(x,y), 垂直部分在右侧(x,y); */
+    background-image:
+        linear-gradient(to right, #000 0%, #000 80%),
+        linear-gradient(to bottom, #000 0%, #000 100%);
+    background-size:
+        100% 2px,
+        2px 100%;
+    background-position:
+        0 0,
+        left 0;
+    background-repeat: no-repeat;
+  }
+
+  /* 右上角 */
+  .cross-corners::after {
+    top: 0;
+    right: 0;
+
+    /* background-image: 水平部分, 垂直部分;*/
+    /* background-size: 水平部分高度, 垂直部分宽度;*/
+    /* background-position: 水平部分在顶部, 垂直部分在右侧;*/
+    background-image:
+        linear-gradient(to right, #000 0%, #000 100%),
+        linear-gradient(to bottom, #000 0%, #000 80%);
+    background-size:
+        100% 2px,
+        2px 100%;
+    background-position:
+        0 top,
+        right 0;
+    background-repeat: no-repeat;
+  }
+
+  /* 左下角: 向上的 "L" 形 */
+  .cross-corners span::before {
+    bottom: 0;
+    left: 0;
+
+    /* background-image: 水平部分, 垂直部分;*/
+    /* background-size: 水平部分高度, 垂直部分宽度;*/
+    /* background-position: 水平部分在底部, 垂直部分在左侧;*/
+    background-image:
+        linear-gradient(to right, #000 0%, #000 100%),
+        linear-gradient(to bottom, #000 20%, #000 100%);
+    background-size:
+        100% 2px,
+        2px 100%;
+    background-position:
+        0 bottom,
+        left 0;
+    background-repeat: no-repeat;
+  }
+
+  /* 右下角 */
+  .cross-corners span::after {
+    bottom: 0;
+    right: 0;
+
+    /* background-image: 水平部分, 垂直部分;*/
+    /* background-size: 水平部分高度, 垂直部分宽度;*/
+    /* background-position: 水平部分在底部, 垂直部分在左侧;*/
+    background-image:
+        linear-gradient(to right, #000 20%, #000 100%),
+        linear-gradient(to bottom, #000 0%, #000 100%);
+    background-size:
+        100% 2px,
+        2px 100%;
+    background-position:
+        0 bottom,
+        right 0;
+    background-repeat: no-repeat;
+  }
+</style>
+```
+
+#### demo2
+
+不使用伪元素
+
+```html
+<div class="cross-corners">
+  <span class="outer-a" data-tip="左上角"></span>
+  <span>
+    <span class="in-a" data-tip="左下角"></span>
+     四个角都是直角ss
+    <span class="in-b" data-tip="右下角"></span>
+  </span>
+  <span class="outer-b" data-tip="右上角"></span>
+</div>
+<style>
+  .cross-corners {
+    position: relative;
+    width: 200px;
+    height: 150px;
+    background: #f5f5f5;
+  }
+
+  .outer-a,
+  .outer-b,
+  .in-a,
+  .in-b {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+  }
+
+
+  .outer-a {
+    top: 0;
+    left: 0;
+
+    background-image:
+        linear-gradient(to right, red 0%, red 80%),
+        linear-gradient(to bottom, red 0%, red 100%);
+    background-size:
+        100% 2px,
+        2px 100%;
+    background-position:
+        0 0,
+        left 0;
+    background-repeat: no-repeat;
+  }
+
+  .outer-b {
+    top: 0;
+    right: 0;
+
+    background-image:
+        linear-gradient(to right, red 0%, red 100%),
+        linear-gradient(to bottom, red 0%, red 80%);
+    background-size:
+        100% 2px,
+        2px 100%;
+    background-position:
+        0 top,
+        right 0;
+    background-repeat: no-repeat;
+  }
+
+  .in-a {
+    bottom: 0;
+    left: 0;
+
+    background-image:
+        linear-gradient(to right, red 0%, red 100%),
+        linear-gradient(to bottom, red 20%, red 100%);
+    background-size:
+        100% 2px,
+        2px 100%;
+    background-position:
+        0 bottom,
+        left 0;
+    background-repeat: no-repeat;
+  }
+
+  .in-b {
+    bottom: 0;
+    right: 0;
+    background-image:
+        linear-gradient(to right, red 20%, red 100%),
+        linear-gradient(to bottom, red 0%, red 100%);
+    background-size:
+        100% 2px,
+        2px 100%;
+    background-position:
+        0 bottom,
+        right 0;
+    background-repeat: no-repeat;
+  }
+</style>
+
+
+```
+
+<div class="cross-corners" style="position: relative;width: 200px;height: 150px;background: #f5f5f5;"><span class="outer-a" data-tip="左上角" style="content: '';position: absolute;width: 15px;height: 15px;top: 0;left: 0;background-image: linear-gradient(to right, red 0%, red 80%), linear-gradient(to bottom, red 0%, red 100%);background-size: 100% 2px, 2px 100%;background-position: 0 0, left 0;background-repeat: no-repeat;"></span><span><span class="in-a" data-tip="左下角" style="content: '';position: absolute;width: 15px;height: 15px;bottom: 0;left: 0;background-image: linear-gradient(to right, red 0%, red 100%), linear-gradient(to bottom, red 20%, red 100%);background-size: 100% 2px, 2px 100%;background-position: 0 bottom, left 0;background-repeat: no-repeat;"></span>四个角都是直角ss<span class="in-b" data-tip="右下角" style=" content: '';position: absolute;width: 15px;height: 15px;bottom: 0;right: 0;background-image: linear-gradient(to right, red 20%, red 100%), linear-gradient(to bottom, red 0%, red 100%);background-size: 100% 2px, 2px 100%;background-position: 0 bottom, right 0;background-repeat: no-repeat;"></span></span><span class="outer-b" data-tip="右上角" style="content: '';position: absolute;width: 15px;height: 15px;top: 0;right: 0;background-image: linear-gradient(to right, red 0%, red 100%), linear-gradient(to bottom, red 0%, red 80%);background-size: 100% 2px, 2px 100%;background-position: 0 top, right 0;background-repeat: no-repeat;"></span></div>
+
 
 
 ### 底部
