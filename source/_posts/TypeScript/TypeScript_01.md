@@ -41,20 +41,70 @@ world = function (n1, n2): number {
 world(1, 3);
 ```
 
+### 字符串声明
+
+```typescript
+let name: string   // 声明一个字符串类型
+name = 'dafei'
+
+let age: number  // 声明一个数字类型
+age = 18
+
+let isStudent: boolean // 布尔类型
+isStudent = true
+
+let anything: any  // 任意类型
+anything = 'hello'
+anything = 123
+
+
+// 简洁写法, 在声明时直接初始化
+let name: string = 'dafei'
+let age: number = 18
+let isActive: boolean = true
+```
+
+
+
 ### 数组声明
 
 ```typescript
 // 数组类型声明:
 //      类型[]
 //      Array<类型>
-let foo: string[];
+let foo: string[];  // 字符串数组
 foo = ['a', 'b', 'c'];
 
-let bar: number[];
+let bar: number[];  // 数字数组
 bar = [1, 2, 3];
 
-let bar2: Array<number>;
+let bar2: Array<number>; // 数字数组
 bar2 = [4, 5, 6];
+
+
+//demo001: 使用场景================
+// 定义任意类型数组(比如处理路由菜单)
+let fei2: Array<any> = [];
+
+// 向数组添加任意类型元素（无类型校验）
+fei2.push(123); // 数字
+fei2.push('字符串'); // 字符串
+fei2.push({ id: 1, name: '对象' }); // 对象
+fei2.push([4, 5, 6]); // 嵌套数组
+fei2.push(null); // null
+
+console.log('fei2 内容：', fei2); // 输出内容
+```
+
+```wiki
+数组介绍:
+
+TypeScript像JavaScript一样可以操作数组元素。 有两种方式可以定义数组。 第一种，可以在元素类型后面接上[]，表示由此类型元素组成的一个数组：
+let list: number[] = [1, 2, 3];
+
+
+第二种方式是使用数组泛型，Array<元素类型>：
+let list: Array<number> = [1, 2, 3];
 ```
 
 ### 元祖

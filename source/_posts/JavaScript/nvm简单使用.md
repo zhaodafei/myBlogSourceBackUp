@@ -64,3 +64,74 @@ npx hexo -v
 
 03) 开始使用 
 npx hexo g
+
+### 自定义脚本
+
+使用`nvm`命令比较麻烦,方便自己使用,编写`Windows`系统中运行脚本, 使用管理员身份运行`bat`脚本
+
+```wiki
+#文件名称
+nvm_切换脚本.bat
+
+#脚本内容如下, 使用管理员身份运行该 bat 脚本
+```
+
+```shell
+CHCP 65001
+@echo off
+echo.
+echo +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+echo ++        选择node版本,请使用管理员身份运行该程序                             ++
+echo ++        作者:赵大飞, QQ:1097625354                                     ++
+:: 安装 nvm install 14.18.0
+:: 卸载 nvm uninstall 14.18.0
+:: 查看 nvm ls
+:: 使用 nvm use 14.18.0
+:: 查看 node -v
+:: 查看 npm -v
+echo +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+echo.
+
+%~d0
+cd %~dp0
+nvm ls
+echo.
+
+echo 请选择你需要的node版本
+echo ++     1、node版本 8.17.0    第01个项目      ++
+echo ++     2、node版本 14.18.0   第02个项目     ++
+echo ++     3、node版本 16.16.0   第03个项目     ++
+echo ++     4、node版本 20.19.6   第04个项目     ++
+echo ++     100、其他                             ++
+echo.
+
+set /p versionFei=你选择的版本:
+echo %versionFei%
+echo.
+
+if "%versionFei%"=="1" (
+    nvm use 8.17.0
+) else if "%versionFei%"=="2" (
+    nvm use 14.18.0
+) else if "%versionFei%"=="3" (
+    nvm use 16.16.0
+) else if "%versionFei%"=="4" (
+    nvm use 20.19.6
+) else (
+    echo 没有对应的版本
+)
+
+nvm ls
+
+
+echo.
+pause
+
+
+```
+
+
+
+### 底部
+
+没有了

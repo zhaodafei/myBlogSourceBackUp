@@ -118,11 +118,12 @@ LODOP.SET_PRINT_STYLEA(0, "ScalY", 1.5);//纯文本垂直缩放x
 ### 图片
 
 ```javascript
+// Stretch 参数: 0--截取图片 1--扩展（可变形）缩放 2--按原图长和宽比例（不变形）缩放。缺省值是0。
 LODOP.ADD_PRINT_IMAGE('50mm', '30mm', 50, 50, "imgUrl图片地址");
 LODOP.SET_PRINT_STYLEA(0, "Stretch", 2); // Stretch 的值:2--按原图长和宽比例(不变形)缩放
 
 
-// demo4: 图片旋转(注意调整位置)
+// demo4: 图片旋转(注意调整位置)( 注意: 缩放后旋转,宽高会影响最后的图大小 )
 LODOP.ADD_PRINT_IMAGE('60mm', '30mm', 50, 50, "imgUrl图片地址");
 LODOP.SET_PRINT_STYLEA(0, "Stretch", 2);
 LODOP.SET_PRINT_STYLEA(0, "Angle", 10);//图片旋转:逆时针旋转角度数,单位是度,0度表示不旋转,旋转时以对象的左上角为原点

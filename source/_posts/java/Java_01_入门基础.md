@@ -441,6 +441,58 @@ class User {
 
 
 
+### 写例子通用demo类
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+public class HelloWorld2 {
+    public static void main(String[] args) {
+        // 创建示例数据列表
+        List<Person> people = new ArrayList<>();
+        people.add(new Person("张三", 25));
+        people.add(new Person("李四", 17));
+        people.add(new Person("王五", 30));
+        people.add(new Person("赵六", 22));
+
+        System.out.println(people);
+    }
+
+    // 自定义Person类
+    static class Person {
+        private String name;
+        private int age;
+
+        public Person(String name, int age) {
+            this.name = name;
+            this.age = age;
+        }
+
+        public String getName() {return name;}
+        public int getAge() {return age;}
+
+        @Override
+        public String toString() {
+            return name + "(" + age + "岁" + ")";
+        }
+    }
+}
+
+
+```
+
+### 其他说明
+
+#### list 前后端交互
+
+```wiki
+前端 list 不传参数,后端容易报错需要
+
+#isNotEmpty, 自己定义个方法校验
+list.size() > 0 直接使用这个会报错,需要用 StringUtils.isNotEmpty(list) 先判断
+```
+
 
 
 ### 底部

@@ -141,6 +141,11 @@ https://nodejs.org/download/release/index.json
 
 #node版本  "version": "v21.0.0",
 #npm版本   "npm": "10.2.0",  
+
+
+02) https://nodejs.org/zh-cn/about/previous-releases
+    https://nodejs.org/zh-cn/about/previous-releases
+    从这个地址打开后,点击每个的详情也可以查看 node 和 npm 版本对应
 ```
 
 

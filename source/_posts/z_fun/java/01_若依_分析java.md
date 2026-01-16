@@ -212,13 +212,25 @@ public void configurePathMatch(PathMatchConfigurer configurer) {
 
 
 
-### 代码模板生产
+### 代码模板生成
 
 ```wiki
 01) 手动创建相关表table
 02) 在菜单 [ 系统工具/代码生成/导入 ] 选择需要导入的表,然后修改( 生成信息:生成包路径,生成模块名 )
 03) 下载即可使用
 ```
+
+### 代码模板调整
+
+```wiki
+#修改生成代码模板
+01)位置: ruoyi-generator/src/main/resources/vm/
+02)修改生成vue代码: ruoyi-generator/src/main/resources/vm/vue
+03)修改生成vue的js: ruoyi-generator/src/main/resources/vm/js
+04)修改生成Java代码: ruoyi-generator/src/main/resources/vm/java
+```
+
+
 
 ### 参数接受
 
@@ -338,15 +350,7 @@ public void insertUserRole(Long userId, Long[] roleIds)
 </insert>
 ```
 
-### 代码模板生成
 
-```wiki
-#修改生成代码模板
-01)位置: ruoyi-generator/src/main/resources/vm/
-02)修改生成vue代码: ruoyi-generator/src/main/resources/vm/vue
-03)修改生成vue的js: ruoyi-generator/src/main/resources/vm/js
-04)修改生成Java代码: ruoyi-generator/src/main/resources/vm/java
-```
 
 ### 分页接口
 
@@ -373,6 +377,34 @@ public void insertUserRole(Long userId, Long[] roleIds)
     <artifactId>mybatis-plus-boot-starter</artifactId>
     <version>最新版本</version>
 </dependency>
+```
+
+### mybatis拦截器
+
+#### 字段自动填充
+
+若依框架中自定义MyBatis拦截器,实现id、创建人、创建时间、修改人、修改时间自动注入保存到数据库
+
+```wiki
+01) 创建拦截器类 MybatisInterceptor
+创建的文件在: src/main/java/com/ruoyi/framework/interceptor/MybatisInterceptor.java
+02) 引入 MybatisInterceptor 
+在 src/main/java/com/ruoyi/framework/config/MyBatisConfig.java 中引入
+03)核心代码
+    @Autowired
+    private MybatisInterceptor mybatisInterceptor;
+   
+    添加自定义拦截器
+    sessionFactory.setPlugins(mybatisInterceptor);
+```
+
+#### 知识点扩展
+
+```wiki
+MyBatis拦截器是在 MyBatis框架中实现 createTime（创建时间）、updateTime（更新时间）字段自动填充，核心是通过 MyBatis 拦截器 拦截 SQL 执行流程，在插入 / 更新时自动注入时间值（MyBatis 原生无 MetaObjectHandler，需手动基于拦截器实现）
+
+
+MetaObjectHandler 是在 MyBatis-Plus 中实现的
 ```
 
 
@@ -489,7 +521,7 @@ com.ruoyi
 
 ```xml
 01) 关联查询中xml怎么写数据
-02）插入自定义id
+02) 插入自定义id
 03)
 ```
 

@@ -55,7 +55,62 @@ File->Settings->Maven
     D:\soft_position\Java\mvn_repository
 ```
 
+### 把`jar`注入本地仓库
 
+场景描述
+
+> 雪花id依赖包`com.baidu.fsg.uid-generator`在中央仓库没有, 存在阿里云仓库中
+>
+> ```shell
+> #核心命令: 把 uid-generator-1.0.5.jar 注入到本地仓库中
+> #注意路径中 / 是反斜杠
+> 
+> mvn install:install-file \
+> -Dfile=E:/self_web/git_dev/gitee_source/tmpl_springBoot/doc/uid-generator-1.0.5.jar \
+> -DgroupId=com.baidu.fsg \
+> -DartifactId=uid-generator \
+> -Dversion=1.0.5 \
+> -Dpackaging=jar
+> ```
+>
+> 步骤:
+>
+> 1. 从阿里云仓库下载[uid-generator-1.0.5.jar](https://aliyun-osm-maven.oss-cn-shanghai.aliyuncs.com/repository/spring/com/baidu/fsg/uid-generator/1.0.5/uid-generator-1.0.5.jar?Expires=1763711124&OSSAccessKeyId=LTAI5tQeTg2SkYgiUPXMyK7t&Signature=t5q%2BThVusig72RhzWrHJ9ohKVXU%3D)
+>
+> 2. 使用`mvn`命令开始注入
+>    ```shell
+>    #注意uid-generator-1.0.5.jar 这个包不能用, 这里的命令主要是用来学习
+>    
+>    mvn install:install-file \
+>      -Dfile=E:/self_web/git_dev/gitee_source/tmpl_springBoot/doc/uid-generator-1.0.5.jar \
+>      -DgroupId=com.baidu.fsg \
+>      -DartifactId=uid-generator \
+>      -Dversion=1.0.5 \
+>      -Dpackaging=jar
+>      
+>      
+>      
+>    mvn install:install-file \
+>      -Dfile=E:/self_web/git_dev/gitee_source/tmpl_springBoot/doc/uid-generator-1.0.5.jar \
+>      -DpomFile=E:/self_web/git_dev/gitee_source/tmpl_springBoot/doc/uid-generator-1.0.5.pom \
+>      -DgroupId=com.baidu.fsg \
+>      -DartifactId=uid-generator \
+>      -Dversion=1.0.5 \
+>      -Dpackaging=jar
+>    ```
+>    
+> 3. 修改项目中`pom`依赖
+>    ```xml
+>    <dependency>
+>        <groupId>com.baidu.fsg</groupId>
+>        <artifactId>uid-generator</artifactId>
+>        <version>1.0.5</version>
+>    </dependency>
+>    ```
+>
+> 4. 项目中安装成功
+>
+> ![mvn注入本地依赖](/img/java/mvn/mvn_01.png "mvn注入本地依赖")
 
 ### 其他
 

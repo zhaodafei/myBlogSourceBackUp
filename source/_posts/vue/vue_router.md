@@ -156,6 +156,14 @@ module.exports = {
 
 否则报错 `Uncaught SyntaxError: Unexpected token '<'`
 
+### 参数处理
+
+```js
+// 地址如 index/:dictId , 接受参数用 route.params
+
+// 地址如 index/exhibition-detail?id=123 , 接受参数用 route.query
+```
+
 
 
 

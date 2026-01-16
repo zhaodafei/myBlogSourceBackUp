@@ -169,6 +169,47 @@ background-image 和 img 的选择使用
 
 ![color](/img/css/css_01/color.png "color")
 
+#### HTML中常用颜色02
+
+```scss
+--fei-BG-0: #ededed;
+--fei-BG-1: #f7f7f7;
+--fei-BG-2: #fff;
+--fei-BG-3: #f7f7f7;
+--fei-BG-4: #4c4c4c;
+--fei-BG-5: #fff;
+--fei-FG-0: rgba(0, 0, 0, 0.9);
+--fei-FG-HALF: rgba(0, 0, 0, 0.9);
+--fei-FG-1: rgba(0, 0, 0, 0.5);
+--fei-FG-2: rgba(0, 0, 0, 0.3);
+--fei-FG-3: rgba(0, 0, 0, 0.1);
+--fei-FG-4: rgba(0, 0, 0, 0.15);
+--fei-RED: #fa5151;
+--fei-ORANGE: #fa9d3b;
+--fei-YELLOW: #ffc300;
+--fei-GREEN: #91d300;
+--fei-LIGHTGREEN: #95ec69;
+--fei-BRAND: #07c160;
+--fei-BLUE: #10aeff;
+--fei-INDIGO: #1485ee;
+--fei-PURPLE: #6467f0;
+--fei-WHITE: #fff;
+--fei-LINK: #576b95;
+--fei-TEXTGREEN: #06ae56;
+--fei-FG: #000;
+--fei-BG: #fff;
+--fei-TAG-TEXT-ORANGE: #fa9d3b;
+--fei-TAG-BACKGROUND-ORANGE: rgba(250, 157, 59, 0.1);
+--fei-TAG-TEXT-GREEN: #06ae56;
+--fei-TAG-BACKGROUND-GREEN: rgba(6, 174, 86, 0.1);
+--fei-TAG-TEXT-BLUE: #10aeff;
+--fei-TAG-BACKGROUND-BLUE: rgba(16, 174, 255, 0.1);
+--fei-TAG-TEXT-BLACK: rgba(0, 0, 0, 0.5);
+--fei-TAG-BACKGROUND-BLACK: rgba(0, 0, 0, 0.05);
+```
+
+[笔记: 常用颜色](https://www.cnblogs.com/dafei4/p/12939055.html)
+
 #### 16进制和透明度
 
 透明度从00-FF，一共256个梯度
@@ -194,6 +235,45 @@ background-image 和 img 的选择使用
     <div style="background:#000000F0;width:20px;height:20px"></div>
     <div style="background:#000000FF;width:20px;height:20px"></div>
 </div>
+```
+
+#### rgba 转 8位16进制颜色
+
+```js
+/**
+ * 将 RGBA 颜色值转换为 8 位十六进制颜色（#RRGGBBAA）
+ * @param {string} rgbaStr - 如 "rgba(0, 0, 0, 0.25)" 或 "rgba(255,255,255,1)"
+ * @returns {string} 8 位十六进制颜色值
+ */
+function rgbaToHex(rgbaStr) {
+  // 提取 RGBA 中的数字（兼容带/不带空格的格式）
+  const match = rgbaStr.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*(\d+(?:\.\d+)?))?\)/);
+  if (!match) {
+    throw new Error("请输入合法的 RGBA 颜色值，如 rgba(0, 0, 0, 0.25)");
+  }
+
+  // 解析 R/G/B/A 数值
+  const r = parseInt(match[1], 10);
+  const g = parseInt(match[2], 10);
+  const b = parseInt(match[3], 10);
+  // Alpha 默认为 1（如果只有 RGB）
+  const a = match[4] ? parseFloat(match[4]) : 1;
+
+  // 转为两位十六进制（不足补 0）
+  const toHex = (num) => num.toString(16).padStart(2, '0').toLowerCase();
+  const rHex = toHex(r);
+  const gHex = toHex(g);
+  const bHex = toHex(b);
+  // Alpha 先转 0-255 再转十六进制
+  const aHex = toHex(Math.round(a * 255));
+
+  return `#${rHex}${gHex}${bHex}${aHex}`;
+}
+
+// 测试：转换 rgba(0, 0, 0, 0.25)
+const result = rgbaToHex("rgba(0, 0, 0, 0.25)");
+console.log(result); // 输出：#00000040
+
 ```
 
 
