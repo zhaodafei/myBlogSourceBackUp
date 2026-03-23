@@ -168,6 +168,81 @@ let barS1 = arr.some(item => {
 console.log("ccc_111", barS1);
 ```
 
+#### some,校验所有值
+
+```js
+  let arr = [
+    {id: 1, name: "daFei", age: "18", hobby: "JavaScript"},
+    {id: 1, name: "daFei", age: "18", hobby: ""}, // 设置一个空值
+    {id: 2, name: "daFei", age: "18", hobby: "HTML"},
+    {id: 3, name: "daFei", age: "18", hobby: "CSS"},
+  ];
+
+  // 校验不能为空
+  const hasNoEmpty2 = arr.some(item => {
+    const t = Object.keys(item)
+        .filter(key1 => !['id'].includes(key1)) // 过滤掉 id 这个字段,保留剩下字段组成新的数组['name','age','hobby']
+        .every(key2 => {
+          console.log("ddddddddddd", item[key2]);
+          return item[key2] // 是不是所有列表项都有值
+        })
+    console.log("=====取反", !t);
+    return !t
+  })
+
+  console.log("22222222", hasNoEmpty2);
+  if (hasNoEmpty2) {
+    console.log('some遍历: 出现空值');
+  }
+```
+
+### every 遍历
+
+```js
+let arr = [
+    {id: 1, name: "daFei", age: "18", hobby: "JavaScript"},
+    {id: 1, name: "daFei", age: "18", hobby: ""}, // 设置一个空值
+    {id: 2, name: "daFei", age: "18", hobby: "HTML"},
+    {id: 3, name: "daFei", age: "18", hobby: "CSS"},
+];
+
+const res = arr.every(item => {
+    console.log('多少');
+    return item.id = 2 // 找到id为2的项
+})
+const res2 = arr.every(item => item.id = 2)
+console.log(res);
+console.log(res2);
+```
+
+#### every,校验所有值
+
+```js
+let arr = [
+    {id: 1, name: "daFei", age: "18", hobby: "JavaScript"},
+    {id: 1, name: "daFei", age: "18", hobby: ""}, // 设置一个空值
+    {id: 2, name: "daFei", age: "18", hobby: "HTML"},
+    {id: 3, name: "daFei", age: "18", hobby: "CSS"},
+];
+
+// 校验不能为空
+const hasNoEmpty = arr.every(item => {
+    const t = Object.keys(item)
+    .filter(item => !['id'].includes(item)) // 过滤掉 id 这个字段,保留剩下字段组成新的数组['name','age','hobby']
+    .every(key => {
+        console.log("aaaaaaaa", item[key]);
+        return item[key] // 是不是所有列表项都有值
+    })
+    console.log("########################", t);
+    return t
+})
+
+if (!hasNoEmpty) {
+    console.log('every遍历: 有==空空空空空');
+    // return
+}
+```
+
 
 
 ### fill,填充数组

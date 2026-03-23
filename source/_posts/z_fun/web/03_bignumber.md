@@ -62,8 +62,12 @@ console.log(a.div(b).toNumber()); // 10
 
 ```js
 01) 小于等于  isGreaterThanOrEqualTo
-02) 保留4位数,有逗号  BigNumber(10.123).toFormat(4) // 12,310.1230
-03) 保留4位数,无逗号  BigNumber(10.123).toFormat(4) // 12310.12
+02) 保留4位数,无逗号  BigNumber(12310.123).toFixed(4) // 12310.1230
+03) 保留4位数,有逗号  BigNumber(12310.123).toFormat(4) // 12,310.1230
+03-2) 案例: 12310.1230 保存为 12310.12{ 逗号分割, 2位小数}
+	  const price = 12310.1230
+      priceA = BigNumber(price).toFixed(2, 4) // 必须先这个
+	  BigNumber(priceA).toFormat(2)   // 然后再这个
 04) 移位获取到前三位数 shiftedBy
     let x = new BigNumber(0.123)
     x.shiftedBy(3).toNumber()
