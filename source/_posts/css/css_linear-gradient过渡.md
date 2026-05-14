@@ -188,6 +188,26 @@ css
 
 <div style="width: 300px;height: 3px;background: linear-gradient(to left, transparent 0%, transparent 50%, red 50%, red 100%);background-size: 5px 1px;background-repeat: repeat-x;"></div>
 
+### 精美的垂直线
+
+```html
+<div class="fei-box"></div>
+<style>
+  .fei-box {
+    width: 2px;  /* 点的宽度（水平方向） */
+    height: 300px;
+    background: linear-gradient(
+        to bottom,
+        #f00 50%,
+        transparent 50%
+    ) repeat-y;
+    background-size: 4px 12px; /* 宽度4px，高度12px（点的高度+间距） */
+  }
+</style>
+```
+
+<div class="fei-box" style="width: 2px;height: 300px;background: linear-gradient(to bottom, #f00 50%, transparent 50%) repeat-y;background-size: 4px 12px;"></div>
+
 ### 其他gradient渐变
 
 ```html

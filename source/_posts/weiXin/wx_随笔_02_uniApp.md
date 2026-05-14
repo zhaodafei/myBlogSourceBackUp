@@ -205,6 +205,8 @@ https://m3w.cn/uniapp
 ### webstorm支持uni语法提示
 
 ```wiki
+webstorm支持uni语法提示, 同时支持 @/utils/common 这样的跳转
+
 01)安装插件  Uniapp Support
    插件地址: https://plugins.jetbrains.com/plugin/19675-uniapp-support
    
@@ -221,6 +223,22 @@ https://m3w.cn/uniapp
 ```wiki
 根目录:  components/file-name-a
 使用: <file-name-a />
+```
+
+### 图片预览
+
+```js
+const = ['图片1','图片2']
+uni.previewImage({
+    urls: urls, //需要预览的图片http链接列表，多张的时候，url直接写在后面就行了
+    current: '图片1', // 当前显示图片的http链接，默认是第一个
+    success: function (res) {},
+    fail: function (res) {},
+    longPressActions: {
+      itemList: ['发送给朋友', '保存图片', '收藏'],
+      success: function (data) {}
+    },
+})
 ```
 
 

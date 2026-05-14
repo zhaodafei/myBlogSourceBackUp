@@ -16,10 +16,10 @@ tags:
 
 ```css
 /* 核心代码 */
-let color-fei = ref("#90ee90");
+let colorFei = ref("#90ee90");
 
 .text {
-  color: v-bind(color-fei);
+  color: v-bind(colorFei);
 }
 ```
 
@@ -66,6 +66,81 @@ let color-fei = ref("#90ee90");
 }
 </style>
 
+```
+
+### 伪元素中使用
+
+```vue
+<template>
+  <div class="text">测试内容1,使用计算属性</div>
+  <div class="text2" :style="{ '--dynamic-color': colorFei, '--dynamic-content': `'${contentText}'` }">
+    测试内容2,使用 CSS 变量中转
+  </div>
+</template>
+
+<script setup>
+  import { ref } from 'vue'
+
+  const colorFei = ref("#90ee90")
+  const contentText = ref("★")  // 要显示的内容
+  // 计算属性返回带引号的字符串
+  const contentValue = computed(() => `"${contentText.value}"`)
+</script>
+
+<style scoped lang="scss">
+  .text {
+    color: v-bind(colorFei);
+  }
+
+  .text::before {
+    content: v-bind(contentValue); // 使用计算属性
+    color: v-bind(colorFei);
+    margin-right: 5px;
+  }
+
+  .text2 {
+    color: v-bind(colorFei);
+  }
+  .text2::before {
+    content: var(--dynamic-content); // 使用 CSS 变量中转
+    color: v-bind(colorFei);
+    margin-right: 5px;
+  }
+</style>
+
+```
+
+
+
+### 外部文件使用变色
+
+```vue
+第一种
+<style scoped lang="scss">
+  /* 占位样式：激活 v-bind 响应式绑定机制，使导入的 SCSS 文件中 v-bind('myColor') 生效 */
+  .theme-color-activation {
+    color: v-bind('myColor');
+    background-color: v-bind('myColor');
+  }
+  @import './fei.scss'; /*  在这个文件中就可以使用了 */
+</style>
+
+外部文件写法
+background: v-bind('myColor');
+```
+
+```vue
+第二种
+
+<div class="hall-navigator" :style="{ '--dynamic-color': myColor }">
+在这里先调用一次
+</div>
+<style scoped lang="scss">
+  @import './xyHallNavigator.scss';
+</style>
+
+外部文件写法
+color: var(--dynamic-color); // 这样也就可以使用了
 ```
 
 

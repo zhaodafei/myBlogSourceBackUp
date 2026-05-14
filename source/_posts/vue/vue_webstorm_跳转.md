@@ -48,6 +48,38 @@ module.exports = {
 
 ![webstrom vue 波浪线](/img/vue/idea/web_02.png "webstrom vue 波浪线")
 
+### vite 中波浪线(补充)
+
+```js
+import { defineConfig, loadEnv } from 'vite'
+
+export default defineConfig(({ mode, command }) => {
+  // 获取环境变量
+  // env对象包含.env中的所有配置项 mode 对应 staging等
+  const env = loadEnv(mode, process.cwd())
+
+  return {
+    // vite 相关配置
+    server: {
+      port: 8000,
+      host: true,
+      open: false,
+      proxy: {
+        '^/api': {
+          // 这里不能直接使用 import.meta.env.VITE_APP_SERVER
+          target: env.VITE_APP_SERVER,
+          changeOrigin: true,
+          logLevel: 'debug',
+          rewrite: path => path.replace(/^\/api/, '/')
+        }
+      }
+    }
+  }
+})
+```
+
+
+
 ### vite 中波浪线2
 
 ```wiki

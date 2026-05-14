@@ -111,6 +111,22 @@ bar("bar2")
   var isFF = UA && UA.match(/firefox\/(\d+)/);
 ```
 
+### 判断是否是移动端
+
+```js
+function isMobileDevice() {
+  const ua = navigator.userAgent;
+  const isMobileUA = /(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i.test(ua);
+  
+  // 针对 iPad iOS 13+ 的补充检测
+  const isIPad = navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1;
+  
+  return isMobileUA || isIPad;
+}
+```
+
+
+
 ### 抛出异常
 
 ```javascript

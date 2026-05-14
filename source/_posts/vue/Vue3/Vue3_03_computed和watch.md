@@ -358,6 +358,26 @@ watch(person.value, (newVal, oldVal) => {
 
 ```
 
+#### 停止侦听器
+
+```js
+const isNaviReady = ref(false)
+await new Promise(resolve => {
+  // 开始监听
+  const unwatch = watch(
+    () => isNaviReady.value,
+    (ready) => {
+      if (ready) {
+        unwatch() // 停止监听
+        resolve()
+      }
+    }
+  )
+})
+```
+
+
+
 
 
 ### watchEffect
