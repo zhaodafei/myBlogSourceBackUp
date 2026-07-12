@@ -243,6 +243,44 @@ server {
 }
 ```
 
+### nginx中配置vue项目代理
+
+```wiki
+#场景
+前端项目和后端项目不在同一台服务器, nginx层需要配置代理
+```
+
+```nginx
+server {
+    listen       80;
+    #前端项目地址域名
+    server_name  demo.vue03.com;
+    charset utf-8;
+
+	root E:/selfweb/fei_laravel/public/dist-staging/;
+    index index.html;
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+
+    # Java系统 API 反向代理（/fei3-api/xxx → https://test.javaDemo.cn/api/xxx）
+    location /fei3-api/ {
+        # proxy_pass 末尾的 / 不能少：https://test.javaDemo.cn/api/
+        # 带斜杠 Nginx 会将 /fei3-api/xxx 重写为 /api/xxx (去掉 /fei3-api 前缀再拼接),与开发环境 Vite 的 rewrite 行为一致
+        proxy_pass https://test.javaDemo.cn/api/;
+        proxy_set_header Host test.javaDemo.cn;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        # 目标 test.javaDemo.cn 是 HTTPS，需要开启 SNI 让 Nginx 正确发送 Host 头完成 TLS 握手。
+        proxy_ssl_server_name on;
+    }
+}
+
+```
+
+
+
 ### `webpack`搭建`Vue` 
 
 ```bash

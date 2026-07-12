@@ -299,6 +299,7 @@ chmod u+s nginx
 C:\fei\Nginx1.15.11>.\nginx.exe -v
 
 #启动nginx (注意有个点)
+##说明: 这里启动成功后命令窗口会出现Starting Nginx... 然后保持不动
 C:\fei\Nginx1.15.11>.\nginx.exe
 
 #停止nginx(注意有个点)

@@ -357,6 +357,119 @@ Object.keys(params).forEach(item => {
 })
 ```
 
+### 数组扁平化
+
+二维数组变为一维数组, 场景: 3列分别显示`A,B,C`,一共5行
+
+```wiki
+#效果
+第一列   第二列    第三列
+A1号     B1号     C1号
+A2号     B2号     C2号
+A3号     B3号     C3号
+A4号     B4号     C4号
+A5号     B5号     C5号
+
+#核心点:
+Array.from({})
+flat()
+new Map([])
+```
+
+
+
+```vue
+<template>
+  <div class="fei">
+    <div class="hall-grid">
+      <div
+        v-for="hall in allHalls"
+        :key="hall"
+        :class="['hall-item', { active: currentHall === hall }]"
+      >
+        {{ getHallDisplayName(hall) }}
+      </div>
+    </div>
+  </div>
+</template>
+
+<script setup>
+  const currentHall = ref('fei_a08')
+  const getHallDisplayName = (efHalls) => {
+    const hallMap = new Map([
+      // A1-A5 (fei_a11 - fei_a15)
+      ['fei_a11', 'A1'],
+      ['fei_a12', 'A2'],
+      ['fei_a13', 'A3'],
+      ['fei_a14', 'A4'],
+      ['fei_a15', 'A5'],
+
+      // B1-B5 (fei_a06 - fei_a10)
+      ['fei_a06', 'B1'],
+      ['fei_a07', 'B2'],
+      ['fei_a08', 'B3'],
+      ['fei_a09', 'B4'],
+      ['fei_a10', 'B5'],
+
+      // C1-C5 (fei_a01 - fei_a05)
+      ['fei_a01', 'C1'],
+      ['fei_a02', 'C2'],
+      ['fei_a03', 'C3'],
+      ['fei_a04', 'C4'],
+      ['fei_a05', 'C5'],
+    ]);
+    const hallInfo = hallMap.get(efHalls)
+    return hallInfo
+  }
+
+  // 17馆平铺 - 按 E → N → W 列优先顺序排列
+  // CSS Grid 按行填充,所以需要交叉排列: E1,N1,W1, E2,N2,W2...
+  const allHalls_01 = Array.from({ length: 5 }, (_, i) => [
+    `fei_a${String(i + 11).padStart(2, '0')}`, // A1-A5
+    `fei_a${String(i + 6).padStart(2, '0')}`,  // B1-B5
+    `fei_a${String(i + 1).padStart(2, '0')}`,  // C1-C5
+  ])
+  const allHalls = allHalls_01.flat()
+
+  console.log("ddd",allHalls_01) //二维数组
+  console.log("ddd",allHalls) // 展开操作,扁平化为一维数组
+
+</script>
+
+
+<style scoped lang="scss">
+.hall-grid {
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+
+  .hall-item {
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 64px;
+    background: #ff6b81;
+    border-radius: 18px;
+    border: 1px solid transparent;
+    font-size: 30px;
+    color: rgba(0,0,0,0.85);
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &.active {
+      border-color: #ffd700;
+      background: #eee8aa;
+    }
+  }
+}
+</style>
+
+```
+
 
 
 

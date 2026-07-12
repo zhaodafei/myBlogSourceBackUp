@@ -59,6 +59,13 @@ location @name { ... }
 Default:	—
 Context:	server, location
 ```
+> Nginx 的 location 匹配优先级（从高到低）：
+>
+> 1. `=` 精确匹配
+> 2. `^~` 前缀匹配（优先于正则）
+> 3. `~` 或 `~*` 正则匹配
+> 4. 普通前缀匹配（如 `/profile/`）
+
 ![nginx location](/img/ubuntu/nginx/other/nginx_location.png "nginx location")
 
 
@@ -143,6 +150,10 @@ server {
 ```wiki
 #场景描述
 文件上传后再某个具体的访问地址下面，需要给代理访问到
+
+#知识扩展
+alias：将 /profile/ 直接替换为 /home/ruoyi/uploadPath/
+root：将 /profile/ 追加到 /home/ruoyi/uploadPath/ 后面。
 ```
 
 
@@ -162,7 +173,74 @@ location /profile/ {
 }
 ```
 
+```nginx
+location ~*\.txt$ {
+    #匹配特定文件后缀（所有 .txt 文件）
+    root /home/ruoyi/uploadPath/;
+}
+```
+**关键点**：
 
+- `~*` 表示正则匹配且**不区分大小写**（`.TXT`、`.txt` 都能匹配）
+- `\.txt$` 表示以 `.txt` 结尾的路径
+- `$` 是正则中的**结束符**，确保只匹配文件扩展名，而不是包含 `txt` 的目录（如 `/text/`）
+
+
+> ```nginx
+> #这个2项nginx配置的区别
+> location /profile/ {
+>     alias /home/ruoyi/uploadPath/;
+> }
+> 
+> location /profile/ {
+>     root /home/ruoyi/uploadPath/;
+> }
+> ```
+>
+> 这两个 Nginx 配置的核心区别在于**URL路径与文件系统路径的映射方式**。简单来说：
+>
+> - **`alias`**：将 `/profile/` 直接替换为 `/home/ruoyi/uploadPath/`。
+> - **`root`**：将 `/profile/` **追加**到 `/home/ruoyi/uploadPath/` 后面。
+>
+> ### 具体区别演示
+>
+> 假设用户访问 `https://your-domain.com/profile/avatar/1.jpg`
+>
+> #### 使用 `alias`
+>
+> ```nginx
+> location /profile/ {
+>     alias /home/ruoyi/uploadPath/;
+> }
+> ```
+>
+> **Nginx查找的文件路径**：
+>
+> ```wiki
+> /home/ruoyi/uploadPath/avatar/1.jpg
+> ```
+>
+> **处理逻辑**：Nginx会从URL中剥离 `/profile/` 部分，然后将剩余部分（`avatar/1.jpg`）直接拼接到 `alias` 指定的路径后面。
+>
+> #### 使用 `root`
+>
+> ```nginx
+> location /profile/ {
+>     root /home/ruoyi/uploadPath/;
+> }
+> ```
+>
+> **Nginx查找的文件路径**：
+>
+> ```wiki
+> /home/ruoyi/uploadPath/profile/avatar/1.jpg
+> 
+> 说明: 这里多了一层 profile
+> ```
+>
+> 
+>
+> **处理逻辑**：Nginx会将完整的URL路径（`/profile/avatar/1.jpg`）拼接到 `root` 指定的路径后面。
 
 ### 底部
 

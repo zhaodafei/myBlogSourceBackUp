@@ -19,6 +19,8 @@ vue 和 debug 断点调试
 
 ### 在webstorm中断点调试
 
+可以先尝试直接直接04步骤开始,
+
 #### 01) 在chrome中安装插件 [JetBrains IDE Support](https://chrome.google.com/webstore/detail/jetbrains-ide-support/hmhgeddbohgjknpmjagkdomcpobmllji) [ 想办法自己下载 ]
 
 #### 02) 创建demo项目 vue init webpack vuejs-webpack-project-dafei

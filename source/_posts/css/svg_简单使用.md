@@ -52,6 +52,52 @@ tags:
 </svg>
 ```
 
+### 颜色控制
+
+```wiki
+一般情况有 svg 里面的 fill 控制颜色, 有时候页面html中使用需要其他颜色,需要通过css的 mask-image 来实现
+```
+
+```vue
+<template>
+  <div>
+    <span class="locate marker"></span>
+  </div>
+</template>
+
+<style scoped lang="scss">
+.locate {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.marker {
+  /**
+   这段 CSS 是使用 SVG 文件作为蒙版（mask），而不是直接显示 SVG 本身
+   这种情况下，填充色由元素的 background-color 决定，而不是 SVG 文件里的颜色。
+   */
+  background-color: #90ee90;
+  //background-color: #ff6b81;
+  //mask-image: url(/images/fei/marker01.svg);
+  //-webkit-mask-image: url(/images/fei/marker01.svg);
+  mask-image: url(/images/fei/marker02.svg);
+  -webkit-mask-image: url(/images/fei/marker02.svg);
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+}
+</style>
+
+```
+
 
 
 
