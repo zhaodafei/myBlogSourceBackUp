@@ -45,6 +45,13 @@ curl -i www.test.com   [显示头和内容]
 
 ![curl i](/img/ubuntu/linux_command/linux_curl/curl_ii.png "curl i")
 
+### 参数`i`
+
+```wiki
+#查看DNS解析、IP地址、请求头、响应头、状态码、传输统计
+curl -v www.test.com
+```
+
 ### 链接保存到文件中
 
 ```
