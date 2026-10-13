@@ -22,7 +22,7 @@ tags:
 头像 / 编辑器设置 / 主题(搜索) / 常用设置( 选择: Qoder Light )
 
 #设置编辑器字体
-头像 / 编辑器设置 / 字体(搜索) / 文本编辑器/字体 / 字体大小(16) 
+头像 / 编辑器设置 / 字体(搜索) / 文本编辑器/字体 / 字体大小(17) 
 ## webstorm 中
 File / Setting / Editor / Font / size(16)
 
@@ -37,6 +37,13 @@ File / Setting / Editor / Font / size(16)
 打开设置，或者点击左下角齿轮图标，选择“设置”。
 在搜索框里输入 autoReveal
 找到[ 功能/资源管理器/Auto Reveal ] 把这个选项改为false
+
+#关闭自动更新
+C:\Users\fei\AppData\Roaming\Qoder\User\settings.json 在文件中添加这2项
+"update.mode": "never",
+"update.enableWindowsBackgroundUpdates": false,
+"configAdvancedAutoUpdate": false
+修改配置文件后可以在软件设置中搜索Update: Mode,查看这一下已经改为不更新
 ```
 
 ### 快捷键

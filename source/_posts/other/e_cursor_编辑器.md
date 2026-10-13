@@ -59,7 +59,53 @@ Cursor 现在有两套界面：
 #在cursor内置浏览器打开访问地址
 右上角设置 / Brower & Newwork / Show Localhost Links in Browser ( 改为关闭 )
 
+#关闭自动更新
+C:\Users\fei\AppData\Roaming\Cursor\User\settings.json 在文件中添加这2项
+"update.mode": "none",
+"update.enableWindowsBackgroundUpdates": false
+修改配置文件后可以在软件设置中搜索Update: Mode,查看这一下已经改为不更新
+
+说明：
+"update.mode": "manual" 仍会提示有新版本，但不会自动安装
+"update.mode": "none" 彻底关闭自动更新
+
+#常用插件
+书签: alefragnani.Bookmarks
+功能很接近在 WebStorm 里习惯的那种“行级书签”
+
+#调整字体
+调整和 webstorm 一样的字体
+下载字体: https://www.jetbrains.com/lp/mono/
+安装: JetBrainsMono-2.304\fonts\ttf 目录中全选,右键/为所有用户安装
+windwos中检查是否安装: window + i / 个性化 / 字体 / 搜索 jetbrains
+## 开始配置cursor
+01)Commonly Used / Editor: Font Family 改为: 'JetBrains Mono','Microsoft YaHei', Consolas, 'Courier New', monospace
+02)搜索 Line Height 或 行高, 找到 Editor: Line Height, 调整到1.6
+
 ```
+
+配置后的json文件 `C:\Users\fei\AppData\Roaming\Cursor\User\settings.json`
+
+```json
+{
+    "window.autoDetectColorScheme": true,
+    "editor.fontSize": 16,
+    "workbench.editor.enablePreview": false,
+    "breadcrumbs.enabled": false,
+    "editor.stickyScroll.enabled": false,
+    "workbench.activityBar.orientation": "vertical",
+    
+    "update.mode": "none",
+    "update.enableWindowsBackgroundUpdates": false,
+    
+    "editor.fontFamily": "'JetBrains Mono','Microsoft YaHei', Consolas, 'Courier New', monospace",
+    "editor.lineHeight": 1.6
+}
+```
+
+
+
+
 
 ### 配置文件
 
@@ -95,7 +141,7 @@ Cursor 现在有两套界面：
 {
     // ==================== 编辑器外观 ====================
     "editor.fontSize": 16,
-    "editor.fontFamily": "JetBrains Mono, Consolas, 'Courier New', monospace",
+    "editor.fontFamily": "'JetBrains Mono','Microsoft YaHei', Consolas, 'Courier New', monospace",
     "editor.fontLigatures": true,
     "editor.tabSize": 2,
     "editor.renderWhitespace": "all",

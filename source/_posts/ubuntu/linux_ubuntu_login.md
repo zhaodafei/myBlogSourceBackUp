@@ -209,6 +209,16 @@ echo “你被管理员踢出了” > /dev/pts/17 && fuser -k /dev/pts/17  #发�
 
 ![fuser](/img/ubuntu/linux_command/linux_login/fuser.png "fuser")
 
+### 切换用户
+
+```shell
+#切换指定普通用户
+su - fei
+
+#切换root账号
+sudo -i
+```
+
 ### 其他
 
 ```
